@@ -173,16 +173,16 @@
     <string id="30187">Videoclips</string>           
     <string id="30188">Fotografías</string>                 
     <string id="30189">Películas No vistas</string><!-- Verified -->
-    <string id="30190">Movie Genres</string>           
-    <string id="30191">Movie Studios</string>          
-    <string id="30192">Movie Actors</string>           
-    <string id="30193">Unwatched Episodes</string>     
-    <string id="30194">TV Genres</string>              
-    <string id="30195">TV Networks</string>            
-    <string id="30196">TV Actors</string>              
-    <string id="30197">Playlists</string>              
-    <string id="30198">Search</string>              
-    <string id="30199">Set Views</string>              
+    <string id="30190">Géneros de Películas</string>           
+    <string id="30191">Estudios de Cine</string>          
+    <string id="30192">Actores de Películas</string>           
+    <string id="30193">Episodios No vistos</string>     
+    <string id="30194">Géneros de Series</string>              
+    <string id="30195">Estaciones de TV</string>            
+    <string id="30196">Actores de Series</string>              
+    <string id="30197">Listas de reproducción</string>              
+    <string id="30198">Buscar</string>              
+    <string id="30199">Establecer Vistas</string>              
     
     <string id="30200">Select User</string>              
     <string id="30201">Profiling enabled.</string>              
