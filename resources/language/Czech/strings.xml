@@ -508,8 +508,8 @@
     <string id="39501">Kolekce</string>
 
     <!-- Plex utils.py -->
-    <string id="39600">Are you sure you want to reset your local Kodi database? A re-sync of the Plex data will take time afterwards.</string>
-    <string id="39601">Could not stop the database from running. Please try again later.</string>
-    <string id="39602">Remove all cached artwork? (recommended!)</string>
+    <string id="39600">Opravdu chcete resetovat místní databázi Kodi? Opětovná synchronizace dat z Plexu si vyžádá čas později.</string>
+    <string id="39601">Nemohu zastavit běh databáze. Prosím zkuste to později.</string>
+    <string id="39602">Odstranit všechny obrázky v mezipaměti? (doporučuje se!)</string>
     <string id="39603">Reset all PlexKodiConnect Addon settings? (this is usually NOT recommended and unnecessary!)</string>
 </strings>
