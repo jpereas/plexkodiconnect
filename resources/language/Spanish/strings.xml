@@ -184,27 +184,27 @@
     <string id="30198">Buscar</string>              
     <string id="30199">Establecer Vistas</string>              
     
-    <string id="30200">Select User</string>              
-    <string id="30201">Profiling enabled.</string>              
-    <string id="30202">Please remember to turn off when finished testing.</string>              
-    <string id="30203">Error in ArtworkRotationThread</string>              
-    <string id="30204">Unable to connect to server</string>         
-    <string id="30205">Error in LoadMenuOptionsThread</string>     
+    <string id="30200">Seleccionar Usuario</string>              
+    <string id="30201">Perfilamiento activado.</string>              
+    <string id="30202">Por favor recuerde apagar cuando haya terminado la prueba.</string>              
+    <string id="30203">Error en ArtworkRotationThread</string>              
+    <string id="30204">No se puede conectar al servidor</string>         
+    <string id="30205">Error en LoadMenuOptionsThread</string>     
     
-    <string id="30206">Enable Playlists Loader (Requires Restart)</string>   
+    <string id="30206">Activar gestor de Listas de Reproducción (Requiere Reiniciar)</string>   
     
-    <string id="30207">Songs</string>
-    <string id="30208">Albums</string>
-    <string id="30209">Album Artists</string>
-    <string id="30210">Artists</string>
-    <string id="30211">Music Genres</string>
+    <string id="30207">Canciones</string>
+    <string id="30208">Álbumes</string>
+    <string id="30209">Artistas de álbumes</string>
+    <string id="30210">Artistas</string>
+    <string id="30211">Géneros de Música</string>
     
-    <string id="30212">Enable Theme Videos (Requires Restart)</string>
-    <string id="30213"> - Loop Theme Videos</string>
+    <string id="30212">Activar Videos de tema (Requiere Reiniciar)</string>
+    <string id="30213"> - Mantener constante Vídeos de Tema</string>
     
-    <string id="30216">AutoPlay remaining episodes in a season</string> 
-    <string id="30218">Compress Artwork</string>
-    <string id="30220">Latest </string>
+    <string id="30216">Reproducir automáticamente episodios restantes en una temporada</string> 
+    <string id="30218">Comprimir Arte</string>
+    <string id="30220">Más Recientes </string>
     <string id="30221">In Progress </string>
     <string id="30222">NextUp </string>
     <string id="30223">User Views</string>
