@@ -2,9 +2,9 @@
 <strings>
     <!-- Add-on settings -->
     <string id="29999">PlexKodiConnect</string>
-    <string id="30000">IP-Adresse des Servers</string><!-- Verified -->
+    <string id="30000">Server Adresse (IP)</string><!-- Verified -->
     <string id="30002">Gewünschte Wiedergabe-Methode</string><!-- Verified -->
-    <string id="30004">Log Level</string><!-- Verified -->
+    <string id="30004">Logging Level</string><!-- Verified -->
     <string id="30005">Benutzername: </string>
     <string id="30006">Passwort: </string>
     <string id="30007">Netzwerk-Benutzername: </string>
@@ -116,7 +116,7 @@
     <string id="30128">Abspielfehler</string>
     <string id="30129">Dieses Element ist nicht abspielbar</string>    
     <string id="30130">Lokaler Pfad erkannt</string>
-    <string id="30131">Your MB3 Server contains local paths.  Please change server paths to UNC or change XBMB3C setting 'Play from Stream' to true.  Path: </string>
+    <string id="30131">MB3-Server enthält lokale Pfade.  Bitte ändern Sie Server Pfade zu UNC oder ändern Sie die XBMB3C Einstellung 'Play from Stream' auf aktiviert. Pfad: </string>
     <string id="30132">Warnung</string>
     <string id="30133">Debug Logging aktiviert.</string>
     <string id="30134">Dies beeinträchtigt die Performance.</string>
@@ -168,7 +168,7 @@
     <string id="30182">Lieblingsepisoden</string>      
     <string id="30183">Häufig gespielte Alben</string> 
     <string id="30184">Anstehende Serien</string>            
-    <string id="30185">Sammlungen</string>                
+    <string id="30185">Kollektionen</string>                
     <string id="30186">Trailer</string>               
     <string id="30187">Musik-Videos</string>           
     <string id="30188">Fotos</string>                 
@@ -248,7 +248,7 @@
     <string id="30300">Aktiviert</string>              
     <string id="30301">Zurücksetzen</string>              
     <string id="30302">Filme</string>              
-    <string id="30303">Sammlungen</string>              
+    <string id="30303">Kollektionen</string>              
     <string id="30304">Trailer</string>              
     <string id="30305">Serien</string>              
     <string id="30306">Staffeln</string>              
@@ -343,7 +343,7 @@
     <string id="33015">Datei vom Embyserver löschen?</string>
     <string id="33016">Trailer abspielen?</string>
     <string id="33017">Filme zusammenstellen aus:</string>
-    <string id="33018">Sammlungen zusammenstellen aus</string>
+    <string id="33018">Kollektionen zusammenstellen aus</string>
     <string id="33019">Musikvideos zusammenstellen aus:</string>
     <string id="33020">Serien zusammenstellen aus:</string>
     <string id="33021">Zusammenstellen:</string>
@@ -352,7 +352,7 @@
     <string id="33024">Abbruch der Datenbank Synchronisierung. Die aktuelle Kodi-Version wird nicht unterstützt.</string>
     <string id="33025">fertiggestellt in:</string>
     <string id="33026">Filme zusammenstellen aus:</string>
-    <string id="33027">Sammlungen zusammenstellen aus</string>
+    <string id="33027">Kollektionen zusammenstellen aus</string>
     <string id="33028">Musikvideos zusammenstellen aus:</string>
     <string id="33029">Serien zusammenstellen aus:</string>
     <string id="33030">Episoden zusammenstellen aus:</string>
@@ -496,20 +496,20 @@
     <string id="39402">  funktioniert möglicherweise nicht richtig, bis die Kodi Datenbank zurückgesetzt worden ist.</string>
     <string id="39403">Synchronisierung der Plex Bibliotheken wird abgebrochen. Die momentane Kodi Version wird nicht unterstützt. Für weitere Informationen bitte das Kodi Log konsultieren.</string>
     <string id="39404">Der Synchronisations-Prozess der Plex Bibliotheken beim Start ist mehrmals fehlgeschlagen. Bitte Kodi neu starten. Synch wird jetzt gestoppt.</string>
-    <string id="39405">Plex Playlisten/Nodes aktualisiert</string>
-    <string id="39406">Plex playlists/nodes refresh failed</string>
-    <string id="39407">Full library sync finished</string>
-    <string id="39408">Sync had to skip some items because they could not be processed. Kodi may be instable now!! Please post your Kodi logs to the Plex forum.</string>
-    <string id="39409">The Plex Server did not like you asking for so much data at once and returned ERRORS. Try lowering the number of sync download threads in the settings. Skipped some items for now.</string>
-    <string id="39410">ERROR in library sync</string>
+    <string id="39405">Plex Wiedergabelisten/Video Nodes aktualisiert</string>
+    <string id="39406">Aktualisierung der Wiedergabelisten/Video Nodes fehlgeschlagen</string>
+    <string id="39407">Alle Plex Bibliotheken aktualisiert</string>
+    <string id="39408">Einige Plex Einträge mussten übersprungen werden, da sie nicht verarbeitet werden konnten. Kodi ist nun möglicherweise instabil!! Bitte teilen Sie Ihr Kodi log im Plex Forum.</string>
+    <string id="39409">Der Plex Server war überfordert und hat mit ERROR reagiert. Versuchen Sie, in den PKC Optionen die Download Sync Threads Anzahl zu reduzieren. Ein paar Plex Elemente wurden übersprungen.</string>
+    <string id="39410">Synchronisierungs-ERROR</string>
 
     <!-- Plex videonodes.py -->
-    <string id="39500">On Deck</string>
-    <string id="39501">Collections</string>
+    <string id="39500">Aktuell</string>
+    <string id="39501">Kollektionen</string>
 
     <!-- Plex utils.py -->
-    <string id="39600">Are you sure you want to reset your local Kodi database? A re-sync of the Plex data will take time afterwards.</string>
-    <string id="39601">Could not stop the database from running. Please try again later.</string>
-    <string id="39602">Remove all cached artwork? (recommended!)</string>
-    <string id="39603">Reset all PlexKodiConnect Addon settings? (this is usually NOT recommended and unnecessary!)</string>
+    <string id="39600">Wirklich die lokale Kodi Datenbank zurücksetzen? Die anschliessende Synchronisation der Plex-Daten benötigt Zeit.</string>
+    <string id="39601">Kodi Datenbank konnte nicht gestoppt werden. Bitte später erneut versuchen.</string>
+    <string id="39602">Alle zwischengespeicherten Bilder löschen? (empfohlen!)</string>
+    <string id="39603">Alle PlexKodiConnect Einstellungen zurücksetzen? (normalerweise NICHT empfohlen und nicht nötig!)</string>
 </strings>
