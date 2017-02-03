@@ -231,7 +231,7 @@
     
     <string id="30246">Activar notificación de siguiente episodio estilo Netflix</string>
     <string id="30247">  - El número de segundos antes del final para mostrar la notificación</string>
-    <string id="30248">Mostrar cuadro de diálogo de información de Emby en acción reproducir/seleccionar</string>
+    <string id="30248">Mostrar cuadro de diálogo de información de Plex en acción reproducir/seleccionar</string>
     <string id="30249">Activar mensaje de conexión de servidor al inicio</string><!-- Verified -->
     
     <string id="30251">Vídeos caseros añadidos recientemente</string><!-- Verified -->
@@ -302,7 +302,7 @@
     <string id="30522">Obligar transcodificación de h265/HEVC</string>
     <string id="30523">Opciones de metadatos de música (no compatibles con stream directo)</string>
     <string id="30524">Importar valoración de canciones directamente de los archivos</string>
-    <string id="30525">Convertir valoración de canciones a valoración Emby</string>
+    <string id="30525">Convertir valoración de canciones a valoración Plex</string>
     <string id="30526">Permitir actualización de valoración en archivos de canciones</string>
     <string id="30527">Ignorar especiales en próximos episodios</string>
     <string id="30528">Usuarios permanentes para agregar a la sesión</string>
@@ -340,7 +340,7 @@
     <string id="33012">Reproducción directa falló 3 veces. Reproducción desde HTTP activada.</string>
     <string id="33013">Elegir stream de audio</string>
     <string id="33014">Elegir stream de subtítulos</string>
-    <string id="33015">¿Eliminar archivo del servidor Emby?</string>
+    <string id="33015">¿Eliminar archivo del servidor Plex?</string>
     <string id="33016">¿Reproducir tráilers?</string>
     <string id="33017">Obteniendo películas de:</string>
     <string id="33018">Obteniendo sagas</string>
@@ -357,16 +357,16 @@
     <string id="33029">Comparando series de:</string>
     <string id="33030">Comparando episodios de:</string>
     <string id="33031">Comparando:</string>
-    <string id="33032">Failed to generate a new device Id. See your logs for more information.</string>
-    <string id="33033">Kodi will now restart to apply the changes.</string>
-    <string id="33041">Delete file(s) from Plex Server? This will also delete the file(s) from disk!</string>
+    <string id="33032">Error al generar un nuevo Id de dispositivo. Vea la bitácora para obtener más información.</string>
+    <string id="33033">Kodi ahora se reinicia para aplicar los cambios.</string>
+    <string id="33041">¿Eliminar archivos de servidor Plex? ¡Esto también eliminará los archivos del disco!</string>
 
     <!-- New to Plex -->
-    <string id="39000">- Number of trailers to play before a movie</string>
-    <string id="39001">Boost audio when transcoding</string>
-    <string id="39002">Burnt-in subtitle size</string>
-    <string id="39003">Limit download sync threads (rec. for rpi: 1)</string>
-    <string id="39004">Enable Plex Companion (restart Kodi!)</string>
+    <string id="39000">- Número de tráilers a reproducir antes de una película</string>
+    <string id="39001">Aumentar audio al transcodificar</string>
+    <string id="39002">Tamaño de subtítulos incrustados</string>
+    <string id="39003">Limitar los hilos de sincronización de descarga (recomendado para rpi: 1)</string>
+    <string id="39004">Activar Plex Companion (¡reiniciar Kodi!)</string>
     <string id="39005">Plex Companion Port (change only if needed)</string>
     <string id="39006">Activate Plex Companion debug log</string>
     <string id="39007">Activate Plex Companion GDM debug log</string>
