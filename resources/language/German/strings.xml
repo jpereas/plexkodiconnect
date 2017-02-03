@@ -28,10 +28,10 @@
     <string id="30030">Portnummer</string><!-- Verified -->
     <string id="30031">Dieser Plex Media Server gehört mir</string>
     <string id="30036">Anzahl anzuzeigender zuletzt hinzugefügter Filme:</string>    
-    <string id="30037">Anzahl anzuzeigender zuletzt hinzugefügter TV Folgen:</string>    
+    <string id="30037">Anzahl anzuzeigender zuletzt hinzugefügter TV Episoden:</string>    
     <string id="30035">Anzahl anzuzeigender zuletzt hinzugefügter Alben:</string>    
     <string id="30038">Bei Start der Wiedergabe als 'gesehen' markieren:</string>    
-    <string id="30039">Staffelposter für Folgen nutzen</string>
+    <string id="30039">Staffelposter für Episoden nutzen</string>
 
     <string id="30040">Genre Filter ...</string>
     <string id="30041">Alles von hier abspielen</string>
@@ -107,7 +107,7 @@
     <string id="30116">Für Filme</string><!-- Verified -->
     <string id="30117">Aktualisierungsintervall von Hintergrundbildern (Sekunden)</string>
     <string id="30118">Prozentanzeige für Fortsetzen</string>
-    <string id="30119">Folgennummer hinzufügen</string>
+    <string id="30119">Episodennummer hinzufügen</string>
     <string id="30120">Ladefortschritt anzeigen</string>
     <string id="30121">Inhalt wird geladen</string>
     <string id="30122">Daten werden abgerufen</string>
@@ -127,43 +127,43 @@
     
     <string id="30139">Titelmusik aktivieren (Neustart erforderlich)</string>
     <string id="30140"> - Themen-Musik in Schleife abspielen</string>
-    <string id="30141">Enable Background Image (Requires Restart)</string>
-    <string id="30142">Services</string>
+    <string id="30141">Hintergrundbild aktivieren (Erfordert Neustart)</string>
+    <string id="30142">Dienste</string>
 
-    <string id="30143">Always transcode if video bitrate is above</string>
+    <string id="30143">Immer transkodieren falls Bitrate höher als</string>
     
-    <string id="30150">Skin does not support setting views</string>
-    <string id="30151">Select item action (Requires Restart)</string>
+    <string id="30150">Skin unterstützt das Setzen von benutzerdefinierten Ansichten nicht</string>
+    <string id="30151">Aktion bei Auswahl (Erfordert Neustart)</string>
     
-    <string id="30156">Sort NextUp by Show Title</string>    
-    <string id="30157">Enable Enhanced Images (eg CoverArt)</string><!-- Verified -->
-    <string id="30158">Metadata</string>
-    <string id="30159">Artwork</string>
-    <string id="30160">Video Quality if Transcoding necessary</string><!-- Verified -->
+    <string id="30156">Sortiere 'Nächste' nach Serientitel</string>    
+    <string id="30157">Deaktiviere erweiterte Bilder (z. B. CoverArt)</string><!-- Verified -->
+    <string id="30158">Metadaten</string>
+    <string id="30159">Grafiken</string>
+    <string id="30160">Videoqualität falls Transkodierung nötig</string><!-- Verified -->
     
-    <string id="30161">Enable Suggested Loader (Requires Restart)</string>
-    <string id="30162">Add Season Number</string>     
-    <string id="30163">Flatten Seasons</string>     
+    <string id="30161">'Empfohlen'-Loader aktivieren (Erfordert Neustart)</string>
+    <string id="30162">Staffelnummer hinzufügen</string>     
+    <string id="30163">Serienstaffeln reduzieren</string>     
     
-    <string id="30164">Direct Play - HTTP</string>     
-    <string id="30165">Direct Play</string>     
-    <string id="30166">Transcoding</string>     
-    <string id="30167">Server Detection Succeeded</string>     
-    <string id="30168">Found server</string>     
-    <string id="30169">Address : </string>     
+    <string id="30164">Direkte Wiedergabe - HTTP</string>     
+    <string id="30165">Direkte Wiedergabe</string>     
+    <string id="30166">Transkodiere</string>     
+    <string id="30167">Serversuche erfolgreich</string>     
+    <string id="30168">Server gefunden</string>     
+    <string id="30169">Adresse: </string>     
     
     <!-- Video nodes -->
-    <string id="30170">Recently Added TV Shows</string><!-- Verified -->
-    <string id="30171">In Progress TV Shows</string><!-- Verified -->
-    <string id="30172">All Music</string>              
-    <string id="30173">Channels</string><!-- Verified -->
-    <string id="30174">Recently Added</string><!-- Verified -->
-    <string id="30175">Recently Added Episodes</string><!-- Verified -->
-    <string id="30176">Recently Added Albums</string>  
-    <string id="30177">In Progress Movies</string><!-- Verified -->
-    <string id="30178">In Progress Episodes</string><!-- Verified -->
-    <string id="30179">Next Episodes</string><!-- Verified -->
-    <string id="30180">Favorite Movies</string><!-- Verified -->      
+    <string id="30170">Zuletzt hinzugefügte Serien</string><!-- Verified -->
+    <string id="30171">Begonnene Serien</string><!-- Verified -->
+    <string id="30172">Gesamte Musik</string>              
+    <string id="30173">Kanäle</string><!-- Verified -->
+    <string id="30174">Zuletzt hinzugefügt</string><!-- Verified -->
+    <string id="30175">Kürzlich hinzugefügte Episoden</string><!-- Verified -->
+    <string id="30176">Zuletzt hinzugefügte Alben</string>  
+    <string id="30177">Begonnene Filme</string><!-- Verified -->
+    <string id="30178">Begonnene Episoden</string><!-- Verified -->
+    <string id="30179">Nächste Episoden</string><!-- Verified -->
+    <string id="30180">Lieblingsfilme</string><!-- Verified -->      
     <string id="30181">Favorite Shows</string><!-- Verified -->
     <string id="30182">Favorite Episodes</string>      
     <string id="30183">Frequent Played Albums</string> 
