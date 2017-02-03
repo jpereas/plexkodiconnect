@@ -273,17 +273,17 @@
     <string id="30411">Set custom song rating (0-5)</string>
     <string id="30412">Force transcode</string>
     <string id="30413">Enable Plex context menu in Kodi</string>
-    <string id="30414">Could not delete the Plex item. Is item deletion enabled on the Plex Media Server?</string>
-    <string id="30415">Start playback via PMS</string>
+    <string id="30414">Non riesco a cancellare l'elemento di Plex. La cancellazione degli elementi è abilitata sul PMS?</string>
+    <string id="30415">Inizia riproduzione via PMS</string>
 
     <!-- add-on settings -->
-    <string id="30500">Verify Host SSL Certificate (more secure)</string>
-    <string id="30501">Client SSL certificate</string>
-    <string id="30502">Use alternate address</string>
-    <string id="30503">Alternate Server Address</string>
-    <string id="30504">Use alternate device Name</string>
-    <string id="30505">[COLOR yellow]Reset login attempts[/COLOR]</string>
-    <string id="30506">Sync Options</string>
+    <string id="30500">Verifica certificato SSL Host (più sicuro)</string>
+    <string id="30501">Certificato SSL Client</string>
+    <string id="30502">Usa indirizzo alternativo</string>
+    <string id="30503">Indirizzo alternativo server</string>
+    <string id="30504">Usa nome dispositivo alternativo</string>
+    <string id="30505">[COLOR yellow]Resetta tentativi di accesso[/COLOR]</string>
+    <string id="30506">Opzioni di sincronizzazione</string>
     <string id="30507">Show syncing progress</string>
     <string id="30508">Sync empty TV Shows</string>
     <string id="30509">Enable Music Library</string>
