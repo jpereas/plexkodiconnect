@@ -11,7 +11,7 @@
     <string id="30008">Síťové heslo: </string>
     <string id="30009">Překódování: </string>
     <string id="30010">Povolit profilování výkonu</string>
-    <string id="30011">Místní systémová cache</string>
+    <string id="30011">Místní systémová mezipaměť</string>
     <string id="30012">OK</string>
     <string id="30013">Nezobrazovat</string>
 
@@ -69,14 +69,14 @@
     <string id="30077">Fantasy</string>
     <string id="30078">Zahraniční</string>
     <string id="30079">Historický</string>
-    <string id="30080">Horror</string>
+    <string id="30080">Horor</string>
     <string id="30081">Hudební</string>
     <string id="30082">Muzikál</string>
     <string id="30083">Tajemný</string>
     <string id="30084">Romantický</string>
     <string id="30085">Vědeckofantastický</string>
     <string id="30086">Krátký</string>
-    <string id="30087">Suspense</string>
+    <string id="30087">Napínavý</string>
     <string id="30088">Thriller</string>
     <string id="30089">Western</string>
     
@@ -289,8 +289,8 @@
     <string id="30509">Povolit hudební knihovnu</string>
     <string id="30510">Přímé streamování hudební knihovny</string>
     <string id="30511">Režim přehrávání</string>
-    <string id="30512">Vynutit cache obrázků</string>
-    <string id="30513">Omezit vlákna cache obrázků (doporučeno pro rpi)</string>
+    <string id="30512">Vynutit ukládání obrázků do mezipaměti</string>
+    <string id="30513">Omezit vlákna mezipaměti obrázků (doporučeno pro rpi)</string>
     <string id="30514">Povolit rychlé spuštění (vyžaduje plugin na serveru)</string>
     <string id="30515">Maximální počet položek vyžádaných najednou ze serveru</string>
     <string id="30516">Přehrávání</string>
@@ -383,7 +383,7 @@
 
     <string id="39018">[COLOR yellow]Opravit místní databázi (vynutit aktualizaci všeho obsahu)[/COLOR]</string>
     <string id="39019">[COLOR red]Částečný nebo plný reset databáze a PKC[/COLOR]</string>
-    <string id="39020">[COLOR yellow]Teď umístit všechny obrázky do texturové cache Kodi[/COLOR]</string>
+    <string id="39020">[COLOR yellow]Nyní umístit všechny obrázky do texturové mezipaměti Kodi[/COLOR]</string>
     <string id="39021">[COLOR yellow]Sync Emby Theme Media to Kodi[/COLOR]</string>
     <string id="39022">místní</string>
     <string id="39023">Nemohu provést autentifikaci. Přihlásili jste se na plex.tv?</string>
@@ -393,9 +393,9 @@
     <string id="39026">Povolit neustálou synchronizaci na pozadí</string>
     <string id="39027">Režim přehrávání</string>
     <string id="39028">POZOR! Pokud zvolíte "Nativní" režim, přijdete o některé funkce Plexu, jako např. ukázky, nebo možnosti překódování. Všechny knihovny Plexu musí používat přímé cesty (např. smb://myNAS/mymovie.mkv nebo \\myNAS/mymovie.mkv)!</string>
-    <string id="39029">Network credentials</string>
+    <string id="39029">Přihlašovací údaje k síti</string>
     <string id="39030">Přidat síťové přihlašovací údaje pro přístup Kodi k vašemu obsahu? Pokud přeskočíte tento krok, při úvodním skenování se může zobrazit výzva k zadání přihlašovacích údajů.</string>
-    <string id="39031">Kodi can't locate file: </string>
+    <string id="39031">Kodi nemůže najít soubor: </string>
     <string id="39032">Prosím zkontrolujte cestu. Možná bude také nutno zkontrolovat síťové přihlašovací údaje v nastavení doplňku nebo použít jinou cestu k Plexu. Zastavit synchronizaci?</string>
     <string id="39033">Automaticky změnit UNC cesty ke knihovně Plexu \\myNas\mymovie.mkv na smb cesty smb://myNas/mymovie.mkv? (doporučeno)</string>
     <string id="39034">Nahradit UNC cesty z \\myNas na smb://myNas</string>
@@ -473,8 +473,8 @@
 
 
     <!-- Plex Artwork.py -->
-    <string id="39250">Spuštění cache obrázků bude nějakou chvíli trvat a proběhne na pozadí. Chcete pokračovat?</string>
-    <string id="39251">Provést nejdříve reset existujících dat v cache?</string>
+    <string id="39250">Spuštění ukládání obrázků do mezipaměti bude nějakou chvíli trvat a proběhne na pozadí. Chcete pokračovat?</string>
+    <string id="39251">Provést nejdříve reset existujících dat v mezipaměti?</string>
 
     <!-- Plex PlexAPI.py -->
     <string id="39300">: Zadejte uživatelské jméno plex.tv. Pro zrušení nezadávejte nic.</string>
@@ -511,5 +511,5 @@
     <string id="39600">Opravdu chcete resetovat místní databázi Kodi? Opětovná synchronizace dat z Plexu si vyžádá čas později.</string>
     <string id="39601">Nemohu zastavit běh databáze. Prosím zkuste to později.</string>
     <string id="39602">Odstranit všechny obrázky v mezipaměti? (doporučuje se!)</string>
-    <string id="39603">Reset all PlexKodiConnect Addon settings? (this is usually NOT recommended and unnecessary!)</string>
+    <string id="39603">Obnovit všechna nastavení doplňku PlexKodiConnect? (to obvykle není vhodné a je to zbytečné!)</string>
 </strings>
