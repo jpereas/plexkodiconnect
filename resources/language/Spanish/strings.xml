@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <strings>
     <!-- Add-on settings -->
-    <string id="29999">PlexKodiCOnnect</string>
+    <string id="29999">PlexKodiConnect</string>
     <string id="30000">Dirección del servidor (IP)</string><!-- Verified -->
     <string id="30002">Método de reproducción preferido</string><!-- Verified -->
     <string id="30004">Nivel de bitácora</string><!-- Verified -->
@@ -510,6 +510,6 @@
     <!-- Plex utils.py -->
     <string id="39600">¿Está seguro que desea restablecer su base de datos local de Kodi? Volver a sincronizar los datos de Plex tomará tiempo después.</string>
     <string id="39601">No se pudo detener la base de datos. Por favor inténtelo más tarde.</string>
-    <string id="39602">Remove all cached artwork? (recommended!)</string>
-    <string id="39603">Reset all PlexKodiConnect Addon settings? (this is usually NOT recommended and unnecessary!)</string>
+    <string id="39602">¿Eliminar todo el arte del caché? (¡recomendado!)</string>
+    <string id="39603">¿Restablecer todos los ajustes de PlexKodiConnect? (esto generalmente NO es recomendable ni necesario!)</string>
 </strings>
