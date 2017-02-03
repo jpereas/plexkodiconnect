@@ -465,51 +465,51 @@
     <string id="39218">Error al contactar al PMS</string>
     <string id="39219">¿Abortar (sí) o guardar la dirección de todos modos (No)?</string>
     <string id="39220">conectado</string>
-    <string id="39221">plex.tv toggle successful</string>
-    <string id="39222">[COLOR yellow]Look for missing fanart on FanartTV now[/COLOR]</string>
-    <string id="39223">Only look for missing fanart or refresh all fanart? The scan will take quite a while and happen in the background.</string>
-    <string id="39224">Refresh all</string>
-    <string id="39225">Missing only</string>    
+    <string id="39221">alternado de plex.tv exitoso</string>
+    <string id="39222">[COLOR yellow Buscar ahora fanart faltante en FanartTV[/COLOR]</string>
+    <string id="39223">Sólo buscar fanart que falta o actualizar todos los fanart? El análisis tomará bastante tiempo y sucede en el fondo.</string>
+    <string id="39224">Actualizar todo</string>
+    <string id="39225">Sólo lo faltante</string>    
 
 
     <!-- Plex Artwork.py -->
-    <string id="39250">Running the image cache process can take some time. It will happen in the background. Are you sure you want continue?</string>
-    <string id="39251">Reset all existing cache data first?</string>
+    <string id="39250">Ejecutar el proceso de caché de imagen puede tardar algún tiempo. Sucederá en el fondo. ¿Está seguro de que desea continuar?</string>
+    <string id="39251">¿Restablecer todos los datos de la caché primero?</string>
 
     <!-- Plex PlexAPI.py -->
-    <string id="39300">: Enter plex.tv username. Or nothing to cancel.</string>
-    <string id="39301">Enter password for plex.tv user </string>
-    <string id="39302">Could not sign in user </string>
-    <string id="39303">Problems trying to contact plex.tv. Try again later</string>
-    <string id="39304">Go to https://plex.tv/pin and enter the code: </string>
-    <string id="39305">Could not sign in to plex.tv. Try again later</string>
-    <string id="39306">: Select User</string>
-    <string id="39307">Enter PIN for user </string>
-    <string id="39308">Could not log in user </string>
-    <string id="39309">Please try again.</string>
-    <string id="39310">unknown</string>
-    <string id="39311">or press No to not sign in.</string>
+    <string id="39300">: Escriba el nombre de usuario plex.tv. O nada para cancelar.</string>
+    <string id="39301">Introduzca la contraseña para el usuario de plex.tv </string>
+    <string id="39302">No pudo iniciar sesión ese usuario </string>
+    <string id="39303">Problemas tratando de contactar a plex.tv. Inténtalo más tarde</string>
+    <string id="39304">Vaya a https://plex.tv/pin e introduzca el código: </string>
+    <string id="39305">No pudo iniciar sesión en plex.tv. Inténtalo más tarde</string>
+    <string id="39306">: Seleccionar Usuario</string>
+    <string id="39307">Ingresar PIN de usuario </string>
+    <string id="39308">No pudo iniciar sesión ese usuario </string>
+    <string id="39309">Por favor, inténtalo de nuevo.</string>
+    <string id="39310">desconocido</string>
+    <string id="39311">o pulse No para no iniciar sesión.</string>
 
     <!-- Plex Librarysync.py -->
-    <string id="39400">Library sync thread has crashed. You should restart Kodi now. Please report this on the forum</string>
-    <string id="39401">Detected Kodi database needs to be recreated for this version. This might take a while. Proceed?</string>
-    <string id="39402"> may not work correctly until the database is reset.</string>
-    <string id="39403">Cancelling the database syncing process. Current Kodi version is unsupported. Please verify your logs for more info.</string>
-    <string id="39404">Startup syncing process failed repeatedly. Try restarting Kodi. Stopping Sync for now.</string>
-    <string id="39405">Plex playlists/nodes refreshed</string>
-    <string id="39406">Plex playlists/nodes refresh failed</string>
-    <string id="39407">Full library sync finished</string>
-    <string id="39408">Sync had to skip some items because they could not be processed. Kodi may be instable now!! Please post your Kodi logs to the Plex forum.</string>
-    <string id="39409">The Plex Server did not like you asking for so much data at once and returned ERRORS. Try lowering the number of sync download threads in the settings. Skipped some items for now.</string>
-    <string id="39410">ERROR in library sync</string>
+    <string id="39400">Hilo de sincronización de biblioteca ha fallado. Debe reiniciar Kodi ahora. Por favor repórtelo en el foro</string>
+    <string id="39401">La base de datos de Kodi detectada necesita ser recreada para esta versión. Esto podría tomar un tiempo. ¿Proceder?</string>
+    <string id="39402"> puede no funcionar correctamente hasta que se reinicie la base de datos.</string>
+    <string id="39403">Cancelando proceso de sincronización de la base de datos. La versión de Kodi actual no es compatible. Por favor, compruebe la bitácora para obtener más información.</string>
+    <string id="39404">Proceso de sincronización inicial falló repetidamente. Pruebe a reiniciar Kodi. Deteniendo la sincronización por ahora.</string>
+    <string id="39405">Listas de reproducción/nodos de Plex actualizados</string>
+    <string id="39406">Error de actualización de listas de reproducción/nodos de Plex</string>
+    <string id="39407">Sincronización completa de la biblioteca terminada</string>
+    <string id="39408">La sincronización tuvo que saltar algunos elementos porque no podían ser procesados. ¡Kodi puede estar inestable ahora!!!! Por favor enviar sus bitácoras de Kodi al foro de Plex.</string>
+    <string id="39409">Al servidor Plex no le gustó la petición de tantos datos a la vez y retornó ERRORES. Intente reducir el número de hilos de descarga de sincronización en la configuración. Se saltaron algunos elementos por ahora.</string>
+    <string id="39410">ERROR en la sincronización de la biblioteca</string>
 
     <!-- Plex videonodes.py -->
     <string id="39500">On Deck</string>
-    <string id="39501">Collections</string>
+    <string id="39501">Sagas</string>
 
     <!-- Plex utils.py -->
-    <string id="39600">Are you sure you want to reset your local Kodi database? A re-sync of the Plex data will take time afterwards.</string>
-    <string id="39601">Could not stop the database from running. Please try again later.</string>
+    <string id="39600">¿Está seguro que desea restablecer su base de datos local de Kodi? Volver a sincronizar los datos de Plex tomará tiempo después.</string>
+    <string id="39601">No se pudo detener la base de datos. Por favor inténtelo más tarde.</string>
     <string id="39602">Remove all cached artwork? (recommended!)</string>
     <string id="39603">Reset all PlexKodiConnect Addon settings? (this is usually NOT recommended and unnecessary!)</string>
 </strings>
