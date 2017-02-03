@@ -378,20 +378,20 @@
     <string id="39013">Ancora non autorizzato per accedere al server Plex </string>
     <string id="39014">Per favore, fai il login a plex.tv.</string>
     <string id="39015">Problemi di connessione al server. Scegliere un altro server?</string>
-    <string id="39016">Disable Plex music library? (It is HIGHLY recommended to use Plex music only with direct paths for large music libraries. Kodi might crash otherwise)</string>
-    <string id="39017">Would you now like to go to the plugin's settings to fine-tune PKC? You will need to RESTART Kodi!</string>
+    <string id="39016">Disabilita libreria musicale di Plex? (Per grandi librerie musicali, è VIVAMENTE raccomandato usare Plex music solo con i percorsi diretti. Kodi, altrimenti, potrebbe crashare)</string>
+    <string id="39017">Vuoi andare nelle impostazioni del plugin per modificare i settaggi di PKC? Avrai bisogno di RIAVVIARE Kodi!</string>
 
-    <string id="39018">[COLOR yellow]Repair local database (force update all content)[/COLOR]</string>
-    <string id="39019">[COLOR red]Partial or full reset of Database and PKC[/COLOR]</string>
-    <string id="39020">[COLOR yellow]Cache all images to Kodi texture cache now[/COLOR]</string>
-    <string id="39021">[COLOR yellow]Sync Emby Theme Media to Kodi[/COLOR]</string>
-    <string id="39022">local</string>
-    <string id="39023">Failed to authenticate. Did you login to plex.tv?</string>
+    <string id="39018">[COLOR yellow]Ripara database locale[/COLOR]</string>
+    <string id="39019">[COLOR red]Reset parziale o completo di database e PKC[/COLOR]</string>
+    <string id="39020">[COLOR yelow]Sposta tutte le immagini nella cache delle texture di Kodi ora[/COLOR]</string>
+    <string id="39021">[COLOR yellow]Sincronizza tema di Plex a Kodi[/COLOR]</string>
+    <string id="39022">locale</string>
+    <string id="39023">Autenticazione fallita. Hai fatto il login su plex.tv?</string>
     
 
-    <string id="39025">Automatically log into plex.tv on startup</string>
-    <string id="39026">Enable constant background sync</string>
-    <string id="39027">Playback Mode</string>
+    <string id="39025">Login automatico su plex.tv all'avvio</string>
+    <string id="39026">Abilita sincronizzazione in background costante</string>
+    <string id="39027">Modalità di riproduzione</string>
     <string id="39028">CAUTION! If you choose "Native" mode , you might loose access to certain Plex features such as: Plex trailers and transcoding options. ALL Plex shares need to use direct paths (e.g. smb://myNAS/mymovie.mkv or \\myNAS/mymovie.mkv)!</string>
     <string id="39029">Network credentials</string>
     <string id="39030">Add network credentials to allow Kodi access to your content? Note: Skipping this step may generate a message during the initial scan of your content if Kodi can't locate your content.</string>
