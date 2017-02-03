@@ -448,55 +448,55 @@
     <string id="39200">Plex Home Benutzer abmelden: </string>
     <string id="39201">Einstellungen</string>
     <string id="39202">Netzwerk-Anmeldeinformationen</string>
-    <string id="39203">Refresh Plex playlists/nodes</string>
-    <string id="39204">Perform manual library sync</string>
-    <string id="39205">Unable to run the sync, the add-on is not connected to a Plex server.</string>
-    <string id="39206">Plex might lock your account if you fail to log in too many times. Proceed anyway?</string>
-    <string id="39207">Resetting PMS connections, please wait</string>
-    <string id="39208">Failed to reset PKC. Try to restart Kodi.</string>
-    <string id="39209">[COLOR yellow]Toggle plex.tv login (sign in or sign out)[/COLOR]</string>
-    <string id="39210">Not yet connected to Plex Server</string>
-    <string id="39211">Watch later</string>
-    <string id="39213">is offline</string>
-    <string id="39214">Even though we signed in to plex.tv, we could not authorize for PMS</string>
-    <string id="39215">Enter your Plex Media Server's IP or URL, Examples are:</string>
+    <string id="39203">Plex Playlisten und Video Nodes aktualisieren</string>
+    <string id="39204">Manuellen Scan der Plex Bibliotheken starten</string>
+    <string id="39205">Plex Bibliothek kann nicht gescannt werden, da keine Verbindung mit einem Plex Server besteht.</string>
+    <string id="39206">Der Plex-Benutzer könnte möglicherweise gesperrt werden, wenn zu viele erfolglose Anmeldungen erfolgen. Trotzdem fortfahren?</string>
+    <string id="39207">PMS Verbindungen werden zurückgesetzt</string>
+    <string id="39208">PKC konnte nicht zurückgesetzt werden. Bitte Kodi neu starten, um das Problem zu beheben.</string>
+    <string id="39209">[COLOR yellow]plex.tv Login wechseln (ein- resp. ausloggen)[/COLOR]</string>
+    <string id="39210">Noch nicht mit Plex Server verbunden</string>
+    <string id="39211">Später ansehen</string>
+    <string id="39213">ist offline</string>
+    <string id="39214">Obwohl mit plex.tv verbunden, konnte keine Verbindung hergestellt werden mit</string>
+    <string id="39215">Plex Media Server IP oder URL eingeben. Zum Beispiel:</string>
 
-    <string id="39217">Does your Plex Media Server support SSL connections? (https instead of http)?</string>
-    <string id="39218">Error contacting PMS</string>
-    <string id="39219">Abort (Yes) or save address anyway (No)?</string>
-    <string id="39220">connected</string>
-    <string id="39221">plex.tv toggle successful</string>
-    <string id="39222">[COLOR yellow]Look for missing fanart on FanartTV now[/COLOR]</string>
-    <string id="39223">Only look for missing fanart or refresh all fanart? The scan will take quite a while and happen in the background.</string>
-    <string id="39224">Refresh all</string>
-    <string id="39225">Missing only</string>    
+    <string id="39217">Unterstützt der Plex Media Server sichere SSL Verbindungen (https anstelle von http)?</string>
+    <string id="39218">Error beim Verbinden mit PMS</string>
+    <string id="39219">Abbrechen (Ja) oder PMS Adresse trotzdem speichern (Nein)?</string>
+    <string id="39220">verbunden</string>
+    <string id="39221">plex.tv Wechsel OK</string>
+    <string id="39222">[COLOR yellow]Jetzt zusätzliche Bilder auf FanartTV suchen[/COLOR]</string>
+    <string id="39223">Nur nach fehlenden Bildern suchen oder sämtliche Bilder erneut herunterladen? Die Suche wird lange dauern und komplett im Hintergrund stattfinden.</string>
+    <string id="39224">Alle aktualisieren</string>
+    <string id="39225">Nur fehlende</string>    
 
 
     <!-- Plex Artwork.py -->
-    <string id="39250">Running the image cache process can take some time. It will happen in the background. Are you sure you want continue?</string>
-    <string id="39251">Reset all existing cache data first?</string>
+    <string id="39250">Alle Plex Bilder in Kodi zwischenzuspeichern kann lange dauern. Es wird im Hintergrund stattfinden. Wirklich fortfahren?</string>
+    <string id="39251">Sollen erst alle bestehenden Bilder im Cache gelöscht werden?</string>
 
     <!-- Plex PlexAPI.py -->
-    <string id="39300">: Enter plex.tv username. Or nothing to cancel.</string>
-    <string id="39301">Enter password for plex.tv user </string>
-    <string id="39302">Could not sign in user </string>
-    <string id="39303">Problems trying to contact plex.tv. Try again later</string>
-    <string id="39304">Go to https://plex.tv/pin and enter the code: </string>
-    <string id="39305">Could not sign in to plex.tv. Try again later</string>
-    <string id="39306">: Select User</string>
-    <string id="39307">Enter PIN for user </string>
-    <string id="39308">Could not log in user </string>
-    <string id="39309">Please try again.</string>
-    <string id="39310">unknown</string>
-    <string id="39311">or press No to not sign in.</string>
+    <string id="39300">: plex.tv Benutzernamen eingeben. Oder nichts, um abzubrechen.</string>
+    <string id="39301">Passwort eingeben für plex.tv Benutzer  </string>
+    <string id="39302">Anmeldung fehlgeschlagen für Benutzer  </string>
+    <string id="39303">Probleme beim Verbinden mit plex.tv. Bitte später erneut versuchen</string>
+    <string id="39304">https://plex.tv/pin besuchen und den folgenden Code eingeben:  </string>
+    <string id="39305">Anmeldung bei plex.tv fehlgeschlagen. Bitte später erneut versuchen</string>
+    <string id="39306">: Benutzer auswählen</string>
+    <string id="39307">PIN eingeben für Benutzer  </string>
+    <string id="39308">Anmeldung fehlgeschlagen für Benutzer  </string>
+    <string id="39309">Bitte erneut versuchen.</string>
+    <string id="39310">unbekannt</string>
+    <string id="39311">oder Nein drücken, um nicht bei plex.tv anzumelden.</string>
 
     <!-- Plex Librarysync.py -->
-    <string id="39400">Library sync thread has crashed. You should restart Kodi now. Please report this on the forum</string>
-    <string id="39401">Detected Kodi database needs to be recreated for this version. This might take a while. Proceed?</string>
-    <string id="39402"> may not work correctly until the database is reset.</string>
-    <string id="39403">Cancelling the database syncing process. Current Kodi version is unsupported. Please verify your logs for more info.</string>
-    <string id="39404">Startup syncing process failed repeatedly. Try restarting Kodi. Stopping Sync for now.</string>
-    <string id="39405">Plex playlists/nodes refreshed</string>
+    <string id="39400">Die Synchronisierung der Plex Bibliotheken ist abgestürzt. Bitte Kodi neu starten. Danke, wenn Sie sich die Zeit nehmen und im Plex Forum vom Absturz berichten</string>
+    <string id="39401">Die Kodi Datenbank muss neu kreiert werden für diese Version. Das kann eine Weile dauern. Fortfahren?</string>
+    <string id="39402">  funktioniert möglicherweise nicht richtig, bis die Kodi Datenbank zurückgesetzt worden ist.</string>
+    <string id="39403">Synchronisierung der Plex Bibliotheken wird abgebrochen. Die momentane Kodi Version wird nicht unterstützt. Für weitere Informationen bitte das Kodi Log konsultieren.</string>
+    <string id="39404">Der Synchronisations-Prozess der Plex Bibliotheken beim Start ist mehrmals fehlgeschlagen. Bitte Kodi neu starten. Synch wird jetzt gestoppt.</string>
+    <string id="39405">Plex Playlisten/Nodes aktualisiert</string>
     <string id="39406">Plex playlists/nodes refresh failed</string>
     <string id="39407">Full library sync finished</string>
     <string id="39408">Sync had to skip some items because they could not be processed. Kodi may be instable now!! Please post your Kodi logs to the Plex forum.</string>
