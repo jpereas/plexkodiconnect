@@ -231,7 +231,7 @@
     
     <string id="30246">Povolit upozornění na následující ve stylu Netflixu</string>
     <string id="30247">  - Sekund před koncem zobrazit upozornění</string>
-    <string id="30248">Show Emby Info dialog on play/select action</string>
+    <string id="30248">Zobrazovat informační dialog Plexu při akci přehrát/vybrat</string>
     <string id="30249">Povolit zprávu o připojení k serveru po spuštění</string><!-- Verified -->
     
     <string id="30251">Naposledy přidaná domácí videa</string><!-- Verified -->
@@ -261,9 +261,9 @@
     
     <!-- contextmenu -->
     <string id="30401">Nastavení Plexu</string>
-    <string id="30402">Clear like for this item</string>
-    <string id="30403">Like this item</string>
-    <string id="30404">Dislike this item</string>
+    <string id="30402">Odstranit 'líbí se mi'</string>
+    <string id="30403">Nastavit 'líbí se mi'</string>
+    <string id="30404">Nastavit 'nelíbí se mi'</string>
     <string id="30405">Přidat do oblíbených Plexu</string>
     <string id="30406">Odstranit z oblíbených Plexu</string>
     <string id="30407">Nastavit vlastní hodnocení skladby</string>
