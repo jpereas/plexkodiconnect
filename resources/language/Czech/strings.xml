@@ -116,7 +116,7 @@
     <string id="30128">Chyba přehrávání</string>
     <string id="30129">Tuto položku nelze přehrát</string>    
     <string id="30130">Zjištěna místní cesta</string>
-    <string id="30131">Your MB3 Server contains local paths.  Please change server paths to UNC or change XBMB3C setting 'Play from Stream' to true.  Path: </string>
+    <string id="30131">Váš Plex server obsahuje místní cesta. Změňte prosím cesty na UNC nebo změňte nastavení  'Přehrát proud'. Cesta: </string>
     <string id="30132">Varování</string>
     <string id="30133">Povoleny ladící záznamy.</string>
     <string id="30134">Toto může mít vliv na výkon.</string>
@@ -384,7 +384,7 @@
     <string id="39018">[COLOR yellow]Opravit místní databázi (vynutit aktualizaci všeho obsahu)[/COLOR]</string>
     <string id="39019">[COLOR red]Částečný nebo plný reset databáze a PKC[/COLOR]</string>
     <string id="39020">[COLOR yellow]Nyní umístit všechny obrázky do texturové mezipaměti Kodi[/COLOR]</string>
-    <string id="39021">[COLOR yellow]Sync Emby Theme Media to Kodi[/COLOR]</string>
+    <string id="39021">[COLOR yellow]Synchronizovat tématickou hudbu do Kodi[/COLOR]</string>
     <string id="39022">místní</string>
     <string id="39023">Nemohu provést autentifikaci. Přihlásili jste se na plex.tv?</string>
     
