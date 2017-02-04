@@ -347,8 +347,8 @@
     <string id="33019">Shromažďuji videoklipy z:</string>
     <string id="33020">Shromažďuji seriály z:</string>
     <string id="33021">Shromažďuji:</string>
-    <string id="33022">Detected the database needs to be recreated for this version of Emby for Kodi. Proceed?</string>
-    <string id="33023">Emby for Kodi may not work correctly until the database is reset.</string>
+    <string id="33022">Zjištěná databáze musí být pro tuto verzi PlexKodiConnect znovu vytvořena. Pokračovat?</string>
+    <string id="33023">PlexKodiConnect nemusí fungovat správně dokud nebude databáze resetována.</string>
     <string id="33024">Ruším synchronizaci databáze. Tato verze Kodi není podporována..</string>
     <string id="33025">dokončeno za:</string>
     <string id="33026">Porovnávám filmy z:</string>
