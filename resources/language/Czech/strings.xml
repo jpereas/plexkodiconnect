@@ -299,13 +299,13 @@
     <string id="30519">Zeptat se na přehrání ukázek</string>
     <string id="30520">Přeskočit potvrzení Plexu o smazání (používejte na vlastní riziko)</string>
     <string id="30521">Poskočit vzad při obnovení přehrávání (v sekundách)</string>
-    <string id="30522">Vynutit překódování h265/HEVC</string>
+    <string id="30522">Vynutit překódování H265/HEVC</string>
     <string id="30523">Nastavení hudebních metadat (není kompatibilní s přímým streamováním)</string>
     <string id="30524">Načíst hodnocení skladeb přímo ze souborů</string>
-    <string id="30525">Convert music song rating to Emby rating</string>
+    <string id="30525">Převést hodnocení hudby na hodnocení Plexu</string>
     <string id="30526">Povolit aktualizaci hodnocení skladeb přímo v souborech</string>
     <string id="30527">Ignorovat speciály v nadcházejících epizodách</string>
-    <string id="30528">Permanent users to add to the session</string>
+    <string id="30528">Stálí uživatelé pro přidání do relace</string>
     <string id="30529">Zpoždění startu (v sekundách)</string>
     <string id="30530">Povolit zprávu o restartu serveru</string>
     <string id="30531">Povolit upozornění na nový obsah</string>
