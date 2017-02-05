@@ -2,14 +2,14 @@
 <strings>
     <!-- Add-on settings -->
     <string id="29999">PlexKodiConnect</string>
-    <string id="30000">Server Address (IP)</string><!-- Verified -->
-    <string id="30002">Preferred playback method</string><!-- Verified -->
-    <string id="30004">Log level</string><!-- Verified -->
+    <string id="30000">Indirizzo Server (IP)</string><!-- Verified -->
+    <string id="30002">Metodo di riproduzione preferito</string><!-- Verified -->
+    <string id="30004">Livello di log</string><!-- Verified -->
     <string id="30005">Username: </string>
     <string id="30006">Password: </string>
-    <string id="30007">Network Username: </string>
-    <string id="30008">Network Password: </string>
-    <string id="30009">Transcode: </string>
+    <string id="30007">Username rete: </string>
+    <string id="30008">Password rete: </string>
+    <string id="30009">Transcodifica: </string>
     <string id="30010">Enable Performance Profiling</string>
     <string id="30011">Local caching system</string>
     <string id="30012">OK</string>
