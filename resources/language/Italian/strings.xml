@@ -39,7 +39,7 @@
     <string id="30043">Elimina</string>
     <string id="30046">Aggiungi il Film a CouchPotato</string>
     
-    <string id="30044">Username o password non corretti</string>
+    <string id="30044">Username o Password non corretti</string>
     <string id="30045">Username non trovato</string>
     
     <string id="30052">Sto eliminando</string>
@@ -82,10 +82,10 @@
     
     <string id="30090">Filtro genere</string>
     <string id="30091">Confema eliminazione</string><!-- Verified -->
-    <string id="30092">Eliminare questo elemento? Questa azione eliminerà i media e i file associati.</string>
+    <string id="30092">Eliminare questo elemento? Questa azione eliminerà il media e i file associati.</string>
     
-    <string id="30093">Segna come visto</string>
-    <string id="30094">Segna come non visto</string>
+    <string id="30093">Segna come Visto</string>
+    <string id="30094">Segna come Non Visto</string>
     <string id="30095">Aggiungi ai Preferiti</string>
     <string id="30096">Rimuovi dai Preferiti</string>
     <string id="30097">Ordina per ...</string>
