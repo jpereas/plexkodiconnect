@@ -10,7 +10,7 @@
     <string id="30007">Username rete: </string>
     <string id="30008">Password rete: </string>
     <string id="30009">Transcodifica: </string>
-    <string id="30010">Enable Performance Profiling</string>
+    <string id="30010">Abilita analisi performance</string>
     <string id="30011">Sistema di caching locale</string>
     <string id="30012">OK</string>
     <string id="30013">Non mostrare mai</string>
@@ -27,17 +27,17 @@
     
     <string id="30030">Porta</string><!-- Verified -->
     <string id="30031">Possiedo questo Plex Media Server</string>
-    <string id="30036">Numero di film recenti da mostrare:</string>    
-    <string id="30037">Numero di episodi TV recenti da mostrare:</string>    
-    <string id="30035">Numero di album musicali recenti da mostrare:</string>    
+    <string id="30036">Numero di Film recenti da mostrare:</string>    
+    <string id="30037">Numero di Episodi TV recenti da mostrare:</string>    
+    <string id="30035">Numero di Album Musicali recenti da mostrare:</string>    
     <string id="30038">Segna come visto all'inizio della riproduzione:</string>    
-    <string id="30039">Imposta il poster della stagione per gli episodi</string>
+    <string id="30039">Imposta il poster della Stagione per gli episodi</string>
 
     <string id="30040">Filtro genere ...</string>
     <string id="30041">Riproduci tutto da qui</string>
     <string id="30042">Aggiorna</string>
     <string id="30043">Elimina</string>
-    <string id="30046">Aggiungere il film a CouchPotato</string>
+    <string id="30046">Aggiungi il Film a CouchPotato</string>
     
     <string id="30044">Username o password non corretti</string>
     <string id="30045">Username non trovato</string>
