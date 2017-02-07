@@ -18,7 +18,7 @@
     <string id="30014">Connessione</string>
     <string id="30015">Rete</string>    
     <string id="30016">Nome del dispositivo</string>
-    <string id="30017">Unauthorized for PMS</string>     
+    <string id="30017">Non autorizzato per PMS</string>     
 
     <string id="30022">Avanzate</string>
     <string id="30024">Username</string><!-- Verified -->
@@ -94,17 +94,17 @@
     <string id="30100">Mostra Persone</string>
 
     <!-- resume dialog -->
-    <string id="30105">Resume</string>
-    <string id="30106">Resume from</string>
-    <string id="30107">Start from beginning</string>
+    <string id="30105">Riprendi</string>
+    <string id="30106">Riprendi da</string>
+    <string id="30107">Parti dall'inizio</string>
     
-    <string id="30110">Interface</string>
-    <string id="30111">Include Stream Info</string>
-    <string id="30112">Include People</string>
-    <string id="30113">Include Overview</string>
-    <string id="30114">Offer delete after playback</string><!-- Verified -->
-    <string id="30115">For Episodes</string><!-- Verified -->
-    <string id="30116">For Movies</string><!-- Verified -->
+    <string id="30110">Interfaccia</string>
+    <string id="30111">Includi informazioni sullo Stream</string>
+    <string id="30112">Includi Persone</string>
+    <string id="30113">Includi Panoramica</string>
+    <string id="30114">Chiedi se eliminare dopo la riproduzione</string><!-- Verified -->
+    <string id="30115">Per Episodi</string><!-- Verified -->
+    <string id="30116">Per Film</string><!-- Verified -->
     <string id="30117">Background Art Refresh Rate (seconds)</string>
     <string id="30118">Add Resume Percent</string>
     <string id="30119">Add Episode Number</string>
