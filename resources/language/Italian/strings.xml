@@ -136,27 +136,27 @@
     <string id="30151">Seleziona l'azione dell'elemento (Richiede riavvio)</string>
     
     <string id="30156">Sort NextUp by Show Title</string>    
-    <string id="30157">Enable Enhanced Images (eg CoverArt)</string><!-- Verified -->
-    <string id="30158">Metadata</string>
+    <string id="30157">Abilita immagini migliorate (es Copertine)</string><!-- Verified -->
+    <string id="30158">Metadati</string>
     <string id="30159">Artwork</string>
-    <string id="30160">Video Quality if Transcoding necessary</string><!-- Verified -->
+    <string id="30160">Qualità Video se la Transcodifica è necessaria</string><!-- Verified -->
     
     <string id="30161">Enable Suggested Loader (Requires Restart)</string>
     <string id="30162">Add Season Number</string>     
     <string id="30163">Flatten Seasons</string>     
     
-    <string id="30164">Direct Play - HTTP</string>     
-    <string id="30165">Direct Play</string>     
-    <string id="30166">Transcoding</string>     
-    <string id="30167">Server Detection Succeeded</string>     
-    <string id="30168">Found server</string>     
-    <string id="30169">Address : </string>     
+    <string id="30164">Riproduzione diretta - HTTP</string>     
+    <string id="30165">Riproduzione diretta</string>     
+    <string id="30166">Transcodifica</string>     
+    <string id="30167">Server rilevato con successo</string>     
+    <string id="30168">Server trovato</string>     
+    <string id="30169">Indirizzo : </string>     
     
     <!-- Video nodes -->
-    <string id="30170">Recently Added TV Shows</string><!-- Verified -->
-    <string id="30171">In Progress TV Shows</string><!-- Verified -->
-    <string id="30172">All Music</string>              
-    <string id="30173">Channels</string><!-- Verified -->
+    <string id="30170">Spettacoli aggiunti recentemente</string><!-- Verified -->
+    <string id="30171">Spettacoli in corso</string><!-- Verified -->
+    <string id="30172">Tutta la Musica</string>              
+    <string id="30173">Canali</string><!-- Verified -->
     <string id="30174">Recently Added</string><!-- Verified -->
     <string id="30175">Recently Added Episodes</string><!-- Verified -->
     <string id="30176">Recently Added Albums</string>  
