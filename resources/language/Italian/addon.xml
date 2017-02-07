@@ -16,7 +16,7 @@
   <extension point="kodi.context.item" library="contextmenu.py">
       <item>
         <label>30401</label>
-              <description>Settings for the Plex Server</description>
+              <description>Impostazioni per il Server Plex</description>
               <visible>[!IsEmpty(ListItem.DBID) + !StringCompare(ListItem.DBID,-1) | !IsEmpty(ListItem.Property(plexid))] + !IsEmpty(Window(10000).Property(plex_context))</visible>
       </item>
   </extension>
