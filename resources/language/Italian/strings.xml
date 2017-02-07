@@ -30,10 +30,10 @@
     <string id="30036">Numero di film recenti da mostrare:</string>    
     <string id="30037">Numero di episodi TV recenti da mostrare:</string>    
     <string id="30035">Numero di album musicali recenti da mostrare:</string>    
-    <string id="30038">Imposta come visto all'inizio della riproduzione:</string>    
+    <string id="30038">Segna come visto all'inizio della riproduzione:</string>    
     <string id="30039">Imposta il poster della stagione per gli episodi</string>
 
-    <string id="30040">Filtra per genere ...</string>
+    <string id="30040">Filtro genere ...</string>
     <string id="30041">Riproduci tutto da qui</string>
     <string id="30042">Aggiorna</string>
     <string id="30043">Elimina</string>
@@ -50,48 +50,48 @@
     <string id="30061">Anno</string>
     <string id="30062">Data di uscita</string>
     <string id="30063">Data creazione</string>
-    <string id="30064">Critic Rating</string>
-    <string id="30065">Community Rating</string>
-    <string id="30066">Play Count</string>
+    <string id="30064">Valutazione critica</string>
+    <string id="30065">Valutazione pubblico</string>
+    <string id="30066">Numero riproduzioni</string>
     <string id="30067">Budget</string>
     <!-- Runtime added as 30226 below -->
     
-    <string id="30068">Sort By</string>
+    <string id="30068">Ordina per</string>
     
-    <string id="30069">None</string>
-    <string id="30070">Action</string>
-    <string id="30071">Adventure</string>
-    <string id="30072">Animation</string>
-    <string id="30073">Crime</string>
-    <string id="30074">Comedy</string>
-    <string id="30075">Documentary</string>
-    <string id="30076">Drama</string>
+    <string id="30069">Nessuno</string>
+    <string id="30070">Azione</string>
+    <string id="30071">Avventura</string>
+    <string id="30072">Animazione</string>
+    <string id="30073">Giallo</string>
+    <string id="30074">Commedia</string>
+    <string id="30075">Documentario</string>
+    <string id="30076">Drammatico</string>
     <string id="30077">Fantasy</string>
-    <string id="30078">Foreign</string>
-    <string id="30079">History</string>
+    <string id="30078">Straniero</string>
+    <string id="30079">Storico</string>
     <string id="30080">Horror</string>
-    <string id="30081">Music</string>
+    <string id="30081">Musica</string>
     <string id="30082">Musical</string>
-    <string id="30083">Mystery</string>
-    <string id="30084">Romance</string>
-    <string id="30085">Science Fiction</string>
-    <string id="30086">Short</string>
+    <string id="30083">Mistero</string>
+    <string id="30084">Romantico</string>
+    <string id="30085">Fantascienza</string>
+    <string id="30086">Corto</string>
     <string id="30087">Suspense</string>
     <string id="30088">Thriller</string>
     <string id="30089">Western</string>
     
-    <string id="30090">Genre Filter</string>
-    <string id="30091">Confirm file deletion</string><!-- Verified -->
-    <string id="30092">Delete this item? This action will delete media and associated data files.</string>
+    <string id="30090">Filtro genere</string>
+    <string id="30091">Confema eliminazione</string><!-- Verified -->
+    <string id="30092">Eliminare questo elemento? Questa azione eliminerà i media e i file associati.</string>
     
-    <string id="30093">Mark Watched</string>
-    <string id="30094">Mark Unwatched</string>
-    <string id="30095">Add to Favorites</string>
-    <string id="30096">Remove from Favorites</string>
-    <string id="30097">Sort By ...</string>
-    <string id="30098">Sort Order Descending</string>
-    <string id="30099">Sort Order Ascending</string>
-    <string id="30100">Show People</string>
+    <string id="30093">Segna come visto</string>
+    <string id="30094">Segna come non visto</string>
+    <string id="30095">Aggiungi ai Preferiti</string>
+    <string id="30096">Rimuovi dai Preferiti</string>
+    <string id="30097">Ordina per ...</string>
+    <string id="30098">Ordinamento decrescente</string>
+    <string id="30099">Ordinamento crescente</string>
+    <string id="30100">Mostra Persone</string>
 
     <!-- resume dialog -->
     <string id="30105">Resume</string>
