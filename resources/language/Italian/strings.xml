@@ -174,7 +174,7 @@
     <string id="30188">Foto</string>                 
     <string id="30189">Film Non Visti</string><!-- Verified -->
     <string id="30190">Generi Film</string>           
-    <string id="30191">Movie Studios</string>          
+    <string id="30191">Studi cinematografici</string>          
     <string id="30192">Attori Film</string>           
     <string id="30193">Episodi Non Visti</string>     
     <string id="30194">TV Genres</string>              
@@ -182,7 +182,7 @@
     <string id="30196">TV Actors</string>              
     <string id="30197">Playlist</string>              
     <string id="30198">Cerca</string>              
-    <string id="30199">Set Views</string>              
+    <string id="30199">Imposta viste</string>              
     
     <string id="30200">Seleziona Utente</string>              
     <string id="30201">Analisi abilitata.</string>              
@@ -207,7 +207,7 @@
     <string id="30220">Recenti </string>
     <string id="30221">In corso </string>
     <string id="30222">NextUp </string>
-    <string id="30223">User Views</string>
+    <string id="30223">Viste utente</string>
     <string id="30224">Dati utilizzo</string>
     <string id="30225">Utilizza ordinamento Kodi</string>
     <string id="30226">Tempo esecuzione</string>
