@@ -6,6 +6,7 @@ import logging
 from urllib import urlencode
 from ntpath import dirname
 from datetime import datetime
+from xbmc import sleep
 
 import artwork
 from utils import tryEncode, tryDecode, settings, window, kodiSQL, \
@@ -21,6 +22,7 @@ import variables as v
 
 log = logging.getLogger("PLEX."+__name__)
 
+MARK_PLAYED_AT = 0.90
 ###############################################################################
 
 
@@ -159,13 +161,13 @@ class Items(object):
         # If the playback was stopped, check whether we need to increment the
         # playcount. PMS won't tell us the playcount via websockets
         if item['state'] in ('stopped', 'ended'):
-            markPlayed = 0.90
             complete = float(item['viewOffset']) / float(item['duration'])
             log.info('Item %s stopped with completion rate %s percent.'
                      'Mark item played at %s percent.'
-                     % (item['ratingKey'], str(complete), markPlayed), 1)
-            if complete >= markPlayed:
+                     % (item['ratingKey'], str(complete), MARK_PLAYED_AT), 1)
+            if complete >= MARK_PLAYED_AT:
                 log.info('Marking as completely watched in Kodi', 1)
+                sleep(500)
                 try:
                     item['viewCount'] += 1
                 except TypeError:
@@ -314,7 +316,8 @@ class Movies(Items):
             # Update the movie entry
             if v.KODIVERSION >= 17:
                 # update new ratings Kodi 17
-                ratingid = self.kodi_db.get_ratingid(movieid)
+                ratingid = self.kodi_db.get_ratingid(movieid,
+                                                     v.KODI_TYPE_MOVIE)
                 self.kodi_db.update_ratings(movieid,
                                             v.KODI_TYPE_MOVIE,
                                             "default",
@@ -322,7 +325,8 @@ class Movies(Items):
                                             votecount,
                                             ratingid)
                 # update new uniqueid Kodi 17
-                uniqueid = self.kodi_db.get_uniqueid(movieid)
+                uniqueid = self.kodi_db.get_uniqueid(movieid,
+                                                     v.KODI_TYPE_MOVIE)
                 self.kodi_db.update_uniqueid(movieid,
                                              v.KODI_TYPE_MOVIE,
                                              imdb,
@@ -512,8 +516,6 @@ class TVShows(Items):
         if not itemid:
             log.error("Cannot parse XML data for TV show")
             return
-        # If the item already exist in the local Kodi DB we'll perform a full item update
-        # If the item doesn't exist, we'll add it to the database
         update_item = True
         force_episodes = False
         plex_dbitem = plex_db.getItem_byId(itemid)
@@ -547,6 +549,7 @@ class TVShows(Items):
         title, sorttitle = API.getTitle()
         plot = API.getPlot()
         rating = API.getAudienceRating()
+        votecount = None
         premieredate = API.getPremiereDate()
         tvdb = API.getProvider('tvdb')
         mpaa = API.getMpaa()
@@ -594,33 +597,6 @@ class TVShows(Items):
         if update_item:
             log.info("UPDATE tvshow itemid: %s - Title: %s"
                      % (itemid, title))
-            if v.KODIVERSION >= 17:
-                # update new ratings Kodi 17
-                ratingid = self.kodi_db.get_ratingid(showid)
-                self.kodi_db.update_ratings(showid,
-                                            v.KODI_TYPE_SHOW,
-                                            "default",
-                                            rating,
-                                            None,  # votecount
-                                            ratingid)
-                # update new uniqueid Kodi 17
-                uniqueid = self.kodi_db.get_uniqueid(showid)
-                self.kodi_db.update_uniqueid(showid,
-                                             v.KODI_TYPE_SHOW,
-                                             tvdb,
-                                             "tvdb",
-                                             uniqueid)
-            # Update the tvshow entry
-            query = ' '.join((
-                
-                "UPDATE tvshow",
-                "SET c00 = ?, c01 = ?, c04 = ?, c05 = ?, c08 = ?, c09 = ?,",
-                    "c12 = ?, c13 = ?, c14 = ?, c15 = ?",
-                "WHERE idShow = ?"
-            ))
-            kodicursor.execute(query, (title, plot, rating, premieredate, genre, title,
-                tvdb, mpaa, studio, sorttitle, showid))
-
             # Add reference is idempotent; the call here updates also fileid
             # and pathid when item is moved or renamed
             plex_db.addReference(itemid,
@@ -630,50 +606,60 @@ class TVShows(Items):
                                  kodi_pathid=pathid,
                                  checksum=checksum,
                                  view_id=viewid)
-        
-        ##### OR ADD THE TVSHOW #####
+            if v.KODIVERSION >= 17:
+                # update new ratings Kodi 17
+                rating_id = self.kodi_db.get_ratingid(showid, v.KODI_TYPE_SHOW)
+                self.kodi_db.update_ratings(showid,
+                                            v.KODI_TYPE_SHOW,
+                                            "default",
+                                            rating,
+                                            votecount,
+                                            rating_id)
+                # update new uniqueid Kodi 17
+                uniqueid = self.kodi_db.get_uniqueid(showid, v.KODI_TYPE_SHOW)
+                self.kodi_db.update_uniqueid(showid,
+                                             v.KODI_TYPE_SHOW,
+                                             tvdb,
+                                             "tvdb",
+                                             uniqueid)
+                # Update the tvshow entry
+                query = '''
+                    UPDATE tvshow
+                    SET c00 = ?, c01 = ?, c04 = ?, c05 = ?, c08 = ?, c09 = ?,
+                        c12 = ?, c13 = ?, c14 = ?, c15 = ?
+                    WHERE idShow = ?
+                '''
+                kodicursor.execute(query, (title, plot, rating_id,
+                                           premieredate, genre, title, tvdb,
+                                           mpaa, studio, sorttitle, showid))
+            else:
+                # Update the tvshow entry
+                query = '''
+                    UPDATE tvshow
+                    SET c00 = ?, c01 = ?, c04 = ?, c05 = ?, c08 = ?, c09 = ?,
+                        c12 = ?, c13 = ?, c14 = ?, c15 = ?
+                    WHERE idShow = ?
+                '''
+                kodicursor.execute(query, (title, plot, rating, premieredate,
+                                           genre, title, tvdb, mpaa, studio,
+                                           sorttitle, showid))
+
+        # OR ADD THE TVSHOW #####
         else:
             log.info("ADD tvshow itemid: %s - Title: %s" % (itemid, title))
-            if v.KODIVERSION >= 17:
-                # add new ratings Kodi 17
-                ratingid = self.kodi_db.create_entry_rating()
-                self.kodi_db.add_ratings(ratingid,
-                                         showid,
-                                         v.KODI_TYPE_SHOW,
-                                         "default",
-                                         rating,
-                                         None)  # votecount
-                # add new uniqueid Kodi 17
-                uniqueid = self.kodi_db.create_entry_uniqueid()
-                self.kodi_db.add_uniqueid(uniqueid,
-                                          showid,
-                                          v.KODI_TYPE_SHOW,
-                                          tvdb,
-                                          "tvdb")
-            query = ' '.join((
-
-                "UPDATE path",
-                "SET strPath = ?, strContent = ?, strScraper = ?, noUpdate = ?",
-                "WHERE idPath = ?"
-            ))
-            kodicursor.execute(query, (toplevelpath, "tvshows", "metadata.local", 1, toppathid))
-
-            # Create the tvshow entry
-            query = (
-                '''
-                INSERT INTO tvshow(
-                    idShow, c00, c01, c04, c05, c08, c09, c12, c13, c14, c15) 
-
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                '''
-            )
-            kodicursor.execute(query, (showid, title, plot, rating, premieredate, genre,
-                title, tvdb, mpaa, studio, sorttitle))
-
+            query = '''
+                UPDATE path
+                SET strPath = ?, strContent = ?, strScraper = ?, noUpdate = ?
+                WHERE idPath = ?
+            '''
+            kodicursor.execute(query, (toplevelpath,
+                                       "tvshows",
+                                       "metadata.local",
+                                       1,
+                                       toppathid))
             # Link the path
-            query = "INSERT INTO tvshowlinkpath(idShow, idPath) values(?, ?)"
+            query = "INSERT INTO tvshowlinkpath(idShow, idPath) values (?, ?)"
             kodicursor.execute(query, (showid, pathid))
-
             # Create the reference in plex table
             plex_db.addReference(itemid,
                                  v.PLEX_TYPE_SHOW,
@@ -682,16 +668,51 @@ class TVShows(Items):
                                  kodi_pathid=pathid,
                                  checksum=checksum,
                                  view_id=viewid)
+            if v.KODIVERSION >= 17:
+                # add new ratings Kodi 17
+                rating_id = self.kodi_db.create_entry_rating()
+                self.kodi_db.add_ratings(rating_id,
+                                         showid,
+                                         v.KODI_TYPE_SHOW,
+                                         "default",
+                                         rating,
+                                         votecount)
+                # add new uniqueid Kodi 17
+                self.kodi_db.add_uniqueid(self.kodi_db.create_entry_uniqueid(),
+                                          showid,
+                                          v.KODI_TYPE_SHOW,
+                                          tvdb,
+                                          "tvdb")
+                # Create the tvshow entry
+                query = '''
+                    INSERT INTO tvshow(
+                        idShow, c00, c01, c04, c05, c08, c09, c12, c13, c14,
+                        c15)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                '''
+                kodicursor.execute(query, (showid, title, plot, rating_id,
+                                           premieredate, genre, title, tvdb,
+                                           mpaa, studio, sorttitle))
+            else:
+                # Create the tvshow entry
+                query = '''
+                    INSERT INTO tvshow(
+                        idShow, c00, c01, c04, c05, c08, c09, c12, c13, c14,
+                        c15)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                '''
+                kodicursor.execute(query, (showid, title, plot, rating,
+                                           premieredate, genre, title, tvdb,
+                                           mpaa, studio, sorttitle))
         # Update the path
-        query = ' '.join((
-
-            "UPDATE path",
-            "SET strPath = ?, strContent = ?, strScraper = ?, noUpdate = ?, ",
-            "idParentPath = ?"
-            "WHERE idPath = ?"
-        ))
+        query = '''
+            UPDATE path
+            SET strPath = ?, strContent = ?, strScraper = ?, noUpdate = ?,
+            idParentPath = ?
+            WHERE idPath = ?
+        '''
         kodicursor.execute(query, (path, None, None, 1, toppathid, pathid))
-        
+
         # Process cast
         people = API.getPeopleList()
         self.kodi_db.addPeople(showid, people, "tvshow")
@@ -706,12 +727,6 @@ class TVShows(Items):
         tags = [viewtag]
         tags.extend(collections)
         self.kodi_db.addTags(showid, tags, "tvshow")
-
-        # if force_episodes:
-        #     # We needed to recreate the show entry. Re-add episodes now.
-        #     log.info("Repairing episodes for showid: %s %s" % (showid, title))
-        #     all_episodes = embyserver.getEpisodesbyShow(itemid)
-        #     self.added_episode(all_episodes['Items'], None)
 
     @CatchExceptions(warnuser=True)
     def add_updateSeason(self, item, viewtag=None, viewid=None):
@@ -809,13 +824,13 @@ class TVShows(Items):
         userdata = API.getUserData()
         playcount = userdata['PlayCount']
         dateplayed = userdata['LastPlayedDate']
+        tvdb = API.getProvider('tvdb')
+        votecount = None
 
         # item details
         peoples = API.getPeople()
         director = API.joinList(peoples['Director'])
         writer = API.joinList(peoples['Writer'])
-        cast = API.joinList(peoples['Cast'])
-        producer = API.joinList(peoples['Producer'])
         title, sorttitle = API.getTitle()
         plot = API.getPlot()
         rating = userdata['Rating']
@@ -916,7 +931,23 @@ class TVShows(Items):
             log.info("UPDATE episode itemid: %s" % (itemid))
             # Update the movie entry
             if v.KODIVERSION >= 17:
-                # Kodi Krypton
+                # update new ratings Kodi 17
+                ratingid = self.kodi_db.get_ratingid(episodeid,
+                                                     v.KODI_TYPE_EPISODE)
+                self.kodi_db.update_ratings(episodeid,
+                                            v.KODI_TYPE_EPISODE,
+                                            "default",
+                                            rating,
+                                            votecount,
+                                            ratingid)
+                # update new uniqueid Kodi 17
+                uniqueid = self.kodi_db.get_uniqueid(episodeid,
+                                                     v.KODI_TYPE_EPISODE)
+                self.kodi_db.update_uniqueid(episodeid,
+                                             v.KODI_TYPE_EPISODE,
+                                             tvdb,
+                                             "tvdb",
+                                             uniqueid)
                 query = '''
                     UPDATE episode
                     SET c00 = ?, c01 = ?, c03 = ?, c04 = ?, c05 = ?, c09 = ?,
@@ -962,7 +993,20 @@ class TVShows(Items):
             log.info("ADD episode itemid: %s - Title: %s" % (itemid, title))
             # Create the episode entry
             if v.KODIVERSION >= 17:
-                # Kodi Krypton
+                # add new ratings Kodi 17
+                rating_id = self.kodi_db.create_entry_rating()
+                self.kodi_db.add_ratings(rating_id,
+                                         episodeid,
+                                         v.KODI_TYPE_EPISODE,
+                                         "default",
+                                         rating,
+                                         votecount)
+                # add new uniqueid Kodi 17
+                self.kodi_db.add_uniqueid(self.kodi_db.create_entry_uniqueid(),
+                                          episodeid,
+                                          v.KODI_TYPE_EPISODE,
+                                          tvdb,
+                                          "tvdb")
                 query = '''
                     INSERT INTO episode( idEpisode, idFile, c00, c01, c03, c04,
                         c05, c09, c10, c12, c13, c14, idShow, c15, c16, c18,
@@ -971,7 +1015,7 @@ class TVShows(Items):
                     ?, ?)
                 '''
                 kodicursor.execute(query, (episodeid, fileid, title, plot,
-                    rating, writer, premieredate, runtime, director, season,
+                    rating_id, writer, premieredate, runtime, director, season,
                     episode, title, showid, airsBeforeSeason,
                     airsBeforeEpisode, playurl, pathid, seasonid,
                     userdata['UserRating']))
@@ -1193,18 +1237,23 @@ class TVShows(Items):
             self.kodi_db.remove_ratings(kodi_id, v.KODI_TYPE_SHOW)
         log.info("Removed tvshow: %s." % kodi_id)
 
-    def removeSeason(self, kodiid):
+    def removeSeason(self, kodi_id):
         kodicursor = self.kodicursor
-        self.artwork.deleteArtwork(kodiid, "season", kodicursor)
-        kodicursor.execute("DELETE FROM seasons WHERE idSeason = ?", (kodiid,))
-        log.info("Removed season: %s." % kodiid)
+        self.artwork.deleteArtwork(kodi_id, "season", kodicursor)
+        kodicursor.execute("DELETE FROM seasons WHERE idSeason = ?",
+                           (kodi_id,))
+        log.info("Removed season: %s." % kodi_id)
 
-    def removeEpisode(self, kodiid, fileid):
+    def removeEpisode(self, kodi_id, fileid):
         kodicursor = self.kodicursor
-        self.artwork.deleteArtwork(kodiid, "episode", kodicursor)
-        kodicursor.execute("DELETE FROM episode WHERE idEpisode = ?", (kodiid,))
+        self.artwork.deleteArtwork(kodi_id, "episode", kodicursor)
+        kodicursor.execute("DELETE FROM episode WHERE idEpisode = ?",
+                           (kodi_id,))
         kodicursor.execute("DELETE FROM files WHERE idFile = ?", (fileid,))
-        log.info("Removed episode: %s." % kodiid)
+        if v.KODIVERSION >= 17:
+            self.kodi_db.remove_uniqueid(kodi_id, v.KODI_TYPE_EPISODE)
+            self.kodi_db.remove_ratings(kodi_id, v.KODI_TYPE_EPISODE)
+        log.info("Removed episode: %s." % kodi_id)
 
 
 class Music(Items):
