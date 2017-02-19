@@ -319,14 +319,14 @@
     <string id="30538">Ri-sincronizzazione completa necessaria</string>
     <string id="30539">Scarica immagini aggiuntive da FanArtTV</string>
     <string id="30540">Scarica collezioni/cofanetti film da FanArtTV</string>
-    <string id="30541">Don't ask to pick a certain stream/quality</string>
-    <string id="30542">Always pick best quality for trailers</string>
-    <string id="30543">Kodi runs on a low-power device (e.g. Raspberry Pi)</string>
+    <string id="30541">Non chiedere di scegliere la qualità dello stream</string>
+    <string id="30542">Scegli sempre qualità migliore per i trailer</string>
+    <string id="30543">Kodi in esecuzione su un dispositivo poco potente (es Raspberry Pi)</string>
     <string id="30544">Artwork</string>
-    <string id="30545">Force transcode pictures</string>
+    <string id="30545">Forza transcodifica immagini</string>
 
     <!-- service add-on -->
-    <string id="33000">Welcome</string>
+    <string id="33000">Benvenuto</string>
     <string id="33001">Error connecting</string>
     <string id="33002">Server is unreachable</string>
     <string id="33003">Server is online</string>
