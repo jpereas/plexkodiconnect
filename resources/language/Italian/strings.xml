@@ -383,18 +383,18 @@
     <string id="39017">Vuoi andare nelle impostazioni del plugin per modificare i settaggi di PKC? Avrai bisogno di RIAVVIARE Kodi!</string>
 
     <string id="39018">[COLOR yellow]Ripara database locale (forza l'aggiornamento dei contenuti)[/COLOR]</string>
-    <string id="39019">[COLOR red]Partial or full reset of Database and PKC[/COLOR]</string>
-    <string id="39020">[COLOR yellow]Cache all images to Kodi texture cache now[/COLOR]</string>
-    <string id="39021">[COLOR yellow]Sync Emby Theme Media to Kodi[/COLOR]</string>
-    <string id="39022">local</string>
-    <string id="39023">Failed to authenticate. Did you login to plex.tv?</string>
+    <string id="39019">[COLOR red]Reset parziale o completo di database e PKC[/COLOR]</string>
+    <string id="39020">[COLOR yelow]Sposta tutte le immagini nella cache delle texture di Kodi[/COLOR]</string>
+    <string id="39021">[COLOR yellow]Sincronizza il tema di Emby su Kodi[/COLOR]</string>
+    <string id="39022">locale</string>
+    <string id="39023">Autenticazione fallita. Hai fatto il login su plex.tv?</string>
     
 
-    <string id="39025">Automatically log into plex.tv on startup</string>
-    <string id="39026">Enable constant background sync</string>
-    <string id="39027">Playback Mode</string>
-    <string id="39028">CAUTION! If you choose "Native" mode , you might loose access to certain Plex features such as: Plex trailers and transcoding options. ALL Plex shares need to use direct paths (e.g. smb://myNAS/mymovie.mkv or \\myNAS/mymovie.mkv)!</string>
-    <string id="39029">Network credentials</string>
+    <string id="39025">Accedi automaticamente a plex.tv all'avvio</string>
+    <string id="39026">Abilita sincronizzazione continua in background</string>
+    <string id="39027">Modalità di riproduzione</string>
+    <string id="39028">ATTENZIONE! Se scegli la modalità "Nativa", potresti perdere alcune funzionalità di Plex, come i trailer Plex e le opzioni di transcodifica. TUTTE le condivisioni di Plex devono utilizzare i percorsi diretti (es. smb://myNAS/mymovie.mkv o \\myNAS/mymovie.mkv)!</string>
+    <string id="39029">Credenziali di rete</string>
     <string id="39030">Add network credentials to allow Kodi access to your content? Note: Skipping this step may generate a message during the initial scan of your content if Kodi can't locate your content.</string>
     <string id="39031">Kodi can't locate file: </string>
     <string id="39032">Please verify the path. You may need to verify your network credentials in the add-on settings or use different Plex paths. Stop syncing?</string>
