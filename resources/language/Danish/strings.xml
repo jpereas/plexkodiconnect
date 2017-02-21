@@ -42,32 +42,32 @@
     <string id="30044">Forkert brugernavn/adgangskode</string>
     <string id="30045">Brugernavn blev ikke fundet</string>
     
-    <string id="30052">Deleting</string>
-    <string id="30053">Waiting for server to delete</string>
+    <string id="30052">Sletter</string>
+    <string id="30053">Venter på at serveren sletter</string>
     
-    <string id="30059">Server Default</string>
-    <string id="30060">Title</string>
-    <string id="30061">Year</string>
-    <string id="30062">Premiere Date</string>
-    <string id="30063">Date Created</string>
-    <string id="30064">Critic Rating</string>
-    <string id="30065">Community Rating</string>
-    <string id="30066">Play Count</string>
+    <string id="30059">Server standard</string>
+    <string id="30060">Titel:</string>
+    <string id="30061">År</string>
+    <string id="30062">Premiere dato</string>
+    <string id="30063">Oprettelsesdato</string>
+    <string id="30064">Kritiker Rating</string>
+    <string id="30065">Fællesskabs Rating</string>
+    <string id="30066">Antal afspilninger</string>
     <string id="30067">Budget</string>
     <!-- Runtime added as 30226 below -->
     
-    <string id="30068">Sort By</string>
+    <string id="30068">Sortér efter</string>
     
-    <string id="30069">None</string>
+    <string id="30069">Ingen</string>
     <string id="30070">Action</string>
-    <string id="30071">Adventure</string>
+    <string id="30071">Eventyr</string>
     <string id="30072">Animation</string>
-    <string id="30073">Crime</string>
-    <string id="30074">Comedy</string>
-    <string id="30075">Documentary</string>
+    <string id="30073">Krimi</string>
+    <string id="30074">Komedie</string>
+    <string id="30075">Dokumentar</string>
     <string id="30076">Drama</string>
-    <string id="30077">Fantasy</string>
-    <string id="30078">Foreign</string>
+    <string id="30077">Fantasi</string>
+    <string id="30078">Udenlandske</string>
     <string id="30079">History</string>
     <string id="30080">Horror</string>
     <string id="30081">Music</string>
