@@ -512,5 +512,5 @@
     <string id="39600">Vil du nulstille dine lokale Kodi database? Synkroniser Plex data igen vil tage tid bagefter.</string>
     <string id="39601">Kunne ikke stoppe den kørende database. Prøv igen senere.</string>
     <string id="39602">Fjern alle cachelagrede illustrationer? (anbefales!)</string>
-    <string id="39603">Reset all PlexKodiConnect Addon settings? (this is usually NOT recommended and unnecessary!)</string>
+    <string id="39603">Nulstil alle indstillinger for PlexKodiConnect Addon? (dette er normalt ikke anbefalet og unødvendigt!)</string>
 </strings>
