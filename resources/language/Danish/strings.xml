@@ -138,15 +138,15 @@
     <string id="30156">Sorter NextUp efter titel visning</string>    
     <string id="30157">Aktiver forbedret billeder (fx CoverArt)</string><!-- Verified -->
     <string id="30158">Metadata</string>
-    <string id="30159">Artwork</string>
-    <string id="30160">Video Quality if Transcoding necessary</string><!-- Verified -->
+    <string id="30159">Illustrationer</string>
+    <string id="30160">Video kvalitet hvis Transcoding nødvendigt</string><!-- Verified -->
     
-    <string id="30161">Enable Suggested Loader (Requires Restart)</string>
-    <string id="30162">Add Season Number</string>     
-    <string id="30163">Flatten Seasons</string>     
+    <string id="30161">Aktivere baggrundsbillede (kræver genstart)</string>
+    <string id="30162">Tilføje sæson nummer</string>     
+    <string id="30163">Flade sæsoner</string>     
     
-    <string id="30164">Direct Play - HTTP</string>     
-    <string id="30165">Direct Play</string>     
+    <string id="30164">Direkte afspilning - HTTP</string>     
+    <string id="30165">Direkte afspilning</string>     
     <string id="30166">Transcoding</string>     
     <string id="30167">Server Detection Succeeded</string>     
     <string id="30168">Found server</string>     
