@@ -263,9 +263,9 @@
     <string id="30401">Plex indstillinger</string>
     <string id="30402">Slet Like for dette emne</string>
     <string id="30403">Like dette emne</string>
-    <string id="30404">Dislike this item</string>
-    <string id="30405">Add to Plex favorites</string>
-    <string id="30406">Remove from Plex favorites</string>
+    <string id="30404">Dislike dette emne</string>
+    <string id="30405">Tilføj til Plex favoritter</string>
+    <string id="30406">Fjern fra Plex favoritter</string>
     <string id="30407">Set custom song rating</string>
     <string id="30408">Plex addon settings</string>
     <string id="30409">Delete item from server</string>
