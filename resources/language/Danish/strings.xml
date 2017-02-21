@@ -116,27 +116,27 @@
     <string id="30128">Afspilnings fejl</string>
     <string id="30129">Emnet kan ikke afspilles</string>    
     <string id="30130">Lokale sti opdaget</string>
-    <string id="30131">Your MB3 Server contains local paths.  Please change server paths to UNC or change XBMB3C setting 'Play from Stream' to true.  Path: </string>
-    <string id="30132">Warning</string>
-    <string id="30133">Debug logging enabled.</string>
-    <string id="30134">This will affect performance.</string>
-    <string id="30135">Error</string>
-    <string id="30136">Monitoring service is not running</string>
-    <string id="30137">If you have just installed please restart Kodi</string>
-    <string id="30138">Search</string>
+    <string id="30131">MB3 serveren indeholder lokale stier.  Venligst ændre server stier til UNC- eller Skift XBMB3C indstilling 'afspil fra Stream' til true.  Sti: </string>
+    <string id="30132">Advarsel</string>
+    <string id="30133">Debug logføring aktiveret.</string>
+    <string id="30134">Dette vil påvirke ydeevnen.</string>
+    <string id="30135">Fejl</string>
+    <string id="30136">Overvågning service kører ikke</string>
+    <string id="30137">Hvis du lige har installeret genstart Kodi</string>
+    <string id="30138">Søg</string>
     
-    <string id="30139">Enable Theme Music (Requires Restart)</string>
-    <string id="30140"> - Loop Theme Music</string>
-    <string id="30141">Enable Background Image (Requires Restart)</string>
+    <string id="30139">Aktiver temamusik (kræver genstart)</string>
+    <string id="30140"> -Loop temamusik</string>
+    <string id="30141">Aktivere baggrundsbillede (kræver genstart)</string>
     <string id="30142">Services</string>
 
-    <string id="30143">Always transcode if video bitrate is above</string>
+    <string id="30143">Altid transcode hvis video bitrate er over</string>
     
-    <string id="30150">Skin does not support setting views</string>
-    <string id="30151">Select item action (Requires Restart)</string>
+    <string id="30150">Skin understøtter ikke visning indstillinger</string>
+    <string id="30151">Vælg handling (kræver genstart)</string>
     
-    <string id="30156">Sort NextUp by Show Title</string>    
-    <string id="30157">Enable Enhanced Images (eg CoverArt)</string><!-- Verified -->
+    <string id="30156">Sorter NextUp efter titel visning</string>    
+    <string id="30157">Aktiver forbedret billeder (fx CoverArt)</string><!-- Verified -->
     <string id="30158">Metadata</string>
     <string id="30159">Artwork</string>
     <string id="30160">Video Quality if Transcoding necessary</string><!-- Verified -->
