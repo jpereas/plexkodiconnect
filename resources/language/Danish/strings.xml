@@ -229,8 +229,8 @@
     <string id="30243">Aktivere HTTPS</string><!-- Verified -->
     <string id="30245">Vælg Transcoding Codecs</string>
     
-    <string id="30246">Enable Netflix style next up notification</string>
-    <string id="30247">  - The number of seconds before the end to show the notification</string>
+    <string id="30246">Aktivere Netflix style notifikationer</string>
+    <string id="30247">  -Antallet af sekunder før slutningen til at vise notifiaktioner</string>
     <string id="30248">Show Emby Info dialog on play/select action</string>
     <string id="30249">Enable server connection message on startup</string><!-- Verified -->
     
