@@ -46,33 +46,33 @@
     <string id="30053">Waiting for server to delete</string>
     
     <string id="30059">Server par défaut</string>
-    <string id="30060">Title</string>
-    <string id="30061">Year</string>
+    <string id="30060">Titre</string>
+    <string id="30061">Année</string>
     <string id="30062">Premiere Date</string>
-    <string id="30063">Date Created</string>
+    <string id="30063">Date de Création</string>
     <string id="30064">Critic Rating</string>
     <string id="30065">Community Rating</string>
     <string id="30066">Play Count</string>
     <string id="30067">Budget</string>
     <!-- Runtime added as 30226 below -->
     
-    <string id="30068">Sort By</string>
+    <string id="30068">Trier par</string>
     
-    <string id="30069">None</string>
+    <string id="30069">Aucun</string>
     <string id="30070">Action</string>
-    <string id="30071">Adventure</string>
+    <string id="30071">Aventure</string>
     <string id="30072">Animation</string>
-    <string id="30073">Crime</string>
-    <string id="30074">Comedy</string>
-    <string id="30075">Documentary</string>
+    <string id="30073">Meurtre</string>
+    <string id="30074">Comédie</string>
+    <string id="30075">Documentaire</string>
     <string id="30076">Drama</string>
-    <string id="30077">Fantasy</string>
-    <string id="30078">Foreign</string>
-    <string id="30079">History</string>
-    <string id="30080">Horror</string>
-    <string id="30081">Music</string>
-    <string id="30082">Musical</string>
-    <string id="30083">Mystery</string>
+    <string id="30077">Fantastique</string>
+    <string id="30078">Étranger</string>
+    <string id="30079">Histoire</string>
+    <string id="30080">Horreur</string>
+    <string id="30081">Musique</string>
+    <string id="30082">Musicale</string>
+    <string id="30083">Mystère</string>
     <string id="30084">Romance</string>
     <string id="30085">Science Fiction</string>
     <string id="30086">Short</string>
@@ -80,15 +80,15 @@
     <string id="30088">Thriller</string>
     <string id="30089">Western</string>
     
-    <string id="30090">Genre Filter</string>
+    <string id="30090">Filtre Genre</string>
     <string id="30091">Confirm file deletion</string><!-- Verified -->
     <string id="30092">Delete this item? This action will delete media and associated data files.</string>
     
-    <string id="30093">Mark Watched</string>
-    <string id="30094">Mark Unwatched</string>
-    <string id="30095">Add to Favorites</string>
-    <string id="30096">Remove from Favorites</string>
-    <string id="30097">Sort By ...</string>
+    <string id="30093">Marquer Vu</string>
+    <string id="30094">Marquer Non-Vu</string>
+    <string id="30095">Ajouter aux Favoris</string>
+    <string id="30096">Enlever des Favoris</string>
+    <string id="30097">Trier Par ...</string>
     <string id="30098">Sort Order Descending</string>
     <string id="30099">Sort Order Ascending</string>
     <string id="30100">Show People</string>
