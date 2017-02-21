@@ -489,28 +489,28 @@
     <string id="39308">Kunne ikke logge brugeren på </string>
     <string id="39309">Forsøg venligst igen.</string>
     <string id="39310">Ukendt</string>
-    <string id="39311">or press No to not sign in.</string>
+    <string id="39311">eller tryk på Nej for ikke at logge på.</string>
 
     <!-- Plex Librarysync.py -->
-    <string id="39400">Library sync thread has crashed. You should restart Kodi now. Please report this on the forum</string>
-    <string id="39401">Detected Kodi database needs to be recreated for this version. This might take a while. Proceed?</string>
-    <string id="39402"> may not work correctly until the database is reset.</string>
-    <string id="39403">Cancelling the database syncing process. Current Kodi version is unsupported. Please verify your logs for more info.</string>
-    <string id="39404">Startup syncing process failed repeatedly. Try restarting Kodi. Stopping Sync for now.</string>
-    <string id="39405">Plex playlists/nodes refreshed</string>
-    <string id="39406">Plex playlists/nodes refresh failed</string>
-    <string id="39407">Full library sync finished</string>
-    <string id="39408">Sync had to skip some items because they could not be processed. Kodi may be instable now!! Please post your Kodi logs to the Plex forum.</string>
-    <string id="39409">The Plex Server did not like you asking for so much data at once and returned ERRORS. Try lowering the number of sync download threads in the settings. Skipped some items for now.</string>
-    <string id="39410">ERROR in library sync</string>
+    <string id="39400">Biblioteket sync tråd er gået ned. Du skal genstarte Kodi nu. Bedes du rapportere det på forum</string>
+    <string id="39401">Registreret database skal genskabes i denne version af Emby for Kodi. Vil du fortsætte?</string>
+    <string id="39402"> kan ikke fungerer korrekt indtil databasen bliver nulstillet.</string>
+    <string id="39403">Annullering af databasen synkronisering proces. Nuværende Kodi version understøttes ikke. Kontroller dine logfiler for mere info.</string>
+    <string id="39404">Start synkronisering processen mislykkedes gentagne gange. Prøv at genstarte Kodi. Stop synkronisering for nu.</string>
+    <string id="39405">Plex afspilningslister/noder opdateret</string>
+    <string id="39406">Plex afspilningslister/noder opdatering mislykkedes</string>
+    <string id="39407">Fuld bibliotek synkronisering færdig!</string>
+    <string id="39408">Sync måtte springe nogle emner, fordi de ikke kunne behandles. Kodi kan være ustabilt nu!! Bedes du sende dine Kodi logfiler til Plex forumet.</string>
+    <string id="39409">Plex-serveren kunne ikke lide du beder om så meget data på én gang og returnerede fejl. Prøv at sænke antallet af sync download tråde i indstillingerne. Spring nogle emner over for nu.</string>
+    <string id="39410">FEJL i bibliotek synkronisering</string>
 
     <!-- Plex videonodes.py -->
-    <string id="39500">On Deck</string>
-    <string id="39501">Collections</string>
+    <string id="39500">Igangværende</string>
+    <string id="39501">Samlinger</string>
 
     <!-- Plex utils.py -->
-    <string id="39600">Are you sure you want to reset your local Kodi database? A re-sync of the Plex data will take time afterwards.</string>
-    <string id="39601">Could not stop the database from running. Please try again later.</string>
-    <string id="39602">Remove all cached artwork? (recommended!)</string>
+    <string id="39600">Vil du nulstille dine lokale Kodi database? Synkroniser Plex data igen vil tage tid bagefter.</string>
+    <string id="39601">Kunne ikke stoppe den kørende database. Prøv igen senere.</string>
+    <string id="39602">Fjern alle cachelagrede illustrationer? (anbefales!)</string>
     <string id="39603">Reset all PlexKodiConnect Addon settings? (this is usually NOT recommended and unnecessary!)</string>
 </strings>
