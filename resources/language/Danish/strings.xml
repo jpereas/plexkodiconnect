@@ -199,8 +199,8 @@
     <string id="30210">Kunstner:</string>
     <string id="30211">Musikgenrer</string>
     
-    <string id="30212">Enable Theme Videos (Requires Restart)</string>
-    <string id="30213"> - Loop Theme Videos</string>
+    <string id="30212">Aktiverer tema videoer (kræver genstart)</string>
+    <string id="30213"> -Loop tema videoer</string>
     
     <string id="30216">AutoPlay remaining episodes in a season</string> 
     <string id="30218">Compress Artwork</string>
