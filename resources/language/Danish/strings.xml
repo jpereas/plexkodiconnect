@@ -246,23 +246,23 @@
     
     <!-- Default views -->
     <string id="30300">Aktiv</string>              
-    <string id="30301">Clear Settings</string>              
-    <string id="30302">Movies</string>              
+    <string id="30301">Nulstil indstillinger</string>              
+    <string id="30302">Film</string>              
     <string id="30303">BoxSets</string>              
-    <string id="30304">Trailers</string>              
-    <string id="30305">Series</string>              
-    <string id="30306">Seasons</string>              
-    <string id="30307">Episodes</string>              
-    <string id="30308">Music Artists</string>              
-    <string id="30309">Music Albums</string>              
-    <string id="30310">Music Videos</string>              
-    <string id="30311">Music Tracks</string>
-    <string id="30312">Channels</string>  
+    <string id="30304">Trailer</string>              
+    <string id="30305">Serier</string>              
+    <string id="30306">Sæson</string>              
+    <string id="30307">Episoder</string>              
+    <string id="30308">Musik kunstnere</string>              
+    <string id="30309">Musik Albums</string>              
+    <string id="30310">Musikvideoer</string>              
+    <string id="30311">Musiknumre</string>
+    <string id="30312">Kanaler</string>  
     
     <!-- contextmenu -->
-    <string id="30401">Plex options</string>
-    <string id="30402">Clear like for this item</string>
-    <string id="30403">Like this item</string>
+    <string id="30401">Plex indstillinger</string>
+    <string id="30402">Slet Like for dette emne</string>
+    <string id="30403">Like dette emne</string>
     <string id="30404">Dislike this item</string>
     <string id="30405">Add to Plex favorites</string>
     <string id="30406">Remove from Plex favorites</string>
