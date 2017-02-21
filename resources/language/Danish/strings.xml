@@ -358,27 +358,27 @@
     <string id="33029">Sammenligne TV Shows fra:</string>
     <string id="33030">Sammenligne episoder fra:</string>
     <string id="33031">Sammenligne:</string>
-    <string id="33032">Failed to generate a new device Id. See your logs for more information.</string>
-    <string id="33033">Kodi will now restart to apply the changes.</string>
-    <string id="33041">Delete file(s) from Plex Server? This will also delete the file(s) from disk!</string>
+    <string id="33032">Det lykkedes ikke at generere en nyt enheds Id. Se dine logfiler for flere oplysninger.</string>
+    <string id="33033">Kodi vil nu genstarte for at gemme ændringer.</string>
+    <string id="33041">Slette fil(er) fra Plex Server? Dette vil også slette filen/filerne fra disken!</string>
 
     <!-- New to Plex -->
-    <string id="39000">- Number of trailers to play before a movie</string>
-    <string id="39001">Boost audio when transcoding</string>
-    <string id="39002">Burnt-in subtitle size</string>
-    <string id="39003">Limit download sync threads (rec. for rpi: 1)</string>
-    <string id="39004">Enable Plex Companion (restart Kodi!)</string>
-    <string id="39005">Plex Companion Port (change only if needed)</string>
-    <string id="39006">Activate Plex Companion debug log</string>
-    <string id="39007">Activate Plex Companion GDM debug log</string>
-    <string id="39008">Plex Companion: Allows flinging media to Kodi through Plex</string>
-    <string id="39009">Could not login to plex.tv. Please try signing in again.</string>
-    <string id="39010">Problems connecting to plex.tv. Network or internet issue?</string>
-    <string id="39011">Could not find any Plex server in the network. Aborting...</string>
-    <string id="39012">Choose your Plex server</string>
-    <string id="39013">Not yet authorized for Plex server </string>
-    <string id="39014">Please sign in to plex.tv.</string>
-    <string id="39015">Problems connecting to server. Pick another server?</string>
+    <string id="39000">-Antallet af trailere før afspilning af en film</string>
+    <string id="39001">Øge lyd når transcoding</string>
+    <string id="39002">Undertekst størrelse</string>
+    <string id="39003">Begrænse download sync tråde (rec. for rpi: 1)</string>
+    <string id="39004">Aktivere Plex ledsager (genstart Kodi!)</string>
+    <string id="39005">Plex ledsager Port (ændring kun hvis nødvendigt)</string>
+    <string id="39006">Aktivere Plex ledsager fejlfindingslogfil</string>
+    <string id="39007">Aktivere Plex ledsager GDM fejlfindingslogfil</string>
+    <string id="39008">Plex ledsager: Tillad skift af medier til Kodi gennem Plex</string>
+    <string id="39009">Kunne ikke logge ind på plex.tv. Prøv at logge igen.</string>
+    <string id="39010">Problemer med at forbinde til plex.tv. Netværk eller internet problem?</string>
+    <string id="39011">Kunne ikke finde nogen Plex serveren i netværket. Afbryder...</string>
+    <string id="39012">Vælg din Plex server</string>
+    <string id="39013">Endnu ikke godkendt til Plex server </string>
+    <string id="39014">Venligst log på plex.tv.</string>
+    <string id="39015">Problemer med at forbinde til serveren. Vælg en anden server?</string>
     <string id="39016">Disable Plex music library? (It is HIGHLY recommended to use Plex music only with direct paths for large music libraries. Kodi might crash otherwise)</string>
     <string id="39017">Would you now like to go to the plugin's settings to fine-tune PKC? You will need to RESTART Kodi!</string>
 
