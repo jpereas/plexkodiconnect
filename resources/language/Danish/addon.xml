@@ -9,25 +9,25 @@
   </requires>
   <extension    point="xbmc.python.pluginsource"
                 library="default.py">
-        <provides>video audio image</provides>
+        <provides>video lyd billede</provides>
   </extension>
   <extension point="xbmc.service" library="service.py" start="login">
   </extension>
   <extension point="kodi.context.item" library="contextmenu.py">
       <item>
         <label>30401</label>
-              <description>Settings for the Plex Server</description>
-              <visible>[!IsEmpty(ListItem.DBID) + !StringCompare(ListItem.DBID,-1) | !IsEmpty(ListItem.Property(plexid))] + !IsEmpty(Window(10000).Property(plex_context))</visible>
+              <description>Indstillinger for Plex-Server</description>
+              <visible>[! IsEmpty(ListItem.DBID) +! StringCompare(ListItem.DBID,-1) |! IsEmpty(ListItem.Property(plexid))] +! IsEmpty(Window(10000). Property(plex_context))</visible>
       </item>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-    <language>en</language>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-    <forum>https://forums.plex.tv</forum>
+    <platform>alle</platform>
+    <language>da</language>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, juni 1991</license>
+    <forum>https://forums.Plex.tv</forum>
     <website>https://github.com/croneter/PlexKodiConnect</website>
     <source>https://github.com/croneter/PlexKodiConnect</source>
-    <summary lang="en">Native Integration of Plex into Kodi</summary>
-    <description lang="en">Connect Kodi to your Plex Media Server. This plugin assumes that you manage all your videos with Plex (and none with Kodi). You might lose data already stored in the Kodi video and music databases (as this plugin directly changes them). Use at your own risk!</description>
+    <summary lang="en">Indbygget Integration af Plex i Kodi</summary>
+    <description lang="en">Tilslut Kodi til din Plex Media Server. Dette plugin forudsætter, at du styre alle dine videoer med Plex (og ikke med Kodi). Du kan miste data som allerede er gemt i Kodi video og musik-databaser (dette plugin ændrer direkte i dem). Brug på egen risiko!</description>
   </extension>
 </addon>
