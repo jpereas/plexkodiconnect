@@ -231,21 +231,21 @@
     
     <string id="30246">Aktivere Netflix style notifikationer</string>
     <string id="30247">  -Antallet af sekunder før slutningen til at vise notifiaktioner</string>
-    <string id="30248">Show Emby Info dialog on play/select action</string>
-    <string id="30249">Enable server connection message on startup</string><!-- Verified -->
+    <string id="30248">Vis dialogboks for Emby Info på play/Vælg handling</string>
+    <string id="30249">Aktivere server forbindelse besked ved opstart</string><!-- Verified -->
     
-    <string id="30251">Recently added Home Videos</string><!-- Verified -->
-    <string id="30252">Recently added Photos</string><!-- Verified -->
-    <string id="30253">Favourite Home Videos</string><!-- Verified -->
-    <string id="30254">Favourite Photos</string><!-- Verified -->
-    <string id="30255">Favourite Albums</string>
+    <string id="30251">Senest tilføjet hjemmevideoer</string><!-- Verified -->
+    <string id="30252">Senest tilføjet billeder</string><!-- Verified -->
+    <string id="30253">Favorit hjemmevideoer</string><!-- Verified -->
+    <string id="30254">Favorit fotos</string><!-- Verified -->
+    <string id="30255">Favorit Albums</string>
     
-    <string id="30256">Recently added Music videos</string><!-- Verified -->
-    <string id="30257">In progress Music videos</string><!-- Verified -->
-    <string id="30258">Unwatched Music videos</string><!-- Verified -->
+    <string id="30256">Senest tilføjet musik videoer</string><!-- Verified -->
+    <string id="30257">Igangværende musikvideoer</string><!-- Verified -->
+    <string id="30258">Usete musikvideoer</string><!-- Verified -->
     
     <!-- Default views -->
-    <string id="30300">Active</string>              
+    <string id="30300">Aktiv</string>              
     <string id="30301">Clear Settings</string>              
     <string id="30302">Movies</string>              
     <string id="30303">BoxSets</string>              
