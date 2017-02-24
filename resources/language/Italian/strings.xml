@@ -457,7 +457,7 @@
     <string id="39208">Failed to reset PKC. Try to restart Kodi.</string>
     <string id="39209">[COLOR yellow]Toggle plex.tv login (sign in or sign out)[/COLOR]</string>
     <string id="39210">Not yet connected to Plex Server</string>
-    <string id="39211">Watch later</string>
+    <string id="39211">Guarda più tardi</string>
     <string id="39213">is offline</string>
     <string id="39214">Even though we signed in to plex.tv, we could not authorize for PMS</string>
     <string id="39215">Enter your Plex Media Server's IP or URL, Examples are:</string>
