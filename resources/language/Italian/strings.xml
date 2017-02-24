@@ -418,7 +418,7 @@
     <string id="39050">[COLOR yellow]Choose Plex Server from a list[/COLOR]</string>
     <string id="39051">Wait before sync new/changed PMS item [s]</string>
     <string id="39052">Background Sync</string>
-    <string id="39053">Do a full library sync every x minutes</string>
+    <string id="39053">Eseguire una sincronizzazione completa biblioteca ogni x minuti</string>
     <string id="39054">remote</string>
     <string id="39055">Searching for Plex Server</string>
     <string id="39056">Used by Sync and when attempting to Direct Play</string>
@@ -447,7 +447,7 @@
 
     <!-- Plex Entrypoint.py -->
     <string id="39200">Log-out Plex Home User </string>
-    <string id="39201">Settings</string>
+    <string id="39201">Impostazioni</string>
     <string id="39202">Network credentials</string>
     <string id="39203">Refresh Plex playlists/nodes</string>
     <string id="39204">Perform manual library sync</string>
@@ -487,8 +487,8 @@
     <string id="39306">: Select User</string>
     <string id="39307">Enter PIN for user </string>
     <string id="39308">Could not log in user </string>
-    <string id="39309">Please try again.</string>
-    <string id="39310">unknown</string>
+    <string id="39309">Riprova di nuovo.</string>
+    <string id="39310">sconosciuto</string>
     <string id="39311">or press No to not sign in.</string>
 
     <!-- Plex Librarysync.py -->
