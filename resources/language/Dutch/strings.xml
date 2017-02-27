@@ -3,15 +3,15 @@
     <!-- Add-on settings -->
     <string id="29999">PlexKodiConnect</string>
     <string id="30000">Serveradres (IP)</string><!-- Verified -->
-    <string id="30002">Preferred playback method</string><!-- Verified -->
-    <string id="30004">Log level</string><!-- Verified -->
+    <string id="30002">Voorkeurs methode voor afspelen</string><!-- Verified -->
+    <string id="30004">Logniveau</string><!-- Verified -->
     <string id="30005">Gebruikersnaam: </string>
     <string id="30006">Wachtwoord: </string>
     <string id="30007">Netwerk gebruikersnaam: </string>
     <string id="30008">Netwerk wachtwoord: </string>
     <string id="30009">Transcode: </string>
     <string id="30010">Enable Performance Profiling</string>
-    <string id="30011">Local caching system</string>
+    <string id="30011">Lokaal caching systeem</string>
     <string id="30012">OK</string>
     <string id="30013">Nooit weergeven</string>
 
@@ -31,25 +31,25 @@
     <string id="30037">Aantal recente TV-afleveringen tonen:</string>    
     <string id="30035">Aantal recente muziekalbums tonen:</string>    
     <string id="30038">Markeer als gezien aan begin van afspelen:</string>    
-    <string id="30039">Set Season poster for episodes</string>
+    <string id="30039">Toon poster van seizoen bij afleveringen</string>
 
-    <string id="30040">Genre Filter ...</string>
-    <string id="30041">Play All from Here</string>
-    <string id="30042">Refresh</string>
-    <string id="30043">Delete</string>
-    <string id="30046">Add Movie to CouchPotato</string>
+    <string id="30040">Genre Filter...</string>
+    <string id="30041">Speel alles vanaf hier</string>
+    <string id="30042">Vernieuwen</string>
+    <string id="30043">Verwijderen</string>
+    <string id="30046">Film toevoegen aan CouchPotato</string>
     
-    <string id="30044">Incorrect Username/Password</string>
-    <string id="30045">Username not found</string>
+    <string id="30044">Onjuiste gebruikersnaam/wachtwoord</string>
+    <string id="30045">Gebruikersnaam niet gevonden</string>
     
-    <string id="30052">Deleting</string>
-    <string id="30053">Waiting for server to delete</string>
+    <string id="30052">Verwijderen</string>
+    <string id="30053">Wachten op het verwijderen op de server</string>
     
-    <string id="30059">Server Default</string>
-    <string id="30060">Title</string>
-    <string id="30061">Year</string>
-    <string id="30062">Premiere Date</string>
-    <string id="30063">Date Created</string>
+    <string id="30059">Standaardwaarde van de server</string>
+    <string id="30060">Titel</string>
+    <string id="30061">Jaar</string>
+    <string id="30062">Datum Première</string>
+    <string id="30063">Datum gemaakt</string>
     <string id="30064">Critic Rating</string>
     <string id="30065">Community Rating</string>
     <string id="30066">Play Count</string>
