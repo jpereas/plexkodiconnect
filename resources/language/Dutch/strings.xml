@@ -123,86 +123,86 @@
     <string id="30135">Fout</string>
     <string id="30136">Bewakingsservice draait niet</string>
     <string id="30137">Als je net geïnstalleerd hebt, start Kodi opnieuw</string>
-    <string id="30138">Search</string>
+    <string id="30138">Zoek</string>
     
-    <string id="30139">Enable Theme Music (Requires Restart)</string>
-    <string id="30140"> - Loop Theme Music</string>
-    <string id="30141">Enable Background Image (Requires Restart)</string>
-    <string id="30142">Services</string>
+    <string id="30139">Inschakelen themamuziek (opnieuw opstarten noodzakelijk)</string>
+    <string id="30140"> - themamuziek herhalen</string>
+    <string id="30141">Achtergrondafbeelding inschakelen (opnieuw opstarten noodzakelijk)</string>
+    <string id="30142">Diensten</string>
 
-    <string id="30143">Always transcode if video bitrate is above</string>
+    <string id="30143">Altijd transcoden als video bitrate hoger is dan</string>
     
-    <string id="30150">Skin does not support setting views</string>
-    <string id="30151">Select item action (Requires Restart)</string>
+    <string id="30150">Instelling weergaven worden niet ondersteund door thema</string>
+    <string id="30151">Selecteer de item-actie (vereist opnieuw opstarten)</string>
     
-    <string id="30156">Sort NextUp by Show Title</string>    
-    <string id="30157">Enable Enhanced Images (eg CoverArt)</string><!-- Verified -->
-    <string id="30158">Metadata</string>
-    <string id="30159">Artwork</string>
-    <string id="30160">Video Quality if Transcoding necessary</string><!-- Verified -->
+    <string id="30156">Soort NextUp op Serie titel</string>    
+    <string id="30157">Verbeterde afbeeldingen (bijvoorbeeld CoverArt) inschakelen</string><!-- Verified -->
+    <string id="30158">Metagegevens</string>
+    <string id="30159">Illustraties</string>
+    <string id="30160">Videokwaliteit als Transcoden nodig is</string><!-- Verified -->
     
-    <string id="30161">Enable Suggested Loader (Requires Restart)</string>
-    <string id="30162">Add Season Number</string>     
-    <string id="30163">Flatten Seasons</string>     
+    <string id="30161">Inschakelen van de voorgestelde Loader (opnieuw opstarten noodzakelijk)</string>
+    <string id="30162">Seizoen nummer toevoegen</string>     
+    <string id="30163">Seizoenen samenvoegen</string>     
     
     <string id="30164">Direct Play - HTTP</string>     
     <string id="30165">Direct Play</string>     
-    <string id="30166">Transcoding</string>     
-    <string id="30167">Server Detection Succeeded</string>     
-    <string id="30168">Found server</string>     
-    <string id="30169">Address : </string>     
+    <string id="30166">Transcoden</string>     
+    <string id="30167">Serverdetectie geslaagd</string>     
+    <string id="30168">Server gevonden</string>     
+    <string id="30169">Adres: </string>     
     
     <!-- Video nodes -->
-    <string id="30170">Recently Added TV Shows</string><!-- Verified -->
-    <string id="30171">In Progress TV Shows</string><!-- Verified -->
-    <string id="30172">All Music</string>              
-    <string id="30173">Channels</string><!-- Verified -->
-    <string id="30174">Recently Added</string><!-- Verified -->
-    <string id="30175">Recently Added Episodes</string><!-- Verified -->
-    <string id="30176">Recently Added Albums</string>  
-    <string id="30177">In Progress Movies</string><!-- Verified -->
-    <string id="30178">In Progress Episodes</string><!-- Verified -->
-    <string id="30179">Next Episodes</string><!-- Verified -->
-    <string id="30180">Favorite Movies</string><!-- Verified -->      
-    <string id="30181">Favorite Shows</string><!-- Verified -->
-    <string id="30182">Favorite Episodes</string>      
-    <string id="30183">Frequent Played Albums</string> 
-    <string id="30184">Upcoming TV</string>            
+    <string id="30170">Onlangs toegevoegde TV-Shows</string><!-- Verified -->
+    <string id="30171">Actieve TV-Shows</string><!-- Verified -->
+    <string id="30172">Alle muziek</string>              
+    <string id="30173">Kanalen</string><!-- Verified -->
+    <string id="30174">Onlangs toegevoegd</string><!-- Verified -->
+    <string id="30175">Onlangs toegevoegde afleveringen</string><!-- Verified -->
+    <string id="30176">Onlangs toegevoegde Albums</string>  
+    <string id="30177">Actieve Films</string><!-- Verified -->
+    <string id="30178">Actieve afleveringen</string><!-- Verified -->
+    <string id="30179">Komende afleveringen</string><!-- Verified -->
+    <string id="30180">Favoriete films</string><!-- Verified -->      
+    <string id="30181">Favoriete tv-series</string><!-- Verified -->
+    <string id="30182">Favoriete afleveringen</string>      
+    <string id="30183">Frequent afgespeelde Albums</string> 
+    <string id="30184">Aankomende TV</string>            
     <string id="30185">BoxSets</string>                
     <string id="30186">Trailers</string>               
-    <string id="30187">Music Videos</string>           
-    <string id="30188">Photos</string>                 
-    <string id="30189">Unwatched Movies</string><!-- Verified -->
-    <string id="30190">Movie Genres</string>           
-    <string id="30191">Movie Studios</string>          
-    <string id="30192">Movie Actors</string>           
-    <string id="30193">Unwatched Episodes</string>     
+    <string id="30187">Muziekvideo 's</string>           
+    <string id="30188">Foto 's</string>                 
+    <string id="30189">Onbekeken films</string><!-- Verified -->
+    <string id="30190">Film Genres</string>           
+    <string id="30191">Filmstudios</string>          
+    <string id="30192">Film acteurs</string>           
+    <string id="30193">Onbekeken afleveringen</string>     
     <string id="30194">TV Genres</string>              
-    <string id="30195">TV Networks</string>            
-    <string id="30196">TV Actors</string>              
-    <string id="30197">Playlists</string>              
-    <string id="30198">Search</string>              
+    <string id="30195">TV-netwerken</string>            
+    <string id="30196">TV-acteurs</string>              
+    <string id="30197">Afspeellijsten</string>              
+    <string id="30198">Zoek</string>              
     <string id="30199">Set Views</string>              
     
-    <string id="30200">Select User</string>              
-    <string id="30201">Profiling enabled.</string>              
-    <string id="30202">Please remember to turn off when finished testing.</string>              
-    <string id="30203">Error in ArtworkRotationThread</string>              
-    <string id="30204">Unable to connect to server</string>         
-    <string id="30205">Error in LoadMenuOptionsThread</string>     
+    <string id="30200">Selecteer gebruiker</string>              
+    <string id="30201">Profiling ingeschakeld.</string>              
+    <string id="30202">Vergeet niet uit te schakelen als u klaar bent met testen.</string>              
+    <string id="30203">Fout in ArtworkRotationThread</string>              
+    <string id="30204">Kan geen verbinding maken met de server</string>         
+    <string id="30205">Fout in LoadMenuOptionsThread</string>     
     
-    <string id="30206">Enable Playlists Loader (Requires Restart)</string>   
+    <string id="30206">Inschakelen van Playlists Loader (opnieuw opstarten noodzakelijk)</string>   
     
-    <string id="30207">Songs</string>
+    <string id="30207">Nummers</string>
     <string id="30208">Albums</string>
-    <string id="30209">Album Artists</string>
-    <string id="30210">Artists</string>
-    <string id="30211">Music Genres</string>
+    <string id="30209">Album Artiesten</string>
+    <string id="30210">Artiesten</string>
+    <string id="30211">Muziekgenres</string>
     
-    <string id="30212">Enable Theme Videos (Requires Restart)</string>
-    <string id="30213"> - Loop Theme Videos</string>
+    <string id="30212">Thema video's inschakelen (opnieuw opstarten noodzakelijk)</string>
+    <string id="30213"> - Thema video's herhalen</string>
     
-    <string id="30216">AutoPlay remaining episodes in a season</string> 
+    <string id="30216">Speel automatisch resterende afleveringen in een seizoen</string> 
     <string id="30218">Compress Artwork</string>
     <string id="30220">Latest </string>
     <string id="30221">In Progress </string>
