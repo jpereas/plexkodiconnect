@@ -16,7 +16,7 @@
   <extension point="kodi.context.item" library="contextmenu.py">
       <item>
         <label>30401</label>
-              <description>Settings for the Plex Server</description>
+              <description>Instellingen voor de Plex Server</description>
               <visible>[!IsEmpty(ListItem.DBID) + !StringCompare(ListItem.DBID,-1) | !IsEmpty(ListItem.Property(plexid))] + !IsEmpty(Window(10000).Property(plex_context))</visible>
       </item>
   </extension>
@@ -27,7 +27,7 @@
     <forum>https://forums.plex.tv</forum>
     <website>https://github.com/croneter/PlexKodiConnect</website>
     <source>https://github.com/croneter/PlexKodiConnect</source>
-    <summary lang="en">Native Integration of Plex into Kodi</summary>
-    <description lang="en">Connect Kodi to your Plex Media Server. This plugin assumes that you manage all your videos with Plex (and none with Kodi). You might lose data already stored in the Kodi video and music databases (as this plugin directly changes them). Use at your own risk!</description>
+    <summary lang="en">Directe integratie van Plex in Kodi</summary>
+    <description lang="en">Verbind Kodi met je Plex Media Server. Deze plugin gaat ervan uit dat je al je video's met Plex (en niet met Kodi) beheerd. Je kunt gegevens reeds opgeslagen in de databases voor video en muziek van Kodi (deze plugin wijzigt deze gegevens direct) verliezen. Gebruik op eigen risico!</description>
   </extension>
 </addon>
