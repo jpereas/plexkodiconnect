@@ -135,37 +135,37 @@
     <string id="30150">Η εμφάνιση δεν επιτρέπει τη ρύθμιση της προβολής</string>
     <string id="30151">Επιλογή ενέργειας στοιχείου (απαιτεί επανεκκίνηση)</string>
     
-    <string id="30156">Sort NextUp by Show Title</string>    
-    <string id="30157">Enable Enhanced Images (eg CoverArt)</string><!-- Verified -->
-    <string id="30158">Metadata</string>
-    <string id="30159">Artwork</string>
-    <string id="30160">Video Quality if Transcoding necessary</string><!-- Verified -->
+    <string id="30156">Ταξινόμηση επόμενου με τίτλο σειράς</string>    
+    <string id="30157">Ενεργοποίηση βελτιωμένων εικόνων (π.χ. CoverArt)</string><!-- Verified -->
+    <string id="30158">Μεταδεδομένα</string>
+    <string id="30159">Εξώφυλλο</string>
+    <string id="30160">Ποιότητα βίντεο εάν χρειάζεται μετατροπή</string><!-- Verified -->
     
-    <string id="30161">Enable Suggested Loader (Requires Restart)</string>
-    <string id="30162">Add Season Number</string>     
-    <string id="30163">Flatten Seasons</string>     
+    <string id="30161">Ενεργοποίηση προτεινόμενου φορτωτή (απαιτεί επανεκκίνηση)</string>
+    <string id="30162">Προσθήκη αριθμού σεζόν</string>     
+    <string id="30163">Όλες οι σεζόν σε μία λίστα</string>     
     
     <string id="30164">Direct Play - HTTP</string>     
     <string id="30165">Direct Play</string>     
-    <string id="30166">Transcoding</string>     
-    <string id="30167">Server Detection Succeeded</string>     
-    <string id="30168">Found server</string>     
-    <string id="30169">Address : </string>     
+    <string id="30166">Μετατροπή</string>     
+    <string id="30167">Η ανίχνευση του διακομιστή ολοκληρώθηκε με επιτυχία</string>     
+    <string id="30168">Βρέθηκε διακομιστής</string>     
+    <string id="30169">Διεύθυνση: </string>     
     
     <!-- Video nodes -->
-    <string id="30170">Recently Added TV Shows</string><!-- Verified -->
-    <string id="30171">In Progress TV Shows</string><!-- Verified -->
-    <string id="30172">All Music</string>              
-    <string id="30173">Channels</string><!-- Verified -->
-    <string id="30174">Recently Added</string><!-- Verified -->
-    <string id="30175">Recently Added Episodes</string><!-- Verified -->
-    <string id="30176">Recently Added Albums</string>  
-    <string id="30177">In Progress Movies</string><!-- Verified -->
-    <string id="30178">In Progress Episodes</string><!-- Verified -->
-    <string id="30179">Next Episodes</string><!-- Verified -->
-    <string id="30180">Favorite Movies</string><!-- Verified -->      
-    <string id="30181">Favorite Shows</string><!-- Verified -->
-    <string id="30182">Favorite Episodes</string>      
+    <string id="30170">Πρόσφατες σειρές</string><!-- Verified -->
+    <string id="30171">Σειρές σε εξέλιξη</string><!-- Verified -->
+    <string id="30172">Όλη η μουσική</string>              
+    <string id="30173">Κανάλια</string><!-- Verified -->
+    <string id="30174">Προστέθηκαν πρόσφατα</string><!-- Verified -->
+    <string id="30175">Πρόσφατα επεισόδια σειρών</string><!-- Verified -->
+    <string id="30176">Πρόσφατα άλμπουμ</string>  
+    <string id="30177">Ταινίες σε εξέλιξη</string><!-- Verified -->
+    <string id="30178">Επεισόδια σε εξέλιξη</string><!-- Verified -->
+    <string id="30179">Επόμενα επεισόδια</string><!-- Verified -->
+    <string id="30180">Αγαπημένες ταινίες</string><!-- Verified -->      
+    <string id="30181">Αγαπημένες σειρές</string><!-- Verified -->
+    <string id="30182">Αγαπημένα επεισόδια</string>      
     <string id="30183">Frequent Played Albums</string> 
     <string id="30184">Upcoming TV</string>            
     <string id="30185">BoxSets</string>                
