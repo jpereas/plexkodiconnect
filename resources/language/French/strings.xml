@@ -11,14 +11,14 @@
     <string id="30008">Mot de passe réseau : </string>
     <string id="30009">Transcoder : </string>
     <string id="30010">Activer le profilage des performance</string>
-    <string id="30011">Local caching system</string>
+    <string id="30011">Système de cache local</string>
     <string id="30012">OK</string>
     <string id="30013">Ne plus montrer</string>
 
     <string id="30014">Connexion</string>
     <string id="30015">Réseau</string>    
     <string id="30016">Nom de l'appareil</string>
-    <string id="30017">Unauthorized for PMS</string>     
+    <string id="30017">Non autorisé pour le PMS</string>     
 
     <string id="30022">Avancé</string>
     <string id="30024">Identifiant</string><!-- Verified -->
@@ -34,7 +34,7 @@
     <string id="30039">Afficher l'affiche de la saison pour les épisodes</string>
 
     <string id="30040">Filtrer par type ...</string>
-    <string id="30041">Play All from Here</string>
+    <string id="30041">Jouer tout ce contenu</string>
     <string id="30042">Actualiser</string>
     <string id="30043">Supprimer</string>
     <string id="30046">Ajouter le film à CouchPotato</string>
@@ -43,12 +43,12 @@
     <string id="30045">Identifiant non trouvé</string>
     
     <string id="30052">Suppression en cours</string>
-    <string id="30053">Waiting for server to delete</string>
+    <string id="30053">En attente du serveur pour la suppression</string>
     
     <string id="30059">Server par défaut</string>
     <string id="30060">Titre</string>
     <string id="30061">Année</string>
-    <string id="30062">Premiere Date</string>
+    <string id="30062">Date de sortie</string>
     <string id="30063">Date de Création</string>
     <string id="30064">Critic Rating</string>
     <string id="30065">Community Rating</string>
