@@ -118,22 +118,22 @@
     <string id="30130">Εντοπίστηκε τοπική διαδρομή</string>
     <string id="30131">Ο MB3 διακομιστής σας περιέχει τοπικές διαδρομές.  Παρακαλούμε να αλλάξετε τις διαδρομές διακομιστή σε UNC ή αλλάξτε τη ρύθμιση 'Αναπαραγωγή από τη ροή' σε ενεργό στο XBMB3C. Διαδρομή: </string>
     <string id="30132">Προειδοποίηση</string>
-    <string id="30133">Debug logging enabled.</string>
-    <string id="30134">This will affect performance.</string>
-    <string id="30135">Error</string>
-    <string id="30136">Monitoring service is not running</string>
-    <string id="30137">If you have just installed please restart Kodi</string>
-    <string id="30138">Search</string>
+    <string id="30133">Ενεργοποιήθηκε η καταγραφή σφαλμάτων.</string>
+    <string id="30134">Αυτό θα επηρεάσει την απόδοση.</string>
+    <string id="30135">Σφάλμα</string>
+    <string id="30136">Η υπηρεσία παρακολούθησης δεν εκτελείται</string>
+    <string id="30137">Εάν κάνατε εγκατάσταση μόλις τώρα, παρακαλώ κάντε επανεκκίνηση του Kodi</string>
+    <string id="30138">Αναζήτηση</string>
     
-    <string id="30139">Enable Theme Music (Requires Restart)</string>
-    <string id="30140"> - Loop Theme Music</string>
-    <string id="30141">Enable Background Image (Requires Restart)</string>
-    <string id="30142">Services</string>
+    <string id="30139">Ενεργοποίηση μουσικής θέματος (απαιτεί επανεκκίνηση)</string>
+    <string id="30140"> - Επανάληψη μουσικής θέματος</string>
+    <string id="30141">Ενεργοποίηση εικόνας φόντου (απαιτεί επανεκκίνηση)</string>
+    <string id="30142">Υπηρεσίες</string>
 
-    <string id="30143">Always transcode if video bitrate is above</string>
+    <string id="30143">Μετατροπή πάντα εάν η ποιότητα βίντεο είναι πάνω από</string>
     
-    <string id="30150">Skin does not support setting views</string>
-    <string id="30151">Select item action (Requires Restart)</string>
+    <string id="30150">Η εμφάνιση δεν επιτρέπει τη ρύθμιση της προβολής</string>
+    <string id="30151">Επιλογή ενέργειας στοιχείου (απαιτεί επανεκκίνηση)</string>
     
     <string id="30156">Sort NextUp by Show Title</string>    
     <string id="30157">Enable Enhanced Images (eg CoverArt)</string><!-- Verified -->
