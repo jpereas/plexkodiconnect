@@ -2,22 +2,22 @@
 <strings>
     <!-- Add-on settings -->
     <string id="29999">PlexKodiConnect</string>
-    <string id="30000">Server Address (IP)</string><!-- Verified -->
-    <string id="30002">Preferred playback method</string><!-- Verified -->
-    <string id="30004">Log level</string><!-- Verified -->
-    <string id="30005">Username: </string>
-    <string id="30006">Password: </string>
-    <string id="30007">Network Username: </string>
-    <string id="30008">Network Password: </string>
-    <string id="30009">Transcode: </string>
-    <string id="30010">Enable Performance Profiling</string>
-    <string id="30011">Local caching system</string>
-    <string id="30012">OK</string>
-    <string id="30013">Never show</string>
+    <string id="30000">Διεύθυνση (IP) του διακομιστή</string><!-- Verified -->
+    <string id="30002">Προτιμώμενη μέθοδος αναπαραγωγής</string><!-- Verified -->
+    <string id="30004">Επίπεδο καταγραφής</string><!-- Verified -->
+    <string id="30005">Όνομα χρήστη: </string>
+    <string id="30006">Κωδικός πρόσβασης: </string>
+    <string id="30007">Όνομα χρήστη δικτύου: </string>
+    <string id="30008">Κωδικός πρόσβασης δικτύου: </string>
+    <string id="30009">Μετατροπή: </string>
+    <string id="30010">Ενεργοποίηση προφίλ επιδόσεων</string>
+    <string id="30011">Τοπική προσωρινή αποθήκευση</string>
+    <string id="30012">Αποδοχή</string>
+    <string id="30013">Να μην εμφανίζεται ποτέ</string>
 
-    <string id="30014">Connection</string>
-    <string id="30015">Network</string>    
-    <string id="30016">Device Name</string>
+    <string id="30014">Σύνδεση</string>
+    <string id="30015">Δίκτυο</string>    
+    <string id="30016">Όνομα συσκευής</string>
     <string id="30017">Unauthorized for PMS</string>     
 
     <string id="30022">Advanced</string>
