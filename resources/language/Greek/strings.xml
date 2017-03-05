@@ -82,35 +82,35 @@
     
     <string id="30090">Φίλτρο είδους</string>
     <string id="30091">Επιβεβαίωση διαγραφής</string><!-- Verified -->
-    <string id="30092">Delete this item? This action will delete media and associated data files.</string>
+    <string id="30092">Διαγραφή αυτού του στοιχείου; Αυτή η ενέργεια θα διαγράψει τα πολυμέσα και τα συσχετισμένα αρχεία.</string>
     
-    <string id="30093">Mark Watched</string>
-    <string id="30094">Mark Unwatched</string>
-    <string id="30095">Add to Favorites</string>
-    <string id="30096">Remove from Favorites</string>
-    <string id="30097">Sort By ...</string>
-    <string id="30098">Sort Order Descending</string>
-    <string id="30099">Sort Order Ascending</string>
-    <string id="30100">Show People</string>
+    <string id="30093">Σήμανση ως προβληθέν</string>
+    <string id="30094">Σήμανση ως μη προβληθέν</string>
+    <string id="30095">Προσθήκη στα αγαπημένα</string>
+    <string id="30096">Αφαίρεση από τα αγαπημένα</string>
+    <string id="30097">Ταξινόμηση κατά ...</string>
+    <string id="30098">Φθίνουσα ταξινόμηση</string>
+    <string id="30099">Αύξουσα ταξινόμηση</string>
+    <string id="30100">Εμφάνιση ηθοποιών</string>
 
     <!-- resume dialog -->
-    <string id="30105">Resume</string>
-    <string id="30106">Resume from</string>
-    <string id="30107">Start from beginning</string>
+    <string id="30105">Συνέχιση</string>
+    <string id="30106">Συνέχιση από</string>
+    <string id="30107">Έναρξη από την αρχή</string>
     
-    <string id="30110">Interface</string>
-    <string id="30111">Include Stream Info</string>
-    <string id="30112">Include People</string>
-    <string id="30113">Include Overview</string>
-    <string id="30114">Offer delete after playback</string><!-- Verified -->
-    <string id="30115">For Episodes</string><!-- Verified -->
-    <string id="30116">For Movies</string><!-- Verified -->
-    <string id="30117">Background Art Refresh Rate (seconds)</string>
-    <string id="30118">Add Resume Percent</string>
-    <string id="30119">Add Episode Number</string>
-    <string id="30120">Show Load Progress</string>
-    <string id="30121">Loading Content</string>
-    <string id="30122">Retrieving Data</string>
+    <string id="30110">Περιβάλλον</string>
+    <string id="30111">Εμφάνιση πληροφοριών ροής</string>
+    <string id="30112">Εμφάνιση ηθοποιών</string>
+    <string id="30113">Εμφάνιση περίληψης</string>
+    <string id="30114">Ερώτηση για διαγραφή μετά την αναπαραγωγή</string><!-- Verified -->
+    <string id="30115">Για επεισόδια</string><!-- Verified -->
+    <string id="30116">Για ταινίες</string><!-- Verified -->
+    <string id="30117">Ρυθμός ανανέωσης φόντου (δευτερόλεπτα)</string>
+    <string id="30118">Προσθήκη ποσοστού συνέχισης</string>
+    <string id="30119">Προσθήκη αριθμού επεισοδίου</string>
+    <string id="30120">Εμφάνιση προόδου</string>
+    <string id="30121">Φόρτωση περιεχομένου</string>
+    <string id="30122">Ανάκτηση δεδομένων</string>
     <string id="30125">Done</string>
     <string id="30126">Processing Item : </string>
     <string id="30128">Play Error</string>
