@@ -142,25 +142,25 @@
     <string id="30160">Qualité vidéo si un transcodage est nécessaire</string><!-- Verified -->
     
     <string id="30161">Enable Suggested Loader (Requires Restart)</string>
-    <string id="30162">Add Season Number</string>     
+    <string id="30162">Ajouter le numéro de la saison</string>     
     <string id="30163">Flatten Seasons</string>     
     
     <string id="30164">Direct Play - HTTP</string>     
     <string id="30165">Lecture directe</string>     
-    <string id="30166">Transcoding</string>     
-    <string id="30167">Server Detection Succeeded</string>     
-    <string id="30168">Found server</string>     
-    <string id="30169">Address : </string>     
+    <string id="30166">Transcodage</string>     
+    <string id="30167">Détection du serveur réussie</string>     
+    <string id="30168">Serveur trouvé</string>     
+    <string id="30169">Adresse : </string>     
     
     <!-- Video nodes -->
-    <string id="30170">Recently Added TV Shows</string><!-- Verified -->
-    <string id="30171">In Progress TV Shows</string><!-- Verified -->
-    <string id="30172">All Music</string>              
-    <string id="30173">Channels</string><!-- Verified -->
-    <string id="30174">Recently Added</string><!-- Verified -->
-    <string id="30175">Recently Added Episodes</string><!-- Verified -->
-    <string id="30176">Recently Added Albums</string>  
-    <string id="30177">In Progress Movies</string><!-- Verified -->
+    <string id="30170">Série(s) récemment ajoutée</string><!-- Verified -->
+    <string id="30171">Série(s) commencée(s)</string><!-- Verified -->
+    <string id="30172">Toutes les musiques</string>              
+    <string id="30173">Chaînes</string><!-- Verified -->
+    <string id="30174">Récemment ajoutée</string><!-- Verified -->
+    <string id="30175">Episodes récemment ajoutés</string><!-- Verified -->
+    <string id="30176">Albums récemment ajoutés</string>  
+    <string id="30177">Film(s) commencé</string><!-- Verified -->
     <string id="30178">In Progress Episodes</string><!-- Verified -->
     <string id="30179">Next Episodes</string><!-- Verified -->
     <string id="30180">Favorite Movies</string><!-- Verified -->      
