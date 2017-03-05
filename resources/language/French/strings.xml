@@ -50,9 +50,9 @@
     <string id="30061">Année</string>
     <string id="30062">Date de sortie</string>
     <string id="30063">Date de Création</string>
-    <string id="30064">Critic Rating</string>
-    <string id="30065">Community Rating</string>
-    <string id="30066">Play Count</string>
+    <string id="30064">Notes des critiques</string>
+    <string id="30065">Notes de la communauté</string>
+    <string id="30066">Nombre de lectures</string>
     <string id="30067">Budget</string>
     <!-- Runtime added as 30226 below -->
     
@@ -65,7 +65,7 @@
     <string id="30073">Meurtre</string>
     <string id="30074">Comédie</string>
     <string id="30075">Documentaire</string>
-    <string id="30076">Drama</string>
+    <string id="30076">Drame</string>
     <string id="30077">Fantastique</string>
     <string id="30078">Étranger</string>
     <string id="30079">Histoire</string>
@@ -75,42 +75,42 @@
     <string id="30083">Mystère</string>
     <string id="30084">Romance</string>
     <string id="30085">Science-fiction</string>
-    <string id="30086">Short</string>
+    <string id="30086">Court métrage</string>
     <string id="30087">Suspense</string>
     <string id="30088">Thriller</string>
     <string id="30089">Western</string>
     
     <string id="30090">Filtre Genre</string>
     <string id="30091">Confirmer la suppression du fichier</string><!-- Verified -->
-    <string id="30092">Delete this item? This action will delete media and associated data files.</string>
+    <string id="30092">Supprimer ce contenu ? Cette action supprimera ce contenu et les fichiers associés.</string>
     
     <string id="30093">Marquer Vu</string>
     <string id="30094">Marquer Non-Vu</string>
     <string id="30095">Ajouter aux Favoris</string>
     <string id="30096">Enlever des Favoris</string>
     <string id="30097">Trier Par ...</string>
-    <string id="30098">Sort Order Descending</string>
-    <string id="30099">Sort Order Ascending</string>
-    <string id="30100">Show People</string>
+    <string id="30098">Ordre de tri décroissant</string>
+    <string id="30099">Ordre de tri croissant</string>
+    <string id="30100">Montrer le casting</string>
 
     <!-- resume dialog -->
     <string id="30105">Reprendre</string>
     <string id="30106">Reprendre à partir de</string>
-    <string id="30107">Start from beginning</string>
+    <string id="30107">Démarrer depuis le début</string>
     
     <string id="30110">Interface</string>
-    <string id="30111">Include Stream Info</string>
-    <string id="30112">Include People</string>
-    <string id="30113">Include Overview</string>
-    <string id="30114">Offer delete after playback</string><!-- Verified -->
-    <string id="30115">For Episodes</string><!-- Verified -->
-    <string id="30116">For Movies</string><!-- Verified -->
-    <string id="30117">Background Art Refresh Rate (seconds)</string>
-    <string id="30118">Add Resume Percent</string>
-    <string id="30119">Add Episode Number</string>
-    <string id="30120">Show Load Progress</string>
-    <string id="30121">Loading Content</string>
-    <string id="30122">Retrieving Data</string>
+    <string id="30111">Inclure les infos du stream</string>
+    <string id="30112">Inclure le casting</string>
+    <string id="30113">Inclure la vue d’ensemble</string>
+    <string id="30114">Suppression après la lecture</string><!-- Verified -->
+    <string id="30115">Pour les épisodes</string><!-- Verified -->
+    <string id="30116">Pour les films</string><!-- Verified -->
+    <string id="30117">Taux de rafraîchissement de l'arrière-plan (secondes)</string>
+    <string id="30118">Ajouté le % de ce qui a été vu</string>
+    <string id="30119">Ajouter les numéros d’épisodes</string>
+    <string id="30120">Afficher la progression</string>
+    <string id="30121">Chargement du contenu</string>
+    <string id="30122">Récupération de données</string>
     <string id="30125">Done</string>
     <string id="30126">Processing Item : </string>
     <string id="30128">Erreur de lecture</string>
