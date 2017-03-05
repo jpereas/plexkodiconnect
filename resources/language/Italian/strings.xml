@@ -141,9 +141,9 @@
     <string id="30159">Artwork</string>
     <string id="30160">Qualità Video se la Transcodifica è necessaria</string><!-- Verified -->
     
-    <string id="30161">Enable Suggested Loader (Requires Restart)</string>
-    <string id="30162">Add Season Number</string>     
-    <string id="30163">Flatten Seasons</string>     
+    <string id="30161">Abilita il loader consigliato (Richiede riavvio)</string>
+    <string id="30162">Aggiungi il numero della Stagione</string>     
+    <string id="30163">Appiattire le stagioni</string>     
     
     <string id="30164">Riproduzione diretta - HTTP</string>     
     <string id="30165">Riproduzione diretta</string>     
@@ -168,7 +168,7 @@
     <string id="30182">Episodi preferiti</string>      
     <string id="30183">Album riprodotti di frequente</string> 
     <string id="30184">TV in arrivo</string>            
-    <string id="30185">BoxSets</string>                
+    <string id="30185">Cofanetti</string>                
     <string id="30186">Trailer</string>               
     <string id="30187">Video musicali</string>           
     <string id="30188">Foto</string>                 
@@ -177,9 +177,9 @@
     <string id="30191">Studi cinematografici</string>          
     <string id="30192">Attori Film</string>           
     <string id="30193">Episodi Non Visti</string>     
-    <string id="30194">TV Genres</string>              
-    <string id="30195">TV Networks</string>            
-    <string id="30196">TV Actors</string>              
+    <string id="30194">Generi TV</string>              
+    <string id="30195">Reti TV</string>            
+    <string id="30196">Attori TV</string>              
     <string id="30197">Playlist</string>              
     <string id="30198">Cerca</string>              
     <string id="30199">Imposta viste</string>              
@@ -218,9 +218,9 @@
     <string id="30230">Consigliati</string><!-- Verified -->
     
     <string id="30235">Extra</string><!-- Verified -->
-    <string id="30236">Sync Theme Music</string>
-    <string id="30237">Sync Extra Fanart</string>
-    <string id="30238">Sync Movie BoxSets</string>
+    <string id="30236">Sincronizza Sigla Musicale</string>
+    <string id="30237">Sincronizza Fanart Extra</string>
+    <string id="30238">Sincronizza Cofanetti Film</string>
     
     <string id="30239">[COLOR yellow]Resetta il database locale di Kodi[/COLOR]</string><!-- Verified -->
     <string id="30240">Abilita sincronizzazione stato Film (visto/riprendi)</string>
@@ -248,7 +248,7 @@
     <string id="30300">Attiva</string>              
     <string id="30301">Ripristina Impostazioni</string>              
     <string id="30302">Film</string>              
-    <string id="30303">BoxSets</string>              
+    <string id="30303">Cofanetti</string>              
     <string id="30304">Trailer</string>              
     <string id="30305">Serie TV</string>              
     <string id="30306">Stagioni</string>              
