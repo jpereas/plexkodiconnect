@@ -453,12 +453,12 @@
     <string id="39204">Eseguire sincronizzazione manuale della libreria</string>
     <string id="39205">Impossibile eseguire la sincronizzazione, l'addon non è connesso ad un server Plex.</string>
     <string id="39206">Plex potrebbe bloccare il tuo account se fallisci l'accesso troppe volte. Procedere comunque?</string>
-    <string id="39207">Resetting PMS connections, please wait</string>
-    <string id="39208">Failed to reset PKC. Try to restart Kodi.</string>
-    <string id="39209">[COLOR yellow]Toggle plex.tv login (sign in or sign out)[/COLOR]</string>
-    <string id="39210">Not yet connected to Plex Server</string>
+    <string id="39207">Reset connessioni PMS, si prega di attendere</string>
+    <string id="39208">Impossibile resettare PKC. Prova a riavviare Kodi.</string>
+    <string id="39209">[COLOR yellow]Login/Logout plex.tv[/COLOR]</string>
+    <string id="39210">Non ancora connesso al Server Plex</string>
     <string id="39211">Guarda più tardi</string>
-    <string id="39213">is offline</string>
+    <string id="39213">non è attivo</string>
     <string id="39214">Even though we signed in to plex.tv, we could not authorize for PMS</string>
     <string id="39215">Enter your Plex Media Server's IP or URL, Examples are:</string>
 
