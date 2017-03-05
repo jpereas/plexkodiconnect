@@ -478,31 +478,31 @@
     <string id="39251">Reset all existing cache data first?</string>
 
     <!-- Plex PlexAPI.py -->
-    <string id="39300">: Enter plex.tv username. Or nothing to cancel.</string>
-    <string id="39301">Enter password for plex.tv user </string>
+    <string id="39300">: Entrez le nom d’utilisateur plex.tv. Ou rien pour annuler.</string>
+    <string id="39301">Entrez le mot de passe pour l’utilisateur plex.tv </string>
     <string id="39302">Could not sign in user </string>
-    <string id="39303">Problems trying to contact plex.tv. Try again later</string>
-    <string id="39304">Go to https://plex.tv/pin and enter the code: </string>
-    <string id="39305">Could not sign in to plex.tv. Try again later</string>
-    <string id="39306">: Select User</string>
-    <string id="39307">Enter PIN for user </string>
-    <string id="39308">Could not log in user </string>
-    <string id="39309">Please try again.</string>
-    <string id="39310">unknown</string>
-    <string id="39311">or press No to not sign in.</string>
+    <string id="39303">Problèmes en essayant de contacter plex.tv. Réessayez plus tard</string>
+    <string id="39304">Allez sur https://plex.tv/pin et entrez le code : </string>
+    <string id="39305">Impossible de se connecter à plex.tv. Réessayez plus tard</string>
+    <string id="39306">: Sélection d'un utilisateur</string>
+    <string id="39307">Entrez le code PIN pour l’utilisateur </string>
+    <string id="39308">Impossible de se connecter </string>
+    <string id="39309">Essayez à nouveau.</string>
+    <string id="39310">inconnu</string>
+    <string id="39311">ou appuyez sur non pour ne pas vous connecter.</string>
 
     <!-- Plex Librarysync.py -->
     <string id="39400">Library sync thread has crashed. You should restart Kodi now. Please report this on the forum</string>
-    <string id="39401">Detected Kodi database needs to be recreated for this version. This might take a while. Proceed?</string>
-    <string id="39402"> may not work correctly until the database is reset.</string>
-    <string id="39403">Cancelling the database syncing process. Current Kodi version is unsupported. Please verify your logs for more info.</string>
-    <string id="39404">Startup syncing process failed repeatedly. Try restarting Kodi. Stopping Sync for now.</string>
+    <string id="39401">La base de données de Kodi doit être recréée pour cette version. Cela peut prendre un certain temps. Récréer la base de donnée ?</string>
+    <string id="39402"> peut ne pas fonctionner correctement jusqu'à ce que la base de données soit réinitialisée.</string>
+    <string id="39403">Annulation du processus de synchronisation de base de données. La version actuelle de Kodi n'est pas prise en charge. S’il vous plaît vérifiez vos journaux pour plus d’informations.</string>
+    <string id="39404">Le démarrage du processus de synchronisation a échoué à plusieurs reprises. Essayez de redémarrer Kodi. Arrêt de la synchronisation.</string>
     <string id="39405">Plex playlists/nodes refreshed</string>
     <string id="39406">Plex playlists/nodes refresh failed</string>
-    <string id="39407">Full library sync finished</string>
-    <string id="39408">Sync had to skip some items because they could not be processed. Kodi may be instable now!! Please post your Kodi logs to the Plex forum.</string>
+    <string id="39407">Synchronisation de la bibliothèque terminée</string>
+    <string id="39408">La synchronisation devait ignorer certains éléments parce qu’ils n’ont pas été traitées. Kodi peut être instable maintenant !! Veuillez poster vos journaux de Kodi sur le forum de Plex.</string>
     <string id="39409">The Plex Server did not like you asking for so much data at once and returned ERRORS. Try lowering the number of sync download threads in the settings. Skipped some items for now.</string>
-    <string id="39410">ERROR in library sync</string>
+    <string id="39410">ERREUR de synchronisation de la bibliothèque</string>
 
     <!-- Plex videonodes.py -->
     <string id="39500">On Deck</string>
