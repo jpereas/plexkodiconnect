@@ -452,7 +452,7 @@
     <string id="39203">Actualiser les playlists/nœuds</string>
     <string id="39204">Synchroniser la bibliothèque manuellement</string>
     <string id="39205">Impossible d’exécuter la synchronisation, l’Add-on n’est pas connecté à un serveur Plex.</string>
-    <string id="39206">Plex might lock your account if you fail to log in too many times. Proceed anyway?</string>
+    <string id="39206">Plex pourrait bloquer votre compte si vous ne parvenez pas à vous connecter trop de fois. Continuer néanmoins ?</string>
     <string id="39207">Resetting PMS connections, please wait</string>
     <string id="39208">Failed to reset PKC. Try to restart Kodi.</string>
     <string id="39209">[COLOR yellow]Toggle plex.tv login (sign in or sign out)[/COLOR]</string>
