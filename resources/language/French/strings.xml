@@ -130,16 +130,16 @@
     <string id="30141">Activez l’Image d’arrière-plan (nécessite un redémarrage)</string>
     <string id="30142">Services</string>
 
-    <string id="30143">Always transcode if video bitrate is above</string>
+    <string id="30143">Toujours transcoder si le bitrate vidéo est supérieure à</string>
     
-    <string id="30150">Skin does not support setting views</string>
-    <string id="30151">Select item action (Requires Restart)</string>
+    <string id="30150">Le thème ne supporte pas cet affichage</string>
+    <string id="30151">Sélectionnez l’action (nécessite un redémarrage)</string>
     
     <string id="30156">Sort NextUp by Show Title</string>    
-    <string id="30157">Enable Enhanced Images (eg CoverArt)</string><!-- Verified -->
-    <string id="30158">Metadata</string>
+    <string id="30157">Activez les Images améliorées (Ex: CoverArt)</string><!-- Verified -->
+    <string id="30158">Metadonnés</string>
     <string id="30159">Artwork</string>
-    <string id="30160">Video Quality if Transcoding necessary</string><!-- Verified -->
+    <string id="30160">Qualité vidéo si un transcodage est nécessaire</string><!-- Verified -->
     
     <string id="30161">Enable Suggested Loader (Requires Restart)</string>
     <string id="30162">Add Season Number</string>     
