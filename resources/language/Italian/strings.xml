@@ -443,16 +443,16 @@
     <string id="39076">Se usi diverse librerie Plex dello stesso tipo (es. "Film Ragazzi" e "Film Genitori") controlla il Wiki: https://goo.gl/JFtQV9</string>
     <string id="39077">Numero di elementi PMS da mostrare nei widget (es. "On Deck")</string>
     <string id="39078">Porta Plex Companion (modifica solo se necessario)</string>
-    <string id="39079">Plex Companion could not open the GDM port. Please change it in the PKC settings.</string>
+    <string id="39079">Plex Companion non può aprire la porta GDM. Si prega di modificarla nelle impostazioni di PKC.</string>
 
     <!-- Plex Entrypoint.py -->
-    <string id="39200">Log-out Plex Home User </string>
+    <string id="39200">Logout utente Plex </string>
     <string id="39201">Impostazioni</string>
-    <string id="39202">Network credentials</string>
-    <string id="39203">Refresh Plex playlists/nodes</string>
-    <string id="39204">Perform manual library sync</string>
-    <string id="39205">Unable to run the sync, the add-on is not connected to a Plex server.</string>
-    <string id="39206">Plex might lock your account if you fail to log in too many times. Proceed anyway?</string>
+    <string id="39202">Credenziali di rete</string>
+    <string id="39203">Aggiorna playlist/nodi Plex</string>
+    <string id="39204">Eseguire sincronizzazione manuale della libreria</string>
+    <string id="39205">Impossibile eseguire la sincronizzazione, l'addon non è connesso ad un server Plex.</string>
+    <string id="39206">Plex potrebbe bloccare il tuo account se fallisci l'accesso troppe volte. Procedere comunque?</string>
     <string id="39207">Resetting PMS connections, please wait</string>
     <string id="39208">Failed to reset PKC. Try to restart Kodi.</string>
     <string id="39209">[COLOR yellow]Toggle plex.tv login (sign in or sign out)[/COLOR]</string>
