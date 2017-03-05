@@ -111,23 +111,23 @@
     <string id="30120">Afficher la progression</string>
     <string id="30121">Chargement du contenu</string>
     <string id="30122">Récupération de données</string>
-    <string id="30125">Done</string>
-    <string id="30126">Processing Item : </string>
+    <string id="30125">L'action a été effectuée</string>
+    <string id="30126">Élément en cours de traitement : </string>
     <string id="30128">Erreur de lecture</string>
-    <string id="30129">This item is not playable</string>    
-    <string id="30130">Local path detected</string>
-    <string id="30131">Your MB3 Server contains local paths.  Please change server paths to UNC or change XBMB3C setting 'Play from Stream' to true.  Path: </string>
-    <string id="30132">Warning</string>
-    <string id="30133">Debug logging enabled.</string>
-    <string id="30134">This will affect performance.</string>
+    <string id="30129">Ce contenu ne peut pas être lu</string>    
+    <string id="30130">Chemin d’accès local détecté</string>
+    <string id="30131">Votre serveur MB3 contient un chemin d’accès local. Changez le chemin UNC ou  XBMB3C qui "lis le stream".  Chemin d’accès : </string>
+    <string id="30132">Avertissement</string>
+    <string id="30133">Journal des bugs activé.</string>
+    <string id="30134">Cela affectera les performances.</string>
     <string id="30135">Erreur</string>
-    <string id="30136">Monitoring service is not running</string>
-    <string id="30137">If you have just installed please restart Kodi</string>
-    <string id="30138">Search</string>
+    <string id="30136">Le service de surveillance n'est pas activé</string>
+    <string id="30137">Si vous venez d’effectuer l'installation, s’il vous plaît, redémarrer Kodi</string>
+    <string id="30138">Rechercher</string>
     
-    <string id="30139">Enable Theme Music (Requires Restart)</string>
-    <string id="30140"> - Loop Theme Music</string>
-    <string id="30141">Enable Background Image (Requires Restart)</string>
+    <string id="30139">Activez le thème musical (nécessite un redémarrage)</string>
+    <string id="30140"> -Thème musical en boucle</string>
+    <string id="30141">Activez l’Image d’arrière-plan (nécessite un redémarrage)</string>
     <string id="30142">Services</string>
 
     <string id="30143">Always transcode if video bitrate is above</string>
