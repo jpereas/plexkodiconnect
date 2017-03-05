@@ -350,8 +350,8 @@
     <string id="33021">Gathering:</string>
     <string id="33022">La base de données doit être recréée pour cette version de Emby pour Kodi. Procéder au scan ?</string>
     <string id="33023">Emby for Kodi may not work correctly until the database is reset.</string>
-    <string id="33024">Cancelling the database syncing process. The current Kodi version is unsupported.</string>
-    <string id="33025">completed in:</string>
+    <string id="33024">Annulation du processus de synchronisation de la base de données. La version actuelle de Kodi n'est pas prise en charge.</string>
+    <string id="33025">achevé en :</string>
     <string id="33026">Comparing movies from:</string>
     <string id="33027">Comparing boxsets</string>
     <string id="33028">Comparing music videos from:</string>
