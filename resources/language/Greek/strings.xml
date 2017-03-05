@@ -18,19 +18,19 @@
     <string id="30014">Σύνδεση</string>
     <string id="30015">Δίκτυο</string>    
     <string id="30016">Όνομα συσκευής</string>
-    <string id="30017">Unauthorized for PMS</string>     
+    <string id="30017">Μη εξουσιοδοτημένο στο PMS</string>     
 
-    <string id="30022">Advanced</string>
-    <string id="30024">Username</string><!-- Verified -->
+    <string id="30022">Για προχωρημένους</string>
+    <string id="30024">Όνομα χρήστη</string><!-- Verified -->
 
-    <string id="30025">Display message if PMS goes offline</string>
+    <string id="30025">Εμφάνιση μηνύματος αν αποσυνδεθεί το PMS</string>
     
-    <string id="30030">Port Number</string><!-- Verified -->
-    <string id="30031">I own this Plex Media Server</string>
-    <string id="30036">Number of recent Movies to show:</string>    
-    <string id="30037">Number of recent TV episodes to show:</string>    
-    <string id="30035">Number of recent Music Albums to show:</string>    
-    <string id="30038">Mark watched at start of playback:</string>    
+    <string id="30030">Αριθμός θύρας</string><!-- Verified -->
+    <string id="30031">Κατέχω αυτόν το Plex Media Server</string>
+    <string id="30036">Αριθμός προσφάτων Ταινιών για εμφάνιση:</string>    
+    <string id="30037">Αριθμός προσφάτων Επεισοδίων για εμφάνιση:</string>    
+    <string id="30035">Αριθμός προσφάτων Άλμπουμ μουσικής για εμφάνιση:</string>    
+    <string id="30038">Σήμανση ως προβληθέν κατά την έναρξη της αναπαραγωγής:</string>    
     <string id="30039">Set Season poster for episodes</string>
 
     <string id="30040">Genre Filter ...</string>
