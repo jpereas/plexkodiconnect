@@ -436,13 +436,13 @@
     <string id="39069">Indirizzo attuale:</string>
     <string id="39070">Porta attuale:</string>
     <string id="39071">Stato attuale di plex.tv:</string>
-    <string id="39072">Is your Kodi installed on a low-powered device like a Raspberry Pi? If yes, then we will reduce the strain on Kodi to prevent it from crashing.</string>
+    <string id="39072">Il tuo Kodi è installato in un dispositivo a bassa potenza come un Raspberry Pi? In caso affermativo, sarà ridotto l'utilizzo delle risorse per prevenire arresti anomali.</string>
     <string id="39073">Appearance Tweaks</string>
-    <string id="39074">TV Shows</string>
-    <string id="39075">Always use default Plex subtitle if possible</string>
-    <string id="39076">If you use several Plex libraries of one kind, e.g. "Kids Movies" and "Parents Movies", be sure to check the Wiki: https://goo.gl/JFtQV9</string>
-    <string id="39077">Number of PMS items to show in widgets (e.g. "On Deck")</string>
-    <string id="39078">Plex Companion Update Port (change only if needed)</string>
+    <string id="39074">Serie TV</string>
+    <string id="39075">Usa sempre i sottotitoli predefiniti di Plex se possibile</string>
+    <string id="39076">Se usi diverse librerie Plex dello stesso tipo (es. "Film Ragazzi" e "Film Genitori") controlla il Wiki: https://goo.gl/JFtQV9</string>
+    <string id="39077">Numero di elementi PMS da mostrare nei widget (es. "On Deck")</string>
+    <string id="39078">Porta Plex Companion (modifica solo se necessario)</string>
     <string id="39079">Plex Companion could not open the GDM port. Please change it in the PKC settings.</string>
 
     <!-- Plex Entrypoint.py -->
