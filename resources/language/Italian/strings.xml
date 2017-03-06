@@ -460,9 +460,9 @@
     <string id="39211">Guarda più tardi</string>
     <string id="39213">non è attivo</string>
     <string id="39214">Even though we signed in to plex.tv, we could not authorize for PMS</string>
-    <string id="39215">Enter your Plex Media Server's IP or URL, Examples are:</string>
+    <string id="39215">Inserisci l'IP o l'URL del tuo Plex Media Server. Ad esempio:</string>
 
-    <string id="39217">Does your Plex Media Server support SSL connections? (https instead of http)?</string>
+    <string id="39217">Il tuo Plex Media Server supporta le connessioni SSL (https invece di http)?</string>
     <string id="39218">Error contacting PMS</string>
     <string id="39219">Abort (Yes) or save address anyway (No)?</string>
     <string id="39220">connected</string>
