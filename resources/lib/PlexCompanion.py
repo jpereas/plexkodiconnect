@@ -6,14 +6,16 @@ from socket import SHUT_RDWR
 
 from xbmc import sleep
 
-from utils import settings, ThreadMethodsAdditionalSuspend, ThreadMethods
+from utils import settings, ThreadMethodsAdditionalSuspend, ThreadMethods, \
+    window
 from plexbmchelper import listener, plexgdm, subscribers, functions, \
     httppersist, plexsettings
 from PlexFunctions import ParseContainerKey, GetPlexMetadata
 from PlexAPI import API
 import player
 from entrypoint import Plex_Node
-from variables import KODI_PLAYLIST_TYPE_FROM_PLEX_TYPE
+import variables as v
+
 
 ###############################################################################
 
@@ -35,7 +37,7 @@ class PlexCompanion(Thread):
         # Start GDM for server/client discovery
         self.client = plexgdm.plexgdm()
         self.client.clientDetails(self.settings)
-        log.debug("Registration string is: %s "
+        log.debug("Registration string is:\n%s"
                   % self.client.getClientDetails())
         # kodi player instance
         self.player = player.Player()
@@ -77,20 +79,42 @@ class PlexCompanion(Thread):
         log.debug('Processing: %s' % task)
         data = task['data']
 
-        if (task['action'] == 'playlist' and
+        if task['action'] == 'alexa':
+            # e.g. Alexa
+            xml = GetPlexMetadata(data['key'])
+            try:
+                xml[0].attrib
+            except (AttributeError, IndexError, TypeError):
+                log.error('Could not download Plex metadata')
+                return
+            api = API(xml[0])
+            if api.getType() == v.PLEX_TYPE_ALBUM:
+                log.debug('Plex music album detected')
+                self.mgr.playqueue.init_playqueue_from_plex_children(
+                    api.getRatingKey())
+            else:
+                thread = Thread(target=Plex_Node,
+                                args=('{server}%s' % data.get('key'),
+                                      data.get('offset'),
+                                      True,
+                                      False),)
+                thread.setDaemon(True)
+                thread.start()
+
+        elif (task['action'] == 'playlist' and
                 data.get('address') == 'node.plexapp.com'):
             # E.g. watch later initiated by Companion
             thread = Thread(target=Plex_Node,
                             args=('{server}%s' % data.get('key'),
                                   data.get('offset'),
-                                  data.get('type'),
                                   True),)
             thread.setDaemon(True)
             thread.start()
+
         elif task['action'] == 'playlist':
             # Get the playqueue ID
             try:
-                _, ID, query = ParseContainerKey(data['containerKey'])
+                typus, ID, query = ParseContainerKey(data['containerKey'])
             except Exception as e:
                 log.error('Exception while processing: %s' % e)
                 import traceback
@@ -98,14 +122,19 @@ class PlexCompanion(Thread):
                 return
             try:
                 playqueue = self.mgr.playqueue.get_playqueue_from_type(
-                    KODI_PLAYLIST_TYPE_FROM_PLEX_TYPE[data['type']])
+                    v.KODI_PLAYLIST_TYPE_FROM_PLEX_TYPE[data['type']])
             except KeyError:
                 # E.g. Plex web does not supply the media type
                 # Still need to figure out the type (video vs. music vs. pix)
                 xml = GetPlexMetadata(data['key'])
+                try:
+                    xml[0].attrib
+                except (AttributeError, IndexError, TypeError):
+                    log.error('Could not download Plex metadata')
+                    return
                 api = API(xml[0])
                 playqueue = self.mgr.playqueue.get_playqueue_from_type(
-                    KODI_PLAYLIST_TYPE_FROM_PLEX_TYPE[api.getType()])
+                    v.KODI_PLAYLIST_TYPE_FROM_PLEX_TYPE[api.getType()])
             self.mgr.playqueue.update_playqueue_from_PMS(
                 playqueue,
                 ID,
@@ -126,6 +155,7 @@ class PlexCompanion(Thread):
             jsonClass, requestMgr, self.player, self.mgr)
 
         queue = Queue.Queue(maxsize=100)
+        self.queue = queue
 
         if settings('plexCompanion') == 'true':
             # Start up httpd
@@ -188,6 +218,7 @@ class PlexCompanion(Thread):
                             log.debug("Client is no longer registered. "
                                       "Plex Companion still running on port %s"
                                       % self.settings['myport'])
+                            client.register_as_client()
                 # Get and set servers
                 if message_count % 30 == 0:
                     subscriptionManager.serverlist = client.getServerList()
@@ -209,7 +240,7 @@ class PlexCompanion(Thread):
                 queue.task_done()
                 # Don't sleep
                 continue
-            sleep(20)
+            sleep(50)
 
         client.stop_all()
         if httpd:

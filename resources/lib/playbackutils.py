@@ -138,7 +138,10 @@ class PlaybackUtils():
                                       plex_lib_UUID,
                                       mediatype=api.getType(),
                                       trailers=trailers)
-            get_playlist_details_from_xml(playqueue, xml=xml)
+            try:
+                get_playlist_details_from_xml(playqueue, xml=xml)
+            except KeyError:
+                return
 
             if (not homeScreen and not seektime and sizePlaylist < 2 and
                     window('plex_customplaylist') != "true" and
@@ -287,16 +290,19 @@ class PlaybackUtils():
         self.currentPosition = 0
         for item in self.xml:
             api = API(item)
+            successful = True
             if api.getType() == v.PLEX_TYPE_CLIP:
                 self.add_trailer(item)
             else:
                 with Get_Plex_DB() as plex_db:
                     db_item = plex_db.getItem_byId(api.getRatingKey())
                 if db_item is not None:
-                    if add_item_to_kodi_playlist(self.playqueue,
-                                                 self.currentPosition,
-                                                 kodi_id=db_item[0],
-                                                 kodi_type=db_item[4]) is True:
+                    successful = add_item_to_kodi_playlist(
+                        self.playqueue,
+                        self.currentPosition,
+                        kodi_id=db_item[0],
+                        kodi_type=db_item[4])
+                    if successful is True:
                         self.currentPosition += 1
                         if len(item[0]) > 1:
                             self.add_part(item,
@@ -306,8 +312,9 @@ class PlaybackUtils():
                 else:
                     # Item not in Kodi DB
                     self.add_trailer(item)
-            self.playqueue.items[self.currentPosition - 1].ID = item.get(
-                '%sItemID' % self.playqueue.kind)
+            if successful is True:
+                self.playqueue.items[self.currentPosition - 1].ID = item.get(
+                    '%sItemID' % self.playqueue.kind)
 
     def add_trailer(self, item):
         # Playurl needs to point back so we can get metadata!

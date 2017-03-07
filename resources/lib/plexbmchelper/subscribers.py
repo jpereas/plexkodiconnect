@@ -71,7 +71,7 @@ class SubscriptionManager:
         msg += self.getTimelineXML(self.js.getAudioPlayerId(players), plex_audio())
         msg += self.getTimelineXML(self.js.getPhotoPlayerId(players), plex_photo())
         msg += self.getTimelineXML(self.js.getVideoPlayerId(players), plex_video())
-        msg += "\r\n</MediaContainer>"
+        msg += "\n</MediaContainer>"
         return msg
 
     def getTimelineXML(self, playerid, ptype):
@@ -84,7 +84,7 @@ class SubscriptionManager:
         else:
             state = "stopped"
             time = 0
-        ret = "\r\n"+'  <Timeline state="%s" time="%s" type="%s"' % (state, time, ptype)
+        ret = "\n"+'  <Timeline state="%s" time="%s" type="%s"' % (state, time, ptype)
         if playerid is None:
             ret += ' seekRange="0-0"'
             ret += ' />'
@@ -312,7 +312,7 @@ class Subscriber:
         else:
             self.navlocationsent = True
         msg = re.sub(r"INSERTCOMMANDID", str(self.commandID), msg)
-        log.debug("sending xml to subscriber %s: %s" % (self.tostr(), msg))
+        log.debug("sending xml to subscriber %s:\n%s" % (self.tostr(), msg))
         url = self.protocol + '://' + self.host + ':' + self.port \
             + "/:/timeline"
         t = threading.Thread(target=self.threadedSend, args=(url, msg))
