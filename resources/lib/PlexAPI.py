@@ -57,7 +57,7 @@ import variables as v
 log = logging.getLogger("PLEX."+__name__)
 
 REGEX_IMDB = re_compile(r'''/(tt\d+)''')
-REGEX_TVDB = re_compile(r'''tvdb://(\d+)''')
+REGEX_TVDB = re_compile(r'''thetvdb:\/\/(.+?)\?''')
 ###############################################################################
 
 
@@ -474,9 +474,18 @@ class PlexAPI():
             if PMS['uuid'] in self.g_PMS:
                 log.debug('We already know of PMS %s from plex.tv'
                           % PMS['serverName'])
-                continue
-            self.declarePMS(PMS['uuid'], PMS['serverName'], 'http',
-                            PMS['ip'], PMS['port'])
+                # Update with GDM data - potentially more reliable than plex.tv
+                self.updatePMSProperty(PMS['uuid'], 'ip', PMS['ip'])
+                self.updatePMSProperty(PMS['uuid'], 'port', PMS['port'])
+                self.updatePMSProperty(PMS['uuid'], 'local', '1')
+                self.updatePMSProperty(PMS['uuid'], 'scheme', 'http')
+                self.updatePMSProperty(PMS['uuid'],
+                                       'baseURL',
+                                       'http://%s:%s' % (PMS['ip'],
+                                                         PMS['port']))
+            else:
+                self.declarePMS(PMS['uuid'], PMS['serverName'], 'http',
+                                PMS['ip'], PMS['port'])
             # Ping to check whether we need HTTPs or HTTP
             https = PMSHttpsEnabled('%s:%s' % (PMS['ip'], PMS['port']))
             if https is None:
@@ -1247,26 +1256,26 @@ class API():
         favorite = False
         try:
             playcount = int(item['viewCount'])
-        except KeyError:
+        except (KeyError, ValueError):
             playcount = None
         played = True if playcount else False
 
         try:
             lastPlayedDate = DateToKodi(int(item['lastViewedAt']))
-        except KeyError:
+        except (KeyError, ValueError):
             lastPlayedDate = None
 
         try:
             userrating = int(float(item['userRating']))
-        except KeyError:
+        except (KeyError, ValueError):
             userrating = 0
 
         try:
             rating = float(item['audienceRating'])
-        except KeyError:
+        except (KeyError, ValueError):
             try:
                 rating = float(item['rating'])
-            except KeyError:
+            except (KeyError, ValueError):
                 rating = 0.0
 
         resume, runtime = self.getRuntime()

@@ -46,13 +46,18 @@ elif xbmc.getCondVisibility('system.platform.android'):
 else:
     PLATFORM = "Unknown"
 
-if _ADDON.getSetting('deviceNameOpt') == "false":
-    # Use Kodi's deviceName
-    DEVICENAME = tryDecode(xbmc.getInfoLabel('System.FriendlyName'))
-else:
-    DEVICENAME = tryDecode(_ADDON.getSetting('deviceName'))
-    DEVICENAME = DEVICENAME.replace("\"", "_")
-    DEVICENAME = DEVICENAME.replace("/", "_")
+DEVICENAME = tryDecode(_ADDON.getSetting('deviceName'))
+DEVICENAME = DEVICENAME.replace(":", "")
+DEVICENAME = DEVICENAME.replace("/", "-")
+DEVICENAME = DEVICENAME.replace("\\", "-")
+DEVICENAME = DEVICENAME.replace("<", "")
+DEVICENAME = DEVICENAME.replace(">", "")
+DEVICENAME = DEVICENAME.replace("*", "")
+DEVICENAME = DEVICENAME.replace("?", "")
+DEVICENAME = DEVICENAME.replace('|', "")
+DEVICENAME = DEVICENAME.replace('(', "")
+DEVICENAME = DEVICENAME.replace(')', "")
+DEVICENAME = DEVICENAME.strip()
 
 # Database paths
 _DB_VIDEO_VERSION = {
@@ -248,3 +253,16 @@ KODI_SUPPORTED_IMAGES = (
     '.pcx',
     '.tga'
 )
+
+
+# Translation table from Alexa websocket commands to Plex Companion
+ALEXA_TO_COMPANION = {
+    'queryKey': 'key',
+    'queryOffset': 'offset',
+    'queryMachineIdentifier': 'machineIdentifier',
+    'queryProtocol': 'protocol',
+    'queryAddress': 'address',
+    'queryPort': 'port',
+    'queryContainerKey': 'containerKey',
+    'queryToken': 'token',
+}

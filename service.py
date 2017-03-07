@@ -4,7 +4,7 @@
 
 import logging
 from os import path as os_path
-from sys import path as sys_path
+from sys import path as sys_path, argv
 
 from xbmc import translatePath, Monitor, sleep
 from xbmcaddon import Addon
@@ -36,7 +36,7 @@ import initialsetup
 from kodimonitor import KodiMonitor
 from librarysync import LibrarySync
 import videonodes
-from websocket_client import WebSocket
+from websocket_client import PMS_Websocket, Alexa_Websocket
 import downloadutils
 from playqueue import Playqueue
 
@@ -70,6 +70,7 @@ class Service():
 
     user_running = False
     ws_running = False
+    alexa_running = False
     library_running = False
     plexCompanion_running = False
     playqueue_running = False
@@ -100,6 +101,7 @@ class Service():
         log.warn("Number of sync threads: %s"
                  % settings('syncThreadNumber'))
         log.warn("Log Level: %s" % logLevel)
+        log.warn("Full sys.argv received: %s" % argv)
 
         # Reset window props for profile switch
         properties = [
@@ -147,7 +149,8 @@ class Service():
 
         # Initialize important threads, handing over self for callback purposes
         self.user = UserClient(self)
-        self.ws = WebSocket(self)
+        self.ws = PMS_Websocket(self)
+        self.alexa = Alexa_Websocket(self)
         self.library = LibrarySync(self)
         self.plexCompanion = PlexCompanion(self)
         self.playqueue = Playqueue(self)
@@ -200,6 +203,11 @@ class Service():
                         if not self.ws_running:
                             self.ws_running = True
                             self.ws.start()
+                        # Start the Alexa thread
+                        if (not self.alexa_running and
+                                settings('enable_alexa') == 'true'):
+                            self.alexa_running = True
+                            self.alexa.start()
                         # Start the syncing thread
                         if not self.library_running:
                             self.library_running = True
@@ -326,6 +334,10 @@ class Service():
         except:
             log.warn('Websocket client already shut down')
         try:
+            self.alexa.stopThread()
+        except:
+            log.warn('Websocket client already shut down')
+        try:
             self.user.stopThread()
         except:
             log.warn('User client already shut down')
@@ -333,14 +345,23 @@ class Service():
             downloadutils.DownloadUtils().stopSession()
         except:
             pass
-
+        window('plex_service_started', clear=True)
         log.warn("======== STOP %s ========" % v.ADDON_NAME)
+
+# Safety net - Kody starts PKC twice upon first installation!
+if window('plex_service_started') == 'true':
+    exit = True
+else:
+    window('plex_service_started', value='true')
+    exit = False
 
 # Delay option
 delay = int(settings('startupDelay'))
 
 log.warn("Delaying Plex startup by: %s sec..." % delay)
-if delay and Monitor().waitForAbort(delay):
+if exit:
+    log.error('PKC service.py already started - exiting this instance')
+elif delay and Monitor().waitForAbort(delay):
     # Start the service
     log.warn("Abort requested while waiting. PKC not started.")
 else:

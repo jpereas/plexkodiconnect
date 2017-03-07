@@ -1,3 +1,73 @@
+version 1.6.4 (beta only)
+- Amazon Alexa support! Be mindful to check the Alexa forum thread first; there are still many issues completely unrelated to PKC
+- Enable skipping for Plex Companion 
+- Set default companion name to PlexKodiConnect
+
+version 1.6.3
+- Fix UnicodeEncodeError for non ASCII filenames in playback_starter 
+- Cleanup playlist/playqueue string/unicode
+
+version 1.6.2
+- Fix Plex Web Issue, thanks @AllanMar
+- Fix TypeError on manually entering PMS port
+- Fix KeyError
+- Update Danish translation
+- Update readme
+
+version 1.6.1
+- New Danish translation, thanks @Osberg
+- Fix UnicodeDecodeError for non-ASCII filenames
+- Better error handling for Plex Companion
+- Fix ValueError for Watch Later
+- Try to skip new PMS items we've already processed
+- Fix TypeError 
+
+version 1.6.0
+A DATABASE RESET IS ABSOLUTELY NECESSARY if you're not using beta PKC
+Make previous version available for everyone. The highlights:
+- New Spanish translation, thanks @bartolomesoriano
+- New Czech translation, thanks @Pavuucek
+- Plex Companion is completely rewired and should now handly anything you throw at it
+- Early compatibility with Kodi 18 Leia
+- New playback startup mechanism for plugin paths
+- Code rebranding from Emby to Plex, including a plex.db database :-)
+- Fixes to Kodi ratings
+- Fix playstate and PMS item changes not working/not propagating anymore (caused by a change Plex made with the websocket interface)
+- Improvements to the way PKC behaves if the PMS goes offline
+- New setting to always transcode if the video bitrate is above a certain threshold (will not work with direct paths)
+- Be smarter when deciding when to transcode
+- Only sign the user out if the PMS says so
+- Cache missing artwork on PKC startup
+- Lots of code refactoring and code optimizations
+- Tons of fixes
+
+version 1.5.15 (beta only)
+- Fix ratings for movies
+- Fixes to Plex Companion
+- Always run only one instance of PKC
+
+version 1.5.14 (beta only)
+- Krypton: Fix ratings for episodes and TV shows
+- Plex Companion: Fix KeyError for Plex Web
+- Fix UnicodeDecodeError for non-ASCII filenames
+- Hopefully fix items not marked as entirely watched after having seen >90%
+- Code optimization
+
+version 1.5.13 (beta only)
+- New Spanish translation, thanks @bartolomesoriano
+- Fix some possible connection issues
+- Fix screensaver not toggling back after full sync
+- Update addon.xml
+- Update readme
+- Updated installation instructions on the Wiki
+- Updated translations
+
+version 1.5.12 (beta only)
+- Possible compatibility with Alexa - do report back!
+- Setup crowdin translations. Please help out translating PlexKodiConnect: https://crowdin.com/project/plexkodiconnect/invite
+- Fix OperationalError on update sync
+- Apply item limit to On Deck if OnDeckTVextended not set, thanks @dettwild
+
 version 1.5.11 (beta only)
 - Fix userratings for Kodi Krypton
 - Krypton: update userratings on startup and on user change

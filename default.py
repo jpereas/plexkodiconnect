@@ -133,7 +133,7 @@ class Main():
 
             elif mode in ("nextup", "inprogressepisodes"):
                 limit = int(params['limit'])
-                modes[mode](itemid, limit)
+                modes[mode](params['tagname'], limit)
             
             elif mode in ("channels","getsubfolders"):
                 modes[mode](itemid)
@@ -161,8 +161,7 @@ class Main():
                 modes[mode](itemid, params=argv[2])
             elif mode == 'Plex_Node':
                 modes[mode](params.get('id'),
-                            params.get('viewOffset'),
-                            params.get('plex_type'))
+                            params.get('viewOffset'))
             else:
                 modes[mode]()
         else:

@@ -1423,9 +1423,11 @@ class Kodidb_Functions():
     def add_uniqueid(self, *args):
         """
         Feed with:
-            uniqueid_id, media_id, media_type, value, type
-
-        type: e.g. 'imdb'
+            uniqueid_id: int
+            media_id: int
+            media_type: string
+            value: string
+            type: e.g. 'imdb' or 'tvdb'
         """
         query = '''
             INSERT INTO uniqueid(
@@ -1434,9 +1436,12 @@ class Kodidb_Functions():
         '''
         self.cursor.execute(query, (args))
 
-    def get_uniqueid(self, media_id):
-        query = "SELECT uniqueid_id FROM uniqueid WHERE media_id = ?"
-        self.cursor.execute(query, (media_id,))
+    def get_uniqueid(self, kodi_id, kodi_type):
+        query = '''
+            SELECT uniqueid_id FROM uniqueid
+            WHERE media_id = ? AND media_type = ?
+        '''
+        self.cursor.execute(query, (kodi_id, kodi_type))
         try:
             uniqueid = self.cursor.fetchone()[0]
         except TypeError:
@@ -1465,9 +1470,12 @@ class Kodidb_Functions():
         self.cursor.execute("select coalesce(max(rating_id),0) from rating")
         return self.cursor.fetchone()[0] + 1
 
-    def get_ratingid(self, media_id):
-        query = "SELECT rating_id FROM rating WHERE media_id = ?"
-        self.cursor.execute(query, (media_id,))
+    def get_ratingid(self, kodi_id, kodi_type):
+        query = '''
+            SELECT rating_id FROM rating
+            WHERE media_id = ? AND media_type = ?
+        '''
+        self.cursor.execute(query, (kodi_id, kodi_type))
         try:
             ratingid = self.cursor.fetchone()[0]
         except TypeError:

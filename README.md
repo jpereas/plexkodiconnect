@@ -1,3 +1,9 @@
+##Status
+
+[![GitHub issues](https://img.shields.io/github/issues/croneter/PlexKodiConnect.svg?maxAge=60&style=flat-square)](https://github.com/croneter/PlexKodiConnect/issues)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/croneter/PlexKodiConnect.svg?maxAge=60&style=flat-square)](https://github.com/croneter/PlexKodiConnect/pulls)
+
+
 # PlexKodiConnect (PKC)
 **Combine the best frontend media player Kodi with the best multimedia backend server Plex**
 
@@ -5,19 +11,23 @@ PKC combines the best of Kodi - ultra smooth navigation, beautiful and highly cu
 
 Have a look at [some screenshots](https://github.com/croneter/PlexKodiConnect/wiki/Some-PKC-Screenshots) to see what's possible. 
 
+### Call for Translations
+
+Please help translate PlexKodiConnect into your language: [visit crowdin.com](https://crowdin.com/project/plexkodiconnect/invite)
+
 
 ### Content
-* [**Warning**](https://github.com/croneter/PlexKodiConnect/tree/hotfixes#warning)
-* [**What does PKC do and how is it different from the official 'Plex for Kodi'**](https://github.com/croneter/PlexKodiConnect/tree/hotfixes#what-does-pkc-do-and-how-is-it-different-from-the-official-plex-for-kod)
-* [**Download and Installation**](https://github.com/croneter/PlexKodiConnect/tree/hotfixes#download-and-installation)
-* [**Important notes**](https://github.com/croneter/PlexKodiConnect/tree/hotfixes#important-notes)
-* [**Donations**](https://github.com/croneter/PlexKodiConnect/tree/hotfixes#donations)
-* [**What is currently supported?**](https://github.com/croneter/PlexKodiConnect/tree/hotfixes#what-is-currently-supported)
-* [**Known Larger Issues**](https://github.com/croneter/PlexKodiConnect/tree/hotfixes#known-larger-issues)
-* [**Issues being worked on**](https://github.com/croneter/PlexKodiConnect/tree/hotfixes#issues-being-worked-on)
-* [**Pipeline for future development**](https://github.com/croneter/PlexKodiConnect/tree/hotfixes#what-could-be-in-the-pipeline-for-future-development)
-* [**Checkout the PKC Wiki**](https://github.com/croneter/PlexKodiConnect/tree/hotfixes#checkout-the-pkc-wiki)
-* [**Credits**](https://github.com/croneter/PlexKodiConnect/tree/hotfixes#credits)
+* [**Warning**](#warning)
+* [**What does PKC do and how is it different from the official 'Plex for Kodi'**](#what-does-pkc-do-and-how-is-it-different-from-the-official-plex-for-kod)
+* [**Download and Installation**](#download-and-installation)
+* [**Important notes**](#important-notes)
+* [**Donations**](#donations)
+* [**What is currently supported?**](#what-is-currently-supported)
+* [**Known Larger Issues**](#known-larger-issues)
+* [**Issues being worked on**](#issues-being-worked-on)
+* [**Requests for new features**](#requests-for-new-features)
+* [**Checkout the PKC Wiki**](#checkout-the-pkc-wiki)
+* [**Credits**](#credits)
 
 ### Warning
 Use at your own risk! This plugin assumes that you manage all your videos with Plex (and none with Kodi). You might lose data already stored in the Kodi video and music databases as this plugin directly changes them. Don't worry if you want Plex to manage all your media (like you should ;-)). 
@@ -71,8 +81,10 @@ PKC currently provides the following features:
 - Different PKC interface languages:
     + English
     + German
-    + Czech (thanks @Pavuucek)
-    + More coming up
+    + Czech, thanks @Pavuucek
+    + Spanish, thanks @bartolomesoriano
+    + Danish, thanks @FIGHT
+    + More coming up: [you can help!](https://crowdin.com/project/plexkodiconnect/invite)
 - [Plex Watch Later / Plex It!](https://support.plex.tv/hc/en-us/sections/200211783-Plex-It-)
 - [Plex Companion](https://support.plex.tv/hc/en-us/sections/200276908-Plex-Companion): fling Plex media (or anything else) from other Plex devices to PlexKodiConnect
 - [Plex Transcoding](https://support.plex.tv/hc/en-us/articles/200250377-Transcoding-Media)
@@ -108,12 +120,9 @@ However, some changes to individual items are instantly detected, e.g. if you ma
 Have a look at the [Github Issues Page](https://github.com/croneter/PlexKodiConnect/issues). Before you open your own issue, please read [How to report a bug](https://github.com/croneter/PlexKodiConnect/wiki/How-to-Report-A-Bug).
 
 
-### What could be in the pipeline for future development?
+### Requests for new features
 
-- Plex channels
-- Movie extras (trailers already work)
-- Playlists
-- Music Videos
+[![Feature Requests](http://feathub.com/croneter/PlexKodiConnect?format=svg)](http://feathub.com/croneter/PlexKodiConnect)
 
 ### Checkout the PKC Wiki
 The [Wiki can be found here](https://github.com/croneter/PlexKodiConnect/wiki) and will hopefully answer all your questions. You can even edit the wiki yourself!
