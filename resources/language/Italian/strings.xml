@@ -106,8 +106,8 @@
     <string id="30115">Per Episodi</string><!-- Verified -->
     <string id="30116">Per Film</string><!-- Verified -->
     <string id="30117">Frequenza di aggiornamento dello sfondo (secondi)</string>
-    <string id="30118">Add Resume Percent</string>
-    <string id="30119">Add Episode Number</string>
+    <string id="30118">Aggiungi percentuale riproduzione</string>
+    <string id="30119">Aggiungi numero Episodio</string>
     <string id="30120">Mostra progresso caricamento</string>
     <string id="30121">Caricamento contenuti</string>
     <string id="30122">Recupero dati</string>
@@ -115,8 +115,8 @@
     <string id="30126">Elaborazione elemento : </string>
     <string id="30128">Errore riproduzione</string>
     <string id="30129">Questo elemento non è riproducibile</string>    
-    <string id="30130">Rilevato Percorso Locale</string>
-    <string id="30131">Your MB3 Server contains local paths.  Please change server paths to UNC or change XBMB3C setting 'Play from Stream' to true.  Path: </string>
+    <string id="30130">Rilevato percorso locale</string>
+    <string id="30131">Il tuo server MB3 contiene percorsi locali. Si prega di cambiare i percorsi del server a UNC o abilitare l'impostazione XBMB3C 'Riproduci dallo Stream'. Percorso: </string>
     <string id="30132">Avviso</string>
     <string id="30133">Debugging abilitato.</string>
     <string id="30134">Questo influirà sulle prestazioni.</string>
@@ -132,7 +132,7 @@
 
     <string id="30143">Transcodifica sempre se il bitrate è sopra</string>
     
-    <string id="30150">Skin does not support setting views</string>
+    <string id="30150">La skin non supporta l'impostazione delle viste</string>
     <string id="30151">Seleziona l'azione dell'elemento (Richiede riavvio)</string>
     
     <string id="30156">Sort NextUp by Show Title</string>    
@@ -141,9 +141,9 @@
     <string id="30159">Artwork</string>
     <string id="30160">Qualità Video se la Transcodifica è necessaria</string><!-- Verified -->
     
-    <string id="30161">Enable Suggested Loader (Requires Restart)</string>
-    <string id="30162">Add Season Number</string>     
-    <string id="30163">Flatten Seasons</string>     
+    <string id="30161">Abilita il loader consigliato (Richiede riavvio)</string>
+    <string id="30162">Aggiungi il numero della Stagione</string>     
+    <string id="30163">Appiattire le stagioni</string>     
     
     <string id="30164">Riproduzione diretta - HTTP</string>     
     <string id="30165">Riproduzione diretta</string>     
@@ -168,7 +168,7 @@
     <string id="30182">Episodi preferiti</string>      
     <string id="30183">Album riprodotti di frequente</string> 
     <string id="30184">TV in arrivo</string>            
-    <string id="30185">BoxSets</string>                
+    <string id="30185">Cofanetti</string>                
     <string id="30186">Trailer</string>               
     <string id="30187">Video musicali</string>           
     <string id="30188">Foto</string>                 
@@ -177,9 +177,9 @@
     <string id="30191">Studi cinematografici</string>          
     <string id="30192">Attori Film</string>           
     <string id="30193">Episodi Non Visti</string>     
-    <string id="30194">TV Genres</string>              
-    <string id="30195">TV Networks</string>            
-    <string id="30196">TV Actors</string>              
+    <string id="30194">Generi TV</string>              
+    <string id="30195">Reti TV</string>            
+    <string id="30196">Attori TV</string>              
     <string id="30197">Playlist</string>              
     <string id="30198">Cerca</string>              
     <string id="30199">Imposta viste</string>              
@@ -218,9 +218,9 @@
     <string id="30230">Consigliati</string><!-- Verified -->
     
     <string id="30235">Extra</string><!-- Verified -->
-    <string id="30236">Sync Theme Music</string>
-    <string id="30237">Sync Extra Fanart</string>
-    <string id="30238">Sync Movie BoxSets</string>
+    <string id="30236">Sincronizza Sigla Musicale</string>
+    <string id="30237">Sincronizza Fanart Extra</string>
+    <string id="30238">Sincronizza Cofanetti Film</string>
     
     <string id="30239">[COLOR yellow]Resetta il database locale di Kodi[/COLOR]</string><!-- Verified -->
     <string id="30240">Abilita sincronizzazione stato Film (visto/riprendi)</string>
@@ -248,7 +248,7 @@
     <string id="30300">Attiva</string>              
     <string id="30301">Ripristina Impostazioni</string>              
     <string id="30302">Film</string>              
-    <string id="30303">BoxSets</string>              
+    <string id="30303">Cofanetti</string>              
     <string id="30304">Trailer</string>              
     <string id="30305">Serie TV</string>              
     <string id="30306">Stagioni</string>              
@@ -372,12 +372,12 @@
     <string id="39006">Attiva debug log di Plex Companion</string>
     <string id="39007">Attiva GDM debug log di Plex Companion</string>
     <string id="39008">Plex Companion: permetti l'esecuzione di file multimediali mediante Plex</string>
-    <string id="39009">Impossibile effettuare il login su plex.tv. Per favore prova ad accedere nuovamente.</string>
+    <string id="39009">Impossibile effettuare il login su plex.tv. Si prega di provare ad accedere nuovamente.</string>
     <string id="39010">Problema di connessione a plex.tv. Problemi di rete o di internet?</string>
     <string id="39011">Non riesco a trovare un server Plex nella rete. Annullamento...</string>
     <string id="39012">Scegli il tuo server Plex</string>
     <string id="39013">Ancora non autorizzato ad accedere al server Plex </string>
-    <string id="39014">Per favore accedi a plex.tv.</string>
+    <string id="39014">Si prega di accedere a plex.tv.</string>
     <string id="39015">Problemi di connessione al server. Scegliere un altro server?</string>
     <string id="39016">Disabilita libreria musicale di Plex? (Per grandi librerie musicali, è VIVAMENTE raccomandato di usare Plex music solo con i percorsi diretti. Altrimenti Kodi potrebbe crashare)</string>
     <string id="39017">Vuoi andare nelle impostazioni del plugin per modificare i settaggi di PKC? Avrai bisogno di RIAVVIARE Kodi!</string>
@@ -393,76 +393,76 @@
     <string id="39025">Accedi automaticamente a plex.tv all'avvio</string>
     <string id="39026">Abilita sincronizzazione continua in background</string>
     <string id="39027">Modalità di riproduzione</string>
-    <string id="39028">ATTENZIONE! Se scegli la modalità "Nativa", potresti perdere alcune funzionalità di Plex, come i trailer Plex e le opzioni di transcodifica. TUTTE le condivisioni di Plex devono utilizzare i percorsi diretti (es. smb://myNAS/mymovie.mkv o \\myNAS/mymovie.mkv)!</string>
+    <string id="39028">ATTENZIONE! Se scegli la modalità "Nativa", potresti perdere alcune funzionalità di Plex, come i trailer Plex e le opzioni di transcodifica. TUTTE le condivisioni di Plex devono utilizzare i percorsi diretti (es. smb://mioNAS/mioFilm.mkv o \\mioNAS/mioFilm.mkv)!</string>
     <string id="39029">Credenziali di rete</string>
-    <string id="39030">Add network credentials to allow Kodi access to your content? Note: Skipping this step may generate a message during the initial scan of your content if Kodi can't locate your content.</string>
-    <string id="39031">Kodi can't locate file: </string>
-    <string id="39032">Please verify the path. You may need to verify your network credentials in the add-on settings or use different Plex paths. Stop syncing?</string>
-    <string id="39033">Transform Plex UNC library paths \\myNas\mymovie.mkv automatically to smb paths, smb://myNas/mymovie.mkv? (recommended)</string>
-    <string id="39034">Replace Plex UNC paths \\myNas with smb://myNas</string>
+    <string id="39030">Aggiungi le credenziali di rete per consentire a Kodi di leggere i tuoi contenuti? Nota: Se si salta questo passaggio potrebbe essere mostrato un messaggio durante la scansione iniziale, se Kodi non riesce a trovare i tuoi contenuti.</string>
+    <string id="39031">Kodi non riesce a trovare il file: </string>
+    <string id="39032">Si prega di verificare il percorso. Potrebbe essere necessario verificare le tue credenziali di rete nelle impostazioni dell'addon o utilizzare dei percorsi Plex differenti. Interrompere la sincronizzazione?</string>
+    <string id="39033">Trasformare i percorsi UNC della libreria Plex \\NAS\media in percorsi SMB smb://NAS/media automaticamente? (raccomandato)</string>
+    <string id="39034">Sostituisci i percorsi UNC di Plex \\NAS con smb://NAS</string>
 
-    <string id="39035">Replace Plex paths /volume1/media or \\myserver\media with custom SMB paths smb://NAS/mystuff</string>
-    <string id="39037">Original Plex MOVIE path to replace:</string>
-    <string id="39038">Replace Plex MOVIE with:</string>
-    <string id="39039">Original Plex TV SHOWS path to replace:</string>
-    <string id="39040">Replace Plex TV SHOWS with:</string>
-    <string id="39041">Original Plex MUSIC path to replace:</string>
-    <string id="39042">Replace Plex MUSIC with:</string>
-    <string id="39043">Go a step further and completely replace all original Plex library paths (/volume1/media) with custom SMB paths (smb://NAS/MyStuff)?</string>
-    <string id="39044">Please enter your custom smb paths in the settings under "Sync Options" and then restart Kodi</string>
-    <string id="39045">Original Plex PHOTO path to replace:</string>
-    <string id="39046">Replace Plex PHOTO with:</string>
+    <string id="39035">Sostituisci i percorsi Plex /volume1/media o \\NAS\media con dei percorsi SMB smb://NAS/media</string>
+    <string id="39037">Percorso FILM Plex originale da sostituire:</string>
+    <string id="39038">Sostituisci FILM Plex con:</string>
+    <string id="39039">Percorso SPETTACOLI Plex originale da sostituire:</string>
+    <string id="39040">Sostituisci SPETTACOLI Plex con:</string>
+    <string id="39041">Percorso MUSICA Plex originale da sostituire:</string>
+    <string id="39042">Sostituisci MUSICA Plex con:</string>
+    <string id="39043">Fare un ulteriore passaggio e sostituire completamente tutti i percorsi originali della libreria Plex (/volume1/media) con percorsi SMB (smb://NAS/media)?</string>
+    <string id="39044">Si prega di inserire i percorsi SMB personalizzati nelle impostazioni sotto "Opzioni di Sincronizzazione" e poi riavviare Kodi</string>
+    <string id="39045">Percorso FOTO Plex originale da sostituire:</string>
+    <string id="39046">Sostituisci FOTO Plex con:</string>
     <string id="39047">On Deck: Append show title to episode</string>
     <string id="39048">On Deck: Append season- and episode-number SxxExx</string>
-    <string id="39049">Nothing works? Try a full reset!</string>
-    <string id="39050">[COLOR yellow]Choose Plex Server from a list[/COLOR]</string>
-    <string id="39051">Wait before sync new/changed PMS item [s]</string>
-    <string id="39052">Background Sync</string>
-    <string id="39053">Eseguire una sincronizzazione completa biblioteca ogni x minuti</string>
-    <string id="39054">remote</string>
-    <string id="39055">Searching for Plex Server</string>
-    <string id="39056">Used by Sync and when attempting to Direct Play</string>
-    <string id="39057">Customize Paths</string>
+    <string id="39049">Non funziona nulla? Prova un reset completo!</string>
+    <string id="39050">[COLOR yellow]Scegli un server Plex[/COLOR]</string>
+    <string id="39051">Attesa prima della sincronizzazione di elementi nuovi/modificati in PMS [s]</string>
+    <string id="39052">Sincronizzazione in background</string>
+    <string id="39053">Esegui una sincronizzazione completa della libreria ogni x minuti</string>
+    <string id="39054">remoto</string>
+    <string id="39055">Ricerca del server Plex</string>
+    <string id="39056">Utilizzato dalla sincronizzazione e quando si utilizza la riproduzione diretta</string>
+    <string id="39057">Personalizza i percorsi</string>
     <string id="39058">Extend Plex TV Series "On Deck" view to all shows</string>
     <string id="39059">Recently Added: Append show title to episode</string>
     <string id="39060">Recently Added: Append season- and episode-number SxxExx</string>
-    <string id="39061">Would you like to download additional artwork from FanArtTV in the background?</string>
-    <string id="39062">Sync when screensaver is deactivated</string>
-    <string id="39063">Force Transcode Hi10P</string>
-    <string id="39064">Recently Added: Also show already watched episodes</string>
-    <string id="39066">Recently Added: Also show already watched movies (Refresh Plex playlist/nodes!)</string>
-    <string id="39067">Your current Plex Media Server:</string>
-    <string id="39068">[COLOR yellow]Manually enter Plex Media Server address[/COLOR]</string>
-    <string id="39069">Current address:</string>
-    <string id="39070">Current port:</string>
-    <string id="39071">Current plex.tv status:</string>
-    <string id="39072">Is your Kodi installed on a low-powered device like a Raspberry Pi? If yes, then we will reduce the strain on Kodi to prevent it from crashing.</string>
+    <string id="39061">Vuoi scariare degli artwork aggiuntivi da FanArtTV in background?</string>
+    <string id="39062">Sincronizzazione quando lo screensaver è disattivato</string>
+    <string id="39063">Forza transcodifica Hi10P</string>
+    <string id="39064">Aggiunti di recente: mostra anche gli episodi già visti</string>
+    <string id="39066">Aggiunti di recente: mostra anche i film già visti (Aggiornare playlist/nodi Plex!)</string>
+    <string id="39067">Il tuo Plex Media Server corrente:</string>
+    <string id="39068">[COLOR yellow]Inserisci manualmente l'indirizzo del Plex Media Server[/COLOR]</string>
+    <string id="39069">Indirizzo attuale:</string>
+    <string id="39070">Porta attuale:</string>
+    <string id="39071">Stato attuale di plex.tv:</string>
+    <string id="39072">Il tuo Kodi è installato in un dispositivo a bassa potenza come un Raspberry Pi? In caso affermativo, sarà ridotto l'utilizzo delle risorse per prevenire arresti anomali.</string>
     <string id="39073">Appearance Tweaks</string>
-    <string id="39074">TV Shows</string>
-    <string id="39075">Always use default Plex subtitle if possible</string>
-    <string id="39076">If you use several Plex libraries of one kind, e.g. "Kids Movies" and "Parents Movies", be sure to check the Wiki: https://goo.gl/JFtQV9</string>
-    <string id="39077">Number of PMS items to show in widgets (e.g. "On Deck")</string>
-    <string id="39078">Plex Companion Update Port (change only if needed)</string>
-    <string id="39079">Plex Companion could not open the GDM port. Please change it in the PKC settings.</string>
+    <string id="39074">Serie TV</string>
+    <string id="39075">Usa sempre i sottotitoli predefiniti di Plex se possibile</string>
+    <string id="39076">Se usi diverse librerie Plex dello stesso tipo (es. "Film Ragazzi" e "Film Genitori") controlla il Wiki: https://goo.gl/JFtQV9</string>
+    <string id="39077">Numero di elementi PMS da mostrare nei widget (es. "On Deck")</string>
+    <string id="39078">Porta Plex Companion (modifica solo se necessario)</string>
+    <string id="39079">Plex Companion non può aprire la porta GDM. Si prega di modificarla nelle impostazioni di PKC.</string>
 
     <!-- Plex Entrypoint.py -->
-    <string id="39200">Log-out Plex Home User </string>
+    <string id="39200">Logout utente Plex </string>
     <string id="39201">Impostazioni</string>
-    <string id="39202">Network credentials</string>
-    <string id="39203">Refresh Plex playlists/nodes</string>
-    <string id="39204">Perform manual library sync</string>
-    <string id="39205">Unable to run the sync, the add-on is not connected to a Plex server.</string>
-    <string id="39206">Plex might lock your account if you fail to log in too many times. Proceed anyway?</string>
-    <string id="39207">Resetting PMS connections, please wait</string>
-    <string id="39208">Failed to reset PKC. Try to restart Kodi.</string>
-    <string id="39209">[COLOR yellow]Toggle plex.tv login (sign in or sign out)[/COLOR]</string>
-    <string id="39210">Not yet connected to Plex Server</string>
+    <string id="39202">Credenziali di rete</string>
+    <string id="39203">Aggiorna playlist/nodi Plex</string>
+    <string id="39204">Eseguire sincronizzazione manuale della libreria</string>
+    <string id="39205">Impossibile eseguire la sincronizzazione, l'addon non è connesso ad un server Plex.</string>
+    <string id="39206">Plex potrebbe bloccare il tuo account se fallisci l'accesso troppe volte. Procedere comunque?</string>
+    <string id="39207">Reset connessioni PMS, si prega di attendere</string>
+    <string id="39208">Impossibile resettare PKC. Prova a riavviare Kodi.</string>
+    <string id="39209">[COLOR yellow]Login/Logout plex.tv[/COLOR]</string>
+    <string id="39210">Non ancora connesso al Server Plex</string>
     <string id="39211">Guarda più tardi</string>
-    <string id="39213">is offline</string>
+    <string id="39213">non è attivo</string>
     <string id="39214">Even though we signed in to plex.tv, we could not authorize for PMS</string>
-    <string id="39215">Enter your Plex Media Server's IP or URL, Examples are:</string>
+    <string id="39215">Inserisci l'IP o l'URL del tuo Plex Media Server. Ad esempio:</string>
 
-    <string id="39217">Does your Plex Media Server support SSL connections? (https instead of http)?</string>
+    <string id="39217">Il tuo Plex Media Server supporta le connessioni SSL (https invece di http)?</string>
     <string id="39218">Error contacting PMS</string>
     <string id="39219">Abort (Yes) or save address anyway (No)?</string>
     <string id="39220">connected</string>
@@ -513,4 +513,7 @@
     <string id="39601">Could not stop the database from running. Please try again later.</string>
     <string id="39602">Remove all cached artwork? (recommended!)</string>
     <string id="39603">Reset all PlexKodiConnect Addon settings? (this is usually NOT recommended and unnecessary!)</string>
+
+    <string id="39700">Amazon Alexa (Voice Recognition)</string>
+    <string id="39701">Alexa aktivieren</string>
 </strings>
