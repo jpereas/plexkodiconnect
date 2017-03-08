@@ -36,13 +36,14 @@ from utils import window, pickl_window, reset, passwordsXML, language as lang,\
     dialog
 from pickler import unpickle_me
 from PKC_listitem import convert_PKC_to_listitem
+import variables as v
 
 ###############################################################################
 
 import loghandler
 
 loghandler.config()
-log = logging.getLogger("PLEX.default")
+log = logging.getLogger('PLEX.default')
 
 ###############################################################################
 
@@ -50,144 +51,160 @@ HANDLE = int(argv[1])
 
 
 class Main():
-
     # MAIN ENTRY POINT
     # @utils.profiling()
     def __init__(self):
-        log.debug("Full sys.argv received: %s" % argv)
+        log.debug('Full sys.argv received: %s' % argv)
         # Parse parameters
         params = dict(parse_qsl(argv[2][1:]))
-        try:
-            mode = params['mode']
-            itemid = params.get('id', '')
-        except:
-            mode = ""
-            itemid = ''
+        mode = params.get('mode', '')
+        itemid = params.get('id', '')
 
         if mode == 'play':
-            # Put the request into the "queue"
-            while window('plex_play_new_item'):
-                sleep(50)
-            window('plex_play_new_item',
-                   value='%s%s' % (mode, argv[2]))
-            # Wait for the result
-            while not pickl_window('plex_result'):
-                sleep(50)
-            result = unpickle_me()
-            if result is None:
-                log.error('Error encountered, aborting')
-                dialog('notification',
-                       heading='{plex}',
-                       message=lang(30128),
-                       icon='{error}',
-                       time=3000)
-                setResolvedUrl(HANDLE, False, ListItem())
-            elif result.listitem:
-                listitem = convert_PKC_to_listitem(result.listitem)
-                setResolvedUrl(HANDLE, True, listitem)
-            return
+            self.play()
 
-        modes = {
-            'reset': reset,
-            'resetauth': entrypoint.resetAuth,
-            'passwords': passwordsXML,
-            'getsubfolders': entrypoint.GetSubFolders,
-            'nextup': entrypoint.getNextUpEpisodes,
-            'inprogressepisodes': entrypoint.getInProgressEpisodes,
-            'recentepisodes': entrypoint.getRecentEpisodes,
-            'refreshplaylist': entrypoint.refreshPlaylist,
-            'switchuser': entrypoint.switchPlexUser,
-            'deviceid': entrypoint.resetDeviceId,
-            'browseplex': entrypoint.BrowsePlexContent,
-            'ondeck': entrypoint.getOnDeck,
-            'chooseServer': entrypoint.chooseServer,
-            'watchlater': entrypoint.watchlater,
-            'enterPMS': entrypoint.enterPMS,
-            'togglePlexTV': entrypoint.togglePlexTV,
-            'Plex_Node': entrypoint.Plex_Node
-        }
+        elif mode == 'ondeck':
+            entrypoint.getOnDeck(itemid,
+                                 params.get('type'),
+                                 params.get('tagname'),
+                                 int(params.get('limit')))
 
-        if "/extrafanart" in argv[0]:
-            plexpath = argv[2][1:]
-            plexid = params.get('id')
-            entrypoint.getExtraFanArt(plexid, plexpath)
-            entrypoint.getVideoFiles(plexid, plexpath)
-            return
+        elif mode == 'recentepisodes':
+            entrypoint.getRecentEpisodes(itemid,
+                                         params.get('type'),
+                                         params.get('tagname'),
+                                         int(params.get('limit')))
 
-        if mode == 'fanart':
+        elif mode == 'nextup':
+            entrypoint.getNextUpEpisodes(params['tagname'],
+                                         int(params['limit']))
+
+        elif mode == 'inprogressepisodes':
+            entrypoint.getInProgressEpisodes(params['tagname'],
+                                             int(params['limit']))
+
+        elif mode == 'Plex_Node':
+            entrypoint.Plex_Node(itemid, params.get('viewOffset'))
+
+        elif mode == 'browseplex':
+            entrypoint.browse_plex(key=params.get('key'),
+                                   plex_section_id=params.get('id'))
+
+        elif mode == 'getsubfolders':
+            entrypoint.GetSubFolders(itemid)
+
+        elif mode == 'watchlater':
+            entrypoint.watchlater()
+
+        elif mode == 'channels':
+            entrypoint.channels()
+
+        elif mode == 'settings':
+            executebuiltin('Addon.OpenSettings(%s)' % v.ADDON_ID)
+
+        elif mode == 'enterPMS':
+            entrypoint.enterPMS()
+
+        elif mode == 'reset':
+            reset()
+
+        elif mode == 'togglePlexTV':
+            entrypoint.togglePlexTV()
+
+        elif mode == 'resetauth':
+            entrypoint.resetAuth()
+
+        elif mode == 'passwords':
+            passwordsXML()
+
+        elif mode == 'switchuser':
+            entrypoint.switchPlexUser()
+
+        elif mode in ('manualsync', 'repair'):
+            if window('plex_online') != 'true':
+                # Server is not online, do not run the sync
+                dialog('ok',
+                       heading=lang(29999),
+                       message=lang(39205))
+                log.error('Not connected to a PMS.')
+            else:
+                if mode == 'repair':
+                    window('plex_runLibScan', value='repair')
+                    log.info('Requesting repair lib sync')
+                elif mode == 'manualsync':
+                    log.info('Requesting full library scan')
+                    window('plex_runLibScan', value='full')
+
+        elif mode == 'texturecache':
+            window('plex_runLibScan', value='del_textures')
+
+        elif mode == 'chooseServer':
+            entrypoint.chooseServer()
+
+        elif mode == 'refreshplaylist':
+            log.info('Requesting playlist/nodes refresh')
+            window('plex_runLibScan', value='views')
+
+        elif mode == 'deviceid':
+            self.deviceid()
+
+        elif mode == 'fanart':
             log.info('User requested fanarttv refresh')
             window('plex_runLibScan', value='fanart')
 
+        elif '/extrafanart' in argv[0]:
+            plexpath = argv[2][1:]
+            plexid = itemid
+            entrypoint.getExtraFanArt(plexid, plexpath)
+            entrypoint.getVideoFiles(plexid, plexpath)
+
         # Called by e.g. 3rd party plugin video extras
-        if ("/Extras" in argv[0] or "/VideoFiles" in argv[0] or
-                "/Extras" in argv[2]):
-            plexId = params.get('id', None)
+        elif ('/Extras' in argv[0] or '/VideoFiles' in argv[0] or
+                '/Extras' in argv[2]):
+            plexId = itemid or None
             entrypoint.getVideoFiles(plexId, params)
 
-        if modes.get(mode):
-            # Simple functions
-            if mode == "play":
-                dbid = params.get('dbid')
-                # modes[mode](itemid, dbid)
-                modes[mode](itemid, dbid)
-
-            elif mode in ("nextup", "inprogressepisodes"):
-                limit = int(params['limit'])
-                modes[mode](params['tagname'], limit)
-            
-            elif mode in ("channels","getsubfolders"):
-                modes[mode](itemid)
-                
-            elif mode == "browsecontent":
-                modes[mode](itemid, params.get('type'), params.get('folderid'))
-
-            elif mode == 'browseplex':
-                modes[mode](
-                    itemid,
-                    params.get('type'),
-                    params.get('folderid'))
-
-            elif mode in ('ondeck', 'recentepisodes'):
-                modes[mode](
-                    itemid,
-                    params.get('type'),
-                    params.get('tagname'),
-                    int(params.get('limit')))
-
-            elif mode == "channelsfolder":
-                folderid = params['folderid']
-                modes[mode](itemid, folderid)
-            elif mode == "companion":
-                modes[mode](itemid, params=argv[2])
-            elif mode == 'Plex_Node':
-                modes[mode](params.get('id'),
-                            params.get('viewOffset'))
-            else:
-                modes[mode]()
         else:
-            # Other functions
-            if mode == "settings":
-                executebuiltin('Addon.OpenSettings(plugin.video.plexkodiconnect)')
-            elif mode in ("manualsync", "repair"):
-                if window('plex_online') != "true":
-                    # Server is not online, do not run the sync
-                    dialog('ok',
-                           heading=lang(29999),
-                           message=lang(39205))
-                    log.error("Not connected to a PMS.")
-                else:
-                    if mode == 'repair':
-                        window('plex_runLibScan', value="repair")
-                        log.info("Requesting repair lib sync")
-                    elif mode == 'manualsync':
-                        log.info("Requesting full library scan")
-                        window('plex_runLibScan', value="full")
-            elif mode == "texturecache":
-                window('plex_runLibScan', value='del_textures')
-            else:
-                entrypoint.doMainListing()
+            entrypoint.doMainListing()
 
-if __name__ == "__main__":
-    log.info('plugin.video.plexkodiconnect started')
+    def play(self):
+        # Put the request into the 'queue'
+        while window('plex_play_new_item'):
+            sleep(50)
+        window('plex_play_new_item',
+               value='%s%s' % ('play', argv[2]))
+        # Wait for the result
+        while not pickl_window('plex_result'):
+            sleep(50)
+        result = unpickle_me()
+        if result is None:
+            log.error('Error encountered, aborting')
+            dialog('notification',
+                   heading='{plex}',
+                   message=lang(30128),
+                   icon='{error}',
+                   time=3000)
+            setResolvedUrl(HANDLE, False, ListItem())
+        elif result.listitem:
+            listitem = convert_PKC_to_listitem(result.listitem)
+            setResolvedUrl(HANDLE, True, listitem)
+
+    def deviceid(self):
+        deviceId_old = window('plex_client_Id')
+        from clientinfo import getDeviceId
+        try:
+            deviceId = getDeviceId(reset=True)
+        except Exception as e:
+            log.error('Failed to generate a new device Id: %s' % e)
+            dialog('ok', lang(29999), lang(33032))
+        else:
+            log.info('Successfully removed old device ID: %s New deviceId:'
+                     '%s' % (deviceId_old, deviceId))
+            # 'Kodi will now restart to apply the changes'
+            dialog('ok', lang(29999), lang(33033))
+            executebuiltin('RestartApp')
+
+if __name__ == '__main__':
+    log.info('%s started' % v.ADDON_ID)
     Main()
-    log.info('plugin.video.plexkodiconnect stopped')
+    log.info('%s stopped' % v.ADDON_ID)
