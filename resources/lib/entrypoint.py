@@ -106,7 +106,10 @@ def Plex_Node(url, viewOffset, playdirectly=False, node=True):
     log.info('Plex_Node called with url: %s, viewOffset: %s'
              % (url, viewOffset))
     # Plex redirect, e.g. watch later. Need to get actual URLs
-    xml = downloadutils.DownloadUtils().downloadUrl(url)
+    if url.startswith('http'):
+        xml = downloadutils.DownloadUtils().downloadUrl(url)
+    else:
+        xml = downloadutils.DownloadUtils().downloadUrl('{server}%s' % url)
     try:
         xml[0].attrib
     except:
@@ -114,8 +117,7 @@ def Plex_Node(url, viewOffset, playdirectly=False, node=True):
         return
     if viewOffset != '0':
         try:
-            viewOffset = int(v.PLEX_TO_KODI_TIMEFACTOR *
-                             float(viewOffset))
+            viewOffset = int(v.PLEX_TO_KODI_TIMEFACTOR * float(viewOffset))
         except:
             pass
         else:
@@ -194,6 +196,9 @@ def doMainListing():
     # Plex Watch later
     addDirectoryItem(lang(39211),
                      "plugin://plugin.video.plexkodiconnect/?mode=watchlater")
+    # Plex Channels
+    addDirectoryItem(lang(30173),
+                     "plugin://plugin.video.plexkodiconnect/?mode=channels")
     # Plex user switch
     addDirectoryItem(lang(39200) + window('plex_username'),
                      "plugin://plugin.video.plexkodiconnect/"
@@ -209,23 +214,6 @@ def doMainListing():
     addDirectoryItem(lang(39203), "plugin://plugin.video.plexkodiconnect/?mode=refreshplaylist")
     addDirectoryItem(lang(39204), "plugin://plugin.video.plexkodiconnect/?mode=manualsync")
     xbmcplugin.endOfDirectory(HANDLE)
-
-
-##### Generate a new deviceId
-def resetDeviceId():
-    deviceId_old = window('plex_client_Id')
-    from clientinfo import getDeviceId
-    try:
-        deviceId = getDeviceId(reset=True)
-    except Exception as e:
-        log.error("Failed to generate a new device Id: %s" % e)
-        dialog('ok', lang(29999), lang(33032))
-    else:
-        log.info("Successfully removed old deviceId: %s New deviceId: %s"
-                 % (deviceId_old, deviceId))
-        # "Kodi will now restart to apply the changes"
-        dialog('ok', lang(29999), lang(33033))
-        executebuiltin('RestartApp')
 
 
 def switchPlexUser():
@@ -247,12 +235,6 @@ def switchPlexUser():
     # Remove video nodes
     deleteNodes()
     __LogIn()
-
-
-##### REFRESH EMBY PLAYLISTS #####
-def refreshPlaylist():
-    log.info('Requesting playlist/nodes refresh')
-    window('plex_runLibScan', value="views")
 
 
 #### SHOW SUBFOLDERS FOR NODE #####
@@ -661,83 +643,6 @@ def RunLibScan(mode):
         window('plex_runLibScan', value='full')
 
 
-def BrowsePlexContent(viewid, mediatype="", folderid=""):
-    """
-    Browse Plex Photos:
-        viewid:          PMS name of the library
-        mediatype:       mediatype, 'photos'
-        nodetype:        e.g. 'ondeck' (TBD!!)
-    """
-    log.debug("BrowsePlexContent called with viewid: %s, mediatype: "
-              "%s, folderid: %s" % (viewid, mediatype, folderid))
-
-    if not folderid:
-        # Top-level navigation, so get the content of this section
-        # Get all sections
-        xml = GetPlexSectionResults(
-            viewid,
-            containerSize=int(settings('limitindex')))
-        try:
-            xml.attrib
-        except AttributeError:
-            log.error("Error download section %s" % viewid)
-            return xbmcplugin.endOfDirectory(HANDLE, False)
-    else:
-        # folderid was passed so we can directly access the folder
-        xml = downloadutils.DownloadUtils().downloadUrl(
-            "{server}%s" % folderid)
-        try:
-            xml.attrib
-        except AttributeError:
-            log.error("Error downloading %s" % folderid)
-            return xbmcplugin.endOfDirectory(HANDLE, False)
-
-    # Set the folder's name
-    xbmcplugin.setPluginCategory(HANDLE,
-                                 xml.attrib.get('librarySectionTitle'))
-
-    # set the correct params for the content type
-    if mediatype == "photos":
-        xbmcplugin.setContent(HANDLE, 'photos')
-
-    # process the listing
-    for item in xml:
-        api = API(item)
-        if item.tag == 'Directory':
-            li = ListItem(item.attrib.get('title', 'Missing title'))
-            # for folders we add an additional browse request, passing the
-            # folderId
-            li.setProperty('IsFolder', 'true')
-            li.setProperty('IsPlayable', 'false')
-            path = "%s?id=%s&mode=browseplex&type=%s&folderid=%s" \
-                   % (ARGV_0, viewid, mediatype, api.getKey())
-            api.set_listitem_artwork(li)
-            xbmcplugin.addDirectoryItem(handle=HANDLE,
-                                        url=path,
-                                        listitem=li,
-                                        isFolder=True)
-        else:
-            li = api.CreateListItemFromPlexItem()
-            api.set_listitem_artwork(li)
-            xbmcplugin.addDirectoryItem(
-                handle=HANDLE,
-                url=li.getProperty("path"),
-                listitem=li)
-
-    xbmcplugin.addSortMethod(HANDLE,
-                             xbmcplugin.SORT_METHOD_VIDEO_TITLE)
-    xbmcplugin.addSortMethod(HANDLE,
-                             xbmcplugin.SORT_METHOD_DATE)
-    xbmcplugin.addSortMethod(HANDLE,
-                             xbmcplugin.SORT_METHOD_VIDEO_RATING)
-    xbmcplugin.addSortMethod(HANDLE,
-                             xbmcplugin.SORT_METHOD_VIDEO_RUNTIME)
-
-    xbmcplugin.endOfDirectory(
-        handle=HANDLE,
-        cacheToDisc=settings('enableTextureCache') == 'true')
-
-
 def getOnDeck(viewid, mediatype, tagname, limit):
     """
     Retrieves Plex On Deck items, currently only for TV shows
@@ -905,26 +810,177 @@ def watchlater():
 
     log.info('Displaying watch later plex.tv items')
     xbmcplugin.setContent(HANDLE, 'movies')
-    url = "plugin://plugin.video.plexkodiconnect/"
-    params = {
-        'mode': "Plex_Node",
-    }
     for item in xml:
-        api = API(item)
-        listitem = api.CreateListItemFromPlexItem()
-        api.AddStreamInfo(listitem)
-        api.set_listitem_artwork(listitem)
-        params['id'] = item.attrib.get('key')
-        params['viewOffset'] = item.attrib.get('viewOffset', '0')
-        params['plex_type'] = item.attrib.get('type')
-        xbmcplugin.addDirectoryItem(
-            handle=HANDLE,
-            url="%s?%s" % (url, urlencode(params)),
-            listitem=listitem)
+        __build_item(item)
 
     xbmcplugin.endOfDirectory(
         handle=HANDLE,
         cacheToDisc=settings('enableTextureCache') == 'true')
+
+
+def channels():
+    """
+    Listing for Plex Channels
+    """
+    if window('plex_restricteduser') == 'true':
+        log.error('No Plex Channels - restricted user')
+        return xbmcplugin.endOfDirectory(HANDLE, False)
+
+    xml = downloadutils.DownloadUtils().downloadUrl('{server}/channels/all')
+    try:
+        xml[0].attrib
+    except (ValueError, AttributeError, IndexError):
+        log.error('Could not download Plex Channels')
+        return xbmcplugin.endOfDirectory(HANDLE, False)
+
+    log.info('Displaying Plex Channels')
+    xbmcplugin.setContent(HANDLE, 'files')
+    for method in v.SORT_METHODS_DIRECTORY:
+        xbmcplugin.addSortMethod(HANDLE, getattr(xbmcplugin, method))
+    for item in xml:
+        __build_folder(item)
+    xbmcplugin.endOfDirectory(
+        handle=HANDLE,
+        cacheToDisc=settings('enableTextureCache') == 'true')
+
+
+def browse_plex(key=None, plex_section_id=None):
+    """
+    Lists the content of a Plex folder, e.g. channels. Either pass in key (to
+    be used directly for PMS url {server}<key>) or the plex_section_id
+    """
+    if key:
+        xml = downloadutils.DownloadUtils().downloadUrl('{server}%s' % key)
+    else:
+        xml = GetPlexSectionResults(
+            plex_section_id,
+            containerSize=int(settings('limitindex')))
+    try:
+        xml[0].attrib
+    except (ValueError, AttributeError, IndexError):
+        log.error('Could not browse to %s' % key)
+        return xbmcplugin.endOfDirectory(HANDLE, False)
+
+    photos = False
+    movies = False
+    clips = False
+    tvshows = False
+    episodes = False
+    songs = False
+    artists = False
+    albums = False
+    musicvideos = False
+    for item in xml:
+        typus = item.attrib.get('type')
+        if item.tag == 'Directory':
+            __build_folder(item, plex_section_id=plex_section_id)
+        else:
+            __build_item(item)
+            if typus == v.PLEX_TYPE_PHOTO:
+                photos = True
+            elif typus == v.PLEX_TYPE_MOVIE:
+                movies = True
+            elif typus == v.PLEX_TYPE_CLIP:
+                clips = True
+            elif typus in (v.PLEX_TYPE_SHOW, v.PLEX_TYPE_SEASON):
+                tvshows = True
+            elif typus == v.PLEX_TYPE_EPISODE:
+                episodes = True
+            elif typus == v.PLEX_TYPE_SONG:
+                songs = True
+            elif typus == v.PLEX_TYPE_ARTIST:
+                artists = True
+            elif typus == v.PLEX_TYPE_ALBUM:
+                albums = True
+            elif typus == v.PLEX_TYPE_MUSICVIDEO:
+                musicvideos = True
+
+    # Set the correct content type
+    if movies is True:
+        xbmcplugin.setContent(HANDLE, 'movies')
+        sort_methods = v.SORT_METHODS_MOVIES
+    elif clips is True:
+        xbmcplugin.setContent(HANDLE, 'movies')
+        sort_methods = v.SORT_METHODS_CLIPS
+    elif photos is True:
+        xbmcplugin.setContent(HANDLE, 'files')
+        sort_methods = v.SORT_METHODS_PHOTOS
+    elif tvshows is True:
+        xbmcplugin.setContent(HANDLE, 'tvshows')
+        sort_methods = v.SORT_METHOD_TVSHOWS
+    elif episodes is True:
+        xbmcplugin.setContent(HANDLE, 'episodes')
+        sort_methods = v.SORT_METHODS_EPISODES
+    elif songs is True:
+        xbmcplugin.setContent(HANDLE, 'songs')
+        sort_methods = v.SORT_METHODS_SONGS
+    elif artists is True:
+        xbmcplugin.setContent(HANDLE, 'artists')
+        sort_methods = v.SORT_METHODS_ARTISTS
+    elif albums is True:
+        xbmcplugin.setContent(HANDLE, 'albums')
+        sort_methods = v.SORT_METHODS_ALBUMS
+    elif musicvideos is True:
+        xbmcplugin.setContent(HANDLE, 'musicvideos')
+        sort_methods = v.SORT_METHODS_MOVIES
+    else:
+        xbmcplugin.setContent(HANDLE, 'files')
+        sort_methods = v.SORT_METHODS_DIRECTORY
+
+    for method in sort_methods:
+        xbmcplugin.addSortMethod(HANDLE, getattr(xbmcplugin, method))
+
+    # Set the Kodi title for this view
+    title = xml.attrib.get('librarySectionTitle', xml.attrib.get('title1'))
+    xbmcplugin.setPluginCategory(HANDLE, title)
+
+    xbmcplugin.endOfDirectory(
+        handle=HANDLE,
+        cacheToDisc=settings('enableTextureCache') == 'true')
+
+
+def __build_folder(xml_element, plex_section_id=None):
+    url = "plugin://%s/" % v.ADDON_ID
+    key = xml_element.attrib.get('fastKey', xml_element.attrib.get('key'))
+    if not key.startswith('/'):
+        key = '/library/sections/%s/%s' % (plex_section_id, key)
+    params = {
+        'mode': "browseplex",
+        'key': key,
+        'id': plex_section_id
+    }
+    listitem = ListItem(xml_element.attrib.get('title'))
+    listitem.setArt({'thumb': xml_element.attrib.get('thumb'),
+                     'poster': xml_element.attrib.get('art')})
+    xbmcplugin.addDirectoryItem(handle=HANDLE,
+                                url="%s?%s" % (url, urlencode(params)),
+                                isFolder=True,
+                                listitem=listitem)
+
+
+def __build_item(xml_element):
+    api = API(xml_element)
+    listitem = api.CreateListItemFromPlexItem()
+    api.AddStreamInfo(listitem)
+    api.set_listitem_artwork(listitem)
+    if api.getType() == v.PLEX_TYPE_CLIP:
+        params = {
+            'mode': "Plex_Node",
+            'id': xml_element.attrib.get('key'),
+            'viewOffset': xml_element.attrib.get('viewOffset', '0'),
+            'plex_type': xml_element.attrib.get('type')
+        }
+    else:
+        params = {
+            'filename': api.getKey(),
+            'id': api.getRatingKey(),
+            'dbid': listitem.getProperty('dbid') or '',
+            'mode': "play"
+        }
+    url = "plugin://%s?%s" % (v.ADDON_ID, urlencode(params))
+    xbmcplugin.addDirectoryItem(handle=HANDLE,
+                                url=url,
+                                listitem=listitem)
 
 
 def enterPMS():
