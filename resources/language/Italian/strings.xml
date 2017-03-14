@@ -482,25 +482,25 @@
     <string id="39301">Inserisci la password per l'utente plex.tv </string>
     <string id="39302">Impossibile autenticare l'utente </string>
     <string id="39303">Errore durante la connessione a plex.tv. Riprovare più tardi</string>
-    <string id="39304">Go to https://plex.tv/pin and enter the code: </string>
-    <string id="39305">Could not sign in to plex.tv. Try again later</string>
-    <string id="39306">: Select User</string>
-    <string id="39307">Enter PIN for user </string>
-    <string id="39308">Could not log in user </string>
-    <string id="39309">Riprova di nuovo.</string>
+    <string id="39304">Vai su https://plex.tv/pin e inserisci il codice: </string>
+    <string id="39305">Impossibile accedere a plex.tv. Riprovare più tardi</string>
+    <string id="39306">: Seleziona Utente</string>
+    <string id="39307">Immettere il PIN per l'utente </string>
+    <string id="39308">Impossibile autenticare l'utente </string>
+    <string id="39309">Si prega di riprovare.</string>
     <string id="39310">sconosciuto</string>
-    <string id="39311">or press No to not sign in.</string>
+    <string id="39311">oppure premere No per non accedere.</string>
 
     <!-- Plex Librarysync.py -->
-    <string id="39400">Library sync thread has crashed. You should restart Kodi now. Please report this on the forum</string>
-    <string id="39401">Detected Kodi database needs to be recreated for this version. This might take a while. Proceed?</string>
-    <string id="39402"> may not work correctly until the database is reset.</string>
-    <string id="39403">Cancelling the database syncing process. Current Kodi version is unsupported. Please verify your logs for more info.</string>
-    <string id="39404">Startup syncing process failed repeatedly. Try restarting Kodi. Stopping Sync for now.</string>
-    <string id="39405">Plex playlists/nodes refreshed</string>
-    <string id="39406">Plex playlists/nodes refresh failed</string>
-    <string id="39407">Full library sync finished</string>
-    <string id="39408">Sync had to skip some items because they could not be processed. Kodi may be instable now!! Please post your Kodi logs to the Plex forum.</string>
+    <string id="39400">Il thread di sincronizzazione della libreria è crashato. E' necessario riavviare Kodi ora. Si prega di segnalare l'anomalia sul forum</string>
+    <string id="39401">Il database di Kodi deve essere ricreato per questa versione. Questa operazione potrebbe richiedere un po' di tempo. Procedere?</string>
+    <string id="39402"> potrebbe non funzionare correttamente finché non viene resettato il database.</string>
+    <string id="39403">Annullamento della sincronizzazione del database. La versione corrente di Kodi non è supportata. Per maggiori informazioni si prega di verificare i log.</string>
+    <string id="39404">L'avvio della sincronizzazione è fallito ripetutamente. Provare a riavviare Kodi. La sincronizzazione è stata temporaneamente arrestata.</string>
+    <string id="39405">Playlist/Nodi Plex aggiornati</string>
+    <string id="39406">Aggiornamento playlist/nodi Plex fallito</string>
+    <string id="39407">Sincronizzazione completa libreria terminata</string>
+    <string id="39408">La sincronizzazione ha dovuto saltare alcuni elementi perché non potevano essere elaborati. Kodi potrebbe risultare instabile ora!! Si prega di inviare i log di Kodi sul forum di Plex.</string>
     <string id="39409">The Plex Server did not like you asking for so much data at once and returned ERRORS. Try lowering the number of sync download threads in the settings. Skipped some items for now.</string>
     <string id="39410">ERROR in library sync</string>
 
