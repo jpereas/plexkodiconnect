@@ -135,7 +135,7 @@
     <string id="30150">La skin non supporta l'impostazione delle viste</string>
     <string id="30151">Seleziona l'azione dell'elemento (Richiede riavvio)</string>
     
-    <string id="30156">Sort NextUp by Show Title</string>    
+    <string id="30156">Ordina i prossimi per il titolo della Serie</string>    
     <string id="30157">Abilita immagini migliorate (es Copertine)</string><!-- Verified -->
     <string id="30158">Metadati</string>
     <string id="30159">Artwork</string>
@@ -199,14 +199,14 @@
     <string id="30210">Artisti</string>
     <string id="30211">Generi Musicali</string>
     
-    <string id="30212">Enable Theme Videos (Requires Restart)</string>
-    <string id="30213"> - Loop Theme Videos</string>
+    <string id="30212">Abilita video del tema (Richiede riavvio)</string>
+    <string id="30213"> - Riproduzione continua dei video del tema</string>
     
     <string id="30216">Riproduci automaticamente episodi della stagione</string> 
     <string id="30218">Comprimi Artwork</string>
     <string id="30220">Recenti </string>
     <string id="30221">In corso </string>
-    <string id="30222">NextUp </string>
+    <string id="30222">Prossimi </string>
     <string id="30223">Viste utente</string>
     <string id="30224">Dati utilizzo</string>
     <string id="30225">Utilizza ordinamento Kodi</string>
@@ -229,7 +229,7 @@
     <string id="30243">Abilita HTTPS</string><!-- Verified -->
     <string id="30245">Forza transcodifica codec</string>
     
-    <string id="30246">Enable Netflix style next up notification</string>
+    <string id="30246">Abilita notifiche in stile Netflix</string>
     <string id="30247">  - Il numero di secondi prima della fine per mostrare la notifica</string>
     <string id="30248">Mostra il dialogo informativo di Emby nell'azione riproduci/seleziona</string>
     <string id="30249">Abilita il messaggio di connessione al server all'avvio</string><!-- Verified -->
@@ -412,8 +412,8 @@
     <string id="39044">Si prega di inserire i percorsi SMB personalizzati nelle impostazioni sotto "Opzioni di Sincronizzazione" e poi riavviare Kodi</string>
     <string id="39045">Percorso FOTO Plex originale da sostituire:</string>
     <string id="39046">Sostituisci FOTO Plex con:</string>
-    <string id="39047">On Deck: Append show title to episode</string>
-    <string id="39048">On Deck: Append season- and episode-number SxxExx</string>
+    <string id="39047">On Deck: Aggiungere il titolo della serie all'episodio</string>
+    <string id="39048">On Deck: Aggiungere il numero della stagione e dell'episodio (SxxExx)</string>
     <string id="39049">Non funziona nulla? Prova un reset completo!</string>
     <string id="39050">[COLOR yellow]Scegli un server Plex[/COLOR]</string>
     <string id="39051">Attesa prima della sincronizzazione di elementi nuovi/modificati in PMS [s]</string>
@@ -423,9 +423,9 @@
     <string id="39055">Ricerca del server Plex</string>
     <string id="39056">Utilizzato dalla sincronizzazione e quando si utilizza la riproduzione diretta</string>
     <string id="39057">Personalizza i percorsi</string>
-    <string id="39058">Extend Plex TV Series "On Deck" view to all shows</string>
-    <string id="39059">Recently Added: Append show title to episode</string>
-    <string id="39060">Recently Added: Append season- and episode-number SxxExx</string>
+    <string id="39058">Estendi la vista "On Deck" delle Serie TV a tutte le serie</string>
+    <string id="39059">Aggiunti di recente: Aggiungere il titolo della serie all'episodio</string>
+    <string id="39060">Aggiunti di recente: Aggiungere il numero della stagione e dell'episodio (SxxExx)</string>
     <string id="39061">Vuoi scariare degli artwork aggiuntivi da FanartTV in background?</string>
     <string id="39062">Sincronizzazione quando lo screensaver è disattivato</string>
     <string id="39063">Forza transcodifica Hi10P</string>
