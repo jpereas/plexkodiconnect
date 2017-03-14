@@ -437,7 +437,7 @@
     <string id="39070">Porta attuale:</string>
     <string id="39071">Stato attuale di plex.tv:</string>
     <string id="39072">Il tuo Kodi è installato in un dispositivo a bassa potenza come un Raspberry Pi? In caso affermativo, sarà ridotto l'utilizzo delle risorse per prevenire arresti anomali.</string>
-    <string id="39073">Appearance Tweaks</string>
+    <string id="39073">Impostazioni aspetto</string>
     <string id="39074">Serie TV</string>
     <string id="39075">Usa sempre i sottotitoli predefiniti di Plex se possibile</string>
     <string id="39076">Se usi diverse librerie Plex dello stesso tipo (es. "Film Ragazzi" e "Film Genitori") controlla il Wiki: https://goo.gl/JFtQV9</string>
@@ -459,7 +459,7 @@
     <string id="39210">Non ancora connesso al Server Plex</string>
     <string id="39211">Guarda più tardi</string>
     <string id="39213">non è attivo</string>
-    <string id="39214">Even though we signed in to plex.tv, we could not authorize for PMS</string>
+    <string id="39214">Anche se è stato effettuato l'accesso a plex.tv, non è possibile autorizzare il PMS</string>
     <string id="39215">Inserisci l'IP o l'URL del tuo Plex Media Server. Ad esempio:</string>
 
     <string id="39217">Il tuo Plex Media Server supporta le connessioni SSL (https invece di http)?</string>
@@ -501,20 +501,20 @@
     <string id="39406">Aggiornamento playlist/nodi Plex fallito</string>
     <string id="39407">Sincronizzazione completa libreria terminata</string>
     <string id="39408">La sincronizzazione ha dovuto saltare alcuni elementi perché non potevano essere elaborati. Kodi potrebbe risultare instabile ora!! Si prega di inviare i log di Kodi sul forum di Plex.</string>
-    <string id="39409">The Plex Server did not like you asking for so much data at once and returned ERRORS. Try lowering the number of sync download threads in the settings. Skipped some items for now.</string>
-    <string id="39410">ERROR in library sync</string>
+    <string id="39409">Il server Plex non è stato in grado di fornire troppi dati contemporaneamente e ha restituito degli errori. Si prega di ridurre il numero di thread di sincronizzazione nelle impostazioni. Alcuni elementi sono stati saltati per ora.</string>
+    <string id="39410">ERRORE nella sincronizzazione della libreria</string>
 
     <!-- Plex videonodes.py -->
     <string id="39500">On Deck</string>
-    <string id="39501">Collections</string>
+    <string id="39501">Collezioni</string>
 
     <!-- Plex utils.py -->
-    <string id="39600">Are you sure you want to reset your local Kodi database? A re-sync of the Plex data will take time afterwards.</string>
-    <string id="39601">Could not stop the database from running. Please try again later.</string>
-    <string id="39602">Remove all cached artwork? (recommended!)</string>
-    <string id="39603">Reset all PlexKodiConnect Addon settings? (this is usually NOT recommended and unnecessary!)</string>
+    <string id="39600">Sei sicuro di voler resettare il database di Kodi? La ri-sincronizzazione dei dati Plex richiederà del tempo in seguito.</string>
+    <string id="39601">Impossibile interrompere l'esecuzione del database. Si prega di riprovare più tardi.</string>
+    <string id="39602">Rimuovere tutti gli artwork in cache? (raccomandato!)</string>
+    <string id="39603">Resettare tutte le impostazioni di PlexKodiConnect? (questo solitamente NON E' raccomandato, né necessario!)</string>
 
-    <string id="39700">Amazon Alexa (Voice Recognition)</string>
-    <string id="39701">Activate Alexa</string>
-    <string id="39702">Browse by folder</string>
+    <string id="39700">Amazon Alexa (Riconoscimento vocale)</string>
+    <string id="39701">Attivare Alexa</string>
+    <string id="39702">Sfoglia cartelle</string>
 </strings>
