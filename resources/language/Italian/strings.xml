@@ -317,8 +317,8 @@
     <string id="30536">Gli utenti devono fare login ogni volta che viene avviato Kodi</string>
     <string id="30537">RIAVVIA KODI SE FAI DELLE MODIFICHE</string>
     <string id="30538">Ri-sincronizzazione completa necessaria</string>
-    <string id="30539">Scarica immagini aggiuntive da FanArtTV</string>
-    <string id="30540">Scarica collezioni/cofanetti film da FanArtTV</string>
+    <string id="30539">Scarica immagini aggiuntive da FanartTV</string>
+    <string id="30540">Scarica collezioni/cofanetti film da FanartTV</string>
     <string id="30541">Non chiedere di scegliere la qualità dello stream</string>
     <string id="30542">Scegli sempre qualità migliore per i trailer</string>
     <string id="30543">Kodi in esecuzione su un dispositivo poco potente (es Raspberry Pi)</string>
@@ -426,7 +426,7 @@
     <string id="39058">Extend Plex TV Series "On Deck" view to all shows</string>
     <string id="39059">Recently Added: Append show title to episode</string>
     <string id="39060">Recently Added: Append season- and episode-number SxxExx</string>
-    <string id="39061">Vuoi scariare degli artwork aggiuntivi da FanArtTV in background?</string>
+    <string id="39061">Vuoi scariare degli artwork aggiuntivi da FanartTV in background?</string>
     <string id="39062">Sincronizzazione quando lo screensaver è disattivato</string>
     <string id="39063">Forza transcodifica Hi10P</string>
     <string id="39064">Aggiunti di recente: mostra anche gli episodi già visti</string>
@@ -463,25 +463,25 @@
     <string id="39215">Inserisci l'IP o l'URL del tuo Plex Media Server. Ad esempio:</string>
 
     <string id="39217">Il tuo Plex Media Server supporta le connessioni SSL (https invece di http)?</string>
-    <string id="39218">Error contacting PMS</string>
-    <string id="39219">Abort (Yes) or save address anyway (No)?</string>
-    <string id="39220">connected</string>
-    <string id="39221">plex.tv toggle successful</string>
-    <string id="39222">[COLOR yellow]Look for missing fanart on FanartTV now[/COLOR]</string>
-    <string id="39223">Only look for missing fanart or refresh all fanart? The scan will take quite a while and happen in the background.</string>
-    <string id="39224">Refresh all</string>
-    <string id="39225">Missing only</string>    
+    <string id="39218">Errore connessione PMS</string>
+    <string id="39219">Annullare (Sì) o salvare comunque l'indirizzo (No)?</string>
+    <string id="39220">connesso</string>
+    <string id="39221">Login/Logout plex.tv eseguito</string>
+    <string id="39222">[COLOR yellow]Cercare ora fanart mancanti su FanartTV[/COLOR]</string>
+    <string id="39223">Cercare solo fanart mancanti o aggiornare tutte le fanart? La scansione impiegherà un po' di tempo e avverrà in background.</string>
+    <string id="39224">Aggiorna tutto</string>
+    <string id="39225">Solo mancanti</string>    
 
 
     <!-- Plex Artwork.py -->
-    <string id="39250">Running the image cache process can take some time. It will happen in the background. Are you sure you want continue?</string>
-    <string id="39251">Reset all existing cache data first?</string>
+    <string id="39250">Il caching delle immagini può richiedere diverso tempo. Sarà eseguito in background. Sei sicuro di voler continuare?</string>
+    <string id="39251">Resettare prima tutti i dati in cache?</string>
 
     <!-- Plex PlexAPI.py -->
-    <string id="39300">: Enter plex.tv username. Or nothing to cancel.</string>
-    <string id="39301">Enter password for plex.tv user </string>
-    <string id="39302">Could not sign in user </string>
-    <string id="39303">Problems trying to contact plex.tv. Try again later</string>
+    <string id="39300">: Inserisci l'username plex.tv. O niente per annullare.</string>
+    <string id="39301">Inserisci la password per l'utente plex.tv </string>
+    <string id="39302">Impossibile autenticare l'utente </string>
+    <string id="39303">Errore durante la connessione a plex.tv. Riprovare più tardi</string>
     <string id="39304">Go to https://plex.tv/pin and enter the code: </string>
     <string id="39305">Could not sign in to plex.tv. Try again later</string>
     <string id="39306">: Select User</string>
