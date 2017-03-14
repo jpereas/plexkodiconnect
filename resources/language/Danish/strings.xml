@@ -87,7 +87,7 @@
     <string id="30093">Mark som set</string>
     <string id="30094">Mark som ikke set</string>
     <string id="30095">Føj til favoritter</string>
-    <string id="30096">Fjern fra Favoritter</string>
+    <string id="30096">Fjern fra favoritter</string>
     <string id="30097">Sorter efter...</string>
     <string id="30098">Sorter faldende</string>
     <string id="30099">Sorter stigende</string>
@@ -99,7 +99,7 @@
     <string id="30107">Start fra begyndelsen</string>
     
     <string id="30110">Interface</string>
-    <string id="30111">Inkludere Stream Info</string>
+    <string id="30111">Inkludere stream info</string>
     <string id="30112">Inkludere mennesker</string>
     <string id="30113">Inkludere oversigt</string>
     <string id="30114">Tilbud sletning efter afspilning</string><!-- Verified -->
@@ -514,7 +514,7 @@
     <string id="39602">Fjern alle cachelagrede illustrationer? (anbefales!)</string>
     <string id="39603">Nulstil alle indstillinger for PlexKodiConnect Addon? (dette er normalt ikke anbefalet og unødvendigt!)</string>
 
-    <string id="39700">Amazon Alexa (Voice Recognition)</string>
-    <string id="39701">Activate Alexa</string>
-    <string id="39702">Browse by folder</string>
+    <string id="39700">Amazon Alexa (Stemme genkendelse)</string>
+    <string id="39701">Aktivere Alexa</string>
+    <string id="39702">Søg via mappe</string>
 </strings>
