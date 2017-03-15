@@ -326,7 +326,7 @@
     <string id="30545">Force transcode pictures</string>
 
     <!-- service add-on -->
-    <string id="33000">Welcome</string>
+    <string id="33000">Welkom</string>
     <string id="33001">Error connecting</string>
     <string id="33002">Server is unreachable</string>
     <string id="33003">Server is online</string>
@@ -515,6 +515,6 @@
     <string id="39603">Reset all PlexKodiConnect Addon settings? (this is usually NOT recommended and unnecessary!)</string>
 
     <string id="39700">Amazon Alexa (Voice Recognition)</string>
-    <string id="39701">Activate Alexa</string>
+    <string id="39701">Aktiveer Alexa</string>
     <string id="39702">Browse by folder</string>
 </strings>
