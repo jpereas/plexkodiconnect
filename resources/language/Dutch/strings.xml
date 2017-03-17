@@ -391,23 +391,23 @@
     
 
     <string id="39025">Automatisch inloggen op plex.tv bij het opstarten</string>
-    <string id="39026">Enable constant background sync</string>
-    <string id="39027">Playback Mode</string>
-    <string id="39028">CAUTION! If you choose "Native" mode , you might loose access to certain Plex features such as: Plex trailers and transcoding options. ALL Plex shares need to use direct paths (e.g. smb://myNAS/mymovie.mkv or \\myNAS/mymovie.mkv)!</string>
-    <string id="39029">Network credentials</string>
-    <string id="39030">Add network credentials to allow Kodi access to your content? Note: Skipping this step may generate a message during the initial scan of your content if Kodi can't locate your content.</string>
-    <string id="39031">Kodi can't locate file: </string>
-    <string id="39032">Please verify the path. You may need to verify your network credentials in the add-on settings or use different Plex paths. Stop syncing?</string>
-    <string id="39033">Transform Plex UNC library paths \\myNas\mymovie.mkv automatically to smb paths, smb://myNas/mymovie.mkv? (recommended)</string>
-    <string id="39034">Replace Plex UNC paths \\myNas with smb://myNas</string>
+    <string id="39026">Constante achtergrond sync inschakelen</string>
+    <string id="39027">Afspeelmodus</string>
+    <string id="39028">LET OP! Als u "Native" modus kiest, zullen sommige Plex mogelijkheden niet beschikbaar zijn. Bijvoorbeeld: Plex trailers en opties voor transcoden. ALLE Plex shares moeten gebruik maken van directe paden (bijvoorbeeld smb://myNAS/mymovie.mkv of \\myNAS/mymovie.mkv)!</string>
+    <string id="39029">Netwerk gegevens</string>
+    <string id="39030">Netwerk gegevens toevoegen zodat Kodi bij de inhoud kan? Opmerking: Kodi zal een bericht tonen bij de eerste sync als deze stap overgeslagen word.</string>
+    <string id="39031">Kodi kan het bestand niet vinden: </string>
+    <string id="39032">Controleer het pad. Waarschijnlijk verkeerde netwerk gegevens of verkeerde paden. Stop synchroniseren?</string>
+    <string id="39033">Vervang Plex UNC pad \\myNas\mymovie.mkv automatisch met smb paden, smb://myNas/mymovie.mkv? (aanbevolen)</string>
+    <string id="39034">Vervang Plex UNC paden \\myNas met smb://myNas</string>
 
-    <string id="39035">Replace Plex paths /volume1/media or \\myserver\media with custom SMB paths smb://NAS/mystuff</string>
-    <string id="39037">Original Plex MOVIE path to replace:</string>
-    <string id="39038">Replace Plex MOVIE with:</string>
-    <string id="39039">Original Plex TV SHOWS path to replace:</string>
-    <string id="39040">Replace Plex TV SHOWS with:</string>
-    <string id="39041">Original Plex MUSIC path to replace:</string>
-    <string id="39042">Replace Plex MUSIC with:</string>
+    <string id="39035">Vervang Plex paden /volume1/media of \\myserver\media met SMB paden smb://NAS/mystuff</string>
+    <string id="39037">Oorspronkelijke Plex film pad om te vervangen:</string>
+    <string id="39038">Vervang Plex MOVIE met:</string>
+    <string id="39039">Vervang Plex TV SHOWS pad met:</string>
+    <string id="39040">Vervang Plex TV-SHOWS met:</string>
+    <string id="39041">Oorspronkelijke Plex muziek pad om te vervangen:</string>
+    <string id="39042">Vervang Plex MUZIEK met:</string>
     <string id="39043">Go a step further and completely replace all original Plex library paths (/volume1/media) with custom SMB paths (smb://NAS/MyStuff)?</string>
     <string id="39044">Please enter your custom smb paths in the settings under "Sync Options" and then restart Kodi</string>
     <string id="39045">Original Plex PHOTO path to replace:</string>
