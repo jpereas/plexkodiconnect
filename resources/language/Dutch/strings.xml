@@ -360,37 +360,37 @@
     <string id="33031">Vergelijken:</string>
     <string id="33032">Genereren van nieuwe device id mislukt. Zie de logs voor meer informatie.</string>
     <string id="33033">Kodi zal nu opnieuw opstarten om de wijzigingen toe te passen.</string>
-    <string id="33041">Delete file(s) from Plex Server? This will also delete the file(s) from disk!</string>
+    <string id="33041">Bestand(en) van Plex Server verwijderen? Dit zal ook de bestanden van de schijf verwijderen!</string>
 
     <!-- New to Plex -->
-    <string id="39000">- Number of trailers to play before a movie</string>
-    <string id="39001">Boost audio when transcoding</string>
-    <string id="39002">Burnt-in subtitle size</string>
-    <string id="39003">Limit download sync threads (rec. for rpi: 1)</string>
-    <string id="39004">Enable Plex Companion (restart Kodi!)</string>
-    <string id="39005">Plex Companion Port (change only if needed)</string>
-    <string id="39006">Activate Plex Companion debug log</string>
-    <string id="39007">Activate Plex Companion GDM debug log</string>
-    <string id="39008">Plex Companion: Allows flinging media to Kodi through Plex</string>
-    <string id="39009">Could not login to plex.tv. Please try signing in again.</string>
-    <string id="39010">Problems connecting to plex.tv. Network or internet issue?</string>
-    <string id="39011">Could not find any Plex server in the network. Aborting...</string>
-    <string id="39012">Choose your Plex server</string>
-    <string id="39013">Not yet authorized for Plex server </string>
-    <string id="39014">Please sign in to plex.tv.</string>
-    <string id="39015">Problems connecting to server. Pick another server?</string>
-    <string id="39016">Disable Plex music library? (It is HIGHLY recommended to use Plex music only with direct paths for large music libraries. Kodi might crash otherwise)</string>
-    <string id="39017">Would you now like to go to the plugin's settings to fine-tune PKC? You will need to RESTART Kodi!</string>
+    <string id="39000">- Aantal trailers voor een film afspelen</string>
+    <string id="39001">Volume ophogen bij transcoden</string>
+    <string id="39002">Ondertitel grootte</string>
+    <string id="39003">Beperk aantal download threads (voor rpi: 1)</string>
+    <string id="39004">Plex Companion inschakelen (herstart kodi!)</string>
+    <string id="39005">Plex Companion poort (alleen aanpassen indien nodig)</string>
+    <string id="39006">Activeer debug log voor Plex Companion</string>
+    <string id="39007">Activeer debug log voor Plex Companion GDM</string>
+    <string id="39008">Plex Companion: Ondersteun afspelen van media via Kodi met Plex</string>
+    <string id="39009">Kan niet inloggen op plex.tv. Probeer opnieuw.</string>
+    <string id="39010">Problemen bij het verbinding met plex.tv. Netwerk of internet probleem?</string>
+    <string id="39011">Kon geen Plex servers in het netwerk vinden. Afgebroken...</string>
+    <string id="39012">Kies uw Plex server</string>
+    <string id="39013">Nog niet ingelogd op de Plex server </string>
+    <string id="39014">Log in op plex.tv.</string>
+    <string id="39015">Problemen bij het verbinden met de server. Kies een andere server?</string>
+    <string id="39016">Plex muziek library uitzetten? (Het is sterk aangeraden om Plex muziek alleen met directe paden te gebruiken bij een grote library. Kodie kan anders vastlopen)</string>
+    <string id="39017">PKC plugin instellingen aanpassen? Kodi moet hierna herstart worden!</string>
 
-    <string id="39018">[COLOR yellow]Repair local database (force update all content)[/COLOR]</string>
-    <string id="39019">[COLOR red]Partial or full reset of Database and PKC[/COLOR]</string>
-    <string id="39020">[COLOR yellow]Cache all images to Kodi texture cache now[/COLOR]</string>
+    <string id="39018">[COLOR yellow]Lokale database herstellen (forceer verversen van alle inhoud)[/COLOR]</string>
+    <string id="39019">[COLOR red]Gedeeltelijke of volledige reset van database en PKC[/COLOR]</string>
+    <string id="39020">[COLOR yellow]Alle afbeeldingen van Kodi nu aan de cache toevoegen[/COLOR]</string>
     <string id="39021">[COLOR yellow]Sync Emby Theme Media to Kodi[/COLOR]</string>
-    <string id="39022">local</string>
-    <string id="39023">Failed to authenticate. Did you login to plex.tv?</string>
+    <string id="39022">lokaal</string>
+    <string id="39023">Authenticatie mislukt. Ingelogd bij plex.tv?</string>
     
 
-    <string id="39025">Automatically log into plex.tv on startup</string>
+    <string id="39025">Automatisch inloggen op plex.tv bij het opstarten</string>
     <string id="39026">Enable constant background sync</string>
     <string id="39027">Playback Mode</string>
     <string id="39028">CAUTION! If you choose "Native" mode , you might loose access to certain Plex features such as: Plex trailers and transcoding options. ALL Plex shares need to use direct paths (e.g. smb://myNAS/mymovie.mkv or \\myNAS/mymovie.mkv)!</string>
