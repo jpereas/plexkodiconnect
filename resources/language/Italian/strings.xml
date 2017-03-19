@@ -135,7 +135,7 @@
     <string id="30150">La skin non supporta l'impostazione delle viste</string>
     <string id="30151">Seleziona l'azione dell'elemento (Richiede riavvio)</string>
     
-    <string id="30156">Sort NextUp by Show Title</string>    
+    <string id="30156">Ordina i prossimi per il titolo della Serie</string>    
     <string id="30157">Abilita immagini migliorate (es Copertine)</string><!-- Verified -->
     <string id="30158">Metadati</string>
     <string id="30159">Artwork</string>
@@ -199,14 +199,14 @@
     <string id="30210">Artisti</string>
     <string id="30211">Generi Musicali</string>
     
-    <string id="30212">Enable Theme Videos (Requires Restart)</string>
-    <string id="30213"> - Loop Theme Videos</string>
+    <string id="30212">Abilita video del tema (Richiede riavvio)</string>
+    <string id="30213"> - Riproduzione continua dei video del tema</string>
     
     <string id="30216">Riproduci automaticamente episodi della stagione</string> 
     <string id="30218">Comprimi Artwork</string>
     <string id="30220">Recenti </string>
     <string id="30221">In corso </string>
-    <string id="30222">NextUp </string>
+    <string id="30222">Prossimi </string>
     <string id="30223">Viste utente</string>
     <string id="30224">Dati utilizzo</string>
     <string id="30225">Utilizza ordinamento Kodi</string>
@@ -229,7 +229,7 @@
     <string id="30243">Abilita HTTPS</string><!-- Verified -->
     <string id="30245">Forza transcodifica codec</string>
     
-    <string id="30246">Enable Netflix style next up notification</string>
+    <string id="30246">Abilita notifiche in stile Netflix</string>
     <string id="30247">  - Il numero di secondi prima della fine per mostrare la notifica</string>
     <string id="30248">Mostra il dialogo informativo di Emby nell'azione riproduci/seleziona</string>
     <string id="30249">Abilita il messaggio di connessione al server all'avvio</string><!-- Verified -->
@@ -317,8 +317,8 @@
     <string id="30536">Gli utenti devono fare login ogni volta che viene avviato Kodi</string>
     <string id="30537">RIAVVIA KODI SE FAI DELLE MODIFICHE</string>
     <string id="30538">Ri-sincronizzazione completa necessaria</string>
-    <string id="30539">Scarica immagini aggiuntive da FanArtTV</string>
-    <string id="30540">Scarica collezioni/cofanetti film da FanArtTV</string>
+    <string id="30539">Scarica immagini aggiuntive da FanartTV</string>
+    <string id="30540">Scarica collezioni/cofanetti film da FanartTV</string>
     <string id="30541">Non chiedere di scegliere la qualità dello stream</string>
     <string id="30542">Scegli sempre qualità migliore per i trailer</string>
     <string id="30543">Kodi in esecuzione su un dispositivo poco potente (es Raspberry Pi)</string>
@@ -412,8 +412,8 @@
     <string id="39044">Si prega di inserire i percorsi SMB personalizzati nelle impostazioni sotto "Opzioni di Sincronizzazione" e poi riavviare Kodi</string>
     <string id="39045">Percorso FOTO Plex originale da sostituire:</string>
     <string id="39046">Sostituisci FOTO Plex con:</string>
-    <string id="39047">On Deck: Append show title to episode</string>
-    <string id="39048">On Deck: Append season- and episode-number SxxExx</string>
+    <string id="39047">On Deck: Aggiungere il titolo della serie all'episodio</string>
+    <string id="39048">On Deck: Aggiungere il numero della stagione e dell'episodio (SxxExx)</string>
     <string id="39049">Non funziona nulla? Prova un reset completo!</string>
     <string id="39050">[COLOR yellow]Scegli un server Plex[/COLOR]</string>
     <string id="39051">Attesa prima della sincronizzazione di elementi nuovi/modificati in PMS [s]</string>
@@ -423,10 +423,10 @@
     <string id="39055">Ricerca del server Plex</string>
     <string id="39056">Utilizzato dalla sincronizzazione e quando si utilizza la riproduzione diretta</string>
     <string id="39057">Personalizza i percorsi</string>
-    <string id="39058">Extend Plex TV Series "On Deck" view to all shows</string>
-    <string id="39059">Recently Added: Append show title to episode</string>
-    <string id="39060">Recently Added: Append season- and episode-number SxxExx</string>
-    <string id="39061">Vuoi scariare degli artwork aggiuntivi da FanArtTV in background?</string>
+    <string id="39058">Estendi la vista "On Deck" delle Serie TV a tutte le serie</string>
+    <string id="39059">Aggiunti di recente: Aggiungere il titolo della serie all'episodio</string>
+    <string id="39060">Aggiunti di recente: Aggiungere il numero della stagione e dell'episodio (SxxExx)</string>
+    <string id="39061">Vuoi scariare degli artwork aggiuntivi da FanartTV in background?</string>
     <string id="39062">Sincronizzazione quando lo screensaver è disattivato</string>
     <string id="39063">Forza transcodifica Hi10P</string>
     <string id="39064">Aggiunti di recente: mostra anche gli episodi già visti</string>
@@ -437,7 +437,7 @@
     <string id="39070">Porta attuale:</string>
     <string id="39071">Stato attuale di plex.tv:</string>
     <string id="39072">Il tuo Kodi è installato in un dispositivo a bassa potenza come un Raspberry Pi? In caso affermativo, sarà ridotto l'utilizzo delle risorse per prevenire arresti anomali.</string>
-    <string id="39073">Appearance Tweaks</string>
+    <string id="39073">Impostazioni aspetto</string>
     <string id="39074">Serie TV</string>
     <string id="39075">Usa sempre i sottotitoli predefiniti di Plex se possibile</string>
     <string id="39076">Se usi diverse librerie Plex dello stesso tipo (es. "Film Ragazzi" e "Film Genitori") controlla il Wiki: https://goo.gl/JFtQV9</string>
@@ -459,62 +459,62 @@
     <string id="39210">Non ancora connesso al Server Plex</string>
     <string id="39211">Guarda più tardi</string>
     <string id="39213">non è attivo</string>
-    <string id="39214">Even though we signed in to plex.tv, we could not authorize for PMS</string>
+    <string id="39214">Anche se è stato effettuato l'accesso a plex.tv, non è possibile autorizzare il PMS</string>
     <string id="39215">Inserisci l'IP o l'URL del tuo Plex Media Server. Ad esempio:</string>
 
     <string id="39217">Il tuo Plex Media Server supporta le connessioni SSL (https invece di http)?</string>
-    <string id="39218">Error contacting PMS</string>
-    <string id="39219">Abort (Yes) or save address anyway (No)?</string>
-    <string id="39220">connected</string>
-    <string id="39221">plex.tv toggle successful</string>
-    <string id="39222">[COLOR yellow]Look for missing fanart on FanartTV now[/COLOR]</string>
-    <string id="39223">Only look for missing fanart or refresh all fanart? The scan will take quite a while and happen in the background.</string>
-    <string id="39224">Refresh all</string>
-    <string id="39225">Missing only</string>    
+    <string id="39218">Errore connessione PMS</string>
+    <string id="39219">Annullare (Sì) o salvare comunque l'indirizzo (No)?</string>
+    <string id="39220">connesso</string>
+    <string id="39221">Login/Logout plex.tv eseguito</string>
+    <string id="39222">[COLOR yellow]Cercare ora fanart mancanti su FanartTV[/COLOR]</string>
+    <string id="39223">Cercare solo fanart mancanti o aggiornare tutte le fanart? La scansione impiegherà un po' di tempo e avverrà in background.</string>
+    <string id="39224">Aggiorna tutto</string>
+    <string id="39225">Solo mancanti</string>    
 
 
     <!-- Plex Artwork.py -->
-    <string id="39250">Running the image cache process can take some time. It will happen in the background. Are you sure you want continue?</string>
-    <string id="39251">Reset all existing cache data first?</string>
+    <string id="39250">Il caching delle immagini può richiedere diverso tempo. Sarà eseguito in background. Sei sicuro di voler continuare?</string>
+    <string id="39251">Resettare prima tutti i dati in cache?</string>
 
     <!-- Plex PlexAPI.py -->
-    <string id="39300">: Enter plex.tv username. Or nothing to cancel.</string>
-    <string id="39301">Enter password for plex.tv user </string>
-    <string id="39302">Could not sign in user </string>
-    <string id="39303">Problems trying to contact plex.tv. Try again later</string>
-    <string id="39304">Go to https://plex.tv/pin and enter the code: </string>
-    <string id="39305">Could not sign in to plex.tv. Try again later</string>
-    <string id="39306">: Select User</string>
-    <string id="39307">Enter PIN for user </string>
-    <string id="39308">Could not log in user </string>
-    <string id="39309">Riprova di nuovo.</string>
+    <string id="39300">: Inserisci l'username plex.tv. O niente per annullare.</string>
+    <string id="39301">Inserisci la password per l'utente plex.tv </string>
+    <string id="39302">Impossibile autenticare l'utente </string>
+    <string id="39303">Errore durante la connessione a plex.tv. Riprovare più tardi</string>
+    <string id="39304">Vai su https://plex.tv/pin e inserisci il codice: </string>
+    <string id="39305">Impossibile accedere a plex.tv. Riprovare più tardi</string>
+    <string id="39306">: Seleziona Utente</string>
+    <string id="39307">Immettere il PIN per l'utente </string>
+    <string id="39308">Impossibile autenticare l'utente </string>
+    <string id="39309">Si prega di riprovare.</string>
     <string id="39310">sconosciuto</string>
-    <string id="39311">or press No to not sign in.</string>
+    <string id="39311">oppure premere No per non accedere.</string>
 
     <!-- Plex Librarysync.py -->
-    <string id="39400">Library sync thread has crashed. You should restart Kodi now. Please report this on the forum</string>
-    <string id="39401">Detected Kodi database needs to be recreated for this version. This might take a while. Proceed?</string>
-    <string id="39402"> may not work correctly until the database is reset.</string>
-    <string id="39403">Cancelling the database syncing process. Current Kodi version is unsupported. Please verify your logs for more info.</string>
-    <string id="39404">Startup syncing process failed repeatedly. Try restarting Kodi. Stopping Sync for now.</string>
-    <string id="39405">Plex playlists/nodes refreshed</string>
-    <string id="39406">Plex playlists/nodes refresh failed</string>
-    <string id="39407">Full library sync finished</string>
-    <string id="39408">Sync had to skip some items because they could not be processed. Kodi may be instable now!! Please post your Kodi logs to the Plex forum.</string>
-    <string id="39409">The Plex Server did not like you asking for so much data at once and returned ERRORS. Try lowering the number of sync download threads in the settings. Skipped some items for now.</string>
-    <string id="39410">ERROR in library sync</string>
+    <string id="39400">Il thread di sincronizzazione della libreria è crashato. E' necessario riavviare Kodi ora. Si prega di segnalare l'anomalia sul forum</string>
+    <string id="39401">Il database di Kodi deve essere ricreato per questa versione. Questa operazione potrebbe richiedere un po' di tempo. Procedere?</string>
+    <string id="39402"> potrebbe non funzionare correttamente finché non viene resettato il database.</string>
+    <string id="39403">Annullamento della sincronizzazione del database. La versione corrente di Kodi non è supportata. Per maggiori informazioni si prega di verificare i log.</string>
+    <string id="39404">L'avvio della sincronizzazione è fallito ripetutamente. Provare a riavviare Kodi. La sincronizzazione è stata temporaneamente arrestata.</string>
+    <string id="39405">Playlist/Nodi Plex aggiornati</string>
+    <string id="39406">Aggiornamento playlist/nodi Plex fallito</string>
+    <string id="39407">Sincronizzazione completa libreria terminata</string>
+    <string id="39408">La sincronizzazione ha dovuto saltare alcuni elementi perché non potevano essere elaborati. Kodi potrebbe risultare instabile ora!! Si prega di inviare i log di Kodi sul forum di Plex.</string>
+    <string id="39409">Il server Plex non è stato in grado di fornire troppi dati contemporaneamente e ha restituito degli errori. Si prega di ridurre il numero di thread di sincronizzazione nelle impostazioni. Alcuni elementi sono stati saltati per ora.</string>
+    <string id="39410">ERRORE nella sincronizzazione della libreria</string>
 
     <!-- Plex videonodes.py -->
     <string id="39500">On Deck</string>
-    <string id="39501">Collections</string>
+    <string id="39501">Collezioni</string>
 
     <!-- Plex utils.py -->
-    <string id="39600">Are you sure you want to reset your local Kodi database? A re-sync of the Plex data will take time afterwards.</string>
-    <string id="39601">Could not stop the database from running. Please try again later.</string>
-    <string id="39602">Remove all cached artwork? (recommended!)</string>
-    <string id="39603">Reset all PlexKodiConnect Addon settings? (this is usually NOT recommended and unnecessary!)</string>
+    <string id="39600">Sei sicuro di voler resettare il database di Kodi? La ri-sincronizzazione dei dati Plex richiederà del tempo in seguito.</string>
+    <string id="39601">Impossibile interrompere l'esecuzione del database. Si prega di riprovare più tardi.</string>
+    <string id="39602">Rimuovere tutti gli artwork in cache? (raccomandato!)</string>
+    <string id="39603">Resettare tutte le impostazioni di PlexKodiConnect? (questo solitamente NON E' raccomandato, né necessario!)</string>
 
-    <string id="39700">Amazon Alexa (Voice Recognition)</string>
-    <string id="39701">Activate Alexa</string>
-    <string id="39702">Browse by folder</string>
+    <string id="39700">Amazon Alexa (Riconoscimento vocale)</string>
+    <string id="39701">Attivare Alexa</string>
+    <string id="39702">Sfoglia cartelle</string>
 </strings>
