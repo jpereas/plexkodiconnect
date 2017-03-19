@@ -496,25 +496,25 @@
     <string id="39401">Deze versie vereist een nieuwe database. Dit kan enige tijd duren. Doorgaan?</string>
     <string id="39402"> werkt mogelijk niet correct totdat de database opnieuw wordt ingesteld.</string>
     <string id="39403">Database syncing proces geannuleerd. Huidige Kodi versie wordt niet ondersteund. Controleer uw logbestanden voor meer info.</string>
-    <string id="39404">Startup syncing process failed repeatedly. Try restarting Kodi. Stopping Sync for now.</string>
-    <string id="39405">Plex playlists/nodes refreshed</string>
-    <string id="39406">Plex playlists/nodes refresh failed</string>
-    <string id="39407">Full library sync finished</string>
+    <string id="39404">Opstarten synchronisatie proces mislukt herhaaldelijk. Start Kodi opnieuw. Sync is voor nu geannuleerd.</string>
+    <string id="39405">Plex afspeellijsten/nodes vernieuwd</string>
+    <string id="39406">Plex afspeellijsten/nodes vernieuwen mislukt</string>
+    <string id="39407">Volledige bibliotheek sync klaar</string>
     <string id="39408">Sync diende een aantal bestanden over te slaan. Kodi werkt misschien niet langer stabiel. Gelieve uw Kodi log bestanden op het Plex forum te posten.</string>
-    <string id="39409">The Plex Server did not like you asking for so much data at once and returned ERRORS. Try lowering the number of sync download threads in the settings. Skipped some items for now.</string>
-    <string id="39410">ERROR in library sync</string>
+    <string id="39409">Plex gaf fouten terug door de gevraagde hoeveelheid data. Verminder het aantal sync threads in de instellingen. Sommige items zijn overgeslagen.</string>
+    <string id="39410">FOUT in bibliotheek sync</string>
 
     <!-- Plex videonodes.py -->
     <string id="39500">On Deck</string>
-    <string id="39501">Collections</string>
+    <string id="39501">Verzamelingen</string>
 
     <!-- Plex utils.py -->
-    <string id="39600">Are you sure you want to reset your local Kodi database? A re-sync of the Plex data will take time afterwards.</string>
-    <string id="39601">Could not stop the database from running. Please try again later.</string>
+    <string id="39600">Lokale database van Kodi resetten? Een hersynchronisatie is nodig en kan enige tijd duren.</string>
+    <string id="39601">Kon de database synchronisatie niet stoppen. Probeer het later nog eens.</string>
     <string id="39602">Verwijder artwork cache? (aanbevolen!)</string>
     <string id="39603">Reset alle instellingen van de PlexKodiConnect Addon? (dit is gewoonlijk niet aanbevolen en onnodig!)</string>
 
     <string id="39700">Amazon Alexa (spraakherkenning)</string>
     <string id="39701">Aktiveer Alexa</string>
-    <string id="39702">Browse by folder</string>
+    <string id="39702">Per map bladeren</string>
 </strings>
