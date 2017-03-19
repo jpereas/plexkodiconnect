@@ -236,9 +236,9 @@
     
     <string id="30251">Vidéos récemment ajoutées</string><!-- Verified -->
     <string id="30252">Photos récemment ajoutée</string><!-- Verified -->
-    <string id="30253">Vidéos préférées</string><!-- Verified -->
-    <string id="30254">Photos favorites</string><!-- Verified -->
-    <string id="30255">Albums préférés</string>
+    <string id="30253">Favorite Home Videos</string><!-- Verified -->
+    <string id="30254">Favorite Photos</string><!-- Verified -->
+    <string id="30255">Favorite Albums</string>
     
     <string id="30256">Clips récemment ajouté</string><!-- Verified -->
     <string id="30257">Clips en lecture</string><!-- Verified -->
