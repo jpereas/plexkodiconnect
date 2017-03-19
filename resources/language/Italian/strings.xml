@@ -236,9 +236,9 @@
     
     <string id="30251">Video aggiunti di recente</string><!-- Verified -->
     <string id="30252">Foto aggiunte di recente</string><!-- Verified -->
-    <string id="30253">Video preferiti</string><!-- Verified -->
-    <string id="30254">Foto preferite</string><!-- Verified -->
-    <string id="30255">Album preferiti</string>
+    <string id="30253">Favorite Home Videos</string><!-- Verified -->
+    <string id="30254">Favorite Photos</string><!-- Verified -->
+    <string id="30255">Favorite Albums</string>
     
     <string id="30256">Video Musicali aggiuni di recente</string><!-- Verified -->
     <string id="30257">Video Musicali in corso</string><!-- Verified -->
