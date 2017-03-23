@@ -169,7 +169,7 @@
     <string id="30183">Albums souvent joué</string> 
     <string id="30184">TV à venir</string>            
     <string id="30185">BoxSets</string>                
-    <string id="30186">Trailers</string>               
+    <string id="30186">Bande-annonce</string>               
     <string id="30187">Clips</string>           
     <string id="30188">Photos</string>                 
     <string id="30189">Films non vu</string><!-- Verified -->
@@ -209,7 +209,7 @@
     <string id="30222">NextUp </string>
     <string id="30223">Vues de l’utilisateur</string>
     <string id="30224">Report Metrics</string>
-    <string id="30225">Use Kodi Sorting</string>
+    <string id="30225">Utiliser le tri de Kodi</string>
     <string id="30226">Durée</string>
     
     <string id="30227">Aléatoire</string>
@@ -238,7 +238,7 @@
     <string id="30252">Photos récemment ajoutée</string><!-- Verified -->
     <string id="30253">Favorite Home Videos</string><!-- Verified -->
     <string id="30254">Favorite Photos</string><!-- Verified -->
-    <string id="30255">Favorite Albums</string>
+    <string id="30255">Albums préférés</string>
     
     <string id="30256">Clips récemment ajouté</string><!-- Verified -->
     <string id="30257">Clips en lecture</string><!-- Verified -->
@@ -249,7 +249,7 @@
     <string id="30301">Effacer les paramètres</string>              
     <string id="30302">Films</string>              
     <string id="30303">BoxSets</string>              
-    <string id="30304">Trailers</string>              
+    <string id="30304">Bande-annonce</string>              
     <string id="30305">Séries</string>              
     <string id="30306">Saisons</string>              
     <string id="30307">Épisodes</string>              
@@ -297,7 +297,7 @@
     <string id="30516">Lecture</string>
     <string id="30517">[COLOR yellow]Enter network credentials[/COLOR]</string>
     <string id="30518">Enable Plex Trailers (Plexpass is needed)</string>
-    <string id="30519">Ask to play trailers</string>
+    <string id="30519">Demander à jouer les bandes annonces</string>
     <string id="30520">Skip Plex delete confirmation for the context menu (use at your own risk)</string>
     <string id="30521">Jump back on resume (in seconds)</string>
     <string id="30522">Forcer le transcodage h265/HEVC</string>
@@ -318,7 +318,7 @@
     <string id="30537">REDÉMARREZ KODI SI VOUS APPORTEZ DES MODIFICATIONS</string>
     <string id="30538">Re-synchronisation complète nécessaire</string>
     <string id="30539">Download additional art from FanArtTV</string>
-    <string id="30540">Download movie set/collection art from FanArtTV</string>
+    <string id="30540">Télécharger les affiches des sagas sur FanArtTV</string>
     <string id="30541">Don't ask to pick a certain stream/quality</string>
     <string id="30542">Always pick best quality for trailers</string>
     <string id="30543">Kodi s’exécute sur un appareil de faible puissance (Ex: Raspberry Pi)</string>
@@ -342,7 +342,7 @@
     <string id="33013">Choisissez le flux audio</string>
     <string id="33014">Choisissez le fichier de sous-titres</string>
     <string id="33015">Supprimez le fichier de votre serveur Emby ?</string>
-    <string id="33016">Play trailers?</string>
+    <string id="33016">Jouer les bandes-annonces ?</string>
     <string id="33017">Gathering movies from:</string>
     <string id="33018">Gathering boxsets</string>
     <string id="33019">Gathering music videos from:</string>
@@ -363,7 +363,7 @@
     <string id="33041">Supprimer les fichiers du serveur de Plex ? Cela va également supprimer le(s) fichier(s) du disque !</string>
 
     <!-- New to Plex -->
-    <string id="39000">- Number of trailers to play before a movie</string>
+    <string id="39000">-Nombre de bandes-annonces à jouer avant un film</string>
     <string id="39001">Booster l'audio pendant le transcodage</string>
     <string id="39002">Burnt-in subtitle size</string>
     <string id="39003">Limit download sync threads (rec. for rpi: 1)</string>
