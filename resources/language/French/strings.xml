@@ -138,7 +138,7 @@
     <string id="30156">Sort NextUp by Show Title</string>    
     <string id="30157">Activez les Images améliorées (Ex: CoverArt)</string><!-- Verified -->
     <string id="30158">Metadonnés</string>
-    <string id="30159">Artwork</string>
+    <string id="30159">Affiches</string>
     <string id="30160">Qualité vidéo si un transcodage est nécessaire</string><!-- Verified -->
     
     <string id="30161">Enable Suggested Loader (Requires Restart)</string>
@@ -237,7 +237,7 @@
     <string id="30251">Vidéos récemment ajoutées</string><!-- Verified -->
     <string id="30252">Photos récemment ajoutée</string><!-- Verified -->
     <string id="30253">Favorite Home Videos</string><!-- Verified -->
-    <string id="30254">Favorite Photos</string><!-- Verified -->
+    <string id="30254">Photos favorites</string><!-- Verified -->
     <string id="30255">Albums préférés</string>
     
     <string id="30256">Clips récemment ajouté</string><!-- Verified -->
@@ -506,7 +506,7 @@
 
     <!-- Plex videonodes.py -->
     <string id="39500">On Deck</string>
-    <string id="39501">Collections</string>
+    <string id="39501">Sagas</string>
 
     <!-- Plex utils.py -->
     <string id="39600">Êtes-vous sûr de que vouloir réinitialiser votre base de données locale de Kodi ? Une re-synchronisation des données Plex prendra du temps par la suite.</string>
@@ -515,6 +515,6 @@
     <string id="39603">Réinitialiser tous les paramètres de PlexKodiConnect Addon ? (ceci n’est généralement pas recommandée et inutiles !)</string>
 
     <string id="39700">Amazon Alexa (Voice Recognition)</string>
-    <string id="39701">Activate Alexa</string>
-    <string id="39702">Browse by folder</string>
+    <string id="39701">Activer Alexa</string>
+    <string id="39702">Parcourir en suivant les répertoires</string>
 </strings>
