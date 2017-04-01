@@ -35,31 +35,31 @@
 
     <string id="30040">Filtr gatunek...</string>
     <string id="30041">Odtwórz z tej lokalizacji</string>
-    <string id="30042">Refresh</string>
-    <string id="30043">Delete</string>
-    <string id="30046">Add Movie to CouchPotato</string>
+    <string id="30042">Odśwież</string>
+    <string id="30043">Usuń</string>
+    <string id="30046">Dodaj film do CouchPotato</string>
     
-    <string id="30044">Incorrect Username/Password</string>
-    <string id="30045">Username not found</string>
+    <string id="30044">Nieprawidłowa nazwa użytkownika lub hasła</string>
+    <string id="30045">Nazwa użytkownika nie została znaleziona</string>
     
-    <string id="30052">Deleting</string>
-    <string id="30053">Waiting for server to delete</string>
+    <string id="30052">Usuwanie</string>
+    <string id="30053">Czekam na serwer aby usunął</string>
     
-    <string id="30059">Server Default</string>
-    <string id="30060">Title</string>
-    <string id="30061">Year</string>
-    <string id="30062">Premiere Date</string>
-    <string id="30063">Date Created</string>
-    <string id="30064">Critic Rating</string>
-    <string id="30065">Community Rating</string>
-    <string id="30066">Play Count</string>
-    <string id="30067">Budget</string>
+    <string id="30059">Domyślny serwer</string>
+    <string id="30060">Tytuł</string>
+    <string id="30061">Rok</string>
+    <string id="30062">Data Premiery</string>
+    <string id="30063">Data utworzenia</string>
+    <string id="30064">Ocena krytyki</string>
+    <string id="30065">Ocena społeczności</string>
+    <string id="30066">Liczba odtworzeń</string>
+    <string id="30067">Budżet</string>
     <!-- Runtime added as 30226 below -->
     
-    <string id="30068">Sort By</string>
+    <string id="30068">Sortuj Według</string>
     
-    <string id="30069">None</string>
-    <string id="30070">Action</string>
+    <string id="30069">Brak</string>
+    <string id="30070">Akcja</string>
     <string id="30071">Adventure</string>
     <string id="30072">Animation</string>
     <string id="30073">Crime</string>
