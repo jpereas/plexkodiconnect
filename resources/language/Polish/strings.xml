@@ -15,26 +15,26 @@
     <string id="30012">OK</string>
     <string id="30013">Nigdy nie pokazuj</string>
 
-    <string id="30014">Connection</string>
-    <string id="30015">Network</string>    
-    <string id="30016">Device Name</string>
-    <string id="30017">Unauthorized for PMS</string>     
+    <string id="30014">Połączenie</string>
+    <string id="30015">Sieć</string>    
+    <string id="30016">Nazwa urządzenia</string>
+    <string id="30017">Nieautoryzowane dla PMS</string>     
 
-    <string id="30022">Advanced</string>
-    <string id="30024">Username</string><!-- Verified -->
+    <string id="30022">Ustawienia zaawansowane</string>
+    <string id="30024">Nazwa Użytkownika</string><!-- Verified -->
 
-    <string id="30025">Display message if PMS goes offline</string>
+    <string id="30025">Wyświetlić komunikat, jeśli PMS przechodzi w tryb offline</string>
     
-    <string id="30030">Port Number</string><!-- Verified -->
-    <string id="30031">I own this Plex Media Server</string>
-    <string id="30036">Number of recent Movies to show:</string>    
-    <string id="30037">Number of recent TV episodes to show:</string>    
-    <string id="30035">Number of recent Music Albums to show:</string>    
-    <string id="30038">Mark watched at start of playback:</string>    
-    <string id="30039">Set Season poster for episodes</string>
+    <string id="30030">Numer portu</string><!-- Verified -->
+    <string id="30031">Posiadam ten Plex Media Server</string>
+    <string id="30036">Liczba niedawno dodanych Filmów:</string>    
+    <string id="30037">Liczba ostatnio dodanych odcinków seriali telewizyjnych:</string>    
+    <string id="30035">Liczba ostatnio dodanych albumów muzycznych:</string>    
+    <string id="30038">Zaznacz, że oglądane na początku odtwarzania:</string>    
+    <string id="30039">Ustaw Plakat sezonu dla odcinków</string>
 
-    <string id="30040">Genre Filter ...</string>
-    <string id="30041">Play All from Here</string>
+    <string id="30040">Filtr gatunek...</string>
+    <string id="30041">Odtwórz z tej lokalizacji</string>
     <string id="30042">Refresh</string>
     <string id="30043">Delete</string>
     <string id="30046">Add Movie to CouchPotato</string>
