@@ -2,18 +2,18 @@
 <strings>
     <!-- Add-on settings -->
     <string id="29999">PlexKodiConnect</string>
-    <string id="30000">Server Address (IP)</string><!-- Verified -->
-    <string id="30002">Preferred playback method</string><!-- Verified -->
-    <string id="30004">Log level</string><!-- Verified -->
-    <string id="30005">Username: </string>
-    <string id="30006">Password: </string>
-    <string id="30007">Network Username: </string>
-    <string id="30008">Network Password: </string>
-    <string id="30009">Transcode: </string>
-    <string id="30010">Enable Performance Profiling</string>
-    <string id="30011">Local caching system</string>
+    <string id="30000">Adres serwera (IP)</string><!-- Verified -->
+    <string id="30002">Preferowana metoda odtwarzania</string><!-- Verified -->
+    <string id="30004">Poziom rejestrowania</string><!-- Verified -->
+    <string id="30005">Nazwa użytkownika: </string>
+    <string id="30006">Hasło: </string>
+    <string id="30007">Sieciowa nazwa użytkownika: </string>
+    <string id="30008">Sieciowe hasło: </string>
+    <string id="30009">Transkodowanie: </string>
+    <string id="30010">Włącz profilowanie wydajności</string>
+    <string id="30011">Lokalny system buforowania</string>
     <string id="30012">OK</string>
-    <string id="30013">Never show</string>
+    <string id="30013">Nigdy nie pokazuj</string>
 
     <string id="30014">Connection</string>
     <string id="30015">Network</string>    
