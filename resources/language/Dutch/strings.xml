@@ -374,30 +374,30 @@
     <string id="39008">Plex Companion: Ondersteun afspelen van media via Kodi met Plex</string>
     <string id="39009">Kan niet inloggen op plex.tv. Probeer opnieuw.</string>
     <string id="39010">Problemen bij het verbinding met plex.tv. Netwerk of internet probleem?</string>
-    <string id="39011">Kon geen Plex servers in het netwerk vinden. Annuleren...</string>
+    <string id="39011">Kon geen Plex servers in het netwerk vinden. Afgebroken...</string>
     <string id="39012">Kies uw Plex server</string>
     <string id="39013">Nog niet ingelogd op de Plex server </string>
     <string id="39014">Log in op plex.tv.</string>
     <string id="39015">Problemen bij het verbinden met de server. Kies een andere server?</string>
-    <string id="39016">Plex muziek library uitzetten? (Het is sterk aangeraden om Plex muziek alleen met directe paden te gebruiken bij een grote library. Kodie kan anders vastlopen)</string>
+    <string id="39016">Plex muziek library uitzetten? (Het is sterk aanbevolen om Plex muziek alleen met directe paden te gebruiken bij een grote library. Kodi kan anders vastlopen)</string>
     <string id="39017">PKC plugin instellingen aanpassen? Kodi moet hierna herstart worden!</string>
 
     <string id="39018">[COLOR yellow]Lokale database herstellen (forceer verversen van alle inhoud)[/COLOR]</string>
     <string id="39019">[COLOR red]Gedeeltelijke of volledige reset van database en PKC[/COLOR]</string>
     <string id="39020">[COLOR yellow]Alle afbeeldingen van Kodi nu aan de cache toevoegen[/COLOR]</string>
-    <string id="39021">[COLOR yellow]Sync Emby Theme Media to Kodi[/COLOR]</string>
+    <string id="39021">[Kleur geel] Kodi[/COLOR] Synchroniseer Emby thema muziek naar Kodi</string>
     <string id="39022">lokaal</string>
     <string id="39023">Authenticatie mislukt. Ingelogd bij plex.tv?</string>
     
 
-    <string id="39025">Automatisch inloggen op plex.tv bij het opstarten</string>
+    <string id="39025">Automatisch inloggen bij plex.tv bij het opstarten</string>
     <string id="39026">Constante achtergrond sync inschakelen</string>
     <string id="39027">Afspeelmodus</string>
     <string id="39028">LET OP! Als u "Native" modus kiest, zullen sommige Plex mogelijkheden niet beschikbaar zijn. Bijvoorbeeld: Plex trailers en opties voor transcoden. ALLE Plex shares moeten gebruik maken van directe paden (bijvoorbeeld smb://myNAS/mymovie.mkv of \\myNAS/mymovie.mkv)!</string>
-    <string id="39029">Netwerk gegevens</string>
-    <string id="39030">Netwerk gegevens toevoegen zodat Kodi bij de inhoud kan? Opmerking: Kodi zal een bericht tonen bij de eerste sync als deze stap overgeslagen word.</string>
+    <string id="39029">Netwerk inloggegevens</string>
+    <string id="39030">Netwerk inloggegevens toevoegen zodat Kodi bij de inhoud kan? Opmerking: Kodi zal een bericht tonen bij de eerste sync als deze stap overgeslagen word.</string>
     <string id="39031">Kodi kan het bestand niet vinden: </string>
-    <string id="39032">Controleer het pad. Waarschijnlijk verkeerde netwerk gegevens of verkeerde paden. Stop synchroniseren?</string>
+    <string id="39032">Controleer het pad. Waarschijnlijk verkeerde netwerk gegevens of verkeerde paden. Stoppen met synchroniseren?</string>
     <string id="39033">Vervang Plex UNC pad \\myNas\mymovie.mkv automatisch met smb paden, smb://myNas/mymovie.mkv? (aanbevolen)</string>
     <string id="39034">Vervang Plex UNC paden \\myNas met smb://myNas</string>
 
@@ -408,7 +408,7 @@
     <string id="39040">Vervang Plex TV-SHOWS met:</string>
     <string id="39041">Oorspronkelijke Plex muziek pad om te vervangen:</string>
     <string id="39042">Vervang Plex MUZIEK met:</string>
-    <string id="39043">Een stap verder gaan en alle oorspronkelijke Plex bibliotheek paden (/ volume1/media) volledig vervangen door aangepaste SMB paden (smb://NAS/MyStuff)?</string>
+    <string id="39043">Een stap verder gaan en alle oorspronkelijke Plex library paden (/ volume1/media) volledig vervangen door aangepaste SMB paden (smb://NAS/MyStuff)?</string>
     <string id="39044">Voer uw aangepaste smb paden in de instellingen onder "Sync Opties" en herstart Kodi</string>
     <string id="39045">Oorspronkelijke Plex foto pad om te vervangen:</string>
     <string id="39046">Vervang Plex PHOTO met:</string>
@@ -424,7 +424,7 @@
     <string id="39056">Gebruikt door Sync en bij Direct Play</string>
     <string id="39057">Aanpassen van paden</string>
     <string id="39058">On Deck van TV-series laat alle series zien</string>
-    <string id="39059">Onlangs Toegevoegd: Voeg show naam toe aan afleveringen</string>
+    <string id="39059">Onlangs Toegevoegd: Voeg serie naam toe aan afleveringen</string>
     <string id="39060">Onlangs Toegevoegd: Voeg seizoen en aflevering nummer toe SxxExx</string>
     <string id="39061">Extra artwork van FanArtTV in de background downloaden?</string>
     <string id="39062">Sync als screensaver gedeactiveerd is</string>
@@ -438,7 +438,7 @@
     <string id="39071">Huidige status van de plex.tv:</string>
     <string id="39072">Is Kodi geïnstalleerd op een low-powered apparaat zoals een Raspberry Pi? Zo ja, dan zullen we de druk op Kodi verlagen om de kans op crashen te verminderen.</string>
     <string id="39073">Uiterlijk aanpassingen</string>
-    <string id="39074">TV shows</string>
+    <string id="39074">TV series</string>
     <string id="39075">Gebruik indien mogelijk altijd standaard Plex ondertitels</string>
     <string id="39076">Bij gebruik van meerdere plex libraries van hetzelfde type, bijvoorbeeld "Kinder Films" en "Films voor volwassenen" bekijk dan de Wiki: https://goo.gl/JFtQV9</string>
     <string id="39077">Aantal PMS items in widgets laten zien (bijv. "On Deck")</string>
@@ -448,7 +448,7 @@
     <!-- Plex Entrypoint.py -->
     <string id="39200">Log-out Plex Home gebruiker </string>
     <string id="39201">Instellingen</string>
-    <string id="39202">Netwerk gegevens</string>
+    <string id="39202">Netwerk inloggegevens</string>
     <string id="39203">Vernieuwen van Plex afspeellijsten/nodes</string>
     <string id="39204">Handmatige sync uitvoeren</string>
     <string id="39205">Sync is niet gelukt, de add-on is niet verbonden met de Plex Server.</string>
