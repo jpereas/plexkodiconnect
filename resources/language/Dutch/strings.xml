@@ -171,7 +171,7 @@
     <string id="30185">BoxSets</string>                
     <string id="30186">Trailers</string>               
     <string id="30187">Muziekvideo 's</string>           
-    <string id="30188">Foto 's</string>                 
+    <string id="30188">Foto's</string>                 
     <string id="30189">Onbekeken films</string><!-- Verified -->
     <string id="30190">Film Genres</string>           
     <string id="30191">Filmstudios</string>          
@@ -217,7 +217,7 @@
     <string id="30229">Willekeurige Items</string><!-- Verified -->
     <string id="30230">Aanbevolen</string><!-- Verified -->
     
-    <string id="30235">Extra 's</string><!-- Verified -->
+    <string id="30235">Extra's</string><!-- Verified -->
     <string id="30236">Synchroniseer themamuziek</string>
     <string id="30237">Synchroniseer extra Fanart</string>
     <string id="30238">Synchroniseer Film BoxSets</string>
@@ -230,19 +230,19 @@
     <string id="30245">Forceer Codecs Transcoden</string>
     
     <string id="30246">Inschakelen van Netflix stijl volgende notificatie</string>
-    <string id="30247">  - Het aantal seconden voor het einde waneer de notificatie te tonen</string>
+    <string id="30247">  - Het aantal seconden voor het einde wanneer de notificatie te tonen</string>
     <string id="30248">Toon Emby Infodialoog bij Afspelen/Selecteer actie</string>
     <string id="30249">Inschakelen van server verbinding bericht bij het opstarten</string><!-- Verified -->
     
-    <string id="30251">Recent toegevoegde Thuis-video 's</string><!-- Verified -->
+    <string id="30251">Recent toegevoegde Thuis-video's</string><!-- Verified -->
     <string id="30252">Recent toegevoegde foto's</string><!-- Verified -->
-    <string id="30253">Favorite Home Videos</string><!-- Verified -->
-    <string id="30254">Favorite Photos</string><!-- Verified -->
-    <string id="30255">Favorite Albums</string>
+    <string id="30253">Favoriete Thuis-Video's</string><!-- Verified -->
+    <string id="30254">Favoriete foto's</string><!-- Verified -->
+    <string id="30255">Favoriete Albums</string>
     
     <string id="30256">Recent toegevoegde videoclips</string><!-- Verified -->
     <string id="30257">Actieve videoclips</string><!-- Verified -->
-    <string id="30258">Onbekeken videoclips</string><!-- Verified -->
+    <string id="30258">Ongeziene videoclips</string><!-- Verified -->
     
     <!-- Default views -->
     <string id="30300">Actieve</string>              
@@ -254,9 +254,9 @@
     <string id="30306">Seizoenen</string>              
     <string id="30307">Afleveringen</string>              
     <string id="30308">Muziek artiesten</string>              
-    <string id="30309">Muziekalbums</string>              
-    <string id="30310">Muziekvideo 's</string>              
-    <string id="30311">Muziektracks</string>
+    <string id="30309">Muziek albums</string>              
+    <string id="30310">Muziek video 's</string>              
+    <string id="30311">Muziek tracks</string>
     <string id="30312">Kanalen</string>  
     
     <!-- contextmenu -->
@@ -301,7 +301,7 @@
     <string id="30520">Geen confirmatie bij het verwijderen van Plex (gebruik op eigen risico)</string>
     <string id="30521">Terugspringen bij verder kijken (in seconden)</string>
     <string id="30522">Forceer transcoden h265/HEVC</string>
-    <string id="30523">Muzie metagegevens opties (niet compatible met direct stream)</string>
+    <string id="30523">Muziek metagegevens opties (niet compatibel met direct stream)</string>
     <string id="30524">Muziek ratings direct uit bestanden lezen</string>
     <string id="30525">Converteer muziek ratings naar Emby ratings</string>
     <string id="30526">Toestaan van aanpassen rating in bestanden</string>
@@ -310,10 +310,10 @@
     <string id="30529">Opstartvertraging (in seconden)</string>
     <string id="30530">Server herstart bericht inschakelen</string>
     <string id="30531">Schakel kennisgeving in nieuwe inhoud</string>
-    <string id="30532">Duur van de bibliotheek popup (in seconden)</string>
-    <string id="30533">Duur van de bibliotheek popup (in seconden)</string>
+    <string id="30532">Duur van de bibliotheek pop-up (in seconden)</string>
+    <string id="30533">Duur van de bibliotheek pop-up (in seconden)</string>
     <string id="30534">Serverberichten</string>
-    <string id="30535">[COLOR yellow]Genereer nieuw uniek apparaat id (bijvoorbeeld bij het klonen van Kodi)[/COLOR]</string>
+    <string id="30535">[COLOR yellow]Genereer nieuw uniek apparaat ID (bijvoorbeeld bij het klonen van Kodi)[/COLOR]</string>
     <string id="30536">Gebruiker moet bij elke Kodi herstart opnieuw inloggen</string>
     <string id="30537">BIJ AANPASSINGEN KODI HERSTARTEN</string>
     <string id="30538">Volledige re-sync nodig</string>
@@ -346,10 +346,10 @@
     <string id="33017">Verzamel films van:</string>
     <string id="33018">Verzamel boxsets</string>
     <string id="33019">Verzamel muziek video's van:</string>
-    <string id="33020">Verzamel tv-shows van:</string>
+    <string id="33020">Verzamel tv-series van:</string>
     <string id="33021">Verzamelen:</string>
-    <string id="33022">Detected the database needs to be recreated for this version of Emby for Kodi. Proceed?</string>
-    <string id="33023">Emby for Kodi may not work correctly until the database is reset.</string>
+    <string id="33022">Gedetecteerd dat de database opnieuw moet worden gemaakt voor deze versie van Emby voor Kodi. Wilt u doorgaan?</string>
+    <string id="33023">Emby voor Kodi werkt mogelijk niet correct totdat de database is ge-reset.</string>
     <string id="33024">Database sync geannuleerd. De huidige versie van Kodi is niet ondersteund.</string>
     <string id="33025">voltooid in:</string>
     <string id="33026">Vergelijk films met:</string>
@@ -374,7 +374,7 @@
     <string id="39008">Plex Companion: Ondersteun afspelen van media via Kodi met Plex</string>
     <string id="39009">Kan niet inloggen op plex.tv. Probeer opnieuw.</string>
     <string id="39010">Problemen bij het verbinding met plex.tv. Netwerk of internet probleem?</string>
-    <string id="39011">Kon geen Plex servers in het netwerk vinden. Afgebroken...</string>
+    <string id="39011">Kon geen Plex servers in het netwerk vinden. Annuleren...</string>
     <string id="39012">Kies uw Plex server</string>
     <string id="39013">Nog niet ingelogd op de Plex server </string>
     <string id="39014">Log in op plex.tv.</string>
