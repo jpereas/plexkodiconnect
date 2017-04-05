@@ -401,17 +401,18 @@
     <string id="39033">自动转换Plex UNC库路径\\myNas\mymovie.mkv为smb路径smb://myNas/mymovie.mkv?(推荐)</string>
     <string id="39034">用smb://myNas替换Plex UNC路径</string>
 
-    <string id="39035">Replace Plex paths /volume1/media or \\myserver\media with custom SMB paths smb://NAS/mystuff</string>
-    <string id="39037">Original Plex MOVIE path to replace:</string>
-    <string id="39038">Replace Plex MOVIE with:</string>
-    <string id="39039">Original Plex TV SHOWS path to replace:</string>
-    <string id="39040">Replace Plex TV SHOWS with:</string>
-    <string id="39041">Original Plex MUSIC path to replace:</string>
-    <string id="39042">Replace Plex MUSIC with:</string>
-    <string id="39043">Go a step further and completely replace all original Plex library paths (/volume1/media) with custom SMB paths (smb://NAS/MyStuff)?</string>
-    <string id="39044">Please enter your custom smb paths in the settings under "Sync Options" and then restart Kodi</string>
-    <string id="39045">Original Plex PHOTO path to replace:</string>
-    <string id="39046">Replace Plex PHOTO with:</string>
+    <string id="39035">用自定义SMB路径smb://NAS/mystuff替换Plex路径/volume1/media 或 \\myserver\media</string>
+    <string id="39037">要替换的原始Plex电影路径:</string>
+    <string id="39038">用于替换Plex MOVIE：</string>
+    <string id="39039">要替换的原始Plex TV SHOWS路径：</string>
+    <string id="39040">用于替换Plex TV SHOWS：</string>
+    <string id="39041">要替换的原始Plex MUSIC路径：</string>
+    <string id="39042">用于替换Plex MUSIC：</string>
+    <string id="39043">进一步，完全用自定义SMB路径 (smb://NAS/MyStuff) 替换所有原始Plex库路径
+ (/volume1/media)?</string>
+    <string id="39044">请在设置中"同步选项"下输入自定义smb路径，然后重启Kodi</string>
+    <string id="39045">要替换的原始Plex照片路径：</string>
+    <string id="39046">用于替换Plex PHOTO：</string>
     <string id="39047">On Deck: Append show title to episode</string>
     <string id="39048">On Deck: Append season- and episode-number SxxExx</string>
     <string id="39049">Nothing works? Try a full reset!</string>
