@@ -352,21 +352,21 @@
     <string id="33023">数据库重建前Kodi版Emby可能无法正常工作。</string>
     <string id="33024">正在取消数据库同步进程。当前的Kodi版本不受支持。</string>
     <string id="33025">预计完成于</string>
-    <string id="33026">Comparing movies from:</string>
-    <string id="33027">Comparing boxsets</string>
-    <string id="33028">Comparing music videos from:</string>
-    <string id="33029">Comparing tv shows from:</string>
-    <string id="33030">Comparing episodes from:</string>
-    <string id="33031">Comparing:</string>
-    <string id="33032">Failed to generate a new device Id. See your logs for more information.</string>
-    <string id="33033">Kodi will now restart to apply the changes.</string>
-    <string id="33041">Delete file(s) from Plex Server? This will also delete the file(s) from disk!</string>
+    <string id="33026">比较电影于：</string>
+    <string id="33027">比较盒装套装</string>
+    <string id="33028">比较音乐视频于：</string>
+    <string id="33029">比较电视节目于：</string>
+    <string id="33030">比较剧集于：</string>
+    <string id="33031">比较：</string>
+    <string id="33032">无法生成新的设备ID。查看logs以了解更多信息。</string>
+    <string id="33033">Kodi将立即重启以应用更改。</string>
+    <string id="33041">是否从Plex服务器上删除文件？这也将从磁盘上删除文件！</string>
 
     <!-- New to Plex -->
-    <string id="39000">- Number of trailers to play before a movie</string>
-    <string id="39001">Boost audio when transcoding</string>
-    <string id="39002">Burnt-in subtitle size</string>
-    <string id="39003">Limit download sync threads (rec. for rpi: 1)</string>
+    <string id="39000">- 电影开始前要播放的预告片数量</string>
+    <string id="39001">转码时加强音频</string>
+    <string id="39002">压制字幕尺寸</string>
+    <string id="39003">限制下载同步线程(reg. for rpi: 1)</string>
     <string id="39004">Enable Plex Companion (restart Kodi!)</string>
     <string id="39005">Plex Companion Port (change only if needed)</string>
     <string id="39006">Activate Plex Companion debug log</string>
