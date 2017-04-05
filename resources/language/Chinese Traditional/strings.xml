@@ -86,26 +86,26 @@
     
     <string id="30093">設為「已觀看」</string>
     <string id="30094">設為「未觀看」</string>
-    <string id="30095">Add to Favorites</string>
-    <string id="30096">Remove from Favorites</string>
-    <string id="30097">Sort By ...</string>
-    <string id="30098">Sort Order Descending</string>
-    <string id="30099">Sort Order Ascending</string>
-    <string id="30100">Show People</string>
+    <string id="30095">加到最愛</string>
+    <string id="30096">移除最愛</string>
+    <string id="30097">依... 排序</string>
+    <string id="30098">降序</string>
+    <string id="30099">升序</string>
+    <string id="30100">顯示人員</string>
 
     <!-- resume dialog -->
-    <string id="30105">Resume</string>
-    <string id="30106">Resume from</string>
-    <string id="30107">Start from beginning</string>
+    <string id="30105">繼續</string>
+    <string id="30106">指定播放位置</string>
+    <string id="30107">從頭播放</string>
     
-    <string id="30110">Interface</string>
-    <string id="30111">Include Stream Info</string>
-    <string id="30112">Include People</string>
-    <string id="30113">Include Overview</string>
-    <string id="30114">Offer delete after playback</string><!-- Verified -->
-    <string id="30115">For Episodes</string><!-- Verified -->
-    <string id="30116">For Movies</string><!-- Verified -->
-    <string id="30117">Background Art Refresh Rate (seconds)</string>
+    <string id="30110">介面</string>
+    <string id="30111">顯示串流資訊</string>
+    <string id="30112">顯示人員</string>
+    <string id="30113">顯示簡介</string>
+    <string id="30114">播放後刪除</string><!-- Verified -->
+    <string id="30115">針對電視劇</string><!-- Verified -->
+    <string id="30116">針對電影</string><!-- Verified -->
+    <string id="30117">背景更新頻率(秒)</string>
     <string id="30118">Add Resume Percent</string>
     <string id="30119">Add Episode Number</string>
     <string id="30120">Show Load Progress</string>
