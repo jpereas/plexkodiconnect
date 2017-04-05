@@ -222,7 +222,7 @@
     <string id="30237">同步附加Fanart</string>
     <string id="30238">同步电影盒装套装</string>
     
-    <string id="30239">[COLOR yellow]重置本地KodI数据库[/COLOR]</string><!-- Verified -->
+    <string id="30239">[黄色]重置本地KodI数据库[/COLOR]</string><!-- Verified -->
     <string id="30240">启用已观看/继续观看状态同步</string>
     <string id="30241">DB同步标示:</string>
     <string id="30242">播放次数同步标示:</string>
@@ -283,7 +283,7 @@
     <string id="30502">使用备用地址</string>
     <string id="30503">备用服务器地址</string>
     <string id="30504">使用备用设备名称</string>
-    <string id="30505">[COLOR yellow]重置登录尝试[/COLOR]</string>
+    <string id="30505">[黄色]重置登录尝试[/COLOR]</string>
     <string id="30506">同步选项</string>
     <string id="30507">显示同步进度</string>
     <string id="30508">同步空电视节目</string>
@@ -295,7 +295,7 @@
     <string id="30514">启用快速启动(须服务器插件)</string>
     <string id="30515">一次从服务器请求最大项目数</string>
     <string id="30516">回放</string>
-    <string id="30517">[COLOR yellow]输入网络凭证[/COLOR]</string>
+    <string id="30517">[黄色]输入网络凭证[/COLOR]</string>
     <string id="30518">启用Plex预告片(须Plexpass)</string>
     <string id="30519">要求播放预告片</string>
     <string id="30520">为上下文菜单跳过Plex删除确认(须自行承担风险)</string>
@@ -313,7 +313,7 @@
     <string id="30532">视频库弹出时长(秒)</string>
     <string id="30533">音乐库弹出时长(秒)</string>
     <string id="30534">服务器消息</string>
-    <string id="30535">[COLOR yellow]生成新的唯一设备ID(e.g. 当克隆Kodi时)[/COLOR]</string>
+    <string id="30535">[黄色]生成新的唯一设备ID(e.g. 当克隆Kodi时)[/COLOR]</string>
     <string id="30536">Kodi重启后用户须登录</string>
     <string id="30537">如有任何更改请重启KODI</string>
     <string id="30538">必须完整重新同步</string>
@@ -380,21 +380,21 @@
     <string id="39014">请登录到plex.tv。</string>
     <string id="39015">登录到服务器时有问题。选择另一台服务器？</string>
     <string id="39016">停用Plex音乐库？(强烈建议对Plex音乐的大音乐库只使用直接路径。Kodi可能崩溃)</string>
-    <string id="39017">Would you now like to go to the plugin's settings to fine-tune PKC? You will need to RESTART Kodi!</string>
+    <string id="39017">您想现在转入插件设置以调整PKC吗？您将需要重启Kodi！</string>
 
-    <string id="39018">[COLOR yellow]Repair local database (force update all content)[/COLOR]</string>
-    <string id="39019">[COLOR red]Partial or full reset of Database and PKC[/COLOR]</string>
-    <string id="39020">[COLOR yellow]Cache all images to Kodi texture cache now[/COLOR]</string>
-    <string id="39021">[COLOR yellow]Sync Emby Theme Media to Kodi[/COLOR]</string>
-    <string id="39022">local</string>
-    <string id="39023">Failed to authenticate. Did you login to plex.tv?</string>
+    <string id="39018">[黄色]修复本地数据库 (强制更新所有内容)[/COLOR]</string>
+    <string id="39019">[红色]部分或全部重置数据库和PKC[/COLOR]</string>
+    <string id="39020">[黄色]现在缓存所有图像到Kodi texture缓存[/COLOR]</string>
+    <string id="39021">[黄色]同步Emby主题媒体到Kodi[/COLOR]</string>
+    <string id="39022">本地</string>
+    <string id="39023">未能通过验证。您没有登录到plex.tv吗？</string>
     
 
-    <string id="39025">Automatically log into plex.tv on startup</string>
-    <string id="39026">Enable constant background sync</string>
-    <string id="39027">Playback Mode</string>
-    <string id="39028">CAUTION! If you choose "Native" mode , you might loose access to certain Plex features such as: Plex trailers and transcoding options. ALL Plex shares need to use direct paths (e.g. smb://myNAS/mymovie.mkv or \\myNAS/mymovie.mkv)!</string>
-    <string id="39029">Network credentials</string>
+    <string id="39025">启动时自动登录到plex.tv</string>
+    <string id="39026">启用持续背景同步</string>
+    <string id="39027">播放模式</string>
+    <string id="39028">警告！如果选择"Native"模式，你可能无法使用一些Plex特性，如：Plex预告片和转码选项。所有的Plex共享都需要直接路径(e.g. smb://myNAS/mymovie.mkv or \\myNAS/mymovie.mkv)!</string>
+    <string id="39029">网络凭据</string>
     <string id="39030">Add network credentials to allow Kodi access to your content? Note: Skipping this step may generate a message during the initial scan of your content if Kodi can't locate your content.</string>
     <string id="39031">Kodi can't locate file: </string>
     <string id="39032">Please verify the path. You may need to verify your network credentials in the add-on settings or use different Plex paths. Stop syncing?</string>
