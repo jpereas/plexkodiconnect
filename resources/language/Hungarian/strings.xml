@@ -2,13 +2,13 @@
 <strings>
     <!-- Add-on settings -->
     <string id="29999">PlexKodiConnect</string>
-    <string id="30000">Server Address (IP)</string><!-- Verified -->
-    <string id="30002">Preferred playback method</string><!-- Verified -->
+    <string id="30000">Szerver címe (IP)</string><!-- Verified -->
+    <string id="30002">Előnyben részesített lejátszási módszerrel</string><!-- Verified -->
     <string id="30004">Log level</string><!-- Verified -->
-    <string id="30005">Username: </string>
-    <string id="30006">Password: </string>
-    <string id="30007">Network Username: </string>
-    <string id="30008">Network Password: </string>
+    <string id="30005">Felhasználónév: </string>
+    <string id="30006">Jelszó: </string>
+    <string id="30007">Hálózati felhasználónév: </string>
+    <string id="30008">Hálózati jelszó: </string>
     <string id="30009">Transcode: </string>
     <string id="30010">Enable Performance Profiling</string>
     <string id="30011">Local caching system</string>
@@ -16,8 +16,8 @@
     <string id="30013">Never show</string>
 
     <string id="30014">Connection</string>
-    <string id="30015">Network</string>    
-    <string id="30016">Device Name</string>
+    <string id="30015">Hálózat</string>    
+    <string id="30016">Eszköz neve</string>
     <string id="30017">Unauthorized for PMS</string>     
 
     <string id="30022">Advanced</string>
@@ -59,21 +59,21 @@
     <string id="30068">Sort By</string>
     
     <string id="30069">None</string>
-    <string id="30070">Action</string>
-    <string id="30071">Adventure</string>
-    <string id="30072">Animation</string>
-    <string id="30073">Crime</string>
-    <string id="30074">Comedy</string>
-    <string id="30075">Documentary</string>
-    <string id="30076">Drama</string>
+    <string id="30070">Akció</string>
+    <string id="30071">Kaland</string>
+    <string id="30072">Animáció</string>
+    <string id="30073">Bűnügyi</string>
+    <string id="30074">Vígjáték</string>
+    <string id="30075">Dokumentumfilm</string>
+    <string id="30076">Dráma</string>
     <string id="30077">Fantasy</string>
     <string id="30078">Foreign</string>
-    <string id="30079">History</string>
+    <string id="30079">Történelmi</string>
     <string id="30080">Horror</string>
-    <string id="30081">Music</string>
+    <string id="30081">Zene</string>
     <string id="30082">Musical</string>
     <string id="30083">Mystery</string>
-    <string id="30084">Romance</string>
+    <string id="30084">Romantikus</string>
     <string id="30085">Science Fiction</string>
     <string id="30086">Short</string>
     <string id="30087">Suspense</string>
@@ -111,7 +111,7 @@
     <string id="30120">Show Load Progress</string>
     <string id="30121">Loading Content</string>
     <string id="30122">Retrieving Data</string>
-    <string id="30125">Done</string>
+    <string id="30125">Kész</string>
     <string id="30126">Processing Item : </string>
     <string id="30128">Play Error</string>
     <string id="30129">This item is not playable</string>    
@@ -120,10 +120,10 @@
     <string id="30132">Warning</string>
     <string id="30133">Debug logging enabled.</string>
     <string id="30134">This will affect performance.</string>
-    <string id="30135">Error</string>
+    <string id="30135">Hiba</string>
     <string id="30136">Monitoring service is not running</string>
     <string id="30137">If you have just installed please restart Kodi</string>
-    <string id="30138">Search</string>
+    <string id="30138">Keresés</string>
     
     <string id="30139">Enable Theme Music (Requires Restart)</string>
     <string id="30140"> - Loop Theme Music</string>
