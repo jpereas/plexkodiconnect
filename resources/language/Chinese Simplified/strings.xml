@@ -230,13 +230,13 @@
     <string id="30245">强制转码编码器</string>
     
     <string id="30246">启用类Netflix下一步通知</string>
-    <string id="30247">  - The number of seconds before the end to show the notification</string>
-    <string id="30248">Show Emby Info dialog on play/select action</string>
-    <string id="30249">Enable server connection message on startup</string><!-- Verified -->
+    <string id="30247">  - 节目结束前多少秒显示通知</string>
+    <string id="30248">播放/选择动作时显示Emby信息对话</string>
+    <string id="30249">启用启动时服务器连接消息</string><!-- Verified -->
     
-    <string id="30251">Recently added Home Videos</string><!-- Verified -->
-    <string id="30252">Recently added Photos</string><!-- Verified -->
-    <string id="30253">Favorite Home Videos</string><!-- Verified -->
+    <string id="30251">最近添加的家庭录像</string><!-- Verified -->
+    <string id="30252">最近添加的照片</string><!-- Verified -->
+    <string id="30253">喜欢的家庭录像</string><!-- Verified -->
     <string id="30254">Favorite Photos</string><!-- Verified -->
     <string id="30255">Favorite Albums</string>
     
