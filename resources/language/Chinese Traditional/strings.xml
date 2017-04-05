@@ -27,19 +27,19 @@
     
     <string id="30030">埠號</string><!-- Verified -->
     <string id="30031">我擁有這個伺服器</string>
-    <string id="30036">Number of recent Movies to show:</string>    
-    <string id="30037">Number of recent TV episodes to show:</string>    
-    <string id="30035">Number of recent Music Albums to show:</string>    
-    <string id="30038">Mark watched at start of playback:</string>    
-    <string id="30039">Set Season poster for episodes</string>
+    <string id="30036">顯示幾部新加的電影:</string>    
+    <string id="30037">顯示幾部新加的電視劇:</string>    
+    <string id="30035">顯示幾張新加的專輯:</string>    
+    <string id="30038">開始放就設為「已播放」:</string>    
+    <string id="30039">為電視劇設定每季海報</string>
 
-    <string id="30040">Genre Filter ...</string>
-    <string id="30041">Play All from Here</string>
-    <string id="30042">Refresh</string>
-    <string id="30043">Delete</string>
-    <string id="30046">Add Movie to CouchPotato</string>
+    <string id="30040">依「類型」篩選...</string>
+    <string id="30041">從此全部播放</string>
+    <string id="30042">更新</string>
+    <string id="30043">刪除</string>
+    <string id="30046">將電影加到CouchPotato</string>
     
-    <string id="30044">Incorrect Username/Password</string>
+    <string id="30044">使用者名稱或密碼錯誤</string>
     <string id="30045">Username not found</string>
     
     <string id="30052">Deleting</string>
