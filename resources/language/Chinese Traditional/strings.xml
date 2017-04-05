@@ -2,14 +2,14 @@
 <strings>
     <!-- Add-on settings -->
     <string id="29999">PlexKodiConnect</string>
-    <string id="30000">Server Address (IP)</string><!-- Verified -->
-    <string id="30002">Preferred playback method</string><!-- Verified -->
-    <string id="30004">Log level</string><!-- Verified -->
-    <string id="30005">Username: </string>
-    <string id="30006">Password: </string>
-    <string id="30007">Network Username: </string>
-    <string id="30008">Network Password: </string>
-    <string id="30009">Transcode: </string>
+    <string id="30000">伺服器位址(IP)</string><!-- Verified -->
+    <string id="30002">喜好的播放方式</string><!-- Verified -->
+    <string id="30004">日誌級別</string><!-- Verified -->
+    <string id="30005">使用者: </string>
+    <string id="30006">密碼 </string>
+    <string id="30007">密碼 </string>
+    <string id="30008">網路密碼: </string>
+    <string id="30009">轉碼: </string>
     <string id="30010">Enable Performance Profiling</string>
     <string id="30011">Local caching system</string>
     <string id="30012">OK</string>
