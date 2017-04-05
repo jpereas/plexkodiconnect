@@ -395,11 +395,11 @@
     <string id="39027">播放模式</string>
     <string id="39028">警告！如果选择"Native"模式，你可能无法使用一些Plex特性，如：Plex预告片和转码选项。所有的Plex共享都需要直接路径(e.g. smb://myNAS/mymovie.mkv or \\myNAS/mymovie.mkv)!</string>
     <string id="39029">网络凭据</string>
-    <string id="39030">Add network credentials to allow Kodi access to your content? Note: Skipping this step may generate a message during the initial scan of your content if Kodi can't locate your content.</string>
-    <string id="39031">Kodi can't locate file: </string>
-    <string id="39032">Please verify the path. You may need to verify your network credentials in the add-on settings or use different Plex paths. Stop syncing?</string>
-    <string id="39033">Transform Plex UNC library paths \\myNas\mymovie.mkv automatically to smb paths, smb://myNas/mymovie.mkv? (recommended)</string>
-    <string id="39034">Replace Plex UNC paths \\myNas with smb://myNas</string>
+    <string id="39030">添加网络凭据以允许Kodi访问您的内容？注：如果Kodi无法定位您的内容，则跳过此步骤可能会在初始扫描您的内容时生成一个消息。</string>
+    <string id="39031">Kodi无法定位文件： </string>
+    <string id="39032">请验证路径。您可能需要在插件设置中验证您的网络凭据或使用不同的Plex路径。停止同步吗？</string>
+    <string id="39033">自动转换Plex UNC库路径\\myNas\mymovie.mkv为smb路径smb://myNas/mymovie.mkv?(推荐)</string>
+    <string id="39034">用smb://myNas替换Plex UNC路径</string>
 
     <string id="39035">Replace Plex paths /volume1/media or \\myserver\media with custom SMB paths smb://NAS/mystuff</string>
     <string id="39037">Original Plex MOVIE path to replace:</string>
