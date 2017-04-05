@@ -1,23 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <strings>
     <!-- Add-on settings -->
-    <string id="29999">PlexKodiConnect</string>
-    <string id="30000">Server Address (IP)</string><!-- Verified -->
-    <string id="30002">Preferred playback method</string><!-- Verified -->
-    <string id="30004">Log level</string><!-- Verified -->
-    <string id="30005">Username: </string>
-    <string id="30006">Password: </string>
-    <string id="30007">Network Username: </string>
-    <string id="30008">Network Password: </string>
-    <string id="30009">Transcode: </string>
-    <string id="30010">Enable Performance Profiling</string>
-    <string id="30011">Local caching system</string>
-    <string id="30012">OK</string>
-    <string id="30013">Never show</string>
+    <string id="29999">PlexKodi连接</string>
+    <string id="30000">服务器地址(IP)</string><!-- Verified -->
+    <string id="30002">首选播放模式</string><!-- Verified -->
+    <string id="30004">日志等级</string><!-- Verified -->
+    <string id="30005">用户名 </string>
+    <string id="30006">密码 </string>
+    <string id="30007">网络用户名 </string>
+    <string id="30008">网络密码 </string>
+    <string id="30009">转码 </string>
+    <string id="30010">启用性能分析</string>
+    <string id="30011">本地缓存系统</string>
+    <string id="30012">确认</string>
+    <string id="30013">不再显示</string>
 
-    <string id="30014">Connection</string>
-    <string id="30015">Network</string>    
-    <string id="30016">Device Name</string>
+    <string id="30014">连接</string>
+    <string id="30015">网络</string>    
+    <string id="30016">设备名</string>
     <string id="30017">Unauthorized for PMS</string>     
 
     <string id="30022">Advanced</string>
