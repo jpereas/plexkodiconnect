@@ -33,7 +33,7 @@
     <string id="30038">播放开始后标记为已观看</string>    
     <string id="30039">为剧集设置每季海报</string>
 
-    <string id="30040">流派过滤器...</string>
+    <string id="30040">流派筛选器...</string>
     <string id="30041">从此处播放所有</string>
     <string id="30042">刷新</string>
     <string id="30043">删除</string>
@@ -80,23 +80,23 @@
     <string id="30088">惊悚</string>
     <string id="30089">西部</string>
     
-    <string id="30090">Genre Filter</string>
-    <string id="30091">Confirm file deletion</string><!-- Verified -->
-    <string id="30092">Delete this item? This action will delete media and associated data files.</string>
+    <string id="30090">流派筛选器</string>
+    <string id="30091">文件删除确认</string><!-- Verified -->
+    <string id="30092">删除此项目吗？此操作将删除媒体和关联的数据文件。</string>
     
-    <string id="30093">Mark Watched</string>
-    <string id="30094">Mark Unwatched</string>
-    <string id="30095">Add to Favorites</string>
-    <string id="30096">Remove from Favorites</string>
-    <string id="30097">Sort By ...</string>
-    <string id="30098">Sort Order Descending</string>
-    <string id="30099">Sort Order Ascending</string>
-    <string id="30100">Show People</string>
+    <string id="30093">标记为已观看</string>
+    <string id="30094">标记为未观看</string>
+    <string id="30095">添加到收藏夹</string>
+    <string id="30096">从收藏夹移除</string>
+    <string id="30097">排序方式</string>
+    <string id="30098">降序排序</string>
+    <string id="30099">升序排序</string>
+    <string id="30100">显示人物</string>
 
     <!-- resume dialog -->
-    <string id="30105">Resume</string>
-    <string id="30106">Resume from</string>
-    <string id="30107">Start from beginning</string>
+    <string id="30105">继续</string>
+    <string id="30106">从此处继续</string>
+    <string id="30107">从头开始</string>
     
     <string id="30110">Interface</string>
     <string id="30111">Include Stream Info</string>
