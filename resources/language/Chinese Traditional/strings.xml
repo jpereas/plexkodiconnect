@@ -229,40 +229,40 @@
     <string id="30243">啟用 HTTPS</string><!-- Verified -->
     <string id="30245">強迫使用特定的轉碼</string>
     
-    <string id="30246">Enable Netflix style next up notification</string>
-    <string id="30247">  - The number of seconds before the end to show the notification</string>
+    <string id="30246">使用 Netflix 的「即將上映」通知樣式</string>
+    <string id="30247">  設定通知即將播放完畢前的秒數</string>
     <string id="30248">Show Emby Info dialog on play/select action</string>
-    <string id="30249">Enable server connection message on startup</string><!-- Verified -->
+    <string id="30249">啟動時顯示連接伺服器的訊息</string><!-- Verified -->
     
-    <string id="30251">Recently added Home Videos</string><!-- Verified -->
-    <string id="30252">Recently added Photos</string><!-- Verified -->
-    <string id="30253">Favorite Home Videos</string><!-- Verified -->
-    <string id="30254">Favorite Photos</string><!-- Verified -->
-    <string id="30255">Favorite Albums</string>
+    <string id="30251">最近添加的家庭視頻</string><!-- Verified -->
+    <string id="30252">最近添加的照片</string><!-- Verified -->
+    <string id="30253">最愛的家庭視頻</string><!-- Verified -->
+    <string id="30254">最愛的照片</string><!-- Verified -->
+    <string id="30255">最喜歡的專輯</string>
     
-    <string id="30256">Recently added Music videos</string><!-- Verified -->
-    <string id="30257">In progress Music videos</string><!-- Verified -->
-    <string id="30258">Unwatched Music videos</string><!-- Verified -->
+    <string id="30256">最近添加的音樂視頻</string><!-- Verified -->
+    <string id="30257">進行中的音樂視頻</string><!-- Verified -->
+    <string id="30258">未觀看的音樂視頻</string><!-- Verified -->
     
     <!-- Default views -->
-    <string id="30300">Active</string>              
-    <string id="30301">Clear Settings</string>              
-    <string id="30302">Movies</string>              
-    <string id="30303">BoxSets</string>              
-    <string id="30304">Trailers</string>              
-    <string id="30305">Series</string>              
-    <string id="30306">Seasons</string>              
-    <string id="30307">Episodes</string>              
-    <string id="30308">Music Artists</string>              
-    <string id="30309">Music Albums</string>              
-    <string id="30310">Music Videos</string>              
-    <string id="30311">Music Tracks</string>
-    <string id="30312">Channels</string>  
+    <string id="30300">啟動中</string>              
+    <string id="30301">清除設置</string>              
+    <string id="30302">電影</string>              
+    <string id="30303">合集</string>              
+    <string id="30304">預告片</string>              
+    <string id="30305">系列</string>              
+    <string id="30306">季</string>              
+    <string id="30307">劇集</string>              
+    <string id="30308">音樂演出者</string>              
+    <string id="30309">音樂專輯</string>              
+    <string id="30310">音樂視頻</string>              
+    <string id="30311">音樂曲目</string>
+    <string id="30312">頻道</string>  
     
     <!-- contextmenu -->
-    <string id="30401">Plex options</string>
-    <string id="30402">Clear like for this item</string>
-    <string id="30403">Like this item</string>
+    <string id="30401">Plex 選項</string>
+    <string id="30402">清除類似的項目</string>
+    <string id="30403">類似的項目</string>
     <string id="30404">Dislike this item</string>
     <string id="30405">Add to Plex favorites</string>
     <string id="30406">Remove from Plex favorites</string>
