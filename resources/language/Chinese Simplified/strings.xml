@@ -105,7 +105,7 @@
     <string id="30114">提供播放后删除</string><!-- Verified -->
     <string id="30115">供剧集</string><!-- Verified -->
     <string id="30116">供电影</string><!-- Verified -->
-    <string id="30117">背景刷新率（秒）</string>
+    <string id="30117">背景刷新率(秒)</string>
     <string id="30118">添加恢复比率</string>
     <string id="30119">添加剧集数量</string>
     <string id="30120">显示加载进度</string>
@@ -116,28 +116,28 @@
     <string id="30128">播放错误</string>
     <string id="30129">此项目无法播放</string>    
     <string id="30130">检测到本地路径</string>
-    <string id="30131">Your MB3 Server contains local paths.  Please change server paths to UNC or change XBMB3C setting 'Play from Stream' to true.  Path: </string>
-    <string id="30132">Warning</string>
-    <string id="30133">Debug logging enabled.</string>
-    <string id="30134">This will affect performance.</string>
-    <string id="30135">Error</string>
-    <string id="30136">Monitoring service is not running</string>
-    <string id="30137">If you have just installed please restart Kodi</string>
-    <string id="30138">Search</string>
+    <string id="30131">您的MB3服务器包含本地路径。请更改服务器路径至UNC或在XBMB3C设置里将“从串流播放”值更改为true。路径： </string>
+    <string id="30132">警告</string>
+    <string id="30133">启用调试</string>
+    <string id="30134">这将影响性能</string>
+    <string id="30135">错误</string>
+    <string id="30136">监视服务未运行</string>
+    <string id="30137">如刚安装请重启Kodi</string>
+    <string id="30138">搜索</string>
     
-    <string id="30139">Enable Theme Music (Requires Restart)</string>
-    <string id="30140"> - Loop Theme Music</string>
-    <string id="30141">Enable Background Image (Requires Restart)</string>
-    <string id="30142">Services</string>
+    <string id="30139">启用主题音乐(须重启)</string>
+    <string id="30140"> 循环主题音乐</string>
+    <string id="30141">启用背景图(须重启)</string>
+    <string id="30142">服务</string>
 
-    <string id="30143">Always transcode if video bitrate is above</string>
+    <string id="30143">视频比特率高于则总是转码</string>
     
-    <string id="30150">Skin does not support setting views</string>
-    <string id="30151">Select item action (Requires Restart)</string>
+    <string id="30150">皮肤不支持设置视图</string>
+    <string id="30151">选中项目动作(须重启)</string>
     
-    <string id="30156">Sort NextUp by Show Title</string>    
-    <string id="30157">Enable Enhanced Images (eg CoverArt)</string><!-- Verified -->
-    <string id="30158">Metadata</string>
+    <string id="30156">通过标题排序</string>    
+    <string id="30157">启用增强图像(如Coverart)</string><!-- Verified -->
+    <string id="30158">元数据</string>
     <string id="30159">Artwork</string>
     <string id="30160">Video Quality if Transcoding necessary</string><!-- Verified -->
     
