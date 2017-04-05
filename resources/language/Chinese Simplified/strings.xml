@@ -182,11 +182,11 @@
     <string id="30196">电视演员</string>              
     <string id="30197">播放列表</string>              
     <string id="30198">搜索</string>              
-    <string id="30199">Set Views</string>              
+    <string id="30199">设置视图</string>              
     
-    <string id="30200">Select User</string>              
-    <string id="30201">Profiling enabled.</string>              
-    <string id="30202">Please remember to turn off when finished testing.</string>              
+    <string id="30200">选择用户</string>              
+    <string id="30201">分析已启用</string>              
+    <string id="30202">完成测试后请记得关闭</string>              
     <string id="30203">Error in ArtworkRotationThread</string>              
     <string id="30204">Unable to connect to server</string>         
     <string id="30205">Error in LoadMenuOptionsThread</string>     
