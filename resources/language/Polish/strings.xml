@@ -2,64 +2,64 @@
 <strings>
     <!-- Add-on settings -->
     <string id="29999">PlexKodiConnect</string>
-    <string id="30000">Server Address (IP)</string><!-- Verified -->
-    <string id="30002">Preferred playback method</string><!-- Verified -->
-    <string id="30004">Log level</string><!-- Verified -->
-    <string id="30005">Username: </string>
-    <string id="30006">Password: </string>
-    <string id="30007">Network Username: </string>
-    <string id="30008">Network Password: </string>
-    <string id="30009">Transcode: </string>
-    <string id="30010">Enable Performance Profiling</string>
-    <string id="30011">Local caching system</string>
+    <string id="30000">Adres serwera (IP)</string><!-- Verified -->
+    <string id="30002">Preferowana metoda odtwarzania</string><!-- Verified -->
+    <string id="30004">Poziom rejestrowania</string><!-- Verified -->
+    <string id="30005">Nazwa użytkownika: </string>
+    <string id="30006">Hasło: </string>
+    <string id="30007">Sieciowa nazwa użytkownika: </string>
+    <string id="30008">Sieciowe hasło: </string>
+    <string id="30009">Transkodowanie: </string>
+    <string id="30010">Włącz profilowanie wydajności</string>
+    <string id="30011">Lokalny system buforowania</string>
     <string id="30012">OK</string>
-    <string id="30013">Never show</string>
+    <string id="30013">Nigdy nie pokazuj</string>
 
-    <string id="30014">Connection</string>
-    <string id="30015">Network</string>    
-    <string id="30016">Device Name</string>
-    <string id="30017">Unauthorized for PMS</string>     
+    <string id="30014">Połączenie</string>
+    <string id="30015">Sieć</string>    
+    <string id="30016">Nazwa urządzenia</string>
+    <string id="30017">Nieautoryzowane dla PMS</string>     
 
-    <string id="30022">Advanced</string>
-    <string id="30024">Username</string><!-- Verified -->
+    <string id="30022">Ustawienia zaawansowane</string>
+    <string id="30024">Nazwa Użytkownika</string><!-- Verified -->
 
-    <string id="30025">Display message if PMS goes offline</string>
+    <string id="30025">Wyświetlić komunikat, jeśli PMS przechodzi w tryb offline</string>
     
-    <string id="30030">Port Number</string><!-- Verified -->
-    <string id="30031">I own this Plex Media Server</string>
-    <string id="30036">Number of recent Movies to show:</string>    
-    <string id="30037">Number of recent TV episodes to show:</string>    
-    <string id="30035">Number of recent Music Albums to show:</string>    
-    <string id="30038">Mark watched at start of playback:</string>    
-    <string id="30039">Set Season poster for episodes</string>
+    <string id="30030">Numer portu</string><!-- Verified -->
+    <string id="30031">Posiadam ten Plex Media Server</string>
+    <string id="30036">Liczba niedawno dodanych Filmów:</string>    
+    <string id="30037">Liczba ostatnio dodanych odcinków seriali telewizyjnych:</string>    
+    <string id="30035">Liczba ostatnio dodanych albumów muzycznych:</string>    
+    <string id="30038">Zaznacz, że oglądane na początku odtwarzania:</string>    
+    <string id="30039">Ustaw Plakat sezonu dla odcinków</string>
 
-    <string id="30040">Genre Filter ...</string>
-    <string id="30041">Play All from Here</string>
-    <string id="30042">Refresh</string>
-    <string id="30043">Delete</string>
-    <string id="30046">Add Movie to CouchPotato</string>
+    <string id="30040">Filtr gatunek...</string>
+    <string id="30041">Odtwórz z tej lokalizacji</string>
+    <string id="30042">Odśwież</string>
+    <string id="30043">Usuń</string>
+    <string id="30046">Dodaj film do CouchPotato</string>
     
-    <string id="30044">Incorrect Username/Password</string>
-    <string id="30045">Username not found</string>
+    <string id="30044">Nieprawidłowa nazwa użytkownika lub hasła</string>
+    <string id="30045">Nazwa użytkownika nie została znaleziona</string>
     
-    <string id="30052">Deleting</string>
-    <string id="30053">Waiting for server to delete</string>
+    <string id="30052">Usuwanie</string>
+    <string id="30053">Czekam na serwer aby usunął</string>
     
-    <string id="30059">Server Default</string>
-    <string id="30060">Title</string>
-    <string id="30061">Year</string>
-    <string id="30062">Premiere Date</string>
-    <string id="30063">Date Created</string>
-    <string id="30064">Critic Rating</string>
-    <string id="30065">Community Rating</string>
-    <string id="30066">Play Count</string>
-    <string id="30067">Budget</string>
+    <string id="30059">Domyślny serwer</string>
+    <string id="30060">Tytuł</string>
+    <string id="30061">Rok</string>
+    <string id="30062">Data Premiery</string>
+    <string id="30063">Data utworzenia</string>
+    <string id="30064">Ocena krytyki</string>
+    <string id="30065">Ocena społeczności</string>
+    <string id="30066">Liczba odtworzeń</string>
+    <string id="30067">Budżet</string>
     <!-- Runtime added as 30226 below -->
     
-    <string id="30068">Sort By</string>
+    <string id="30068">Sortuj Według</string>
     
-    <string id="30069">None</string>
-    <string id="30070">Action</string>
+    <string id="30069">Brak</string>
+    <string id="30070">Akcja</string>
     <string id="30071">Adventure</string>
     <string id="30072">Animation</string>
     <string id="30073">Crime</string>

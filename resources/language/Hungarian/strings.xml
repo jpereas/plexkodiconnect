@@ -2,31 +2,31 @@
 <strings>
     <!-- Add-on settings -->
     <string id="29999">PlexKodiConnect</string>
-    <string id="30000">Server Address (IP)</string><!-- Verified -->
-    <string id="30002">Preferred playback method</string><!-- Verified -->
+    <string id="30000">Szerver címe (IP)</string><!-- Verified -->
+    <string id="30002">Előnyben részesített lejátszási módszerrel</string><!-- Verified -->
     <string id="30004">Log level</string><!-- Verified -->
-    <string id="30005">Username: </string>
-    <string id="30006">Password: </string>
-    <string id="30007">Network Username: </string>
-    <string id="30008">Network Password: </string>
+    <string id="30005">Felhasználónév: </string>
+    <string id="30006">Jelszó: </string>
+    <string id="30007">Hálózati felhasználónév: </string>
+    <string id="30008">Hálózati jelszó: </string>
     <string id="30009">Transcode: </string>
     <string id="30010">Enable Performance Profiling</string>
     <string id="30011">Local caching system</string>
-    <string id="30012">OK</string>
-    <string id="30013">Never show</string>
+    <string id="30012">Ok</string>
+    <string id="30013">Sose mutassa</string>
 
-    <string id="30014">Connection</string>
-    <string id="30015">Network</string>    
-    <string id="30016">Device Name</string>
+    <string id="30014">Csatlakozás</string>
+    <string id="30015">Hálózat</string>    
+    <string id="30016">Eszköz neve</string>
     <string id="30017">Unauthorized for PMS</string>     
 
-    <string id="30022">Advanced</string>
-    <string id="30024">Username</string><!-- Verified -->
+    <string id="30022">Haladó</string>
+    <string id="30024">Felhasználónév</string><!-- Verified -->
 
     <string id="30025">Display message if PMS goes offline</string>
     
-    <string id="30030">Port Number</string><!-- Verified -->
-    <string id="30031">I own this Plex Media Server</string>
+    <string id="30030">Port</string><!-- Verified -->
+    <string id="30031">Én vagyok a tulajdonosa ennek a Plex Media Server-nek</string>
     <string id="30036">Number of recent Movies to show:</string>    
     <string id="30037">Number of recent TV episodes to show:</string>    
     <string id="30035">Number of recent Music Albums to show:</string>    
@@ -35,47 +35,47 @@
 
     <string id="30040">Genre Filter ...</string>
     <string id="30041">Play All from Here</string>
-    <string id="30042">Refresh</string>
-    <string id="30043">Delete</string>
+    <string id="30042">Frissítés</string>
+    <string id="30043">Törlés</string>
     <string id="30046">Add Movie to CouchPotato</string>
     
     <string id="30044">Incorrect Username/Password</string>
-    <string id="30045">Username not found</string>
+    <string id="30045">A felhasználónév nem található</string>
     
-    <string id="30052">Deleting</string>
+    <string id="30052">Törlés</string>
     <string id="30053">Waiting for server to delete</string>
     
     <string id="30059">Server Default</string>
     <string id="30060">Title</string>
-    <string id="30061">Year</string>
-    <string id="30062">Premiere Date</string>
-    <string id="30063">Date Created</string>
+    <string id="30061">Év</string>
+    <string id="30062">Premier dátuma</string>
+    <string id="30063">Létehozás dátuma</string>
     <string id="30064">Critic Rating</string>
-    <string id="30065">Community Rating</string>
-    <string id="30066">Play Count</string>
-    <string id="30067">Budget</string>
+    <string id="30065">Közösségi értékelés</string>
+    <string id="30066">Lejátszások száma</string>
+    <string id="30067">Költségvetés</string>
     <!-- Runtime added as 30226 below -->
     
     <string id="30068">Sort By</string>
     
     <string id="30069">None</string>
-    <string id="30070">Action</string>
-    <string id="30071">Adventure</string>
-    <string id="30072">Animation</string>
-    <string id="30073">Crime</string>
-    <string id="30074">Comedy</string>
-    <string id="30075">Documentary</string>
-    <string id="30076">Drama</string>
+    <string id="30070">Akció</string>
+    <string id="30071">Kaland</string>
+    <string id="30072">Animáció</string>
+    <string id="30073">Bűnügyi</string>
+    <string id="30074">Vígjáték</string>
+    <string id="30075">Dokumentumfilm</string>
+    <string id="30076">Dráma</string>
     <string id="30077">Fantasy</string>
     <string id="30078">Foreign</string>
-    <string id="30079">History</string>
+    <string id="30079">Történelmi</string>
     <string id="30080">Horror</string>
-    <string id="30081">Music</string>
+    <string id="30081">Zene</string>
     <string id="30082">Musical</string>
     <string id="30083">Mystery</string>
-    <string id="30084">Romance</string>
+    <string id="30084">Romantikus</string>
     <string id="30085">Science Fiction</string>
-    <string id="30086">Short</string>
+    <string id="30086">Rövid</string>
     <string id="30087">Suspense</string>
     <string id="30088">Thriller</string>
     <string id="30089">Western</string>
@@ -111,7 +111,7 @@
     <string id="30120">Show Load Progress</string>
     <string id="30121">Loading Content</string>
     <string id="30122">Retrieving Data</string>
-    <string id="30125">Done</string>
+    <string id="30125">Kész</string>
     <string id="30126">Processing Item : </string>
     <string id="30128">Play Error</string>
     <string id="30129">This item is not playable</string>    
@@ -120,15 +120,15 @@
     <string id="30132">Warning</string>
     <string id="30133">Debug logging enabled.</string>
     <string id="30134">This will affect performance.</string>
-    <string id="30135">Error</string>
+    <string id="30135">Hiba</string>
     <string id="30136">Monitoring service is not running</string>
     <string id="30137">If you have just installed please restart Kodi</string>
-    <string id="30138">Search</string>
+    <string id="30138">Keresés</string>
     
     <string id="30139">Enable Theme Music (Requires Restart)</string>
     <string id="30140"> - Loop Theme Music</string>
     <string id="30141">Enable Background Image (Requires Restart)</string>
-    <string id="30142">Services</string>
+    <string id="30142">Szolgáltatások</string>
 
     <string id="30143">Always transcode if video bitrate is above</string>
     
@@ -156,7 +156,7 @@
     <string id="30170">Recently Added TV Shows</string><!-- Verified -->
     <string id="30171">In Progress TV Shows</string><!-- Verified -->
     <string id="30172">All Music</string>              
-    <string id="30173">Channels</string><!-- Verified -->
+    <string id="30173">Csatornák</string><!-- Verified -->
     <string id="30174">Recently Added</string><!-- Verified -->
     <string id="30175">Recently Added Episodes</string><!-- Verified -->
     <string id="30176">Recently Added Albums</string>  
@@ -169,9 +169,9 @@
     <string id="30183">Frequent Played Albums</string> 
     <string id="30184">Upcoming TV</string>            
     <string id="30185">BoxSets</string>                
-    <string id="30186">Trailers</string>               
-    <string id="30187">Music Videos</string>           
-    <string id="30188">Photos</string>                 
+    <string id="30186">Előzetesek</string>               
+    <string id="30187">Zenei videók</string>           
+    <string id="30188">Képek</string>                 
     <string id="30189">Unwatched Movies</string><!-- Verified -->
     <string id="30190">Movie Genres</string>           
     <string id="30191">Movie Studios</string>          
@@ -181,7 +181,7 @@
     <string id="30195">TV Networks</string>            
     <string id="30196">TV Actors</string>              
     <string id="30197">Playlists</string>              
-    <string id="30198">Search</string>              
+    <string id="30198">Keresés</string>              
     <string id="30199">Set Views</string>              
     
     <string id="30200">Select User</string>              
