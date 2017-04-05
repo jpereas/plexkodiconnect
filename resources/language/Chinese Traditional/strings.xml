@@ -116,19 +116,19 @@
     <string id="30128">播放錯誤</string>
     <string id="30129">內容無法播放</string>    
     <string id="30130">偵測到本地路徑</string>
-    <string id="30131">Your MB3 Server contains local paths.  Please change server paths to UNC or change XBMB3C setting 'Play from Stream' to true.  Path: </string>
-    <string id="30132">Warning</string>
-    <string id="30133">Debug logging enabled.</string>
-    <string id="30134">This will affect performance.</string>
-    <string id="30135">Error</string>
-    <string id="30136">Monitoring service is not running</string>
-    <string id="30137">If you have just installed please restart Kodi</string>
-    <string id="30138">Search</string>
+    <string id="30131">你的MB3伺服器包含區網位置。請變更伺服器位置到UNC或是將XBMC3C「從串流播放」設定為「True」。路徑: </string>
+    <string id="30132">警告</string>
+    <string id="30133">除錯日誌已啟動</string>
+    <string id="30134">這會影響效能。</string>
+    <string id="30135">錯誤</string>
+    <string id="30136">監控服務未啟動</string>
+    <string id="30137">如果是新安裝的，請重啟Kodi</string>
+    <string id="30138">搜尋</string>
     
-    <string id="30139">Enable Theme Music (Requires Restart)</string>
-    <string id="30140"> - Loop Theme Music</string>
-    <string id="30141">Enable Background Image (Requires Restart)</string>
-    <string id="30142">Services</string>
+    <string id="30139">啟用劇院音樂(須重啟)</string>
+    <string id="30140"> 循環播放劇院音樂</string>
+    <string id="30141">顯示背景圖片(須重啟)</string>
+    <string id="30142">服務項目</string>
 
     <string id="30143">Always transcode if video bitrate is above</string>
     
