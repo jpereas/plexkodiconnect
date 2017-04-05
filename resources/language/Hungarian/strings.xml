@@ -12,15 +12,15 @@
     <string id="30009">Transcode: </string>
     <string id="30010">Enable Performance Profiling</string>
     <string id="30011">Local caching system</string>
-    <string id="30012">OK</string>
-    <string id="30013">Never show</string>
+    <string id="30012">Ok</string>
+    <string id="30013">Sose mutassa</string>
 
-    <string id="30014">Connection</string>
+    <string id="30014">Csatlakozás</string>
     <string id="30015">Hálózat</string>    
     <string id="30016">Eszköz neve</string>
     <string id="30017">Unauthorized for PMS</string>     
 
-    <string id="30022">Advanced</string>
+    <string id="30022">Haladó</string>
     <string id="30024">Felhasználónév</string><!-- Verified -->
 
     <string id="30025">Display message if PMS goes offline</string>
@@ -42,18 +42,18 @@
     <string id="30044">Incorrect Username/Password</string>
     <string id="30045">A felhasználónév nem található</string>
     
-    <string id="30052">Deleting</string>
+    <string id="30052">Törlés</string>
     <string id="30053">Waiting for server to delete</string>
     
     <string id="30059">Server Default</string>
     <string id="30060">Title</string>
     <string id="30061">Év</string>
     <string id="30062">Premier dátuma</string>
-    <string id="30063">Date Created</string>
+    <string id="30063">Létehozás dátuma</string>
     <string id="30064">Critic Rating</string>
-    <string id="30065">Community Rating</string>
-    <string id="30066">Play Count</string>
-    <string id="30067">Budget</string>
+    <string id="30065">Közösségi értékelés</string>
+    <string id="30066">Lejátszások száma</string>
+    <string id="30067">Költségvetés</string>
     <!-- Runtime added as 30226 below -->
     
     <string id="30068">Sort By</string>
@@ -75,7 +75,7 @@
     <string id="30083">Mystery</string>
     <string id="30084">Romantikus</string>
     <string id="30085">Science Fiction</string>
-    <string id="30086">Short</string>
+    <string id="30086">Rövid</string>
     <string id="30087">Suspense</string>
     <string id="30088">Thriller</string>
     <string id="30089">Western</string>
