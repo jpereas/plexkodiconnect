@@ -208,18 +208,18 @@
     <string id="30221">进行中 </string>
     <string id="30222">接下来 </string>
     <string id="30223">用户视图</string>
-    <string id="30224">Report Metrics</string>
-    <string id="30225">Use Kodi Sorting</string>
-    <string id="30226">Runtime</string>
+    <string id="30224">报告Metrics</string>
+    <string id="30225">使用Kodi排序</string>
+    <string id="30226">运行时长</string>
     
-    <string id="30227">Random</string>
-    <string id="30228">Recently releases</string>
-    <string id="30229">Random Items</string><!-- Verified -->
-    <string id="30230">Recommended</string><!-- Verified -->
+    <string id="30227">随机</string>
+    <string id="30228">最近发行</string>
+    <string id="30229">随机项目</string><!-- Verified -->
+    <string id="30230">推荐</string><!-- Verified -->
     
-    <string id="30235">Extras</string><!-- Verified -->
-    <string id="30236">Sync Theme Music</string>
-    <string id="30237">Sync Extra Fanart</string>
+    <string id="30235">附加</string><!-- Verified -->
+    <string id="30236">同步主题音乐</string>
+    <string id="30237">同步附加Fanart</string>
     <string id="30238">Sync Movie BoxSets</string>
     
     <string id="30239">[COLOR yellow]Reset local Kodi database[/COLOR]</string><!-- Verified -->
