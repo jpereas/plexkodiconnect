@@ -191,36 +191,36 @@
     <string id="30204">無法連線到伺服器</string>         
     <string id="30205">載入選單選項的線程發生錯誤</string>     
     
-    <string id="30206">Enable Playlists Loader (Requires Restart)</string>   
+    <string id="30206">啟用播放清單載入程式 (須重啟)</string>   
     
-    <string id="30207">Songs</string>
-    <string id="30208">Albums</string>
-    <string id="30209">Album Artists</string>
-    <string id="30210">Artists</string>
-    <string id="30211">Music Genres</string>
+    <string id="30207">歌曲</string>
+    <string id="30208">專輯</string>
+    <string id="30209">專輯演唱者</string>
+    <string id="30210">演出者</string>
+    <string id="30211">音樂流派</string>
     
-    <string id="30212">Enable Theme Videos (Requires Restart)</string>
-    <string id="30213"> - Loop Theme Videos</string>
+    <string id="30212">啟用主題視頻 (須重啟)</string>
+    <string id="30213"> -循環播放主題視頻</string>
     
-    <string id="30216">AutoPlay remaining episodes in a season</string> 
-    <string id="30218">Compress Artwork</string>
-    <string id="30220">Latest </string>
-    <string id="30221">In Progress </string>
-    <string id="30222">NextUp </string>
-    <string id="30223">User Views</string>
+    <string id="30216">同一季自動播放下一集</string> 
+    <string id="30218">壓縮背景海報</string>
+    <string id="30220">最新的 </string>
+    <string id="30221">進行中 </string>
+    <string id="30222">即將上映 </string>
+    <string id="30223">使用者視圖</string>
     <string id="30224">Report Metrics</string>
-    <string id="30225">Use Kodi Sorting</string>
-    <string id="30226">Runtime</string>
+    <string id="30225">使用Kodi排序</string>
+    <string id="30226">運行時間</string>
     
-    <string id="30227">Random</string>
-    <string id="30228">Recently releases</string>
-    <string id="30229">Random Items</string><!-- Verified -->
-    <string id="30230">Recommended</string><!-- Verified -->
+    <string id="30227">隨機</string>
+    <string id="30228">最近發佈的</string>
+    <string id="30229">隨機播放項目</string><!-- Verified -->
+    <string id="30230">推薦</string><!-- Verified -->
     
-    <string id="30235">Extras</string><!-- Verified -->
-    <string id="30236">Sync Theme Music</string>
-    <string id="30237">Sync Extra Fanart</string>
-    <string id="30238">Sync Movie BoxSets</string>
+    <string id="30235">附加功能</string><!-- Verified -->
+    <string id="30236">同步主題音樂</string>
+    <string id="30237">同步額外的背景海報</string>
+    <string id="30238">同步電影合集</string>
     
     <string id="30239">[COLOR yellow]Reset local Kodi database[/COLOR]</string><!-- Verified -->
     <string id="30240">Enable watched/resume status sync</string>
