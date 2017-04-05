@@ -502,20 +502,20 @@
     <string id="39406">Plex 播放列表/节点刷新失败</string>
     <string id="39407">全库同步完成</string>
     <string id="39408">因无法处理，同步须跳过某些项目。Kodi现在可能不稳定！！请将您的Kodi日志发布到Plex论坛上。</string>
-    <string id="39409">The Plex Server did not like you asking for so much data at once and returned ERRORS. Try lowering the number of sync download threads in the settings. Skipped some items for now.</string>
-    <string id="39410">ERROR in library sync</string>
+    <string id="39409">Plex服务器无法一次响应如此多的数据并反回错误。尝试在设置中降低同步下载线程数量。现在已跳过某些项目。</string>
+    <string id="39410">库同步错误</string>
 
     <!-- Plex videonodes.py -->
     <string id="39500">On Deck</string>
-    <string id="39501">Collections</string>
+    <string id="39501">收藏</string>
 
     <!-- Plex utils.py -->
-    <string id="39600">Are you sure you want to reset your local Kodi database? A re-sync of the Plex data will take time afterwards.</string>
-    <string id="39601">Could not stop the database from running. Please try again later.</string>
-    <string id="39602">Remove all cached artwork? (recommended!)</string>
-    <string id="39603">Reset all PlexKodiConnect Addon settings? (this is usually NOT recommended and unnecessary!)</string>
+    <string id="39600">确定要重置您的本地Kodi数据库？之后重新同步 Plex 数据需要花费一些时间。</string>
+    <string id="39601">无法停止数据库运行。请稍后再试。</string>
+    <string id="39602">删除所有缓存的插图？(推荐!)</string>
+    <string id="39603">重置所有 PlexKodiConnect Addon 设置？(通常不建议并无必要!)</string>
 
-    <string id="39700">Amazon Alexa (Voice Recognition)</string>
-    <string id="39701">Activate Alexa</string>
-    <string id="39702">Browse by folder</string>
+    <string id="39700">亚马逊 Alexa (语音识别)</string>
+    <string id="39701">激活 Alexa</string>
+    <string id="39702">按文件夹浏览</string>
 </strings>
