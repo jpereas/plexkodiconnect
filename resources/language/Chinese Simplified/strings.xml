@@ -464,36 +464,36 @@
     <string id="39215">输入您的Plex媒体服务器的 IP 或 URL，例如︰</string>
 
     <string id="39217">你Plex媒体服务器是否支持 SSL 连接？(https而不是 http)？</string>
-    <string id="39218">Error contacting PMS</string>
-    <string id="39219">Abort (Yes) or save address anyway (No)?</string>
-    <string id="39220">connected</string>
-    <string id="39221">plex.tv toggle successful</string>
-    <string id="39222">[COLOR yellow]Look for missing fanart on FanartTV now[/COLOR]</string>
-    <string id="39223">Only look for missing fanart or refresh all fanart? The scan will take quite a while and happen in the background.</string>
-    <string id="39224">Refresh all</string>
-    <string id="39225">Missing only</string>    
+    <string id="39218">联系PMS错误</string>
+    <string id="39219">中止 (Yes) 或保存地址 (No)？</string>
+    <string id="39220">已连接</string>
+    <string id="39221">plex.tv 切换成功</string>
+    <string id="39222">[黄色]从FanartTV 寻找缺失的fanart[/COLOR]</string>
+    <string id="39223">仅寻找缺失的fanart或刷新所有fanart？扫描将需要相当一段时间在后台继续。</string>
+    <string id="39224">刷新全部</string>
+    <string id="39225">仅缺失的</string>    
 
 
     <!-- Plex Artwork.py -->
-    <string id="39250">Running the image cache process can take some time. It will happen in the background. Are you sure you want continue?</string>
-    <string id="39251">Reset all existing cache data first?</string>
+    <string id="39250">运行图像缓存可能会花费一些时间。它将在后台持续。确定要继续吗？</string>
+    <string id="39251">首先重置现有缓存数据吗？</string>
 
     <!-- Plex PlexAPI.py -->
-    <string id="39300">: Enter plex.tv username. Or nothing to cancel.</string>
-    <string id="39301">Enter password for plex.tv user </string>
-    <string id="39302">Could not sign in user </string>
-    <string id="39303">Problems trying to contact plex.tv. Try again later</string>
-    <string id="39304">Go to https://plex.tv/pin and enter the code: </string>
-    <string id="39305">Could not sign in to plex.tv. Try again later</string>
-    <string id="39306">: Select User</string>
-    <string id="39307">Enter PIN for user </string>
-    <string id="39308">Could not log in user </string>
-    <string id="39309">Please try again.</string>
-    <string id="39310">unknown</string>
-    <string id="39311">or press No to not sign in.</string>
+    <string id="39300">︰ 输入 plex.tv 的用户名。或不输入来取消。</string>
+    <string id="39301">输入 plex.tv 用户密码 </string>
+    <string id="39302">无法登陆用户 </string>
+    <string id="39303">联系plex.tv时有问题。请稍后再试</string>
+    <string id="39304">转到 https://plex.tv/pin，然后输入代码︰ </string>
+    <string id="39305">无法登录到 plex.tv。请稍后再试</string>
+    <string id="39306">︰ 选择用户</string>
+    <string id="39307">为用户输入 PIN </string>
+    <string id="39308">无法登陆用户 </string>
+    <string id="39309">请重试。</string>
+    <string id="39310">未知</string>
+    <string id="39311">或按No停止登录。</string>
 
     <!-- Plex Librarysync.py -->
-    <string id="39400">Library sync thread has crashed. You should restart Kodi now. Please report this on the forum</string>
+    <string id="39400">库同步线程崩溃。现在您应重启Kodi。请将此报告至论坛</string>
     <string id="39401">Detected Kodi database needs to be recreated for this version. This might take a while. Proceed?</string>
     <string id="39402"> may not work correctly until the database is reset.</string>
     <string id="39403">Cancelling the database syncing process. Current Kodi version is unsupported. Please verify your logs for more info.</string>
