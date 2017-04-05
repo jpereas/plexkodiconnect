@@ -33,52 +33,52 @@
     <string id="30038">播放开始后标记为已观看</string>    
     <string id="30039">为剧集设置每季海报</string>
 
-    <string id="30040">Genre Filter ...</string>
-    <string id="30041">Play All from Here</string>
-    <string id="30042">Refresh</string>
-    <string id="30043">Delete</string>
-    <string id="30046">Add Movie to CouchPotato</string>
+    <string id="30040">流派过滤器...</string>
+    <string id="30041">从此处播放所有</string>
+    <string id="30042">刷新</string>
+    <string id="30043">删除</string>
+    <string id="30046">添加电影到CouchPotato</string>
     
-    <string id="30044">Incorrect Username/Password</string>
-    <string id="30045">Username not found</string>
+    <string id="30044">用户名/密码不正确</string>
+    <string id="30045">找不到用户名</string>
     
-    <string id="30052">Deleting</string>
-    <string id="30053">Waiting for server to delete</string>
+    <string id="30052">删除中</string>
+    <string id="30053">等待服务器删除</string>
     
-    <string id="30059">Server Default</string>
-    <string id="30060">Title</string>
-    <string id="30061">Year</string>
-    <string id="30062">Premiere Date</string>
-    <string id="30063">Date Created</string>
-    <string id="30064">Critic Rating</string>
-    <string id="30065">Community Rating</string>
-    <string id="30066">Play Count</string>
-    <string id="30067">Budget</string>
+    <string id="30059">服务器默认值</string>
+    <string id="30060">标题</string>
+    <string id="30061">年份</string>
+    <string id="30062">首播日期</string>
+    <string id="30063">创建日期</string>
+    <string id="30064">专家评分</string>
+    <string id="30065">社区评分</string>
+    <string id="30066">播放次数</string>
+    <string id="30067">预算</string>
     <!-- Runtime added as 30226 below -->
     
-    <string id="30068">Sort By</string>
+    <string id="30068">排序方式</string>
     
-    <string id="30069">None</string>
-    <string id="30070">Action</string>
-    <string id="30071">Adventure</string>
-    <string id="30072">Animation</string>
-    <string id="30073">Crime</string>
-    <string id="30074">Comedy</string>
-    <string id="30075">Documentary</string>
-    <string id="30076">Drama</string>
-    <string id="30077">Fantasy</string>
-    <string id="30078">Foreign</string>
-    <string id="30079">History</string>
-    <string id="30080">Horror</string>
-    <string id="30081">Music</string>
-    <string id="30082">Musical</string>
-    <string id="30083">Mystery</string>
-    <string id="30084">Romance</string>
-    <string id="30085">Science Fiction</string>
-    <string id="30086">Short</string>
-    <string id="30087">Suspense</string>
-    <string id="30088">Thriller</string>
-    <string id="30089">Western</string>
+    <string id="30069">无</string>
+    <string id="30070">动作</string>
+    <string id="30071">冒险</string>
+    <string id="30072">动画</string>
+    <string id="30073">犯罪</string>
+    <string id="30074">喜剧</string>
+    <string id="30075">纪录片</string>
+    <string id="30076">剧情</string>
+    <string id="30077">幻想</string>
+    <string id="30078">外语</string>
+    <string id="30079">历史</string>
+    <string id="30080">恐怖</string>
+    <string id="30081">音乐</string>
+    <string id="30082">音乐剧</string>
+    <string id="30083">悬疑</string>
+    <string id="30084">浪漫</string>
+    <string id="30085">科幻</string>
+    <string id="30086">短片</string>
+    <string id="30087">悬念</string>
+    <string id="30088">惊悚</string>
+    <string id="30089">西部</string>
     
     <string id="30090">Genre Filter</string>
     <string id="30091">Confirm file deletion</string><!-- Verified -->
