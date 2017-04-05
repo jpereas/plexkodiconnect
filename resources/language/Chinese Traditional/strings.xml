@@ -40,32 +40,32 @@
     <string id="30046">將電影加到CouchPotato</string>
     
     <string id="30044">使用者名稱或密碼錯誤</string>
-    <string id="30045">Username not found</string>
+    <string id="30045">沒有這個使用者</string>
     
-    <string id="30052">Deleting</string>
-    <string id="30053">Waiting for server to delete</string>
+    <string id="30052">刪除中</string>
+    <string id="30053">等待伺服器刪除中</string>
     
-    <string id="30059">Server Default</string>
-    <string id="30060">Title</string>
-    <string id="30061">Year</string>
-    <string id="30062">Premiere Date</string>
-    <string id="30063">Date Created</string>
-    <string id="30064">Critic Rating</string>
-    <string id="30065">Community Rating</string>
-    <string id="30066">Play Count</string>
-    <string id="30067">Budget</string>
+    <string id="30059">伺服器預設</string>
+    <string id="30060">標題</string>
+    <string id="30061">年</string>
+    <string id="30062">首映日期</string>
+    <string id="30063">創建日期</string>
+    <string id="30064">關鍵評分</string>
+    <string id="30065">社群評分</string>
+    <string id="30066">播放次數</string>
+    <string id="30067">預算</string>
     <!-- Runtime added as 30226 below -->
     
-    <string id="30068">Sort By</string>
+    <string id="30068">排序</string>
     
-    <string id="30069">None</string>
-    <string id="30070">Action</string>
-    <string id="30071">Adventure</string>
-    <string id="30072">Animation</string>
-    <string id="30073">Crime</string>
-    <string id="30074">Comedy</string>
-    <string id="30075">Documentary</string>
-    <string id="30076">Drama</string>
+    <string id="30069">無</string>
+    <string id="30070">動作</string>
+    <string id="30071">冒險</string>
+    <string id="30072">動畫</string>
+    <string id="30073">犯罪</string>
+    <string id="30074">喜劇</string>
+    <string id="30075">傳記</string>
+    <string id="30076">戲劇</string>
     <string id="30077">Fantasy</string>
     <string id="30078">Foreign</string>
     <string id="30079">History</string>
