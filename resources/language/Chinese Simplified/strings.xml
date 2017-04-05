@@ -494,14 +494,14 @@
 
     <!-- Plex Librarysync.py -->
     <string id="39400">库同步线程崩溃。现在您应重启Kodi。请将此报告至论坛</string>
-    <string id="39401">Detected Kodi database needs to be recreated for this version. This might take a while. Proceed?</string>
-    <string id="39402"> may not work correctly until the database is reset.</string>
-    <string id="39403">Cancelling the database syncing process. Current Kodi version is unsupported. Please verify your logs for more info.</string>
-    <string id="39404">Startup syncing process failed repeatedly. Try restarting Kodi. Stopping Sync for now.</string>
-    <string id="39405">Plex playlists/nodes refreshed</string>
-    <string id="39406">Plex playlists/nodes refresh failed</string>
-    <string id="39407">Full library sync finished</string>
-    <string id="39408">Sync had to skip some items because they could not be processed. Kodi may be instable now!! Please post your Kodi logs to the Plex forum.</string>
+    <string id="39401">检测到需要为当前版本重建Kodi数据库。这可能需要一段时间。是否继续？</string>
+    <string id="39402"> 重置数据库前可能无法正常运行。</string>
+    <string id="39403">正在取消数据库同步进程。不支持当前Kodi版本。请验证logs以获取更多信息。</string>
+    <string id="39404">同步进程启动持续失败。尝试重启Kodi中。现在停止同步。</string>
+    <string id="39405">Plex 播放列表/节点已刷新</string>
+    <string id="39406">Plex 播放列表/节点刷新失败</string>
+    <string id="39407">全库同步完成</string>
+    <string id="39408">因无法处理，同步须跳过某些项目。Kodi现在可能不稳定！！请将您的Kodi日志发布到Plex论坛上。</string>
     <string id="39409">The Plex Server did not like you asking for so much data at once and returned ERRORS. Try lowering the number of sync download threads in the settings. Skipped some items for now.</string>
     <string id="39410">ERROR in library sync</string>
 
