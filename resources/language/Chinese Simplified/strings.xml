@@ -138,30 +138,30 @@
     <string id="30156">通过标题排序</string>    
     <string id="30157">启用增强图像(如Coverart)</string><!-- Verified -->
     <string id="30158">元数据</string>
-    <string id="30159">Artwork</string>
-    <string id="30160">Video Quality if Transcoding necessary</string><!-- Verified -->
+    <string id="30159">插图</string>
+    <string id="30160">如须转码视频质量</string><!-- Verified -->
     
-    <string id="30161">Enable Suggested Loader (Requires Restart)</string>
-    <string id="30162">Add Season Number</string>     
-    <string id="30163">Flatten Seasons</string>     
+    <string id="30161">启用建议的加载器(须重启)</string>
+    <string id="30162">添加季数</string>     
+    <string id="30163">平铺每季</string>     
     
-    <string id="30164">Direct Play - HTTP</string>     
-    <string id="30165">Direct Play</string>     
-    <string id="30166">Transcoding</string>     
-    <string id="30167">Server Detection Succeeded</string>     
-    <string id="30168">Found server</string>     
-    <string id="30169">Address : </string>     
+    <string id="30164">直接播放 - HTTP</string>     
+    <string id="30165">直接播放</string>     
+    <string id="30166">转码</string>     
+    <string id="30167">服务器检测成功</string>     
+    <string id="30168">找到服务器</string>     
+    <string id="30169">地址： </string>     
     
     <!-- Video nodes -->
-    <string id="30170">Recently Added TV Shows</string><!-- Verified -->
-    <string id="30171">In Progress TV Shows</string><!-- Verified -->
-    <string id="30172">All Music</string>              
-    <string id="30173">Channels</string><!-- Verified -->
-    <string id="30174">Recently Added</string><!-- Verified -->
-    <string id="30175">Recently Added Episodes</string><!-- Verified -->
-    <string id="30176">Recently Added Albums</string>  
-    <string id="30177">In Progress Movies</string><!-- Verified -->
-    <string id="30178">In Progress Episodes</string><!-- Verified -->
+    <string id="30170">最近添加的电视剧</string><!-- Verified -->
+    <string id="30171">观看中的电视剧</string><!-- Verified -->
+    <string id="30172">所有音乐</string>              
+    <string id="30173">频道</string><!-- Verified -->
+    <string id="30174">最近添加</string><!-- Verified -->
+    <string id="30175">最近添加剧集</string><!-- Verified -->
+    <string id="30176">最近添加专辑</string>  
+    <string id="30177">观看中的电影</string><!-- Verified -->
+    <string id="30178">观看中的剧集</string><!-- Verified -->
     <string id="30179">Next Episodes</string><!-- Verified -->
     <string id="30180">Favorite Movies</string><!-- Verified -->      
     <string id="30181">Favorite Shows</string><!-- Verified -->
