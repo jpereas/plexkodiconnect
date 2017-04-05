@@ -130,9 +130,9 @@
     <string id="30141">顯示背景圖片(須重啟)</string>
     <string id="30142">服務項目</string>
 
-    <string id="30143">Always transcode if video bitrate is above</string>
+    <string id="30143">執行轉碼，如果傳輸率高於</string>
     
-    <string id="30150">Skin does not support setting views</string>
+    <string id="30150">皮膚不支援設置視圖</string>
     <string id="30151">Select item action (Requires Restart)</string>
     
     <string id="30156">Sort NextUp by Show Title</string>    
