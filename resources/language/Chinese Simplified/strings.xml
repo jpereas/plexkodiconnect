@@ -168,7 +168,7 @@
     <string id="30182">喜欢的剧集</string>      
     <string id="30183">播放最多的专辑</string> 
     <string id="30184">即将来临的电视</string>            
-    <string id="30185">盒装</string>                
+    <string id="30185">盒装套装</string>                
     <string id="30186">预告片</string>               
     <string id="30187">音乐视频</string>           
     <string id="30188">照片</string>                 
@@ -237,37 +237,37 @@
     <string id="30251">最近添加的家庭录像</string><!-- Verified -->
     <string id="30252">最近添加的照片</string><!-- Verified -->
     <string id="30253">喜欢的家庭录像</string><!-- Verified -->
-    <string id="30254">Favorite Photos</string><!-- Verified -->
-    <string id="30255">Favorite Albums</string>
+    <string id="30254">喜欢的照片</string><!-- Verified -->
+    <string id="30255">喜欢的专辑</string>
     
-    <string id="30256">Recently added Music videos</string><!-- Verified -->
-    <string id="30257">In progress Music videos</string><!-- Verified -->
-    <string id="30258">Unwatched Music videos</string><!-- Verified -->
+    <string id="30256">最近添加的音乐视频</string><!-- Verified -->
+    <string id="30257">播放中的音乐视频</string><!-- Verified -->
+    <string id="30258">未观看的音乐视频</string><!-- Verified -->
     
     <!-- Default views -->
-    <string id="30300">Active</string>              
-    <string id="30301">Clear Settings</string>              
-    <string id="30302">Movies</string>              
-    <string id="30303">BoxSets</string>              
-    <string id="30304">Trailers</string>              
-    <string id="30305">Series</string>              
-    <string id="30306">Seasons</string>              
-    <string id="30307">Episodes</string>              
-    <string id="30308">Music Artists</string>              
-    <string id="30309">Music Albums</string>              
-    <string id="30310">Music Videos</string>              
-    <string id="30311">Music Tracks</string>
-    <string id="30312">Channels</string>  
+    <string id="30300">激活</string>              
+    <string id="30301">清除设置</string>              
+    <string id="30302">电影</string>              
+    <string id="30303">盒装套装</string>              
+    <string id="30304">预告片</string>              
+    <string id="30305">系列</string>              
+    <string id="30306">季</string>              
+    <string id="30307">剧集</string>              
+    <string id="30308">音乐艺人</string>              
+    <string id="30309">音乐专辑</string>              
+    <string id="30310">音乐视频</string>              
+    <string id="30311">音乐曲目</string>
+    <string id="30312">频道</string>  
     
     <!-- contextmenu -->
-    <string id="30401">Plex options</string>
-    <string id="30402">Clear like for this item</string>
-    <string id="30403">Like this item</string>
-    <string id="30404">Dislike this item</string>
-    <string id="30405">Add to Plex favorites</string>
-    <string id="30406">Remove from Plex favorites</string>
-    <string id="30407">Set custom song rating</string>
-    <string id="30408">Plex addon settings</string>
+    <string id="30401">Plex选项</string>
+    <string id="30402">取消喜欢对此项目</string>
+    <string id="30403">喜欢此项目</string>
+    <string id="30404">踩这个项目</string>
+    <string id="30405">添加到Plex收藏夹</string>
+    <string id="30406">从Plex收藏夹移除</string>
+    <string id="30407">设置自定义歌曲打分</string>
+    <string id="30408">Plex插件设置</string>
     <string id="30409">Delete item from server</string>
     <string id="30410">Refresh this item</string>
     <string id="30411">Set custom song rating (0-5)</string>
