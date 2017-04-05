@@ -138,22 +138,22 @@
     <string id="30156">依標題排序「即將上映」</string>    
     <string id="30157">使用進階圖片(例: CoverArt)</string><!-- Verified -->
     <string id="30158">元數據</string>
-    <string id="30159">Artwork</string>
-    <string id="30160">Video Quality if Transcoding necessary</string><!-- Verified -->
+    <string id="30159">背景海報</string>
+    <string id="30160">轉碼影像品質</string><!-- Verified -->
     
-    <string id="30161">Enable Suggested Loader (Requires Restart)</string>
-    <string id="30162">Add Season Number</string>     
-    <string id="30163">Flatten Seasons</string>     
+    <string id="30161">啟用建議的裝載機(須重啟)</string>
+    <string id="30162">顯示季數</string>     
+    <string id="30163">不依季分階</string>     
     
-    <string id="30164">Direct Play - HTTP</string>     
-    <string id="30165">Direct Play</string>     
-    <string id="30166">Transcoding</string>     
-    <string id="30167">Server Detection Succeeded</string>     
-    <string id="30168">Found server</string>     
-    <string id="30169">Address : </string>     
+    <string id="30164">直播－HTTP</string>     
+    <string id="30165">直播</string>     
+    <string id="30166">轉碼中</string>     
+    <string id="30167">伺服器檢測成功</string>     
+    <string id="30168">找到伺服器</string>     
+    <string id="30169">位址: </string>     
     
     <!-- Video nodes -->
-    <string id="30170">Recently Added TV Shows</string><!-- Verified -->
+    <string id="30170">最近添加的電視節目</string><!-- Verified -->
     <string id="30171">In Progress TV Shows</string><!-- Verified -->
     <string id="30172">All Music</string>              
     <string id="30173">Channels</string><!-- Verified -->
