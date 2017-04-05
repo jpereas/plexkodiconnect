@@ -170,26 +170,26 @@
     <string id="30184">即將上映的影集</string>            
     <string id="30185">BoxSets</string>                
     <string id="30186">預告片</string>               
-    <string id="30187">Music Videos</string>           
-    <string id="30188">Photos</string>                 
-    <string id="30189">Unwatched Movies</string><!-- Verified -->
-    <string id="30190">Movie Genres</string>           
-    <string id="30191">Movie Studios</string>          
-    <string id="30192">Movie Actors</string>           
-    <string id="30193">Unwatched Episodes</string>     
-    <string id="30194">TV Genres</string>              
-    <string id="30195">TV Networks</string>            
-    <string id="30196">TV Actors</string>              
-    <string id="30197">Playlists</string>              
-    <string id="30198">Search</string>              
-    <string id="30199">Set Views</string>              
+    <string id="30187">音樂視頻</string>           
+    <string id="30188">相片</string>                 
+    <string id="30189">未觀看的電影</string><!-- Verified -->
+    <string id="30190">電影分類</string>           
+    <string id="30191">製片廠</string>          
+    <string id="30192">電影演員</string>           
+    <string id="30193">未觀看的劇集</string>     
+    <string id="30194">電視劇分類</string>              
+    <string id="30195">電視網路</string>            
+    <string id="30196">電視演員</string>              
+    <string id="30197">播放列表</string>              
+    <string id="30198">搜尋</string>              
+    <string id="30199">設置的視圖</string>              
     
-    <string id="30200">Select User</string>              
-    <string id="30201">Profiling enabled.</string>              
-    <string id="30202">Please remember to turn off when finished testing.</string>              
-    <string id="30203">Error in ArtworkRotationThread</string>              
-    <string id="30204">Unable to connect to server</string>         
-    <string id="30205">Error in LoadMenuOptionsThread</string>     
+    <string id="30200">選擇使用者</string>              
+    <string id="30201">啟用分析。</string>              
+    <string id="30202">請記得完成測試後關閉。</string>              
+    <string id="30203">旋轉背景海報線程發生錯誤</string>              
+    <string id="30204">無法連線到伺服器</string>         
+    <string id="30205">載入選單選項的線程發生錯誤</string>     
     
     <string id="30206">Enable Playlists Loader (Requires Restart)</string>   
     
