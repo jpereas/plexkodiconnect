@@ -154,22 +154,22 @@
     
     <!-- Video nodes -->
     <string id="30170">最近添加的電視節目</string><!-- Verified -->
-    <string id="30171">In Progress TV Shows</string><!-- Verified -->
-    <string id="30172">All Music</string>              
-    <string id="30173">Channels</string><!-- Verified -->
-    <string id="30174">Recently Added</string><!-- Verified -->
-    <string id="30175">Recently Added Episodes</string><!-- Verified -->
-    <string id="30176">Recently Added Albums</string>  
-    <string id="30177">In Progress Movies</string><!-- Verified -->
-    <string id="30178">In Progress Episodes</string><!-- Verified -->
-    <string id="30179">Next Episodes</string><!-- Verified -->
-    <string id="30180">Favorite Movies</string><!-- Verified -->      
-    <string id="30181">Favorite Shows</string><!-- Verified -->
-    <string id="30182">Favorite Episodes</string>      
-    <string id="30183">Frequent Played Albums</string> 
-    <string id="30184">Upcoming TV</string>            
+    <string id="30171">未看完的電視節目</string><!-- Verified -->
+    <string id="30172">所有的音樂</string>              
+    <string id="30173">頻道</string><!-- Verified -->
+    <string id="30174">最近加入</string><!-- Verified -->
+    <string id="30175">最近新增的劇集</string><!-- Verified -->
+    <string id="30176">最近新增的專輯</string>  
+    <string id="30177">未看完的電影</string><!-- Verified -->
+    <string id="30178">未看完的劇集</string><!-- Verified -->
+    <string id="30179">下一集</string><!-- Verified -->
+    <string id="30180">最愛的電影</string><!-- Verified -->      
+    <string id="30181">最愛的電視劇</string><!-- Verified -->
+    <string id="30182">最愛的劇集</string>      
+    <string id="30183">最常播放的專輯</string> 
+    <string id="30184">即將上映的影集</string>            
     <string id="30185">BoxSets</string>                
-    <string id="30186">Trailers</string>               
+    <string id="30186">預告片</string>               
     <string id="30187">Music Videos</string>           
     <string id="30188">Photos</string>                 
     <string id="30189">Unwatched Movies</string><!-- Verified -->
