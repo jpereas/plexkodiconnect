@@ -351,7 +351,7 @@
     <string id="33022">检测到须为此版本的Kodi版Emby重建数据库。是否继续？</string>
     <string id="33023">数据库重建前Kodi版Emby可能无法正常工作。</string>
     <string id="33024">正在取消数据库同步进程。当前的Kodi版本不受支持。</string>
-    <string id="33025">completed in:</string>
+    <string id="33025">预计完成于</string>
     <string id="33026">Comparing movies from:</string>
     <string id="33027">Comparing boxsets</string>
     <string id="33028">Comparing music videos from:</string>
