@@ -363,13 +363,13 @@
     <string id="33041">從Plex上刪除檔案？這也將會從磁碟中刪除檔案 ！</string>
 
     <!-- New to Plex -->
-    <string id="39000">- Number of trailers to play before a movie</string>
-    <string id="39001">Boost audio when transcoding</string>
-    <string id="39002">Burnt-in subtitle size</string>
-    <string id="39003">Limit download sync threads (rec. for rpi: 1)</string>
-    <string id="39004">Enable Plex Companion (restart Kodi!)</string>
-    <string id="39005">Plex Companion Port (change only if needed)</string>
-    <string id="39006">Activate Plex Companion debug log</string>
+    <string id="39000">- 預先播放預告片的數量</string>
+    <string id="39001">轉碼時提高音訊</string>
+    <string id="39002">設定字幕大小</string>
+    <string id="39003">限制下載同步執行緒 (rpi 的建議︰ 1)</string>
+    <string id="39004">啟用Plex Companion (重啟Kodi！)</string>
+    <string id="39005">Plex Companion 埠 (僅在需要時更改)</string>
+    <string id="39006">啟用Plex Companion 除錯日誌</string>
     <string id="39007">Activate Plex Companion GDM debug log</string>
     <string id="39008">Plex Companion: Allows flinging media to Kodi through Plex</string>
     <string id="39009">Could not login to plex.tv. Please try signing in again.</string>
