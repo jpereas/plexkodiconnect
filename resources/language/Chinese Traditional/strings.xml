@@ -380,19 +380,19 @@
     <string id="39014">請登錄到 plex.tv。</string>
     <string id="39015">連接到伺服器時出現問題。選擇另一台伺服器？</string>
     <string id="39016">禁用Plex音樂資料庫嗎？(強烈建議使用Plex音樂時，大型音樂資料庫只用直接路徑。否則Kodi可能會崩潰)</string>
-    <string id="39017">Would you now like to go to the plugin's settings to fine-tune PKC? You will need to RESTART Kodi!</string>
+    <string id="39017">你現在想轉到外掛程式的設置進行微調 PKC 嗎？您將需要重新開啟Kodi ！</string>
 
-    <string id="39018">[COLOR yellow]Repair local database (force update all content)[/COLOR]</string>
-    <string id="39019">[COLOR red]Partial or full reset of Database and PKC[/COLOR]</string>
-    <string id="39020">[COLOR yellow]Cache all images to Kodi texture cache now[/COLOR]</string>
-    <string id="39021">[COLOR yellow]Sync Emby Theme Media to Kodi[/COLOR]</string>
-    <string id="39022">local</string>
-    <string id="39023">Failed to authenticate. Did you login to plex.tv?</string>
+    <string id="39018">[COLOR yellow]修復本機資料庫 (強制更新所有內容)[/COLOR]</string>
+    <string id="39019">[COLOR red]部分或全部重置資料庫和PKC[/COLOR]</string>
+    <string id="39020">[COLOR yellow]立即暫存所有圖像到Kodi的圖像暫存區[/COLOR]</string>
+    <string id="39021">[COLOR yellow]同步 Plex 主題媒體到 Kodi[/COLOR]</string>
+    <string id="39022">本地</string>
+    <string id="39023">未能通過身份驗證。您沒有登錄到 plex.tv 嗎？</string>
     
 
-    <string id="39025">Automatically log into plex.tv on startup</string>
-    <string id="39026">Enable constant background sync</string>
-    <string id="39027">Playback Mode</string>
+    <string id="39025">在啟動時自動登入到 plex.tv</string>
+    <string id="39026">啟用持續的背景同步</string>
+    <string id="39027">播放模式</string>
     <string id="39028">CAUTION! If you choose "Native" mode , you might loose access to certain Plex features such as: Plex trailers and transcoding options. ALL Plex shares need to use direct paths (e.g. smb://myNAS/mymovie.mkv or \\myNAS/mymovie.mkv)!</string>
     <string id="39029">Network credentials</string>
     <string id="39030">Add network credentials to allow Kodi access to your content? Note: Skipping this step may generate a message during the initial scan of your content if Kodi can't locate your content.</string>
