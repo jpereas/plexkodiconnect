@@ -408,7 +408,7 @@
     <string id="39040">替換Plex電視路徑為︰</string>
     <string id="39041">要替換的Plex原始音樂路徑︰</string>
     <string id="39042">取代Plex音樂路徑，用︰</string>
-    <string id="39043">Go a step further and completely replace all original Plex library paths (/volume1/media) with custom SMB paths (smb://NAS/MyStuff)?</string>
+    <string id="39043">進一步完全用自訂SMB路徑(smb://NAS/MyStuff) 替換所有Plex資料庫路徑(/volume1/媒體) 嗎？</string>
     <string id="39044">請輸入您自訂的smb路徑在"設置"下的"同步選項"，然後重新開啟kodi</string>
     <string id="39045">要替換的Plex原始照片路徑︰</string>
     <string id="39046">取代Plex照片路徑，用︰</string>
@@ -481,20 +481,20 @@
     <string id="39300">︰輸入 plex.tv 的使用者。或留空取消。</string>
     <string id="39301">輸入 plex.tv 使用者密碼 </string>
     <string id="39302">無法登入使用者 </string>
-    <string id="39303">Problems trying to contact plex.tv. Try again later</string>
-    <string id="39304">Go to https://plex.tv/pin and enter the code: </string>
-    <string id="39305">Could not sign in to plex.tv. Try again later</string>
-    <string id="39306">: Select User</string>
-    <string id="39307">Enter PIN for user </string>
-    <string id="39308">Could not log in user </string>
-    <string id="39309">Please try again.</string>
-    <string id="39310">unknown</string>
-    <string id="39311">or press No to not sign in.</string>
+    <string id="39303">連接 plex.tv 有問題。請稍後再試</string>
+    <string id="39304">請到 https://plex.tv/pin，然後輸入代碼︰ </string>
+    <string id="39305">無法登錄到 plex.tv。請稍後再試</string>
+    <string id="39306">︰ 選擇使用者</string>
+    <string id="39307">為使用者輸入 PIN </string>
+    <string id="39308">使用者無法登錄 </string>
+    <string id="39309">請重試。</string>
+    <string id="39310">未知</string>
+    <string id="39311">或按No，不登入。</string>
 
     <!-- Plex Librarysync.py -->
-    <string id="39400">Library sync thread has crashed. You should restart Kodi now. Please report this on the forum</string>
-    <string id="39401">Detected Kodi database needs to be recreated for this version. This might take a while. Proceed?</string>
-    <string id="39402"> may not work correctly until the database is reset.</string>
+    <string id="39400">資料庫同步執行緒已經掛點。立刻重啟Kodi。請將此狀況回報論壇</string>
+    <string id="39401">檢測到此版本需要重新創建Kodi資料庫。這可能需要一段時間。是否繼續？</string>
+    <string id="39402"> 可能無法正常運行，直到重置資料庫。</string>
     <string id="39403">Cancelling the database syncing process. Current Kodi version is unsupported. Please verify your logs for more info.</string>
     <string id="39404">Startup syncing process failed repeatedly. Try restarting Kodi. Stopping Sync for now.</string>
     <string id="39405">Plex playlists/nodes refreshed</string>
