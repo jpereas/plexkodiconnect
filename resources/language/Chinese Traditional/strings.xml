@@ -311,18 +311,18 @@
     <string id="30530">啟用「伺服器重新開機」訊息</string>
     <string id="30531">啟用「新的內容」通知</string>
     <string id="30532">彈出視訊資料庫持續時間 (以秒為單位)</string>
-    <string id="30533">Duration of the music library pop up (in seconds)</string>
-    <string id="30534">Server messages</string>
-    <string id="30535">[COLOR yellow]Generate a new unique device Id (e.g. when cloning Kodi)[/COLOR]</string>
-    <string id="30536">Users must log in every time Kodi restarts</string>
-    <string id="30537">RESTART KODI IF YOU MAKE ANY CHANGES</string>
-    <string id="30538">Complete Re-Sync necessary</string>
-    <string id="30539">Download additional art from FanArtTV</string>
-    <string id="30540">Download movie set/collection art from FanArtTV</string>
-    <string id="30541">Don't ask to pick a certain stream/quality</string>
-    <string id="30542">Always pick best quality for trailers</string>
-    <string id="30543">Kodi runs on a low-power device (e.g. Raspberry Pi)</string>
-    <string id="30544">Artwork</string>
+    <string id="30533">彈出的音樂資料庫持續時間 (以秒為單位)</string>
+    <string id="30534">伺服器訊息：</string>
+    <string id="30535">[COLOR yellow]產生新的唯一的設備辨識碼(例如：當複製Kodi時)[/COLOR]</string>
+    <string id="30536">重開Kodi時使用者必須重新登入</string>
+    <string id="30537">如果您進行任何更改，請重開Kodi</string>
+    <string id="30538">必需完全重新同步</string>
+    <string id="30539">從 FanArtTV 下載額外的背景海報</string>
+    <string id="30540">從 FanArtTV 下載電影集海報</string>
+    <string id="30541">不要要求挑選特定的 串流/品質</string>
+    <string id="30542">總是挑選最好品質的預告片</string>
+    <string id="30543">Kodi在低效能的設備上運行 (例如Raspberry Pi)</string>
+    <string id="30544">背景海報</string>
     <string id="30545">Force transcode pictures</string>
 
     <!-- service add-on -->
