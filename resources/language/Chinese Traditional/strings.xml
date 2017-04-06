@@ -231,7 +231,7 @@
     
     <string id="30246">使用 Netflix 的「即將上映」通知樣式</string>
     <string id="30247">  設定通知即將播放完畢前的秒數</string>
-    <string id="30248">Show Emby Info dialog on play/select action</string>
+    <string id="30248">在 播放/選擇 時顯示 Plex 資訊對話方塊</string>
     <string id="30249">啟動時顯示連接伺服器的訊息</string><!-- Verified -->
     
     <string id="30251">最近添加的家庭視頻</string><!-- Verified -->
@@ -295,7 +295,7 @@
     <string id="30514">啟用快速啟動 (需要伺服器外掛程式)</string>
     <string id="30515">同時對伺服器請求最多的項目數</string>
     <string id="30516">播放</string>
-    <string id="30517">[COLOR yellow]Enter network credentials[/COLOR]</string>
+    <string id="30517">[COLOR yellow]輸入網路通行訊息[/COLOR]</string>
     <string id="30518">啟用Plex 預告片(需Plexpass資格)</string>
     <string id="30519">播放預告片</string>
     <string id="30520">跳過Plex確認刪除內容的警訊(自己承擔誤刪的風險)</string>
@@ -304,13 +304,13 @@
     <string id="30523">音樂中繼資料選項 (與直接串流不相容)</string>
     <string id="30524">直接從檔中導入音樂歌曲評級</string>
     <string id="30525">將音樂歌曲評級轉換為 Plex 評級</string>
-    <string id="30526">Allow rating in song files to be updated</string>
-    <string id="30527">Ignore specials in next episodes</string>
+    <string id="30526">允許更新歌曲檔評級</string>
+    <string id="30527">播放下一集時忽略特輯</string>
     <string id="30528">Permanent users to add to the session</string>
-    <string id="30529">Startup delay (in seconds)</string>
-    <string id="30530">Enable server restart message</string>
-    <string id="30531">Enable new content notification</string>
-    <string id="30532">Duration of the video library pop up (in seconds)</string>
+    <string id="30529">啟動延遲 (以秒為單位)</string>
+    <string id="30530">啟用「伺服器重新開機」訊息</string>
+    <string id="30531">啟用「新的內容」通知</string>
+    <string id="30532">彈出視訊資料庫持續時間 (以秒為單位)</string>
     <string id="30533">Duration of the music library pop up (in seconds)</string>
     <string id="30534">Server messages</string>
     <string id="30535">[COLOR yellow]Generate a new unique device Id (e.g. when cloning Kodi)[/COLOR]</string>
