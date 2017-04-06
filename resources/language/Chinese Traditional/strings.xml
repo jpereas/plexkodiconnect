@@ -349,18 +349,18 @@
     <string id="33020">從哪取得電視劇︰</string>
     <string id="33021">取得中：</string>
     <string id="33022">偵測到使用本版PKC需要為Kodi重新創建資料庫 。是否繼續？</string>
-    <string id="33023">直到重置資料庫PKC可能無法正常工作。</string>
-    <string id="33024">Cancelling the database syncing process. The current Kodi version is unsupported.</string>
-    <string id="33025">completed in:</string>
-    <string id="33026">Comparing movies from:</string>
-    <string id="33027">Comparing boxsets</string>
-    <string id="33028">Comparing music videos from:</string>
-    <string id="33029">Comparing tv shows from:</string>
-    <string id="33030">Comparing episodes from:</string>
-    <string id="33031">Comparing:</string>
-    <string id="33032">Failed to generate a new device Id. See your logs for more information.</string>
-    <string id="33033">Kodi will now restart to apply the changes.</string>
-    <string id="33041">Delete file(s) from Plex Server? This will also delete the file(s) from disk!</string>
+    <string id="33023">直到完成重置資料庫，PKC可能無法正常工作。</string>
+    <string id="33024">取消資料庫同步過程。當前的Kodi版本不受支援 (請勿使用mySQL)。</string>
+    <string id="33025">已完成：</string>
+    <string id="33026">比對電影：</string>
+    <string id="33027">比對電影合集：</string>
+    <string id="33028">比對音樂視頻︰</string>
+    <string id="33029">比對電視劇︰</string>
+    <string id="33030">比對電視劇集︰</string>
+    <string id="33031">比對︰</string>
+    <string id="33032">無法產生新的設備辨識碼。查看日誌以瞭解更多資訊。</string>
+    <string id="33033">Kodi將立即重啟，以套用更改的設定。</string>
+    <string id="33041">從Plex上刪除檔案？這也將會從磁碟中刪除檔案 ！</string>
 
     <!-- New to Plex -->
     <string id="39000">- Number of trailers to play before a movie</string>
