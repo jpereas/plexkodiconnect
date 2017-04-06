@@ -370,16 +370,16 @@
     <string id="39004">啟用Plex Companion (重啟Kodi！)</string>
     <string id="39005">Plex Companion 埠 (僅在需要時更改)</string>
     <string id="39006">啟用Plex Companion 除錯日誌</string>
-    <string id="39007">Activate Plex Companion GDM debug log</string>
-    <string id="39008">Plex Companion: Allows flinging media to Kodi through Plex</string>
-    <string id="39009">Could not login to plex.tv. Please try signing in again.</string>
-    <string id="39010">Problems connecting to plex.tv. Network or internet issue?</string>
-    <string id="39011">Could not find any Plex server in the network. Aborting...</string>
-    <string id="39012">Choose your Plex server</string>
-    <string id="39013">Not yet authorized for Plex server </string>
-    <string id="39014">Please sign in to plex.tv.</string>
-    <string id="39015">Problems connecting to server. Pick another server?</string>
-    <string id="39016">Disable Plex music library? (It is HIGHLY recommended to use Plex music only with direct paths for large music libraries. Kodi might crash otherwise)</string>
+    <string id="39007">啟用Plex Companion GDM 除錯日誌</string>
+    <string id="39008">Plex Companion︰允許透過Plex傳送媒體到Kodi</string>
+    <string id="39009">無法登錄到 plex.tv。請重試。</string>
+    <string id="39010">連接到 plex.tv 有問題。網路或互聯網的問題？</string>
+    <string id="39011">在網路中找不到任何Plex伺服器。中止...</string>
+    <string id="39012">選擇您的Plex伺服器</string>
+    <string id="39013">尚未為Plex伺服器授權 </string>
+    <string id="39014">請登錄到 plex.tv。</string>
+    <string id="39015">連接到伺服器時出現問題。選擇另一台伺服器？</string>
+    <string id="39016">禁用Plex音樂資料庫嗎？(強烈建議使用Plex音樂時，大型音樂資料庫只用直接路徑。否則Kodi可能會崩潰)</string>
     <string id="39017">Would you now like to go to the plugin's settings to fine-tune PKC? You will need to RESTART Kodi!</string>
 
     <string id="39018">[COLOR yellow]Repair local database (force update all content)[/COLOR]</string>
