@@ -439,9 +439,9 @@
     <string id="39072">Kodi裝在像Raspbery Pi的低效能設備上嗎？如果是的話，我們會減少Kodi的壓力，防止它崩潰。</string>
     <string id="39073">外觀微調</string>
     <string id="39074">電視節目</string>
-    <string id="39075">Always use default Plex subtitle if possible</string>
-    <string id="39076">If you use several Plex libraries of one kind, e.g. "Kids Movies" and "Parents Movies", be sure to check the Wiki: https://goo.gl/JFtQV9</string>
-    <string id="39077">Number of PMS items to show in widgets (e.g. "On Deck")</string>
+    <string id="39075">如果可能的話，使用預設 Plex 字幕</string>
+    <string id="39076">如果您使用多個同類的Plex資料庫，例如"兒童電影"和"父母電影"，務必參閱 Wiki: HTTPs://goo.gl/JFtQV9</string>
+    <string id="39077">PMS 中顯示在工具集 (例如"桌面") 的數目</string>
     <string id="39078">Plex Companion Update Port (change only if needed)</string>
     <string id="39079">Plex Companion could not open the GDM port. Please change it in the PKC settings.</string>
 
