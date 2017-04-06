@@ -403,14 +403,14 @@
 
     <string id="39035">用自訂 SMB 路徑 smb://NAS/mystuff 替換內定路徑 /volume1/media 或 \\myserver\media</string>
     <string id="39037">要替換的Plex原始電影路徑︰</string>
-    <string id="39038">取代Plex電影，用︰</string>
-    <string id="39039">要被替換的原始 Plex 電視劇路徑︰</string>
-    <string id="39040">Replace Plex TV SHOWS with:</string>
-    <string id="39041">Original Plex MUSIC path to replace:</string>
-    <string id="39042">Replace Plex MUSIC with:</string>
+    <string id="39038">取代Plex電影路徑，用︰</string>
+    <string id="39039">要被替換的 Plex 原始電視路徑︰</string>
+    <string id="39040">替換Plex電視路徑為︰</string>
+    <string id="39041">要替換的Plex原始音樂路徑︰</string>
+    <string id="39042">取代Plex音樂路徑，用︰</string>
     <string id="39043">Go a step further and completely replace all original Plex library paths (/volume1/media) with custom SMB paths (smb://NAS/MyStuff)?</string>
-    <string id="39044">Please enter your custom smb paths in the settings under "Sync Options" and then restart Kodi</string>
-    <string id="39045">Original Plex PHOTO path to replace:</string>
+    <string id="39044">請輸入您自訂的smb路徑在"設置"下的"同步選項"，然後重新開啟kodi</string>
+    <string id="39045">要替換的Plex原始照片路徑︰</string>
     <string id="39046">Replace Plex PHOTO with:</string>
     <string id="39047">On Deck: Append show title to episode</string>
     <string id="39048">On Deck: Append season- and episode-number SxxExx</string>
