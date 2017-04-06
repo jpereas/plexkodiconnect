@@ -291,10 +291,10 @@
     <string id="30510">直接串流音樂資料庫</string>
     <string id="30511">播放模式</string>
     <string id="30512">強制暫存背景海報</string>
-    <string id="30513">Limit artwork cache threads (recommended for rpi)</string>
-    <string id="30514">Enable fast startup (requires server plugin)</string>
-    <string id="30515">Maximum items to request from the server at once</string>
-    <string id="30516">Playback</string>
+    <string id="30513">限制快取背景海報(對Raspberry Pi是必須的)</string>
+    <string id="30514">啟用快速啟動 (需要伺服器外掛程式)</string>
+    <string id="30515">同時對伺服器請求最多的項目數</string>
+    <string id="30516">播放</string>
     <string id="30517">[COLOR yellow]Enter network credentials[/COLOR]</string>
     <string id="30518">Enable Plex Trailers (Plexpass is needed)</string>
     <string id="30519">Ask to play trailers</string>
