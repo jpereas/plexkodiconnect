@@ -495,22 +495,22 @@
     <string id="39400">資料庫同步執行緒已經掛點。立刻重啟Kodi。請將此狀況回報論壇</string>
     <string id="39401">檢測到此版本需要重新創建Kodi資料庫。這可能需要一段時間。是否繼續？</string>
     <string id="39402"> 可能無法正常運行，直到重置資料庫。</string>
-    <string id="39403">Cancelling the database syncing process. Current Kodi version is unsupported. Please verify your logs for more info.</string>
-    <string id="39404">Startup syncing process failed repeatedly. Try restarting Kodi. Stopping Sync for now.</string>
-    <string id="39405">Plex playlists/nodes refreshed</string>
-    <string id="39406">Plex playlists/nodes refresh failed</string>
-    <string id="39407">Full library sync finished</string>
-    <string id="39408">Sync had to skip some items because they could not be processed. Kodi may be instable now!! Please post your Kodi logs to the Plex forum.</string>
-    <string id="39409">The Plex Server did not like you asking for so much data at once and returned ERRORS. Try lowering the number of sync download threads in the settings. Skipped some items for now.</string>
-    <string id="39410">ERROR in library sync</string>
+    <string id="39403">取消資料庫同步程序。不支援當前kodi版本。請檢查您的日誌了解更多的資訊。</string>
+    <string id="39404">啟動同步程序一再失敗。請嘗試重開Kodi。停止同步。</string>
+    <string id="39405">已刷新Plex 播放清單/節點</string>
+    <string id="39406">Plex 播放清單/節點刷新失敗</string>
+    <string id="39407">所有資料庫同步完成</string>
+    <string id="39408">同步不得不跳過某些項目，因為他們無法處理。Kodi現在可能不穩定!! 請張貼kodi日誌到Plex論壇。</string>
+    <string id="39409">Plex伺服器不喜歡你一次要求這麼多資料，並返回錯誤。嘗試降低同步下載中的執行緒數設置。跳過一些項目。</string>
+    <string id="39410">資料庫同步錯誤</string>
 
     <!-- Plex videonodes.py -->
-    <string id="39500">On Deck</string>
-    <string id="39501">Collections</string>
+    <string id="39500">桌面</string>
+    <string id="39501">收藏</string>
 
     <!-- Plex utils.py -->
-    <string id="39600">Are you sure you want to reset your local Kodi database? A re-sync of the Plex data will take time afterwards.</string>
-    <string id="39601">Could not stop the database from running. Please try again later.</string>
+    <string id="39600">你確定你想要重置您的本地Kodi資料庫？再重新同步 Plex 資料需要時間。</string>
+    <string id="39601">不能停止運行中的資料庫。請稍後再試。</string>
     <string id="39602">Remove all cached artwork? (recommended!)</string>
     <string id="39603">Reset all PlexKodiConnect Addon settings? (this is usually NOT recommended and unnecessary!)</string>
 
