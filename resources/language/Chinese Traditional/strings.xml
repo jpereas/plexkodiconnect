@@ -393,10 +393,10 @@
     <string id="39025">在啟動時自動登入到 plex.tv</string>
     <string id="39026">啟用持續的背景同步</string>
     <string id="39027">播放模式</string>
-    <string id="39028">CAUTION! If you choose "Native" mode , you might loose access to certain Plex features such as: Plex trailers and transcoding options. ALL Plex shares need to use direct paths (e.g. smb://myNAS/mymovie.mkv or \\myNAS/mymovie.mkv)!</string>
-    <string id="39029">Network credentials</string>
-    <string id="39030">Add network credentials to allow Kodi access to your content? Note: Skipping this step may generate a message during the initial scan of your content if Kodi can't locate your content.</string>
-    <string id="39031">Kodi can't locate file: </string>
+    <string id="39028">小心 ！如果您選擇"原生"模式下，你可能會失去某些Plex功能，例如：預告片和轉碼選項。所有Plex 的分享，都需要使用直接的路徑(如 smb://myNAS/mymovie.mkv 或 \\myNAS/mymovie.mkv)！</string>
+    <string id="39029">網路憑據</string>
+    <string id="39030">添加網路憑據，以允許科迪訪問您的內容嗎？注︰ 跳過這一步在初始掃描期間可能產生一個訊息，如果Kodi找不到您的內容。</string>
+    <string id="39031">科迪找不到檔案︰ </string>
     <string id="39032">Please verify the path. You may need to verify your network credentials in the add-on settings or use different Plex paths. Stop syncing?</string>
     <string id="39033">Transform Plex UNC library paths \\myNas\mymovie.mkv automatically to smb paths, smb://myNas/mymovie.mkv? (recommended)</string>
     <string id="39034">Replace Plex UNC paths \\myNas with smb://myNas</string>
