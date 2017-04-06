@@ -441,17 +441,17 @@
     <string id="39074">電視節目</string>
     <string id="39075">如果可能的話，使用預設 Plex 字幕</string>
     <string id="39076">如果您使用多個同類的Plex資料庫，例如"兒童電影"和"父母電影"，務必參閱 Wiki: HTTPs://goo.gl/JFtQV9</string>
-    <string id="39077">PMS 中顯示在工具集 (例如"桌面") 的數目</string>
-    <string id="39078">Plex Companion Update Port (change only if needed)</string>
-    <string id="39079">Plex Companion could not open the GDM port. Please change it in the PKC settings.</string>
+    <string id="39077">PMS 中顯示在小工具集 (例如"桌面") 品項的數目</string>
+    <string id="39078">Plex Companion更新埠(僅在需要時更改)</string>
+    <string id="39079">Plex Companion不能打開 GDM 埠。請在 PKC 設置中更改它。</string>
 
     <!-- Plex Entrypoint.py -->
-    <string id="39200">Log-out Plex Home User </string>
-    <string id="39201">Settings</string>
-    <string id="39202">Network credentials</string>
-    <string id="39203">Refresh Plex playlists/nodes</string>
-    <string id="39204">Perform manual library sync</string>
-    <string id="39205">Unable to run the sync, the add-on is not connected to a Plex server.</string>
+    <string id="39200">登出Plex Home用戶 </string>
+    <string id="39201">設置</string>
+    <string id="39202">網路憑據</string>
+    <string id="39203">刷新Plex的播放清單/節點</string>
+    <string id="39204">手動執行資料庫同步</string>
+    <string id="39205">外掛未連接到Plex伺服器，同步無法執行．</string>
     <string id="39206">Plex might lock your account if you fail to log in too many times. Proceed anyway?</string>
     <string id="39207">Resetting PMS connections, please wait</string>
     <string id="39208">Failed to reset PKC. Try to restart Kodi.</string>
