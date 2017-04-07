@@ -1,3 +1,29 @@
+version 1.7.5
+- Dutch translation, thanks @mvanbaak
+
+version 1.7.4 (beta only)
+- Show menu item only for appropriate Kodi library: Be careful to start video content through Videos -> Video Addons -> ... and pictures through Pictures -> Picture Addons -> ...
+- Fix playback error popup when using Alexa 
+- New Italian translations, thanks @nikkux, @chicco83
+- Update translations
+- Rewire Kodi ListItem stuff
+- Fix TypeError for setting ListItem streams 
+- Fix Kodi setContent for images
+- Fix AttributeError due to missing Kodi sort methods
+
+version 1.7.3 (beta only)
+- Fix KeyError for channels if no media streams
+- Move plex node navigation, playback to main thread
+- Fix TypeError for malformed browsing xml
+- Fix IndexError if we can't get a valid xml from PMS
+- Pass 'None' instead of empty string in url args
+
+version 1.7.2
+- Fix for some channels not starting playback
+
+version 1.7.1
+- Fix Alexa not doing anything
+
 version 1.7.0
 - Amazon Alexa support! Be sure to check the Plex Alexa forum first if you encounter issues; there are still many bugs completely unrelated to PKC
 - Plex Channels!

@@ -1,9 +1,10 @@
 import logging
 from urllib import quote
+from urlparse import parse_qsl, urlsplit
 
 import plexdb_functions as plexdb
 from downloadutils import DownloadUtils as DU
-from utils import JSONRPC, tryEncode, tryDecode
+from utils import JSONRPC, tryEncode
 from PlexAPI import API
 
 ###############################################################################
@@ -111,6 +112,9 @@ def playlist_item_from_kodi(kodi_item):
         except TypeError:
             pass
     item.file = kodi_item.get('file')
+    if item.file is not None and item.plex_id is None:
+        item.plex_id = dict(
+            parse_qsl(urlsplit(item.file).query)).get('plex_id')
     item.kodi_type = kodi_item.get('type')
     if item.plex_id is None:
         item.uri = 'library://whatever/item/%s' % quote(item.file, safe='')
@@ -164,17 +168,6 @@ def playlist_item_from_xml(playlist, xml_video_element):
     return item
 
 
-def _log_xml(xml):
-    try:
-        xml.attrib
-    except AttributeError:
-        log.error('Did not receive an XML. Answer was: %s' % xml)
-    else:
-        from xml.etree.ElementTree import dump
-        log.error('XML received from the PMS:')
-        dump(xml)
-
-
 def _get_playListVersion_from_xml(playlist, xml):
     """
     Takes a PMS xml as input to overwrite the playlist version (e.g. Plex
@@ -185,7 +178,6 @@ def _get_playListVersion_from_xml(playlist, xml):
     except (TypeError, AttributeError, KeyError):
         log.error('Could not get new playlist Version for playlist %s'
                   % playlist)
-        _log_xml(xml)
         return False
     return True
 
@@ -208,7 +200,6 @@ def get_playlist_details_from_xml(playlist, xml):
                   % playlist)
         import traceback
         log.error(traceback.format_exc())
-        _log_xml(xml)
         raise KeyError
     log.debug('Updated playlist from xml: %s' % playlist)
 
@@ -341,7 +332,6 @@ def add_item_to_PMS_playlist(playlist, pos, plex_id=None, kodi_item=None):
     except (TypeError, AttributeError, KeyError):
         log.error('Could not add item %s to playlist %s'
                   % (kodi_item, playlist))
-        _log_xml(xml)
         return
     # Get the guid for this item
     for plex_item in xml:
