@@ -5,7 +5,7 @@
     <import addon="script.module.requests" version="2.3.0" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video audio image</provides>
+        <provides>視訊 音訊 圖片</provides>
   </extension>
   <extension point="xbmc.service" library="service.py" start="login">
   </extension>
@@ -17,7 +17,7 @@
       </item>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
+    <platform>所有</platform>
     <language></language>
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
     <forum>https://forums.plex.tv</forum>
