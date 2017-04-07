@@ -39,6 +39,7 @@ import xml.etree.ElementTree as etree
 from re import compile as re_compile, sub
 from json import dumps
 from urllib import urlencode, quote_plus, unquote
+from os import path as os_path
 
 import xbmcgui
 from xbmc import sleep, executebuiltin
@@ -2186,13 +2187,38 @@ class API():
             # Several streams/files available.
             dialoglist = []
             for entry in self.item.findall('./Media'):
-                dialoglist.append(
-                    "%sp %s - %s (%s)"
-                    % (entry.attrib.get('videoResolution', 'unknown'),
-                       entry.attrib.get('videoCodec', 'unknown'),
-                       entry.attrib.get('audioProfile', 'unknown'),
-                       entry.attrib.get('audioCodec', 'unknown'))
-                )
+                # Get additional info (filename / languages)
+                filename = None
+                if 'file' in entry[0].attrib:
+                    filename = os_path.basename(entry[0].attrib['file'])
+                # Languages of audio streams
+                languages = []
+                for stream in entry[0]:
+                    if (stream.attrib['streamType'] == '1' and
+                            'language' in stream.attrib):
+                        languages.append(stream.attrib['language'])
+                languages = ', '.join(languages)
+                if filename:
+                    option = tryEncode(filename)
+                if languages:
+                    if option:
+                        option = '%s (%s): ' % (option, tryEncode(languages))
+                    else:
+                        option = '%s: ' % tryEncode(languages)
+                if 'videoResolution' in entry.attrib:
+                    option = '%s%sp ' % (option,
+                                         entry.attrib.get('videoResolution'))
+                if 'videoCodec' in entry.attrib:
+                    option = '%s%s' % (option,
+                                       entry.attrib.get('videoCodec'))
+                option = option.strip() + ' - '
+                if 'audioProfile' in entry.attrib:
+                    option = '%s%s ' % (option,
+                                        entry.attrib.get('audioProfile'))
+                if 'audioCodec' in entry.attrib:
+                    option = '%s%s ' % (option,
+                                        entry.attrib.get('audioCodec'))
+                dialoglist.append(option)
             media = xbmcgui.Dialog().select('Select stream', dialoglist)
         else:
             media = 0
