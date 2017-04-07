@@ -6,21 +6,16 @@ from sys import argv
 from urllib import urlencode
 
 import xbmcplugin
-from xbmc import sleep, Player, executebuiltin, getCondVisibility, \
-    translatePath
+from xbmc import sleep, executebuiltin, translatePath
 from xbmcgui import ListItem
 
 from utils import window, settings, language as lang, dialog, tryDecode,\
     tryEncode, CatchExceptions, JSONRPC
 import downloadutils
-import playbackutils as pbutils
-import plexdb_functions as plexdb
 
 from PlexFunctions import GetPlexMetadata, GetPlexSectionResults, \
     GetMachineIdentifier
 from PlexAPI import API
-from PKC_listitem import convert_PKC_to_listitem
-from playqueue import Playqueue
 import variables as v
 
 ###############################################################################
@@ -97,62 +92,6 @@ def togglePlexTV():
            sound=False)
 
 
-def Plex_Node(url, viewOffset, playdirectly=False, node=True):
-    """
-    Called only for a SINGLE element for Plex.tv watch later
-
-    Always to return with a "setResolvedUrl"
-    """
-    log.info('Plex_Node called with url: %s, viewOffset: %s'
-             % (url, viewOffset))
-    # Plex redirect, e.g. watch later. Need to get actual URLs
-    if url.startswith('http'):
-        xml = downloadutils.DownloadUtils().downloadUrl(url)
-    else:
-        xml = downloadutils.DownloadUtils().downloadUrl('{server}%s' % url)
-    try:
-        xml[0].attrib
-    except:
-        log.error('Could not download PMS metadata')
-        return
-    if viewOffset != '0':
-        try:
-            viewOffset = int(v.PLEX_TO_KODI_TIMEFACTOR * float(viewOffset))
-        except:
-            pass
-        else:
-            window('plex_customplaylist.seektime', value=str(viewOffset))
-            log.info('Set resume point to %s' % str(viewOffset))
-    api = API(xml[0])
-    typus = v.KODI_PLAYLIST_TYPE_FROM_PLEX_TYPE[api.getType()]
-    if node is True:
-        plex_id = None
-        kodi_id = 'plexnode'
-    else:
-        plex_id = api.getRatingKey()
-        kodi_id = None
-        with plexdb.Get_Plex_DB() as plex_db:
-            plexdb_item = plex_db.getItem_byId(plex_id)
-            try:
-                kodi_id = plexdb_item[0]
-            except TypeError:
-                log.info('Couldnt find item %s in Kodi db'
-                         % api.getRatingKey())
-    playqueue = Playqueue().get_playqueue_from_type(typus)
-    result = pbutils.PlaybackUtils(xml, playqueue).play(
-        plex_id,
-        kodi_id=kodi_id,
-        plex_lib_UUID=xml.attrib.get('librarySectionUUID'))
-    if result.listitem:
-        listitem = convert_PKC_to_listitem(result.listitem)
-    else:
-        return
-    if playdirectly:
-        Player().play(listitem.getfilename(), listitem)
-    else:
-        xbmcplugin.setResolvedUrl(HANDLE, True, listitem)
-
-
 ##### DO RESET AUTH #####
 def resetAuth():
     # User tried login and failed too many times
@@ -172,7 +111,8 @@ def addDirectoryItem(label, path, folder=True):
     xbmcplugin.addDirectoryItem(handle=HANDLE, url=path, listitem=li, isFolder=folder)
 
 
-def doMainListing():
+def doMainListing(content_type=None):
+    log.debug('Do main listing with content_type: %s' % content_type)
     xbmcplugin.setContent(HANDLE, 'files')
     # Get emby nodes from the window props
     plexprops = window('Plex.nodes.total')
@@ -182,37 +122,38 @@ def doMainListing():
             path = window('Plex.nodes.%s.index' % i)
             if not path:
                 path = window('Plex.nodes.%s.content' % i)
+                if not path:
+                    continue
             label = window('Plex.nodes.%s.title' % i)
             node_type = window('Plex.nodes.%s.type' % i)
-            #because we do not use seperate entrypoints for each content type, we need to figure out which items to show in each listing.
-            #for now we just only show picture nodes in the picture library video nodes in the video library and all nodes in any other window
-            if path and getCondVisibility("Window.IsActive(Pictures)") and node_type == "photos":
+            # because we do not use seperate entrypoints for each content type,
+            # we need to figure out which items to show in each listing. for
+            # now we just only show picture nodes in the picture library video
+            # nodes in the video library and all nodes in any other window
+            if node_type == 'photos' and content_type == 'image':
                 addDirectoryItem(label, path)
-            elif path and getCondVisibility("Window.IsActive(VideoLibrary)") and node_type != "photos":
-                addDirectoryItem(label, path)
-            elif path and not getCondVisibility("Window.IsActive(VideoLibrary) | Window.IsActive(Pictures) | Window.IsActive(MusicLibrary)"):
+            elif (node_type != 'photos' and
+                    content_type not in ('image', 'audio')):
                 addDirectoryItem(label, path)
 
     # Plex Watch later
-    addDirectoryItem(lang(39211),
-                     "plugin://plugin.video.plexkodiconnect/?mode=watchlater")
+    if content_type not in ('image', 'audio'):
+        addDirectoryItem(lang(39211),
+                         "plugin://%s?mode=watchlater" % v.ADDON_ID)
     # Plex Channels
     addDirectoryItem(lang(30173),
-                     "plugin://plugin.video.plexkodiconnect/?mode=channels")
+                     "plugin://%s?mode=channels" % v.ADDON_ID)
     # Plex user switch
     addDirectoryItem(lang(39200) + window('plex_username'),
-                     "plugin://plugin.video.plexkodiconnect/"
-                     "?mode=switchuser")
+                     "plugin://%s?mode=switchuser" % v.ADDON_ID)
 
-    #experimental live tv nodes
-    # addDirectoryItem("Live Tv Channels (experimental)", "plugin://plugin.video.plexkodiconnect/?mode=browsecontent&type=tvchannels&folderid=root")
-    # addDirectoryItem("Live Tv Recordings (experimental)", "plugin://plugin.video.plexkodiconnect/?mode=browsecontent&type=recordings&folderid=root")
-
-    # some extra entries for settings and stuff. TODO --> localize the labels
-    addDirectoryItem(lang(39201), "plugin://plugin.video.plexkodiconnect/?mode=settings")
-    # addDirectoryItem("Add user to session", "plugin://plugin.video.plexkodiconnect/?mode=adduser")
-    addDirectoryItem(lang(39203), "plugin://plugin.video.plexkodiconnect/?mode=refreshplaylist")
-    addDirectoryItem(lang(39204), "plugin://plugin.video.plexkodiconnect/?mode=manualsync")
+    # some extra entries for settings and stuff
+    addDirectoryItem(lang(39201),
+                     "plugin://%s?mode=settings" % v.ADDON_ID)
+    addDirectoryItem(lang(39203),
+                     "plugin://%s?mode=refreshplaylist" % v.ADDON_ID)
+    addDirectoryItem(lang(39204),
+                     "plugin://%s?mode=manualsync" % v.ADDON_ID)
     xbmcplugin.endOfDirectory(HANDLE)
 
 
@@ -680,8 +621,6 @@ def getOnDeck(viewid, mediatype, tagname, limit):
             listitem = api.CreateListItemFromPlexItem(
                 appendShowTitle=appendShowTitle,
                 appendSxxExx=appendSxxExx)
-            api.AddStreamInfo(listitem)
-            api.set_listitem_artwork(listitem)
             if directpaths:
                 url = api.getFilePath()
             else:
@@ -852,12 +791,10 @@ def browse_plex(key=None, plex_section_id=None):
     if key:
         xml = downloadutils.DownloadUtils().downloadUrl('{server}%s' % key)
     else:
-        xml = GetPlexSectionResults(
-            plex_section_id,
-            containerSize=int(settings('limitindex')))
+        xml = GetPlexSectionResults(plex_section_id)
     try:
         xml[0].attrib
-    except (ValueError, AttributeError, IndexError):
+    except (ValueError, AttributeError, IndexError, TypeError):
         log.error('Could not browse to %s' % key)
         return xbmcplugin.endOfDirectory(HANDLE, False)
 
@@ -871,10 +808,10 @@ def browse_plex(key=None, plex_section_id=None):
     albums = False
     musicvideos = False
     for item in xml:
-        typus = item.attrib.get('type')
         if item.tag == 'Directory':
             __build_folder(item, plex_section_id=plex_section_id)
         else:
+            typus = item.attrib.get('type')
             __build_item(item)
             if typus == v.PLEX_TYPE_PHOTO:
                 photos = True
@@ -903,7 +840,7 @@ def browse_plex(key=None, plex_section_id=None):
         xbmcplugin.setContent(HANDLE, 'movies')
         sort_methods = v.SORT_METHODS_CLIPS
     elif photos is True:
-        xbmcplugin.setContent(HANDLE, 'files')
+        xbmcplugin.setContent(HANDLE, 'images')
         sort_methods = v.SORT_METHODS_PHOTOS
     elif tvshows is True:
         xbmcplugin.setContent(HANDLE, 'tvshows')
@@ -961,23 +898,24 @@ def __build_folder(xml_element, plex_section_id=None):
 def __build_item(xml_element):
     api = API(xml_element)
     listitem = api.CreateListItemFromPlexItem()
-    api.AddStreamInfo(listitem)
-    api.set_listitem_artwork(listitem)
-    if api.getType() == v.PLEX_TYPE_CLIP:
+    if (api.getKey().startswith('/system/services') or
+            api.getKey().startswith('http')):
         params = {
-            'mode': "Plex_Node",
-            'id': xml_element.attrib.get('key'),
-            'viewOffset': xml_element.attrib.get('viewOffset', '0'),
-            'plex_type': xml_element.attrib.get('type')
+            'mode': 'plex_node',
+            'key': xml_element.attrib.get('key'),
+            'view_offset': xml_element.attrib.get('viewOffset', '0'),
         }
+        url = "plugin://%s?%s" % (v.ADDON_ID, urlencode(params))
+    elif api.getType() == v.PLEX_TYPE_PHOTO:
+        url = api.get_picture_path()
     else:
         params = {
+            'mode': 'play',
             'filename': api.getKey(),
             'id': api.getRatingKey(),
-            'dbid': listitem.getProperty('dbid') or '',
-            'mode': "play"
+            'dbid': listitem.getProperty('dbid')
         }
-    url = "plugin://%s?%s" % (v.ADDON_ID, urlencode(params))
+        url = "plugin://%s?%s" % (v.ADDON_ID, urlencode(params))
     xbmcplugin.addDirectoryItem(handle=HANDLE,
                                 url=url,
                                 listitem=listitem)
