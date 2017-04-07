@@ -12,7 +12,7 @@
     <string id="30009">轉碼: </string>
     <string id="30010">使用性能分析</string>
     <string id="30011">本地快取系統</string>
-    <string id="30012">確認</string>
+    <string id="30012">確定</string>
     <string id="30013">不要顯示</string>
 
     <string id="30014">連結</string>
@@ -468,7 +468,7 @@
     <string id="39220">已連結</string>
     <string id="39221">plex.tv 切換成功</string>
     <string id="39222">[COLOR yellow]由FanartTV搜尋漏失的背景海報中[/COLOR]</string>
-    <string id="39223">只搜尋缺失 fanart 或刷新所有 fanart 嗎？掃描在背景執行，將需要相當一段時間。</string>
+    <string id="39223">只搜尋缺失的背景海報或刷新所有的背景海報嗎？掃描在背景執行，將需要相當一段時間。</string>
     <string id="39224">刷新所有</string>
     <string id="39225">僅缺失部分</string>    
 
