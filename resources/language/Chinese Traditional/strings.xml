@@ -50,7 +50,7 @@
     <string id="30061">年</string>
     <string id="30062">首映日期</string>
     <string id="30063">創建日期</string>
-    <string id="30064">關鍵評分</string>
+    <string id="30064">評論家評分</string>
     <string id="30065">適群評等</string>
     <string id="30066">播放次數</string>
     <string id="30067">預算</string>
@@ -106,7 +106,7 @@
     <string id="30115">針對電視節目</string><!-- Verified -->
     <string id="30116">針對電影</string><!-- Verified -->
     <string id="30117">背景更新頻率(秒)</string>
-    <string id="30118">顯示播放比率</string>
+    <string id="30118">顯示已播放比率</string>
     <string id="30119">顯示電視節目集數</string>
     <string id="30120">顯示加載進度</string>
     <string id="30121">加載內容中</string>
@@ -141,7 +141,7 @@
     <string id="30159">背景海報</string>
     <string id="30160">轉碼影像品質</string><!-- Verified -->
     
-    <string id="30161">啟用建議的裝載機(須重啟)</string>
+    <string id="30161">啟用建議的裝載器(須重啟)</string>
     <string id="30162">顯示季數</string>     
     <string id="30163">不依季分階</string>     
     
@@ -318,7 +318,7 @@
     <string id="30537">如果您進行任何更改，請重開Kodi</string>
     <string id="30538">必需完全重新同步</string>
     <string id="30539">從 FanArtTV 下載額外的背景海報</string>
-    <string id="30540">從 FanArtTV 下載電影集海報</string>
+    <string id="30540">從 FanArtTV 下載電影合輯海報</string>
     <string id="30541">不要要求挑選特定的 串流/品質</string>
     <string id="30542">總是挑選最好品質的預告片</string>
     <string id="30543">Kodi在低效能的設備上運行 (例如Raspberry Pi)</string>
@@ -412,7 +412,7 @@
     <string id="39044">請輸入您自訂的smb路徑在"設置"下的"同步選項"，然後重新開啟kodi</string>
     <string id="39045">要替換的Plex原始照片路徑︰</string>
     <string id="39046">取代Plex照片路徑，用︰</string>
-    <string id="39047">上架︰增加顯示電視集標題</string>
+    <string id="39047">上架︰增加顯示電視節目集標題</string>
     <string id="39048">上架︰增加季和集編號 SxxExx</string>
     <string id="39049">完全掛點？試著完全重置 ！</string>
     <string id="39050">[COLOR yellow]選取Plex伺服器[/COLOR]</string>
