@@ -12,7 +12,7 @@
     <string id="30009">轉碼: </string>
     <string id="30010">使用性能分析</string>
     <string id="30011">本地快取系統</string>
-    <string id="30012">OK</string>
+    <string id="30012">確認</string>
     <string id="30013">不要顯示</string>
 
     <string id="30014">連結</string>
@@ -306,7 +306,7 @@
     <string id="30525">將音樂歌曲評級轉換為 Plex 評級</string>
     <string id="30526">允許更新歌曲檔評級</string>
     <string id="30527">播放下一集時忽略特輯</string>
-    <string id="30528">Permanent users to add to the session</string>
+    <string id="30528">多使用者永久加入會話(session)</string>
     <string id="30529">啟動延遲 (以秒為單位)</string>
     <string id="30530">啟用「伺服器重新開機」訊息</string>
     <string id="30531">啟用「新的內容」通知</string>
