@@ -4,7 +4,7 @@
     <string id="29999">PlexKodiConnect</string>
     <string id="30000">伺服器位址(IP)</string><!-- Verified -->
     <string id="30002">喜好的播放方式</string><!-- Verified -->
-    <string id="30004">日誌級別</string><!-- Verified -->
+    <string id="30004">日誌層級</string><!-- Verified -->
     <string id="30005">使用者: </string>
     <string id="30006">密碼 </string>
     <string id="30007">網路使用者: </string>
@@ -15,23 +15,23 @@
     <string id="30012">OK</string>
     <string id="30013">不要顯示</string>
 
-    <string id="30014">已連結</string>
+    <string id="30014">連結</string>
     <string id="30015">網路</string>    
     <string id="30016">裝置名稱</string>
-    <string id="30017">Plex伺服器未授權</string>     
+    <string id="30017">Plex伺服器未被授權</string>     
 
     <string id="30022">進階</string>
     <string id="30024">使用者</string><!-- Verified -->
 
-    <string id="30025">顯示伺服器未連線</string>
+    <string id="30025">顯示"伺服器未連線"</string>
     
     <string id="30030">埠號</string><!-- Verified -->
     <string id="30031">我擁有這個伺服器</string>
     <string id="30036">顯示幾部新加的電影:</string>    
-    <string id="30037">顯示幾部新加的電視劇:</string>    
+    <string id="30037">顯示幾部新加的電視節目:</string>    
     <string id="30035">顯示幾張新加的專輯:</string>    
     <string id="30038">開始放就設為「已播放」:</string>    
-    <string id="30039">為電視劇設定每季海報</string>
+    <string id="30039">為電視節目設定每季海報</string>
 
     <string id="30040">依「類型」篩選...</string>
     <string id="30041">從此全部播放</string>
@@ -103,7 +103,7 @@
     <string id="30112">顯示人員</string>
     <string id="30113">顯示簡介</string>
     <string id="30114">播放後刪除</string><!-- Verified -->
-    <string id="30115">針對電視劇</string><!-- Verified -->
+    <string id="30115">針對電視節目</string><!-- Verified -->
     <string id="30116">針對電影</string><!-- Verified -->
     <string id="30117">背景更新頻率(秒)</string>
     <string id="30118">顯示播放比率</string>
@@ -262,8 +262,8 @@
     <!-- contextmenu -->
     <string id="30401">Plex 選項</string>
     <string id="30402">清除類似的項目</string>
-    <string id="30403">喜歡這項</string>
-    <string id="30404">不喜歡這項</string>
+    <string id="30403">喜歡的項目</string>
+    <string id="30404">不喜歡的項目</string>
     <string id="30405">加到 Plex 的最愛</string>
     <string id="30406">從 Plex 的最愛移除</string>
     <string id="30407">設置自訂歌曲評級</string>
@@ -283,7 +283,7 @@
     <string id="30502">使用備用位址</string>
     <string id="30503">待命伺服器位址</string>
     <string id="30504">使用備用設備名稱</string>
-    <string id="30505">[COLOR yellow]重置登入企圖次數[/COLOR]</string>
+    <string id="30505">[COLOR yellow]重置嘗試登入次數[/COLOR]</string>
     <string id="30506">同步處理選項</string>
     <string id="30507">顯示同步進度</string>
     <string id="30508">同步空的電視影集</string>
@@ -412,18 +412,18 @@
     <string id="39044">請輸入您自訂的smb路徑在"設置"下的"同步選項"，然後重新開啟kodi</string>
     <string id="39045">要替換的Plex原始照片路徑︰</string>
     <string id="39046">取代Plex照片路徑，用︰</string>
-    <string id="39047">在桌面︰增加顯示電視集標題</string>
-    <string id="39048">在桌面︰增加季和集編號 SxxExx</string>
+    <string id="39047">上架︰增加顯示電視集標題</string>
+    <string id="39048">上架︰增加季和集編號 SxxExx</string>
     <string id="39049">完全掛點？試著完全重置 ！</string>
     <string id="39050">[COLOR yellow]選取Plex伺服器[/COLOR]</string>
-    <string id="39051">等待同步新增或修改 PMS 項目 [s]</string>
+    <string id="39051">在同步前等待"新增或修改" Plex媒體伺服器項目完成</string>
     <string id="39052">背景同步</string>
     <string id="39053">每隔 x 分鐘做完整資料庫同步</string>
     <string id="39054">遠端</string>
     <string id="39055">正在搜索Plex伺服器</string>
     <string id="39056">通過同步和嘗試使用直接播放</string>
     <string id="39057">自訂路徑</string>
-    <string id="39058">延伸plex電視節目系列"桌面"，到所有節目</string>
+    <string id="39058">延伸plex電視節目系列"上架"視圖，到所有節目</string>
     <string id="39059">最近添加︰ 追加顯示集標題</string>
     <string id="39060">最近添加︰ 追加和本集編號 SxxExx</string>
     <string id="39061">你想在背景從 FanArtTV 下載更多圖片？</string>
@@ -441,7 +441,7 @@
     <string id="39074">電視節目</string>
     <string id="39075">如果可能的話，使用預設 Plex 字幕</string>
     <string id="39076">如果您使用多個同類的Plex資料庫，例如"兒童電影"和"父母電影"，務必參閱 Wiki: HTTPs://goo.gl/JFtQV9</string>
-    <string id="39077">PMS 中顯示在小工具集 (例如"桌面") 品項的數目</string>
+    <string id="39077">PMS 中顯示在小工具集 (例如"上架") 品項的數目</string>
     <string id="39078">Plex Companion更新埠(僅在需要時更改)</string>
     <string id="39079">Plex Companion不能打開 GDM 埠。請在 PKC 設置中更改它。</string>
 
@@ -505,7 +505,7 @@
     <string id="39410">資料庫同步錯誤</string>
 
     <!-- Plex videonodes.py -->
-    <string id="39500">桌面</string>
+    <string id="39500">上架</string>
     <string id="39501">收藏</string>
 
     <!-- Plex utils.py -->
