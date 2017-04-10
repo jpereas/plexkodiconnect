@@ -5,7 +5,7 @@
     <import addon="script.module.requests" version="2.3.0" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video audio image</provides>
+        <provides>视频音频图像</provides>
   </extension>
   <extension point="xbmc.service" library="service.py" start="login">
   </extension>
