@@ -17,9 +17,9 @@
       </item>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
+    <platform>所有</platform>
     <language></language>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <license>GNU 通用公共许可证。版本 2，1991 年 6 月</license>
     <forum>https://forums.plex.tv</forum>
     <website>https://github.com/croneter/PlexKodiConnect</website>
     <email></email>
