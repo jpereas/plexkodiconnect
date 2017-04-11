@@ -302,7 +302,7 @@
     <string id="30521">Επιστροφή στη συνέχιση (σε δευτερόλεπτα)</string>
     <string id="30522">Επιβολή μετατροπής h265/HEVC</string>
     <string id="30523">Επιλογές μεταδεδομένων μουσικής (δεν είναι συμβατή με την άμεση ροή)</string>
-    <string id="30524">Import music song rating directly from files</string>
+    <string id="30524">Εισαγωγή βαθμολογίας μουσικού κομματιού απευθείας από τα αρχεία</string>
     <string id="30525">Convert music song rating to Emby rating</string>
     <string id="30526">Allow rating in song files to be updated</string>
     <string id="30527">Ignore specials in next episodes</string>
