@@ -146,7 +146,7 @@
     <string id="30163">Όλες οι σεζόν σε μία λίστα</string>     
     
     <string id="30164">Direct Play - HTTP</string>     
-    <string id="30165">Direct Play</string>     
+    <string id="30165">Απευθείας Αναπαραγωγή</string>     
     <string id="30166">Μετατροπή</string>     
     <string id="30167">Η ανίχνευση του διακομιστή ολοκληρώθηκε με επιτυχία</string>     
     <string id="30168">Βρέθηκε διακομιστής</string>     
@@ -236,9 +236,9 @@
     
     <string id="30251">Πρόσφατα προσωπικά βίντεο</string><!-- Verified -->
     <string id="30252">Πρόσφατες φωτοφραφίες</string><!-- Verified -->
-    <string id="30253">Favorite Home Videos</string><!-- Verified -->
-    <string id="30254">Favorite Photos</string><!-- Verified -->
-    <string id="30255">Favorite Albums</string>
+    <string id="30253">Αγαπημένα Προσωπικά Βίντεο</string><!-- Verified -->
+    <string id="30254">Αγαπημένες Φωτογραφίες</string><!-- Verified -->
+    <string id="30255">Αγαπημένα Άλμπουμ</string>
     
     <string id="30256">Πρόσφατα μουσικά βίντεο</string><!-- Verified -->
     <string id="30257">Μουσικά βίντεο σε εξέλιξη</string><!-- Verified -->
