@@ -317,13 +317,13 @@
     <string id="30536">Les utilisateurs doivent se connectent chaque fois que Kodi redémarre</string>
     <string id="30537">REDÉMARREZ KODI SI VOUS APPORTEZ DES MODIFICATIONS</string>
     <string id="30538">Re-synchronisation complète nécessaire</string>
-    <string id="30539">Download additional art from FanArtTV</string>
+    <string id="30539">Télécharger des affiches supplémentaire depuis FanArtTV</string>
     <string id="30540">Télécharger les affiches des sagas sur FanArtTV</string>
-    <string id="30541">Don't ask to pick a certain stream/quality</string>
-    <string id="30542">Always pick best quality for trailers</string>
+    <string id="30541">Ne pas demander de choisir un certain flux/qualité</string>
+    <string id="30542">Toujours séléctionner la meilleure qualité pour les bande-annonces</string>
     <string id="30543">Kodi s’exécute sur un appareil de faible puissance (Ex: Raspberry Pi)</string>
-    <string id="30544">Artwork</string>
-    <string id="30545">Force transcode pictures</string>
+    <string id="30544">Contenu graphique</string>
+    <string id="30545">Forcer le transcodage des images</string>
 
     <!-- service add-on -->
     <string id="33000">Bienvenue</string>
@@ -343,17 +343,17 @@
     <string id="33014">Choisissez le fichier de sous-titres</string>
     <string id="33015">Supprimez le fichier de votre serveur Emby ?</string>
     <string id="33016">Jouer les bandes-annonces ?</string>
-    <string id="33017">Gathering movies from:</string>
-    <string id="33018">Gathering boxsets</string>
-    <string id="33019">Gathering music videos from:</string>
-    <string id="33020">Gathering tv shows from:</string>
-    <string id="33021">Gathering:</string>
+    <string id="33017">Récupérer les films depuis :</string>
+    <string id="33018">Récupérer les coffrets</string>
+    <string id="33019">Récupérer les vidéos musicales depuis :</string>
+    <string id="33020">Récupérer les séries TV depuis :</string>
+    <string id="33021">Récupérer :</string>
     <string id="33022">La base de données doit être recréée pour cette version de Emby pour Kodi. Procéder au scan ?</string>
-    <string id="33023">Emby for Kodi may not work correctly until the database is reset.</string>
+    <string id="33023">Emby pour Kodi peu ne pas fonctionner correctement tant que la base de données n'a pas été réinitialisée.</string>
     <string id="33024">Annulation du processus de synchronisation de la base de données. La version actuelle de Kodi n'est pas prise en charge.</string>
     <string id="33025">achevé en :</string>
     <string id="33026">Comparer les films de :</string>
-    <string id="33027">Comparing boxsets</string>
+    <string id="33027">Comparer les coffrets</string>
     <string id="33028">Comparer les clips vidéo de :</string>
     <string id="33029">Comparer les séries de :</string>
     <string id="33030">Comparaison des épisodes de :</string>
@@ -365,7 +365,7 @@
     <!-- New to Plex -->
     <string id="39000">-Nombre de bandes-annonces à jouer avant un film</string>
     <string id="39001">Booster l'audio pendant le transcodage</string>
-    <string id="39002">Burnt-in subtitle size</string>
+    <string id="39002">Taille des sous-titres incorporés</string>
     <string id="39003">Limit download sync threads (rec. for rpi: 1)</string>
     <string id="39004">Activer le compagnon de Plex (redémarrage de Kodi !)</string>
     <string id="39005">Plex Companion Port (change only if needed)</string>
