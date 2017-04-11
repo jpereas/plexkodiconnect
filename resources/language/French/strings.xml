@@ -293,12 +293,12 @@
     <string id="30512">Forcer la mise en cache du contenu graphique</string>
     <string id="30513">Brider les processus de cache du contenu graphique (recommandé pour rpi)</string>
     <string id="30514">Activer le démarrage rapide (nécessite un plugin serveur)</string>
-    <string id="30515">Maximum items to request from the server at once</string>
+    <string id="30515">Nombre maximum d'éléments concurrents à demander au serveur</string>
     <string id="30516">Lecture</string>
-    <string id="30517">[COLOR yellow]Enter network credentials[/COLOR]</string>
-    <string id="30518">Enable Plex Trailers (Plexpass is needed)</string>
-    <string id="30519">Demander à jouer les bandes annonces</string>
-    <string id="30520">Skip Plex delete confirmation for the context menu (use at your own risk)</string>
+    <string id="30517">[COLOR yellow]Entrez vos identifiants réseau[/COLOR]</string>
+    <string id="30518">Activer les bandes-annonces Plex (nécessite PlexPass)</string>
+    <string id="30519">Demander de jouer les bandes-annonces</string>
+    <string id="30520">Ne pas demander la confirmation de suppression dans le menu contextuel (utilisation à vos risques et périls)</string>
     <string id="30521">Jump back on resume (in seconds)</string>
     <string id="30522">Forcer le transcodage h265/HEVC</string>
     <string id="30523">Music metadata options (not compatible with direct stream)</string>
