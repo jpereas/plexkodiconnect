@@ -5,7 +5,7 @@
     <import addon="script.module.requests" version="2.3.0" />
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
-        <provides>video audio image</provides>
+        <provides>视频音频图像</provides>
   </extension>
   <extension point="xbmc.service" library="service.py" start="login">
   </extension>
@@ -17,9 +17,9 @@
       </item>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
+    <platform>所有</platform>
     <language></language>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <license>GNU 通用公共许可证。版本 2，1991 年 6 月</license>
     <forum>https://forums.plex.tv</forum>
     <website>https://github.com/croneter/PlexKodiConnect</website>
     <email></email>

@@ -2,31 +2,31 @@
 <strings>
     <!-- Add-on settings -->
     <string id="29999">PlexKodiConnect</string>
-    <string id="30000">Server Address (IP)</string><!-- Verified -->
-    <string id="30002">Preferred playback method</string><!-- Verified -->
-    <string id="30004">Log level</string><!-- Verified -->
-    <string id="30005">Username: </string>
-    <string id="30006">Password: </string>
-    <string id="30007">Network Username: </string>
-    <string id="30008">Network Password: </string>
-    <string id="30009">Transcode: </string>
+    <string id="30000">Адрес сервера (IP)</string><!-- Verified -->
+    <string id="30002">Предпочтительный способ воспроизведения</string><!-- Verified -->
+    <string id="30004">Логирование</string><!-- Verified -->
+    <string id="30005">Имя пользователя: </string>
+    <string id="30006">Пароль: </string>
+    <string id="30007">Логин: </string>
+    <string id="30008">Пароль: </string>
+    <string id="30009">Транскодинг: </string>
     <string id="30010">Enable Performance Profiling</string>
     <string id="30011">Local caching system</string>
-    <string id="30012">OK</string>
+    <string id="30012">Ок</string>
     <string id="30013">Never show</string>
 
     <string id="30014">Connection</string>
     <string id="30015">Network</string>    
-    <string id="30016">Device Name</string>
-    <string id="30017">Unauthorized for PMS</string>     
+    <string id="30016">Имя устройства</string>
+    <string id="30017">Не подтвержден в PMS</string>     
 
-    <string id="30022">Advanced</string>
-    <string id="30024">Username</string><!-- Verified -->
+    <string id="30022">Расширенные</string>
+    <string id="30024">Имя пользователя</string><!-- Verified -->
 
-    <string id="30025">Display message if PMS goes offline</string>
+    <string id="30025">Сообщать об отключении от PMS</string>
     
-    <string id="30030">Port Number</string><!-- Verified -->
-    <string id="30031">I own this Plex Media Server</string>
+    <string id="30030">Порт</string><!-- Verified -->
+    <string id="30031">Я владелец этого Plex медиа сервера</string>
     <string id="30036">Number of recent Movies to show:</string>    
     <string id="30037">Number of recent TV episodes to show:</string>    
     <string id="30035">Number of recent Music Albums to show:</string>    
