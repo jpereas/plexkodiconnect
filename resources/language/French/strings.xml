@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <strings>
     <!-- Add-on settings -->
     <string id="29999">PlexKodiConnect</string>
@@ -168,7 +168,7 @@
     <string id="30182">Épisodes préférés</string>      
     <string id="30183">Albums souvent joué</string> 
     <string id="30184">TV à venir</string>            
-    <string id="30185">BoxSets</string>                
+    <string id="30185">Coffrets</string>                
     <string id="30186">Bande-annonce</string>               
     <string id="30187">Clips</string>           
     <string id="30188">Photos</string>                 
@@ -224,8 +224,8 @@
     
     <string id="30239">[COLOR yellow]Remise à zéro de la base de données locale de Kodi[/COLOR]</string><!-- Verified -->
     <string id="30240">Enable watched/resume status sync</string>
-    <string id="30241">DB Sync Indication:</string>
-    <string id="30242">Play Count Sync Indication:</string>
+    <string id="30241">Indication de synchronisation DB:</string>
+    <string id="30242">Indication de synchronisation du compteur de lecture:</string>
     <string id="30243">Activer HTTPS</string><!-- Verified -->
     <string id="30245">Forcer le codec de transcodage</string>
     
@@ -236,7 +236,7 @@
     
     <string id="30251">Vidéos récemment ajoutées</string><!-- Verified -->
     <string id="30252">Photos récemment ajoutée</string><!-- Verified -->
-    <string id="30253">Favorite Home Videos</string><!-- Verified -->
+    <string id="30253">Vidéos préférées</string><!-- Verified -->
     <string id="30254">Photos favorites</string><!-- Verified -->
     <string id="30255">Albums préférés</string>
     
@@ -368,11 +368,11 @@
     <string id="39002">Taille des sous-titres incorporés</string>
     <string id="39003">Limit download sync threads (rec. for rpi: 1)</string>
     <string id="39004">Activer le compagnon de Plex (redémarrage de Kodi !)</string>
-    <string id="39005">Plex Companion Port (change only if needed)</string>
+    <string id="39005">Port compagnon de plex (changement seulement si nécessaire)</string>
     <string id="39006">Activer le journal de débogage de Plex compagnon</string>
     <string id="39007">Activer le journal de débogage de Plex compagnon GDM</string>
     <string id="39008">Plex Companion: Allows flinging media to Kodi through Plex</string>
-    <string id="39009">Could not login to plex.tv. Please try signing in again.</string>
+    <string id="39009">Impossible de se connecter à plex.tv. S’il vous plaît essayez de vous connecter à nouveau.</string>
     <string id="39010">Problèmes de connexion à plex.tv. Problème de réseau ou d’internet ?</string>
     <string id="39011">Aucun serveur Plex dans le réseau. Abandon...</string>
     <string id="39012">Choisissez votre serveur Plex</string>
@@ -399,19 +399,19 @@
     <string id="39031">Kodi ne peut pas localiser le fichier : </string>
     <string id="39032">Veuillez vérifier le chemin d’accès. Vous devrez peut-être vérifier vos informations d’identification réseau dans les paramètres de l’Add-on ou utiliser les différents chemins de Plex. Arrêter la synchronisation ?</string>
     <string id="39033">Transform Plex UNC library paths \\myNas\mymovie.mkv automatically to smb paths, smb://myNas/mymovie.mkv? (recommended)</string>
-    <string id="39034">Replace Plex UNC paths \\myNas with smb://myNas</string>
+    <string id="39034">Remplacez les chemins UNC de Plex \\myNas par smb://myNas</string>
 
     <string id="39035">Replace Plex paths /volume1/media or \\myserver\media with custom SMB paths smb://NAS/mystuff</string>
-    <string id="39037">Original Plex MOVIE path to replace:</string>
-    <string id="39038">Replace Plex MOVIE with:</string>
-    <string id="39039">Original Plex TV SHOWS path to replace:</string>
-    <string id="39040">Replace Plex TV SHOWS with:</string>
-    <string id="39041">Original Plex MUSIC path to replace:</string>
-    <string id="39042">Replace Plex MUSIC with:</string>
+    <string id="39037">Chemin Plex MOVIE original à remplacer:</string>
+    <string id="39038">Remplacez PLEX MOVIE par:</string>
+    <string id="39039">Chemin Plex TV SHOWS original à remplacer:</string>
+    <string id="39040">Remplacez Plex TV SHOWS par:</string>
+    <string id="39041">Chemin Plex MUSIQUE original à remplacer:</string>
+    <string id="39042">Remplacez PLEX MUSIQUE par:</string>
     <string id="39043">Go a step further and completely replace all original Plex library paths (/volume1/media) with custom SMB paths (smb://NAS/MyStuff)?</string>
-    <string id="39044">Please enter your custom smb paths in the settings under "Sync Options" and then restart Kodi</string>
-    <string id="39045">Original Plex PHOTO path to replace:</string>
-    <string id="39046">Replace Plex PHOTO with:</string>
+    <string id="39044">Veuillez entrer vos chemins smb personnalisés dans les paramètres sous "Options de synchronisation" et puis redémarrez Kodi</string>
+    <string id="39045">Chemin Plex PHOTO original à remplacer:</string>
+    <string id="39046">Remplacez Plex PHOTO par:</string>
     <string id="39047">On Deck: Append show title to episode</string>
     <string id="39048">On Deck: Append season- and episode-number SxxExx</string>
     <string id="39049">Rien ne fonctionne ? Essayez une réinitialisation complète !</string>
@@ -446,31 +446,31 @@
     <string id="39079">Plex Companion could not open the GDM port. Please change it in the PKC settings.</string>
 
     <!-- Plex Entrypoint.py -->
-    <string id="39200">Log-out Plex Home User </string>
+    <string id="39200">Déconnexion Plex Home User </string>
     <string id="39201">Paramètres</string>
     <string id="39202">Informations d’identification réseau</string>
     <string id="39203">Actualiser les playlists/nœuds</string>
     <string id="39204">Synchroniser la bibliothèque manuellement</string>
     <string id="39205">Impossible d’exécuter la synchronisation, l’Add-on n’est pas connecté à un serveur Plex.</string>
     <string id="39206">Plex pourrait bloquer votre compte si vous ne parvenez pas à vous connecter trop de fois. Continuer néanmoins ?</string>
-    <string id="39207">Resetting PMS connections, please wait</string>
-    <string id="39208">Failed to reset PKC. Try to restart Kodi.</string>
+    <string id="39207">Réinitialisation des connexions PMS, veuillez patienter</string>
+    <string id="39208">Impossible de réinitialiser PKC. Essayez de redémarrer Kodi.</string>
     <string id="39209">[COLOR yellow]Toggle plex.tv login (sign in or sign out)[/COLOR]</string>
     <string id="39210">Not yet connected to Plex Server</string>
     <string id="39211">Regarder plus tard</string>
     <string id="39213">est actuellement hors ligne</string>
     <string id="39214">Even though we signed in to plex.tv, we could not authorize for PMS</string>
-    <string id="39215">Enter your Plex Media Server's IP or URL, Examples are:</string>
+    <string id="39215">Entrez l'adresse IP ou l'URL de votre Plex Media Server. Les exemples sont :</string>
 
-    <string id="39217">Does your Plex Media Server support SSL connections? (https instead of http)?</string>
-    <string id="39218">Error contacting PMS</string>
-    <string id="39219">Abort (Yes) or save address anyway (No)?</string>
+    <string id="39217">Votre Plex Media Server prend-il en charge les connexions SSL ? (Https au lieu de http)?</string>
+    <string id="39218">Erreur de connexion PMS</string>
+    <string id="39219">Annuler (Oui) ou enregistrer l’adresse quand même (Non) ?</string>
     <string id="39220">connecté</string>
     <string id="39221">plex.tv toggle successful</string>
     <string id="39222">[COLOR yellow]Look for missing fanart on FanartTV now[/COLOR]</string>
     <string id="39223">Only look for missing fanart or refresh all fanart? The scan will take quite a while and happen in the background.</string>
     <string id="39224">Tout rafraîchir</string>
-    <string id="39225">Missing only</string>    
+    <string id="39225">Manquant seulement</string>    
 
 
     <!-- Plex Artwork.py -->
@@ -480,7 +480,7 @@
     <!-- Plex PlexAPI.py -->
     <string id="39300">: Entrez le nom d’utilisateur plex.tv. Ou rien pour annuler.</string>
     <string id="39301">Entrez le mot de passe pour l’utilisateur plex.tv </string>
-    <string id="39302">Could not sign in user </string>
+    <string id="39302">Impossible de se connecter à l'utilisateur </string>
     <string id="39303">Problèmes en essayant de contacter plex.tv. Réessayez plus tard</string>
     <string id="39304">Allez sur https://plex.tv/pin et entrez le code : </string>
     <string id="39305">Impossible de se connecter à plex.tv. Réessayez plus tard</string>
@@ -514,7 +514,7 @@
     <string id="39602">Supprimer toutes les illustrations mises en cache ? (recommandé !)</string>
     <string id="39603">Réinitialiser tous les paramètres de PlexKodiConnect Addon ? (ceci n’est généralement pas recommandée et inutiles !)</string>
 
-    <string id="39700">Amazon Alexa (Voice Recognition)</string>
+    <string id="39700">Amazon Alexa (reconnaissance vocale)</string>
     <string id="39701">Activer Alexa</string>
     <string id="39702">Parcourir en suivant les répertoires</string>
 </strings>
