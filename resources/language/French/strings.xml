@@ -454,7 +454,7 @@
     <string id="39205">Impossible d’exécuter la synchronisation, l’Add-on n’est pas connecté à un serveur Plex.</string>
     <string id="39206">Plex pourrait bloquer votre compte si vous ne parvenez pas à vous connecter trop de fois. Continuer néanmoins ?</string>
     <string id="39207">Resetting PMS connections, please wait</string>
-    <string id="39208">Failed to reset PKC. Try to restart Kodi.</string>
+    <string id="39208">Impossible de réinitialiser PKC. Essayez de redémarrer Kodi.</string>
     <string id="39209">[COLOR yellow]Toggle plex.tv login (sign in or sign out)[/COLOR]</string>
     <string id="39210">Not yet connected to Plex Server</string>
     <string id="39211">Regarder plus tard</string>
@@ -470,7 +470,7 @@
     <string id="39222">[COLOR yellow]Look for missing fanart on FanartTV now[/COLOR]</string>
     <string id="39223">Only look for missing fanart or refresh all fanart? The scan will take quite a while and happen in the background.</string>
     <string id="39224">Tout rafraîchir</string>
-    <string id="39225">Missing only</string>    
+    <string id="39225">Manquant seulement</string>    
 
 
     <!-- Plex Artwork.py -->
@@ -480,7 +480,7 @@
     <!-- Plex PlexAPI.py -->
     <string id="39300">: Entrez le nom d’utilisateur plex.tv. Ou rien pour annuler.</string>
     <string id="39301">Entrez le mot de passe pour l’utilisateur plex.tv </string>
-    <string id="39302">Could not sign in user </string>
+    <string id="39302">Impossible de se connecter à l'utilisateur </string>
     <string id="39303">Problèmes en essayant de contacter plex.tv. Réessayez plus tard</string>
     <string id="39304">Allez sur https://plex.tv/pin et entrez le code : </string>
     <string id="39305">Impossible de se connecter à plex.tv. Réessayez plus tard</string>
@@ -514,7 +514,7 @@
     <string id="39602">Supprimer toutes les illustrations mises en cache ? (recommandé !)</string>
     <string id="39603">Réinitialiser tous les paramètres de PlexKodiConnect Addon ? (ceci n’est généralement pas recommandée et inutiles !)</string>
 
-    <string id="39700">Amazon Alexa (Voice Recognition)</string>
+    <string id="39700">Amazon Alexa (reconnaissance vocale)</string>
     <string id="39701">Activer Alexa</string>
     <string id="39702">Parcourir en suivant les répertoires</string>
 </strings>
