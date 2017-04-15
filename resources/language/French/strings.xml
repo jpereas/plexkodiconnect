@@ -232,7 +232,7 @@
     <string id="30246">Activez le Netflix style ensuite jusqu'à la notification</string>
     <string id="30247">  -Le nombre de secondes avant la fin pour afficher la notification</string>
     <string id="30248">Show Emby Info dialog on play/select action</string>
-    <string id="30249">Enable server connection message on startup</string><!-- Verified -->
+    <string id="30249">Activer le message de connexion au serveur lors du démarrage</string><!-- Verified -->
     
     <string id="30251">Vidéos récemment ajoutées</string><!-- Verified -->
     <string id="30252">Photos récemment ajoutée</string><!-- Verified -->
@@ -398,10 +398,10 @@
     <string id="39030">Ajouter des informations d’identification réseau pour permettre d’accéder à votre contenu Kodi ? Remarque : Sauter cette étape peut générer un message lors de l’analyse initiale de votre contenu si Kodi ne peut pas localiser votre contenu.</string>
     <string id="39031">Kodi ne peut pas localiser le fichier : </string>
     <string id="39032">Veuillez vérifier le chemin d’accès. Vous devrez peut-être vérifier vos informations d’identification réseau dans les paramètres de l’Add-on ou utiliser les différents chemins de Plex. Arrêter la synchronisation ?</string>
-    <string id="39033">Transform Plex UNC library paths \\myNas\mymovie.mkv automatically to smb paths, smb://myNas/mymovie.mkv? (recommended)</string>
+    <string id="39033">Transformez les chemins des bibliothèques UNC de Plex \\myNas\mymovie.mkv automatiquement vers les chemins smb, smb://myNas/mymovie.mkv ? (recommandé)</string>
     <string id="39034">Remplacez les chemins UNC de Plex \\myNas par smb://myNas</string>
 
-    <string id="39035">Replace Plex paths /volume1/media or \\myserver\media with custom SMB paths smb://NAS/mystuff</string>
+    <string id="39035">Remplacer les chemins Plex /volume1/media ou \\myserver\media avec les chemins SMB personnalisés smb://NAS/mystuff</string>
     <string id="39037">Chemin Plex MOVIE original à remplacer:</string>
     <string id="39038">Remplacez PLEX MOVIE par:</string>
     <string id="39039">Chemin Plex TV SHOWS original à remplacer:</string>
@@ -497,8 +497,8 @@
     <string id="39402"> peut ne pas fonctionner correctement jusqu'à ce que la base de données soit réinitialisée.</string>
     <string id="39403">Annulation du processus de synchronisation de base de données. La version actuelle de Kodi n'est pas prise en charge. S’il vous plaît vérifiez vos journaux pour plus d’informations.</string>
     <string id="39404">Le démarrage du processus de synchronisation a échoué à plusieurs reprises. Essayez de redémarrer Kodi. Arrêt de la synchronisation.</string>
-    <string id="39405">Plex playlists/nodes refreshed</string>
-    <string id="39406">Plex playlists/nodes refresh failed</string>
+    <string id="39405">Plex playlists/nodes actualisé</string>
+    <string id="39406">L'actualisation des playlists/nodes Plex a échouée</string>
     <string id="39407">Synchronisation de la bibliothèque terminée</string>
     <string id="39408">La synchronisation devait ignorer certains éléments parce qu’ils n’ont pas été traitées. Kodi peut être instable maintenant !! Veuillez poster vos journaux de Kodi sur le forum de Plex.</string>
     <string id="39409">The Plex Server did not like you asking for so much data at once and returned ERRORS. Try lowering the number of sync download threads in the settings. Skipped some items for now.</string>
