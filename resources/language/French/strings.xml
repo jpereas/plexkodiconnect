@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <strings>
     <!-- Add-on settings -->
     <string id="29999">PlexKodiConnect</string>
@@ -224,8 +224,8 @@
     
     <string id="30239">[COLOR yellow]Remise à zéro de la base de données locale de Kodi[/COLOR]</string><!-- Verified -->
     <string id="30240">Enable watched/resume status sync</string>
-    <string id="30241">DB Sync Indication:</string>
-    <string id="30242">Play Count Sync Indication:</string>
+    <string id="30241">Indication de synchronisation DB:</string>
+    <string id="30242">Indication de synchronisation du compteur de lecture:</string>
     <string id="30243">Activer HTTPS</string><!-- Verified -->
     <string id="30245">Forcer le codec de transcodage</string>
     
@@ -409,9 +409,9 @@
     <string id="39041">Original Plex MUSIC path to replace:</string>
     <string id="39042">Replace Plex MUSIC with:</string>
     <string id="39043">Go a step further and completely replace all original Plex library paths (/volume1/media) with custom SMB paths (smb://NAS/MyStuff)?</string>
-    <string id="39044">Please enter your custom smb paths in the settings under "Sync Options" and then restart Kodi</string>
-    <string id="39045">Original Plex PHOTO path to replace:</string>
-    <string id="39046">Replace Plex PHOTO with:</string>
+    <string id="39044">Veuillez entrer vos chemins smb personnalisés dans les paramètres sous "Options de synchronisation" et puis redémarrez Kodi</string>
+    <string id="39045">Chemin Plex PHOTO original à remplacer:</string>
+    <string id="39046">Remplacez Plex PHOTO par:</string>
     <string id="39047">On Deck: Append show title to episode</string>
     <string id="39048">On Deck: Append season- and episode-number SxxExx</string>
     <string id="39049">Rien ne fonctionne ? Essayez une réinitialisation complète !</string>
@@ -463,7 +463,7 @@
     <string id="39215">Enter your Plex Media Server's IP or URL, Examples are:</string>
 
     <string id="39217">Does your Plex Media Server support SSL connections? (https instead of http)?</string>
-    <string id="39218">Error contacting PMS</string>
+    <string id="39218">Erreur de connexion PMS</string>
     <string id="39219">Abort (Yes) or save address anyway (No)?</string>
     <string id="39220">connecté</string>
     <string id="39221">plex.tv toggle successful</string>
