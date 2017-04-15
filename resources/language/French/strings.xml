@@ -168,7 +168,7 @@
     <string id="30182">Épisodes préférés</string>      
     <string id="30183">Albums souvent joué</string> 
     <string id="30184">TV à venir</string>            
-    <string id="30185">BoxSets</string>                
+    <string id="30185">Coffrets</string>                
     <string id="30186">Bande-annonce</string>               
     <string id="30187">Clips</string>           
     <string id="30188">Photos</string>                 
@@ -368,11 +368,11 @@
     <string id="39002">Taille des sous-titres incorporés</string>
     <string id="39003">Limit download sync threads (rec. for rpi: 1)</string>
     <string id="39004">Activer le compagnon de Plex (redémarrage de Kodi !)</string>
-    <string id="39005">Plex Companion Port (change only if needed)</string>
+    <string id="39005">Port compagnon de plex (changement seulement si nécessaire)</string>
     <string id="39006">Activer le journal de débogage de Plex compagnon</string>
     <string id="39007">Activer le journal de débogage de Plex compagnon GDM</string>
     <string id="39008">Plex Companion: Allows flinging media to Kodi through Plex</string>
-    <string id="39009">Could not login to plex.tv. Please try signing in again.</string>
+    <string id="39009">Impossible de se connecter à plex.tv. S’il vous plaît essayez de vous connecter à nouveau.</string>
     <string id="39010">Problèmes de connexion à plex.tv. Problème de réseau ou d’internet ?</string>
     <string id="39011">Aucun serveur Plex dans le réseau. Abandon...</string>
     <string id="39012">Choisissez votre serveur Plex</string>
