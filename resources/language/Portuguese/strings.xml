@@ -119,26 +119,26 @@
     <string id="30131">Your MB3 Server contains local paths.  Please change server paths to UNC or change XBMB3C setting 'Play from Stream' to true.  Path: </string>
     <string id="30132">Aviso</string>
     <string id="30133">Debug logging enabled.</string>
-    <string id="30134">This will affect performance.</string>
-    <string id="30135">Error</string>
-    <string id="30136">Monitoring service is not running</string>
-    <string id="30137">If you have just installed please restart Kodi</string>
-    <string id="30138">Search</string>
+    <string id="30134">Isto irá afectar o desempenho.</string>
+    <string id="30135">Erro</string>
+    <string id="30136">Serviço de monitorização não está em execução</string>
+    <string id="30137">Se acabou de instalar por favor reinicie o Kodi</string>
+    <string id="30138">Procurar</string>
     
     <string id="30139">Enable Theme Music (Requires Restart)</string>
     <string id="30140"> - Loop Theme Music</string>
-    <string id="30141">Enable Background Image (Requires Restart)</string>
-    <string id="30142">Services</string>
+    <string id="30141">Ativar a imagem de fundo (requer reinicialização)</string>
+    <string id="30142">Serviços</string>
 
-    <string id="30143">Always transcode if video bitrate is above</string>
+    <string id="30143">Sempre transcodificar se a taxa bits do vídeo estiver acima de</string>
     
     <string id="30150">Skin does not support setting views</string>
     <string id="30151">Select item action (Requires Restart)</string>
     
     <string id="30156">Sort NextUp by Show Title</string>    
     <string id="30157">Enable Enhanced Images (eg CoverArt)</string><!-- Verified -->
-    <string id="30158">Metadata</string>
-    <string id="30159">Artwork</string>
+    <string id="30158">Metadados</string>
+    <string id="30159">Arte-final</string>
     <string id="30160">Video Quality if Transcoding necessary</string><!-- Verified -->
     
     <string id="30161">Enable Suggested Loader (Requires Restart)</string>
@@ -147,54 +147,54 @@
     
     <string id="30164">Direct Play - HTTP</string>     
     <string id="30165">Direct Play</string>     
-    <string id="30166">Transcoding</string>     
-    <string id="30167">Server Detection Succeeded</string>     
-    <string id="30168">Found server</string>     
-    <string id="30169">Address : </string>     
+    <string id="30166">Transcodificar</string>     
+    <string id="30167">Detecção de servidor bem sucedida</string>     
+    <string id="30168">Encontrei o servidor</string>     
+    <string id="30169">Endereço: </string>     
     
     <!-- Video nodes -->
-    <string id="30170">Recently Added TV Shows</string><!-- Verified -->
-    <string id="30171">In Progress TV Shows</string><!-- Verified -->
-    <string id="30172">All Music</string>              
-    <string id="30173">Channels</string><!-- Verified -->
-    <string id="30174">Recently Added</string><!-- Verified -->
-    <string id="30175">Recently Added Episodes</string><!-- Verified -->
-    <string id="30176">Recently Added Albums</string>  
-    <string id="30177">In Progress Movies</string><!-- Verified -->
-    <string id="30178">In Progress Episodes</string><!-- Verified -->
-    <string id="30179">Next Episodes</string><!-- Verified -->
-    <string id="30180">Favorite Movies</string><!-- Verified -->      
-    <string id="30181">Favorite Shows</string><!-- Verified -->
-    <string id="30182">Favorite Episodes</string>      
+    <string id="30170">Recentemente adicionado programas de TV</string><!-- Verified -->
+    <string id="30171">Programas de TV em progresso</string><!-- Verified -->
+    <string id="30172">Todas as músicas</string>              
+    <string id="30173">Canais</string><!-- Verified -->
+    <string id="30174">Recentemente adicionado</string><!-- Verified -->
+    <string id="30175">Episódios Recentemente adicionados</string><!-- Verified -->
+    <string id="30176">Álbuns Recentemente adicionados</string>  
+    <string id="30177">Filmes em progresso</string><!-- Verified -->
+    <string id="30178">Episódios em progresso</string><!-- Verified -->
+    <string id="30179">Próximo Episódio</string><!-- Verified -->
+    <string id="30180">Filmes favoritos</string><!-- Verified -->      
+    <string id="30181">Séries de TV favoritas</string><!-- Verified -->
+    <string id="30182">Episódios favoritos</string>      
     <string id="30183">Frequent Played Albums</string> 
-    <string id="30184">Upcoming TV</string>            
+    <string id="30184">Próximos Programas de TV</string>            
     <string id="30185">BoxSets</string>                
     <string id="30186">Trailers</string>               
-    <string id="30187">Music Videos</string>           
-    <string id="30188">Photos</string>                 
-    <string id="30189">Unwatched Movies</string><!-- Verified -->
-    <string id="30190">Movie Genres</string>           
-    <string id="30191">Movie Studios</string>          
-    <string id="30192">Movie Actors</string>           
-    <string id="30193">Unwatched Episodes</string>     
-    <string id="30194">TV Genres</string>              
-    <string id="30195">TV Networks</string>            
-    <string id="30196">TV Actors</string>              
-    <string id="30197">Playlists</string>              
-    <string id="30198">Search</string>              
-    <string id="30199">Set Views</string>              
+    <string id="30187">Vídeos de música</string>           
+    <string id="30188">Fotografias</string>                 
+    <string id="30189">Filmes por ver</string><!-- Verified -->
+    <string id="30190">Gêneros de filme</string>           
+    <string id="30191">Estúdios de cinema</string>          
+    <string id="30192">Atores do filme</string>           
+    <string id="30193">Episódios não vistos</string>     
+    <string id="30194">Gêneros de TV</string>              
+    <string id="30195">Redes de TV</string>            
+    <string id="30196">Atores de TV</string>              
+    <string id="30197">Listas de reprodução</string>              
+    <string id="30198">Procurar</string>              
+    <string id="30199">Definir Vista</string>              
     
-    <string id="30200">Select User</string>              
+    <string id="30200">Selecionar Utilizador</string>              
     <string id="30201">Profiling enabled.</string>              
     <string id="30202">Please remember to turn off when finished testing.</string>              
     <string id="30203">Error in ArtworkRotationThread</string>              
-    <string id="30204">Unable to connect to server</string>         
+    <string id="30204">Não foi possível conectar ao servidor</string>         
     <string id="30205">Error in LoadMenuOptionsThread</string>     
     
     <string id="30206">Enable Playlists Loader (Requires Restart)</string>   
     
-    <string id="30207">Songs</string>
-    <string id="30208">Albums</string>
+    <string id="30207">Músicas</string>
+    <string id="30208">Álbuns</string>
     <string id="30209">Album Artists</string>
     <string id="30210">Artists</string>
     <string id="30211">Music Genres</string>
