@@ -195,38 +195,38 @@
     
     <string id="30207">Músicas</string>
     <string id="30208">Álbuns</string>
-    <string id="30209">Album Artists</string>
-    <string id="30210">Artists</string>
-    <string id="30211">Music Genres</string>
+    <string id="30209">Artista do álbum</string>
+    <string id="30210">Artistas</string>
+    <string id="30211">Gêneros de música</string>
     
     <string id="30212">Enable Theme Videos (Requires Restart)</string>
     <string id="30213"> - Loop Theme Videos</string>
     
     <string id="30216">AutoPlay remaining episodes in a season</string> 
-    <string id="30218">Compress Artwork</string>
-    <string id="30220">Latest </string>
-    <string id="30221">In Progress </string>
-    <string id="30222">NextUp </string>
+    <string id="30218">Comprimir a arte-final</string>
+    <string id="30220">Últimos </string>
+    <string id="30221">Em Progresso </string>
+    <string id="30222">A seguir </string>
     <string id="30223">User Views</string>
-    <string id="30224">Report Metrics</string>
+    <string id="30224">Reportar estatísticas</string>
     <string id="30225">Use Kodi Sorting</string>
-    <string id="30226">Runtime</string>
+    <string id="30226">Duração</string>
     
-    <string id="30227">Random</string>
-    <string id="30228">Recently releases</string>
+    <string id="30227">Aleatório</string>
+    <string id="30228">Recentemente lançados</string>
     <string id="30229">Random Items</string><!-- Verified -->
-    <string id="30230">Recommended</string><!-- Verified -->
+    <string id="30230">Recomendado</string><!-- Verified -->
     
     <string id="30235">Extras</string><!-- Verified -->
-    <string id="30236">Sync Theme Music</string>
-    <string id="30237">Sync Extra Fanart</string>
+    <string id="30236">Sincronizar tema da Música</string>
+    <string id="30237">Sincronizar Extras do Fanart</string>
     <string id="30238">Sync Movie BoxSets</string>
     
-    <string id="30239">[COLOR yellow]Reset local Kodi database[/COLOR]</string><!-- Verified -->
-    <string id="30240">Enable watched/resume status sync</string>
-    <string id="30241">DB Sync Indication:</string>
+    <string id="30239">[COLOR yellow]Reiniciar a base de dados local do Kodi[/COLOR]</string><!-- Verified -->
+    <string id="30240">Habilitar a sincronização do Estado Assistido/Retomar</string>
+    <string id="30241">Indicação de Sincronização da base de dados:</string>
     <string id="30242">Play Count Sync Indication:</string>
-    <string id="30243">Enable HTTPS</string><!-- Verified -->
+    <string id="30243">Habilitar HTTPS</string><!-- Verified -->
     <string id="30245">Force Transcoding Codecs</string>
     
     <string id="30246">Enable Netflix style next up notification</string>
@@ -236,31 +236,31 @@
     
     <string id="30251">Recently added Home Videos</string><!-- Verified -->
     <string id="30252">Recently added Photos</string><!-- Verified -->
-    <string id="30253">Favorite Home Videos</string><!-- Verified -->
-    <string id="30254">Favorite Photos</string><!-- Verified -->
-    <string id="30255">Favorite Albums</string>
+    <string id="30253">Vídeos caseiros favorito</string><!-- Verified -->
+    <string id="30254">Fotografias favoritas</string><!-- Verified -->
+    <string id="30255">Álbuns favoritos</string>
     
-    <string id="30256">Recently added Music videos</string><!-- Verified -->
-    <string id="30257">In progress Music videos</string><!-- Verified -->
-    <string id="30258">Unwatched Music videos</string><!-- Verified -->
+    <string id="30256">Vídeos de música recentemente adicionados</string><!-- Verified -->
+    <string id="30257">Vídeos de música em progresso</string><!-- Verified -->
+    <string id="30258">Vídeos de música por ver</string><!-- Verified -->
     
     <!-- Default views -->
-    <string id="30300">Active</string>              
-    <string id="30301">Clear Settings</string>              
-    <string id="30302">Movies</string>              
-    <string id="30303">BoxSets</string>              
+    <string id="30300">Ativo</string>              
+    <string id="30301">Limpar as definições</string>              
+    <string id="30302">Filmes</string>              
+    <string id="30303">Colectâneas</string>              
     <string id="30304">Trailers</string>              
-    <string id="30305">Series</string>              
-    <string id="30306">Seasons</string>              
-    <string id="30307">Episodes</string>              
-    <string id="30308">Music Artists</string>              
-    <string id="30309">Music Albums</string>              
-    <string id="30310">Music Videos</string>              
-    <string id="30311">Music Tracks</string>
-    <string id="30312">Channels</string>  
+    <string id="30305">Séries</string>              
+    <string id="30306">Temporadas</string>              
+    <string id="30307">Episódios</string>              
+    <string id="30308">Artistas da música</string>              
+    <string id="30309">Álbuns de música</string>              
+    <string id="30310">Vídeos de música</string>              
+    <string id="30311">Faixas de música</string>
+    <string id="30312">Canais</string>  
     
     <!-- contextmenu -->
-    <string id="30401">Plex options</string>
+    <string id="30401">Opções do Plex</string>
     <string id="30402">Clear like for this item</string>
     <string id="30403">Like this item</string>
     <string id="30404">Dislike this item</string>
@@ -285,7 +285,7 @@
     <string id="30504">Use alternate device Name</string>
     <string id="30505">[COLOR yellow]Reset login attempts[/COLOR]</string>
     <string id="30506">Sync Options</string>
-    <string id="30507">Show syncing progress</string>
+    <string id="30507">Mostrar o progresso de sincronização</string>
     <string id="30508">Sync empty TV Shows</string>
     <string id="30509">Enable Music Library</string>
     <string id="30510">Direct stream music library</string>
@@ -294,7 +294,7 @@
     <string id="30513">Limit artwork cache threads (recommended for rpi)</string>
     <string id="30514">Enable fast startup (requires server plugin)</string>
     <string id="30515">Maximum items to request from the server at once</string>
-    <string id="30516">Playback</string>
+    <string id="30516">Reproduzir</string>
     <string id="30517">[COLOR yellow]Enter network credentials[/COLOR]</string>
     <string id="30518">Enable Plex Trailers (Plexpass is needed)</string>
     <string id="30519">Ask to play trailers</string>
