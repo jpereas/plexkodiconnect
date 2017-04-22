@@ -2,47 +2,47 @@
 <strings>
     <!-- Add-on settings -->
     <string id="29999">PlexKodiConnect</string>
-    <string id="30000">Server Address (IP)</string><!-- Verified -->
-    <string id="30002">Preferred playback method</string><!-- Verified -->
-    <string id="30004">Log level</string><!-- Verified -->
-    <string id="30005">Username: </string>
-    <string id="30006">Password: </string>
-    <string id="30007">Network Username: </string>
-    <string id="30008">Network Password: </string>
-    <string id="30009">Transcode: </string>
+    <string id="30000">Endereço do servidor (IP)</string><!-- Verified -->
+    <string id="30002">Método de reprodução preferencial</string><!-- Verified -->
+    <string id="30004">Nível de registo</string><!-- Verified -->
+    <string id="30005">Utilizador: </string>
+    <string id="30006">Palavra passe: </string>
+    <string id="30007">Nome do utilizador de rede: </string>
+    <string id="30008">Palavra passe da rede: </string>
+    <string id="30009">Transcodificar: </string>
     <string id="30010">Enable Performance Profiling</string>
-    <string id="30011">Local caching system</string>
+    <string id="30011">Sistema de cache local</string>
     <string id="30012">OK</string>
-    <string id="30013">Never show</string>
+    <string id="30013">Nunca mostrar</string>
 
-    <string id="30014">Connection</string>
-    <string id="30015">Network</string>    
-    <string id="30016">Device Name</string>
-    <string id="30017">Unauthorized for PMS</string>     
+    <string id="30014">Ligação</string>
+    <string id="30015">Rede</string>    
+    <string id="30016">Nome do dispositivo</string>
+    <string id="30017">Não autorizado para o PMS</string>     
 
-    <string id="30022">Advanced</string>
-    <string id="30024">Username</string><!-- Verified -->
+    <string id="30022">Avançado</string>
+    <string id="30024">Nome de Utilizador</string><!-- Verified -->
 
-    <string id="30025">Display message if PMS goes offline</string>
+    <string id="30025">Exibir mensagens se o PMS ficar offline</string>
     
-    <string id="30030">Port Number</string><!-- Verified -->
-    <string id="30031">I own this Plex Media Server</string>
-    <string id="30036">Number of recent Movies to show:</string>    
-    <string id="30037">Number of recent TV episodes to show:</string>    
-    <string id="30035">Number of recent Music Albums to show:</string>    
-    <string id="30038">Mark watched at start of playback:</string>    
-    <string id="30039">Set Season poster for episodes</string>
+    <string id="30030">Número da porta</string><!-- Verified -->
+    <string id="30031">Eu possuo este Plex Media Server</string>
+    <string id="30036">Número de filmes recentes para mostrar:</string>    
+    <string id="30037">Número de episódios de TV recentes para mostrar:</string>    
+    <string id="30035">Número de álbuns de música recente para mostrar:</string>    
+    <string id="30038">Marcar como visto no início da reprodução:</string>    
+    <string id="30039">Definido o cartaz da temporada para os episódios</string>
 
-    <string id="30040">Genre Filter ...</string>
-    <string id="30041">Play All from Here</string>
-    <string id="30042">Refresh</string>
-    <string id="30043">Delete</string>
-    <string id="30046">Add Movie to CouchPotato</string>
+    <string id="30040">Filtro de gênero...</string>
+    <string id="30041">Reproduzir a partir daqui</string>
+    <string id="30042">Atualizar</string>
+    <string id="30043">Eliminar</string>
+    <string id="30046">Adicionar filme para CouchPotato</string>
     
-    <string id="30044">Incorrect Username/Password</string>
-    <string id="30045">Username not found</string>
+    <string id="30044">Nome de utilizador ou palavra-passe incorretos</string>
+    <string id="30045">Utilizador desconhecido</string>
     
-    <string id="30052">Deleting</string>
+    <string id="30052">A apagar</string>
     <string id="30053">Waiting for server to delete</string>
     
     <string id="30059">Server Default</string>
