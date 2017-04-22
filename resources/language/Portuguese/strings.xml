@@ -43,41 +43,41 @@
     <string id="30045">Utilizador desconhecido</string>
     
     <string id="30052">A apagar</string>
-    <string id="30053">Waiting for server to delete</string>
+    <string id="30053">Aguardando pelo servidor para excluir</string>
     
-    <string id="30059">Server Default</string>
-    <string id="30060">Title</string>
-    <string id="30061">Year</string>
-    <string id="30062">Premiere Date</string>
-    <string id="30063">Date Created</string>
-    <string id="30064">Critic Rating</string>
-    <string id="30065">Community Rating</string>
-    <string id="30066">Play Count</string>
-    <string id="30067">Budget</string>
+    <string id="30059">Servidor padrão</string>
+    <string id="30060">Título</string>
+    <string id="30061">Ano</string>
+    <string id="30062">Data de estreia</string>
+    <string id="30063">Data de Criação</string>
+    <string id="30064">Avaliação de Crítico</string>
+    <string id="30065">Avaliação da Comunidade</string>
+    <string id="30066">Contagem de Visualizações</string>
+    <string id="30067">Orçamento</string>
     <!-- Runtime added as 30226 below -->
     
-    <string id="30068">Sort By</string>
+    <string id="30068">Ordenar por</string>
     
-    <string id="30069">None</string>
-    <string id="30070">Action</string>
-    <string id="30071">Adventure</string>
-    <string id="30072">Animation</string>
+    <string id="30069">Nada</string>
+    <string id="30070">Acção</string>
+    <string id="30071">Aventura</string>
+    <string id="30072">Animação</string>
     <string id="30073">Crime</string>
-    <string id="30074">Comedy</string>
-    <string id="30075">Documentary</string>
+    <string id="30074">Comédia</string>
+    <string id="30075">Documentário</string>
     <string id="30076">Drama</string>
-    <string id="30077">Fantasy</string>
-    <string id="30078">Foreign</string>
-    <string id="30079">History</string>
-    <string id="30080">Horror</string>
-    <string id="30081">Music</string>
+    <string id="30077">Fantasia</string>
+    <string id="30078">Estrangeiros</string>
+    <string id="30079">Histórico</string>
+    <string id="30080">Terror</string>
+    <string id="30081">Música</string>
     <string id="30082">Musical</string>
-    <string id="30083">Mystery</string>
+    <string id="30083">Mistério</string>
     <string id="30084">Romance</string>
-    <string id="30085">Science Fiction</string>
-    <string id="30086">Short</string>
+    <string id="30085">Ficção científica</string>
+    <string id="30086">Curta</string>
     <string id="30087">Suspense</string>
-    <string id="30088">Thriller</string>
+    <string id="30088">Suspense</string>
     <string id="30089">Western</string>
     
     <string id="30090">Genre Filter</string>
