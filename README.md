@@ -1,5 +1,5 @@
-[![stable version](https://img.shields.io/badge/stable_version-1.7.5-blue.svg?maxAge=60&style=flat) ](https://dl.bintray.com/croneter/PlexKodiConnect/bin/repository.plexkodiconnect/repository.plexkodiconnect-1.0.0.zip) 
-[![beta version](https://img.shields.io/badge/beta_version-1.7.5-red.svg?maxAge=60&style=flat) ](https://dl.bintray.com/croneter/PlexKodiConnect_BETA/bin-BETA/repository.plexkodiconnectbeta/repository.plexkodiconnectbeta-1.0.0.zip)
+[![stable version](https://img.shields.io/badge/stable_version-1.7.7-blue.svg?maxAge=60&style=flat) ](https://dl.bintray.com/croneter/PlexKodiConnect/bin/repository.plexkodiconnect/repository.plexkodiconnect-1.0.0.zip) 
+[![beta version](https://img.shields.io/badge/beta_version-1.7.7-red.svg?maxAge=60&style=flat) ](https://dl.bintray.com/croneter/PlexKodiConnect_BETA/bin-BETA/repository.plexkodiconnectbeta/repository.plexkodiconnectbeta-1.0.0.zip)
 
 [![Installation](https://img.shields.io/badge/wiki-installation-brightgreen.svg?maxAge=60&style=flat)](https://github.com/croneter/PlexKodiConnect/wiki/Installation)
 [![FAQ](https://img.shields.io/badge/wiki-FAQ-brightgreen.svg?maxAge=60&style=flat)](https://github.com/croneter/PlexKodiConnect/wiki/faq)
@@ -17,7 +17,7 @@ Have a look at [some screenshots](https://github.com/croneter/PlexKodiConnect/wi
 
 ### Please Help Translating
 
-Please help translate PlexKodiConnect into your language: [crowdin.com](https://crowdin.com/project/plexkodiconnect/invite)
+Please help translate PlexKodiConnect into your language: [Transifex.com](https://www.transifex.com/croneter/pkc)
 
 
 ### Content
@@ -63,7 +63,9 @@ PKC synchronizes your media from your Plex server to the native Kodi database. H
     + Danish, thanks @FIGHT
     + Italian, thanks @nikkux, @chicco83
     + Dutch, thanks @mvanbaak
-    + [Please help translating](https://crowdin.com/project/plexkodiconnect/invite)
+    + Chinese Traditional, thanks @old2tan
+    + Chinese Simplified, thanks @everdream
+    + [Please help translating](https://www.transifex.com/croneter/pkc)
 
 ### Download and Installation
 
