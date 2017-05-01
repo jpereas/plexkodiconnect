@@ -27,7 +27,7 @@ ADDON_VERSION = _ADDON.getAddonInfo('version')
 KODILANGUAGE = xbmc.getLanguage(xbmc.ISO_639_1)
 KODIVERSION = int(xbmc.getInfoLabel("System.BuildVersion")[:2])
 KODILONGVERSION = xbmc.getInfoLabel('System.BuildVersion')
-KODI_PROFILE = xbmc.translatePath("special://profile")
+KODI_PROFILE = tryDecode(xbmc.translatePath("special://profile"))
 
 if xbmc.getCondVisibility('system.platform.osx'):
     PLATFORM = "MacOSX"
@@ -94,6 +94,9 @@ DB_TEXTURE_PATH = tryDecode(xbmc.translatePath(
     "special://database/Textures%s.db" % _DB_TEXTURE_VERSION[KODIVERSION]))
 
 DB_PLEX_PATH = tryDecode(xbmc.translatePath("special://database/plex.db"))
+
+EXTERNAL_SUBTITLE_TEMP_PATH = tryDecode(xbmc.translatePath(
+    "special://profile/addon_data/%s/temp/" % ADDON_ID))
 
 
 # Multiply Plex time by this factor to receive Kodi time

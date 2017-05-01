@@ -43,7 +43,7 @@ from os import path as os_path
 
 import xbmcgui
 from xbmc import sleep, executebuiltin
-from xbmcvfs import exists
+from xbmcvfs import exists, mkdirs
 
 import clientinfo as client
 from downloadutils import DownloadUtils
@@ -2258,37 +2258,37 @@ class API():
             return url
 
         # For Transcoding
+        headers = {
+            'X-Plex-Platform': 'Android',
+            'X-Plex-Platform-Version': '7.0',
+            'X-Plex-Product': 'Plex for Android',
+            'X-Plex-Version': '5.8.0.475'
+        }
         # Path/key to VIDEO item of xml PMS response is needed, not part
         path = self.item.attrib['key']
         transcodePath = self.server + \
             '/video/:/transcode/universal/start.m3u8?'
         args = {
+            'audioBoost': settings('audioBoost'),
+            'autoAdjustQuality': 0,
+            'directPlay': 0,
+            'directStream': 1,
             'protocol': 'hls',   # seen in the wild: 'dash', 'http', 'hls'
             'session':  window('plex_client_Id'),
             'fastSeek': 1,
             'path': path,
             'mediaIndex': self.mediastream,
             'partIndex': self.part,
+            'hasMDE': 1,
+            'location': 'lan',
+            'subtitleSize': settings('subtitleSize')
             # 'copyts': 1,
             # 'offset': 0,           # Resume point
         }
-        # Seem like PHT to let the PMS use the transcoding profile
-        xargs['X-Plex-Device'] = 'Plex Home Theater'
-        # Currently not used!
-        if action == "DirectStream":
-            argsUpdate = {
-                'directPlay': '0',
-                'directStream': '1',
-            }
-            args.update(argsUpdate)
-        elif action == 'Transcode':
-            argsUpdate = {
-                'directPlay': '0',
-                'directStream': '0'
-            }
-            log.debug("Setting transcode quality to: %s" % quality)
-            args.update(quality)
-            args.update(argsUpdate)
+        # Look like Android to let the PMS use the transcoding profile
+        xargs.update(headers)
+        log.debug("Setting transcode quality to: %s" % quality)
+        args.update(quality)
         url = transcodePath + urlencode(xargs) + '&' + urlencode(args)
         return url
 
@@ -2301,23 +2301,57 @@ class API():
             return
         kodiindex = 0
         for stream in mediastreams:
-            index = stream.attrib['id']
             # Since plex returns all possible tracks together, have to pull
-            # only external subtitles.
+            # only external subtitles - only for these a 'key' exists
+            if stream.attrib.get('streamType') != "3":
+                # Not a subtitle
+                continue
+            # Only set for additional external subtitles NOT lying beside video
             key = stream.attrib.get('key')
-            # IsTextSubtitleStream if true, is available to download from plex.
-            if stream.attrib.get('streamType') == "3" and key:
-                # Direct stream
-                url = ("%s%s" % (self.server, key))
-                url = self.addPlexCredentialsToUrl(url)
+            # Only set for dedicated subtitle files lying beside video
+            # ext = stream.attrib.get('format')
+            if key:
+                # We do know the language - temporarily download
+                if stream.attrib.get('languageCode') is not None:
+                    path = self.download_external_subtitles(
+                        "{server}%s" % key,
+                        "subtitle.%s.%s" % (stream.attrib['languageCode'],
+                                            stream.attrib['codec']))
+                # We don't know the language - no need to download
+                else:
+                    path = self.addPlexCredentialsToUrl(
+                        "%s%s" % (self.server, key))
                 # map external subtitles for mapping
-                mapping[kodiindex] = index
-                externalsubs.append(url)
+                mapping[kodiindex] = stream.attrib['id']
+                externalsubs.append(path)
                 kodiindex += 1
         mapping = dumps(mapping)
         window('plex_%s.indexMapping' % playurl, value=mapping)
         log.info('Found external subs: %s' % externalsubs)
         return externalsubs
+
+    @staticmethod
+    def download_external_subtitles(url, filename):
+        """
+        One cannot pass the subtitle language for ListItems. Workaround; will
+        download the subtitle at url to the Kodi PKC directory in a temp dir
+
+        Returns the path to the downloaded subtitle or None
+        """
+        if not exists(v.EXTERNAL_SUBTITLE_TEMP_PATH):
+            mkdirs(v.EXTERNAL_SUBTITLE_TEMP_PATH)
+        path = os_path.join(v.EXTERNAL_SUBTITLE_TEMP_PATH, filename)
+        r = DownloadUtils().downloadUrl(url, return_response=True)
+        try:
+            r.status_code
+        except AttributeError:
+            log.error('Could not temporarily download subtitle %s' % url)
+            return
+        else:
+            r.encoding = 'utf-8'
+            with open(path, 'wb') as f:
+                f.write(r.content)
+            return path
 
     def GetKodiPremierDate(self):
         """
@@ -2601,6 +2635,7 @@ class API():
 
         # Append external subtitles to stream
         playmethod = window('%s.playmethod' % plexitem)
+        # Direct play automatically appends external
+        # BUT: Plex may add additional subtitles NOT lying right next to video
         if playmethod in ("DirectStream", "DirectPlay"):
-            subtitles = self.externalSubs(playurl)
-            listitem.setSubtitles(subtitles)
+            listitem.setSubtitles(self.externalSubs(playurl))

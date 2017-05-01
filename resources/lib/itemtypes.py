@@ -324,13 +324,16 @@ class Movies(Items):
                                             votecount,
                                             rating_id)
                 # update new uniqueid Kodi 17
-                uniqueid = self.kodi_db.get_uniqueid(movieid,
-                                                     v.KODI_TYPE_MOVIE)
-                self.kodi_db.update_uniqueid(movieid,
-                                             v.KODI_TYPE_MOVIE,
-                                             imdb,
-                                             "imdb",
-                                             uniqueid)
+                if imdb is not None:
+                    uniqueid = self.kodi_db.get_uniqueid(movieid,
+                                                         v.KODI_TYPE_MOVIE)
+                    self.kodi_db.update_uniqueid(movieid,
+                                                 v.KODI_TYPE_MOVIE,
+                                                 imdb,
+                                                 "imdb",
+                                                 uniqueid)
+                else:
+                    uniqueid = -1
                 query = '''
                     UPDATE movie
                     SET c00 = ?, c01 = ?, c02 = ?, c03 = ?, c04 = ?, c05 = ?,
@@ -372,12 +375,15 @@ class Movies(Items):
                                          rating,
                                          votecount)
                 # add new uniqueid Kodi 17
-                uniqueid = self.kodi_db.create_entry_uniqueid()
-                self.kodi_db.add_uniqueid(uniqueid,
-                                          movieid,
-                                          v.KODI_TYPE_MOVIE,
-                                          imdb,
-                                          "imdb")
+                if imdb is not None:
+                    uniqueid = self.kodi_db.create_entry_uniqueid()
+                    self.kodi_db.add_uniqueid(uniqueid,
+                                              movieid,
+                                              v.KODI_TYPE_MOVIE,
+                                              imdb,
+                                              "imdb")
+                else:
+                    uniqueid = -1
                 query = '''
                     INSERT INTO movie(idMovie, idFile, c00, c01, c02, c03,
                         c04, c05, c06, c07, c09, c10, c11, c12, c14, c15, c16,
@@ -617,12 +623,16 @@ class TVShows(Items):
                                             votecount,
                                             rating_id)
                 # update new uniqueid Kodi 17
-                uniqueid = self.kodi_db.get_uniqueid(showid, v.KODI_TYPE_SHOW)
-                self.kodi_db.update_uniqueid(showid,
-                                             v.KODI_TYPE_SHOW,
-                                             tvdb,
-                                             "tvdb",
-                                             uniqueid)
+                if tvdb is not None:
+                    uniqueid = self.kodi_db.get_uniqueid(showid,
+                                                         v.KODI_TYPE_SHOW)
+                    self.kodi_db.update_uniqueid(showid,
+                                                 v.KODI_TYPE_SHOW,
+                                                 tvdb,
+                                                 "unknown",
+                                                 uniqueid)
+                else:
+                    uniqueid = -1
                 # Update the tvshow entry
                 query = '''
                     UPDATE tvshow
@@ -631,8 +641,9 @@ class TVShows(Items):
                     WHERE idShow = ?
                 '''
                 kodicursor.execute(query, (title, plot, rating_id,
-                                           premieredate, genre, title, tvdb,
-                                           mpaa, studio, sorttitle, showid))
+                                           premieredate, genre, title,
+                                           uniqueid, mpaa, studio, sorttitle,
+                                           showid))
             else:
                 # Update the tvshow entry
                 query = '''
@@ -679,11 +690,15 @@ class TVShows(Items):
                                          rating,
                                          votecount)
                 # add new uniqueid Kodi 17
-                self.kodi_db.add_uniqueid(self.kodi_db.create_entry_uniqueid(),
-                                          showid,
-                                          v.KODI_TYPE_SHOW,
-                                          tvdb,
-                                          "tvdb")
+                if tvdb is not None:
+                    uniqueid = self.kodi_db.create_entry_uniqueid()
+                    self.kodi_db.add_uniqueid(uniqueid,
+                                              showid,
+                                              v.KODI_TYPE_SHOW,
+                                              tvdb,
+                                              "unknown")
+                else:
+                    uniqueid = -1
                 # Create the tvshow entry
                 query = '''
                     INSERT INTO tvshow(
@@ -692,8 +707,8 @@ class TVShows(Items):
                     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 '''
                 kodicursor.execute(query, (showid, title, plot, rating_id,
-                                           premieredate, genre, title, tvdb,
-                                           mpaa, studio, sorttitle))
+                                           premieredate, genre, title,
+                                           uniqueid, mpaa, studio, sorttitle))
             else:
                 # Create the tvshow entry
                 query = '''
