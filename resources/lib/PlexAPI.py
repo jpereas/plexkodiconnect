@@ -39,11 +39,11 @@ import xml.etree.ElementTree as etree
 from re import compile as re_compile, sub
 from json import dumps
 from urllib import urlencode, quote_plus, unquote
-from os import path as os_path
+from os.path import basename, join, exists
+from os import makedirs
 
 import xbmcgui
 from xbmc import sleep, executebuiltin
-from xbmcvfs import exists, mkdirs
 
 import clientinfo as client
 from downloadutils import DownloadUtils
@@ -2113,11 +2113,14 @@ class API():
             if fanarttvimage not in data:
                 continue
             for entry in data[fanarttvimage]:
-                if fanartcount < maxfanarts:
-                    if exists(entry.get("url")):
-                        allartworks['Backdrop'].append(
-                            entry.get("url", "").replace(' ', '%20'))
-                        fanartcount += 1
+                if entry.get("url") is None:
+                    continue
+                if fanartcount > maxfanarts:
+                    break
+                if exists(tryEncode(entry['url'])):
+                    allartworks['Backdrop'].append(
+                        entry['url'].replace(' ', '%20'))
+                    fanartcount += 1
         return allartworks
 
     def getSetArtwork(self, parentInfo=False):
@@ -2184,7 +2187,7 @@ class API():
                 # Get additional info (filename / languages)
                 filename = None
                 if 'file' in entry[0].attrib:
-                    filename = os_path.basename(entry[0].attrib['file'])
+                    filename = basename(entry[0].attrib['file'])
                 # Languages of audio streams
                 languages = []
                 for stream in entry[0]:
@@ -2339,8 +2342,8 @@ class API():
         Returns the path to the downloaded subtitle or None
         """
         if not exists(v.EXTERNAL_SUBTITLE_TEMP_PATH):
-            mkdirs(v.EXTERNAL_SUBTITLE_TEMP_PATH)
-        path = os_path.join(v.EXTERNAL_SUBTITLE_TEMP_PATH, filename)
+            makedirs(v.EXTERNAL_SUBTITLE_TEMP_PATH)
+        path = join(v.EXTERNAL_SUBTITLE_TEMP_PATH, filename)
         r = DownloadUtils().downloadUrl(url, return_response=True)
         try:
             r.status_code
@@ -2506,7 +2509,8 @@ class API():
             listItem.addStreamInfo(
                 "video", {'duration': self.getRuntime()[1]})
 
-    def validatePlayurl(self, path, typus, forceCheck=False, folder=False):
+    def validatePlayurl(self, path, typus, forceCheck=False, folder=False,
+                        omitCheck=False):
         """
         Returns a valid path for Kodi, e.g. with '\' substituted to '\\' in
         Unicode. Returns None if this is not possible
@@ -2516,6 +2520,7 @@ class API():
             forceCheck : Will always try to check validity of path
                          Will also skip confirmation dialog if path not found
             folder     : Set to True if path is a folder
+            omitCheck  : Will entirely omit validity check if True
         """
         if path is None:
             return None
@@ -2529,7 +2534,8 @@ class API():
         elif window('replaceSMB') == 'true':
             if path.startswith('\\\\'):
                 path = 'smb:' + path.replace('\\', '/')
-        if window('plex_pathverified') == 'true' and forceCheck is False:
+        if ((window('plex_pathverified') == 'true' and forceCheck is False) or
+                omitCheck is True):
             return path
 
         # exist() needs a / or \ at the end to work for directories

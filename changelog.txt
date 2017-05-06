@@ -1,3 +1,18 @@
+version 1.7.12 (beta only)
+- Major music overhaul: Direct Paths should now work! Many thanks @Memesa for the pointers! Don't forget to reset your database
+- Some Plex Companion fixes
+- Fix UnicodeDecodeError on user switch
+- Remove link to Crowdin.com
+- Update Readme
+
+version 1.7.11 (beta only)
+- Add support to Kodi 18.0-alpha1 (thanks @CotzaDev)
+- Fix PKC not storing network credentials correctly
+
+version 1.7.10 (beta only)
+- Avoid xbmcvfs entirely; use encoded paths 
+- Update Czech translation
+
 version 1.7.9 (beta only)
 - Big transcoding overhaul
 - Fix for not detecting external subtitle language

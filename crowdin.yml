@@ -1,5 +1,0 @@
-files:
-  - source: /resources/language/English/*.*
-    translation: /resources/language/%language%/%original_file_name%
-    translate_attributes: '0'
-    content_segmentation: '0'

@@ -1,20 +1,18 @@
 # -*- coding: utf-8 -*-
-
 ###############################################################################
-
 import logging
 from threading import Thread
 import Queue
 from random import shuffle
+from os.path import exists
 
 import xbmc
 import xbmcgui
-import xbmcvfs
 
 from utils import window, settings, getUnixTimestamp, sourcesXML,\
     ThreadMethods, ThreadMethodsAdditionalStop, LogTime, getScreensaver,\
     setScreensaver, playlistXSP, language as lang, DateToKodi, reset,\
-    advancedSettingsXML, tryDecode, deletePlaylists, deleteNodes, \
+    advancedsettings_tweaks, tryDecode, deletePlaylists, deleteNodes, \
     ThreadMethodsAdditionalSuspend, create_actor_db_index, dialog
 import downloadutils
 import itemtypes
@@ -25,12 +23,13 @@ import videonodes
 import variables as v
 
 from PlexFunctions import GetPlexMetadata, GetAllPlexLeaves, scrobble, \
-    GetPlexSectionResults, GetAllPlexChildren, GetPMSStatus
+    GetPlexSectionResults, GetAllPlexChildren, GetPMSStatus, get_plex_sections
 import PlexAPI
 from library_sync.get_metadata import Threaded_Get_Metadata
 from library_sync.process_metadata import Threaded_Process_Metadata
 import library_sync.sync_info as sync_info
 from library_sync.fanart import Process_Fanart_Thread
+import music
 
 ###############################################################################
 
@@ -73,6 +72,7 @@ class LibrarySync(Thread):
         self.enableMusic = settings('enableMusic') == "true"
         self.enableBackgroundSync = settings(
             'enableBackgroundSync') == "true"
+        self.direct_paths = settings('useDirectPaths') == '1'
 
         # Init for replacing paths
         window('remapSMB', value=settings('remapSMB'))
@@ -128,8 +128,7 @@ class LibrarySync(Thread):
         # change in lastViewedAt
 
         # Get all Plex libraries
-        sections = downloadutils.DownloadUtils().downloadUrl(
-            "{server}/library/sections")
+        sections = get_plex_sections()
         try:
             sections.attrib
         except AttributeError:
@@ -298,6 +297,15 @@ class LibrarySync(Thread):
         }
         if self.enableMusic:
             process['music'] = self.PlexMusic
+            if self.direct_paths is True:
+                if music.set_excludefromscan_music_folders() is True:
+                    log.info('Detected new Music library - restarting now')
+                    #  'New Plex music library detected. Sorry, but we need to
+                    #  restart Kodi now due to the changes made.'
+                    dialog('ok', lang(29999), lang(39711))
+                    from xbmc import executebuiltin
+                    executebuiltin('RestartApp')
+                    return False
 
         # Do the processing
         for itemtype in process:
@@ -479,8 +487,7 @@ class LibrarySync(Thread):
         vnodes = self.vnodes
 
         # Get views
-        sections = downloadutils.DownloadUtils().downloadUrl(
-            "{server}/library/sections")
+        sections = get_plex_sections()
         try:
             sections.attrib
         except AttributeError:
@@ -1463,7 +1470,7 @@ class LibrarySync(Thread):
         self.initializeDBs()
 
         if self.enableMusic:
-            advancedSettingsXML()
+            advancedsettings_tweaks()
 
         if settings('FanartTV') == 'true':
             self.fanartthread.start()
@@ -1505,7 +1512,7 @@ class LibrarySync(Thread):
                 # Also runs when first installed
                 # Verify the video database can be found
                 videoDb = v.DB_VIDEO_PATH
-                if not xbmcvfs.exists(videoDb):
+                if not exists(videoDb):
                     # Database does not exists
                     log.error("The current Kodi version is incompatible "
                               "to know which Kodi versions are supported.")
