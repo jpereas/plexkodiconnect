@@ -122,9 +122,11 @@ class SubscriptionManager:
         ret += ' shuffle="%s"' % info['shuffle']
         ret += ' mute="%s"' % self.mute
         ret += ' repeat="%s"' % info['repeat']
+        ret += ' itemType="%s"' % info['itemType']
         # Might need an update in the future
-        ret += ' subtitleStreamID="-1"'
-        ret += ' audioStreamID="-1"'
+        if ptype == 'video':
+            ret += ' subtitleStreamID="-1"'
+            ret += ' audioStreamID="-1"'
 
         ret += '/>'
         return ret
@@ -225,7 +227,8 @@ class SubscriptionManager:
             props = self.js.jsonrpc(
                 "Player.GetProperties",
                 {"playerid": playerid,
-                 "properties": ["time",
+                 "properties": ["type",
+                                "time",
                                 "totaltime",
                                 "speed",
                                 "shuffled",
@@ -244,12 +247,13 @@ class SubscriptionManager:
                 {"playerid": playerid,
                  "properties": ["position"]})['position']
             try:
-                info['playQueueItemID'] = playqueue.items[pos].ID
-                info['guid'] = playqueue.items[pos].guid
-                info['playQueueID'] = playqueue.ID
-                info['playQueueVersion'] = playqueue.version
+                info['playQueueItemID'] = playqueue.items[pos].ID or 'null'
+                info['guid'] = playqueue.items[pos].guid or 'null'
+                info['playQueueID'] = playqueue.ID or 'null'
+                info['playQueueVersion'] = playqueue.version or 'null'
+                info['itemType'] = playqueue.items[pos].plex_type or 'null'
             except:
-                pass
+                info['itemType'] = props.get('type') or 'null'
         except:
             import traceback
             log.error("Traceback:\n%s" % traceback.format_exc())

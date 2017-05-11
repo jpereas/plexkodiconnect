@@ -402,11 +402,11 @@ class InitialSetup():
 
         # Get current Kodi video cache setting
         cache, _ = advancedsettings_xml(['cache', 'memorysize'])
-        if cache is not None:
-            cache = str(cache.text)
-        else:
+        if cache is None:
             # Kodi default cache
             cache = '20971520'
+        else:
+            cache = str(cache.text)
         log.info('Current Kodi video memory cache in bytes: %s' % cache)
         settings('kodi_video_cache', value=cache)
 

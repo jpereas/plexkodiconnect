@@ -165,7 +165,7 @@ class Items(object):
                      'Mark item played at %s percent.'
                      % (item['ratingKey'], str(complete), MARK_PLAYED_AT), 1)
             if complete >= MARK_PLAYED_AT:
-                log.info('Marking as completely watched in Kodi', 1)
+                log.info('Marking as completely watched in Kodi')
                 sleep(500)
                 try:
                     item['viewCount'] += 1
@@ -1189,10 +1189,9 @@ class TVShows(Items):
                                                      v.KODI_TYPE_SEASON)
                 for season in seasons:
                     self.removeSeason(season[1])
-                else:
-                    # Delete plex season entries
-                    plex_db.removeItems_byParentId(showid,
-                                                   v.KODI_TYPE_SEASON)
+                # Delete plex season entries
+                plex_db.removeItems_byParentId(showid,
+                                               v.KODI_TYPE_SEASON)
                 self.removeShow(showid)
                 plex_db.removeItem(show[0])
 
@@ -1208,14 +1207,12 @@ class TVShows(Items):
                     seasonid, v.KODI_TYPE_EPISODE)
                 for episode in season_episodes:
                     self.removeEpisode(episode[1], episode[2])
-                else:
-                    # Remove plex episodes
-                    plex_db.removeItems_byParentId(seasonid,
-                                                   v.KODI_TYPE_EPISODE)
-            else:
-                # Remove plex seasons
-                plex_db.removeItems_byParentId(kodiid,
-                                               v.KODI_TYPE_SEASON)
+                # Remove plex episodes
+                plex_db.removeItems_byParentId(seasonid,
+                                               v.KODI_TYPE_EPISODE)
+            # Remove plex seasons
+            plex_db.removeItems_byParentId(kodiid,
+                                           v.KODI_TYPE_SEASON)
 
             # Remove tvshow
             self.removeShow(kodiid)
@@ -1228,9 +1225,8 @@ class TVShows(Items):
                                                          v.KODI_TYPE_EPISODE)
             for episode in season_episodes:
                 self.removeEpisode(episode[1], episode[2])
-            else:
-                # Remove plex episodes
-                plex_db.removeItems_byParentId(kodiid, v.KODI_TYPE_EPISODE)
+            # Remove plex episodes
+            plex_db.removeItems_byParentId(kodiid, v.KODI_TYPE_EPISODE)
             
             # Remove season
             self.removeSeason(kodiid)

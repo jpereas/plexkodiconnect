@@ -3,13 +3,14 @@
 import logging
 from shutil import copytree
 import xml.etree.ElementTree as etree
+from os import remove, listdir, makedirs
+from os.path import isfile, join
 
 import xbmc
-from os import remove, makedirs, listdir
-from os.path import exists, isfile, join
+from xbmcvfs import exists
 
 from utils import window, settings, language as lang, tryEncode, indent, \
-    normalize_nodes
+    normalize_nodes, exists_dir
 import variables as v
 
 ###############################################################################
@@ -74,14 +75,14 @@ class VideoNodes(object):
             return
 
         # Verify the video directory
-        if exists(path) is False:
+        if not exists_dir(path):
             copytree(
                 src=xbmc.translatePath("special://xbmc/system/library/video"),
                 dst=xbmc.translatePath("special://profile/library/video"))
 
         # Create the node directory
         if mediatype != "photos":
-            if exists(nodepath) is False:
+            if not exists_dir(nodepath):
                 # folder does not exist yet
                 log.debug('Creating folder %s' % nodepath)
                 makedirs(nodepath)
@@ -387,7 +388,7 @@ class VideoNodes(object):
             windowpath = "ActivateWindow(Video,%s,return)" % path
 
         # Create the video node directory
-        if not exists(nodepath):
+        if not exists_dir(nodepath):
             # We need to copy over the default items
             copytree(
                 src=xbmc.translatePath("special://xbmc/system/library/video"),

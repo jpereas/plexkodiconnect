@@ -13,17 +13,18 @@ from unicodedata import normalize
 import xml.etree.ElementTree as etree
 from functools import wraps
 from calendar import timegm
-from os.path import exists, join
-from os import remove, makedirs, walk
+from os.path import join
+from os import remove, walk, makedirs
 from shutil import rmtree
 from urllib import quote_plus
 
 import xbmc
 import xbmcaddon
 import xbmcgui
+from xbmcvfs import exists, delete
 
 from variables import DB_VIDEO_PATH, DB_MUSIC_PATH, DB_TEXTURE_PATH, \
-    DB_PLEX_PATH, KODI_PROFILE
+    DB_PLEX_PATH, KODI_PROFILE, KODIVERSION
 
 ###############################################################################
 
@@ -89,6 +90,30 @@ def settings(setting, value=None):
     else:
         # Should return unicode by default, but just in case
         return tryDecode(addon.getSetting(setting))
+
+
+def exists_dir(path):
+    """
+    Safe way to check whether the directory path exists already (broken in Kodi
+    <17)
+
+    Feed with encoded string
+    """
+    if KODIVERSION >= 17:
+        answ = exists(path)
+    else:
+        dummyfile = join(path, 'dummyfile.txt')
+        try:
+            with open(dummyfile, 'w') as f:
+                f.write('text')
+        except IOError:
+            # folder does not exist yet
+            answ = 0
+        else:
+            # Folder exists. Delete file again.
+            delete(dummyfile)
+            answ = 1
+    return answ
 
 
 def language(stringid):
@@ -322,7 +347,7 @@ def reset():
     for row in rows:
         tablename = row[0]
         if tablename != "version":
-            cursor.execute("DELETE FROM " + tablename)
+            cursor.execute("DELETE FROM ?", (tablename,))
     connection.commit()
     cursor.close()
 
@@ -335,7 +360,7 @@ def reset():
         for row in rows:
             tablename = row[0]
             if tablename != "version":
-                cursor.execute("DELETE FROM " + tablename)
+                cursor.execute("DELETE FROM ?", (tablename, ))
         connection.commit()
         cursor.close()
 
@@ -348,7 +373,7 @@ def reset():
     for row in rows:
         tablename = row[0]
         if tablename != "version":
-            cursor.execute("DELETE FROM " + tablename)
+            cursor.execute("DELETE FROM ?", (tablename, ))
     cursor.execute('DROP table IF EXISTS plex')
     cursor.execute('DROP table IF EXISTS view')
     connection.commit()
@@ -372,7 +397,7 @@ def reset():
         for row in rows:
             tableName = row[0]
             if(tableName != "version"):
-                cursor.execute("DELETE FROM " + tableName)
+                cursor.execute("DELETE FROM ?", (tableName, ))
         connection.commit()
         cursor.close()
 
@@ -542,8 +567,10 @@ def __setSubElement(element, subelement):
 def advancedsettings_xml(node_list, new_value=None, attrib=None,
                          force_create=False):
     """
-    Returns the etree element for nodelist (if it exists) and the tree. None if
-    not set
+    Returns
+        etree element, tree
+    or
+        None, None
 
     node_list is a list of node names starting from the outside, ignoring the
     outter advancedsettings. Example nodelist=['video', 'busydialogdelayms']
@@ -576,7 +603,7 @@ def advancedsettings_xml(node_list, new_value=None, attrib=None,
         # Document is blank or missing
         if new_value is None and attrib is None and force_create is False:
             log.debug('Could not parse advancedsettings.xml, returning None')
-            return
+            return None, None
         # Create topmost xml entry
         tree = etree.ElementTree(element=etree.Element('advancedsettings'))
     root = tree.getroot()
