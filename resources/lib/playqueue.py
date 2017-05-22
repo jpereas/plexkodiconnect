@@ -5,7 +5,7 @@ from threading import RLock, Thread
 
 from xbmc import sleep, Player, PlayList, PLAYLIST_MUSIC, PLAYLIST_VIDEO
 
-from utils import window, ThreadMethods, ThreadMethodsAdditionalSuspend
+from utils import window, thread_methods
 import playlist_func as PL
 from PlexFunctions import ConvertPlexToKodiTime, GetAllPlexChildren
 from PlexAPI import API
@@ -21,8 +21,7 @@ PLUGIN = 'plugin://%s' % v.ADDON_ID
 ###############################################################################
 
 
-@ThreadMethodsAdditionalSuspend('plex_serverStatus')
-@ThreadMethods
+@thread_methods(add_suspends=['PMS_STATUS'])
 class Playqueue(Thread):
     """
     Monitors Kodi's playqueues for changes on the Kodi side
@@ -147,20 +146,24 @@ class Playqueue(Thread):
         index = list(range(0, len(old)))
         log.debug('Comparing new Kodi playqueue %s with our play queue %s'
                   % (new, old))
+        if self.thread_stopped():
+            # Chances are that we got an empty Kodi playlist due to
+            # Kodi exit
+            return
         for i, new_item in enumerate(new):
             if (new_item['file'].startswith('plugin://') and
                     not new_item['file'].startswith(PLUGIN)):
                 # Ignore new media added by other addons
                 continue
             for j, old_item in enumerate(old):
-                if self.threadStopped():
-                    # Chances are that we got an empty Kodi playlist due to
-                    # Kodi exit
-                    return
-                if (old_item['file'].startswith('plugin://') and
-                        not old_item['file'].startswith(PLUGIN)):
-                    # Ignore media by other addons
-                    continue
+                try:
+                    if (old_item.file.startswith('plugin://') and
+                            not old_item['file'].startswith(PLUGIN)):
+                        # Ignore media by other addons
+                        continue
+                except (TypeError, AttributeError):
+                    # were not passed a filename; ignore
+                    pass
                 if new_item.get('id') is None:
                     identical = old_item.file == new_item['file']
                 else:
@@ -193,8 +196,8 @@ class Playqueue(Thread):
         log.debug('Done comparing playqueues')
 
     def run(self):
-        threadStopped = self.threadStopped
-        threadSuspended = self.threadSuspended
+        thread_stopped = self.thread_stopped
+        thread_suspended = self.thread_suspended
         log.info("----===## Starting PlayQueue client ##===----")
         # Initialize the playqueues, if Kodi already got items in them
         for playqueue in self.playqueues:
@@ -203,9 +206,9 @@ class Playqueue(Thread):
                     PL.init_Plex_playlist(playqueue, kodi_item=item)
                 else:
                     PL.add_item_to_PMS_playlist(playqueue, i, kodi_item=item)
-        while not threadStopped():
-            while threadSuspended():
-                if threadStopped():
+        while not thread_stopped():
+            while thread_suspended():
+                if thread_stopped():
                     break
                 sleep(1000)
             with lock:

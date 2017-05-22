@@ -5,7 +5,7 @@ from Queue import Empty
 
 from xbmc import sleep
 
-from utils import ThreadMethodsAdditionalStop, ThreadMethods, window
+from utils import thread_methods, window
 from PlexFunctions import GetPlexMetadata, GetAllPlexChildren
 import sync_info
 
@@ -16,8 +16,7 @@ log = getLogger("PLEX."+__name__)
 ###############################################################################
 
 
-@ThreadMethodsAdditionalStop('suspend_LibraryThread')
-@ThreadMethods
+@thread_methods(add_stops=['SUSPEND_LIBRARY_THREAD'])
 class Threaded_Get_Metadata(Thread):
     """
     Threaded download of Plex XML metadata for a certain library item.
@@ -48,7 +47,7 @@ class Threaded_Get_Metadata(Thread):
                 continue
             else:
                 self.queue.task_done()
-        if self.threadStopped():
+        if self.thread_stopped():
             # Shutdown from outside requested; purge out_queue as well
             while not self.out_queue.empty():
                 # Still try because remaining item might have been taken
@@ -79,8 +78,8 @@ class Threaded_Get_Metadata(Thread):
         # cache local variables because it's faster
         queue = self.queue
         out_queue = self.out_queue
-        threadStopped = self.threadStopped
-        while threadStopped() is False:
+        thread_stopped = self.thread_stopped
+        while thread_stopped() is False:
             # grabs Plex item from queue
             try:
                 item = queue.get(block=False)

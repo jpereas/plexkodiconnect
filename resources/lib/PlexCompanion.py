@@ -7,13 +7,14 @@ from urllib import urlencode
 
 from xbmc import sleep, executebuiltin
 
-from utils import settings, ThreadMethodsAdditionalSuspend, ThreadMethods
+from utils import settings, thread_methods
 from plexbmchelper import listener, plexgdm, subscribers, functions, \
     httppersist, plexsettings
 from PlexFunctions import ParseContainerKey, GetPlexMetadata
 from PlexAPI import API
 import player
 import variables as v
+import state
 
 ###############################################################################
 
@@ -22,8 +23,7 @@ log = logging.getLogger("PLEX."+__name__)
 ###############################################################################
 
 
-@ThreadMethodsAdditionalSuspend('plex_serverStatus')
-@ThreadMethods
+@thread_methods(add_suspends=['PMS_STATUS'])
 class PlexCompanion(Thread):
     """
     """
@@ -77,6 +77,8 @@ class PlexCompanion(Thread):
         log.debug('Processing: %s' % task)
         data = task['data']
 
+        # Get the token of the user flinging media (might be different one)
+        state.PLEX_TRANSIENT_TOKEN = data.get('token')
         if task['action'] == 'alexa':
             # e.g. Alexa
             xml = GetPlexMetadata(data['key'])
@@ -144,11 +146,28 @@ class PlexCompanion(Thread):
                 offset=data.get('offset'))
 
     def run(self):
-        httpd = False
+        # Ensure that sockets will be closed no matter what
+        try:
+            self.__run()
+        finally:
+            try:
+                self.httpd.socket.shutdown(SHUT_RDWR)
+            except AttributeError:
+                pass
+            finally:
+                try:
+                    self.httpd.socket.close()
+                except AttributeError:
+                    pass
+        log.info("----===## Plex Companion stopped ##===----")
+
+    def __run(self):
+        self.httpd = False
+        httpd = self.httpd
         # Cache for quicker while loops
         client = self.client
-        threadStopped = self.threadStopped
-        threadSuspended = self.threadSuspended
+        thread_stopped = self.thread_stopped
+        thread_suspended = self.thread_suspended
 
         # Start up instances
         requestMgr = httppersist.RequestMgr()
@@ -196,12 +215,12 @@ class PlexCompanion(Thread):
         if httpd:
             t = Thread(target=httpd.handle_request)
 
-        while not threadStopped():
+        while not thread_stopped():
             # If we are not authorized, sleep
             # Otherwise, we trigger a download which leads to a
             # re-authorizations
-            while threadSuspended():
-                if threadStopped():
+            while thread_suspended():
+                if thread_stopped():
                     break
                 sleep(1000)
             try:
@@ -245,11 +264,3 @@ class PlexCompanion(Thread):
             sleep(50)
 
         client.stop_all()
-        if httpd:
-            try:
-                httpd.socket.shutdown(SHUT_RDWR)
-            except:
-                pass
-            finally:
-                httpd.socket.close()
-        log.info("----===## Plex Companion stopped ##===----")

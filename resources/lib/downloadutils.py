@@ -9,6 +9,8 @@ import xml.etree.ElementTree as etree
 from utils import settings, window, language as lang, dialog
 import clientinfo as client
 
+import state
+
 ###############################################################################
 
 # Disable annoying requests warnings
@@ -39,20 +41,6 @@ class DownloadUtils():
 
     def __init__(self):
         self.__dict__ = self._shared_state
-
-    def setUsername(self, username):
-        """
-        Reserved for userclient only
-        """
-        self.username = username
-        log.debug("Set username: %s" % username)
-
-    def setUserId(self, userId):
-        """
-        Reserved for userclient only
-        """
-        self.userId = userId
-        log.debug("Set userId: %s" % userId)
 
     def setServer(self, server):
         """
@@ -108,8 +96,6 @@ class DownloadUtils():
         # Set other stuff
         self.setServer(window('pms_server'))
         self.setToken(window('pms_token'))
-        self.setUserId(window('currUserId'))
-        self.setUsername(window('plex_username'))
 
         # Counters to declare PMS dead or unauthorized
         # Use window variables because start of movies will be called with a
@@ -274,10 +260,11 @@ class DownloadUtils():
                             self.unauthorizedAttempts):
                         log.warn('We seem to be truly unauthorized for PMS'
                                  ' %s ' % url)
-                        if window('plex_serverStatus') not in ('401', 'Auth'):
+                        if state.PMS_STATUS not in ('401', 'Auth'):
                             # Tell userclient token has been revoked.
                             log.debug('Setting PMS server status to '
                                       'unauthorized')
+                            state.PMS_STATUS = '401'
                             window('plex_serverStatus', value="401")
                             dialog('notification',
                                    lang(29999),

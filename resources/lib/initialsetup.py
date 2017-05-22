@@ -13,6 +13,7 @@ from userclient import UserClient
 
 from PlexAPI import PlexAPI
 from PlexFunctions import GetMachineIdentifier, get_PMS_settings
+import state
 
 ###############################################################################
 
@@ -156,7 +157,7 @@ class InitialSetup():
             verifySSL = False
         else:
             url = server['baseURL']
-            verifySSL = None
+            verifySSL = True
         chk = self.plx.CheckConnection(url,
                                        token=server['accesstoken'],
                                        verifySSL=verifySSL)
@@ -450,6 +451,7 @@ class InitialSetup():
                         yeslabel="Native (Direct Paths)"):
             log.debug("User opted to use direct paths.")
             settings('useDirectPaths', value="1")
+            state.DIRECT_PATHS = True
             # Are you on a system where you would like to replace paths
             # \\NAS\mymovie.mkv with smb://NAS/mymovie.mkv? (e.g. Windows)
             if dialog.yesno(heading=lang(29999), line1=lang(39033)):
@@ -477,9 +479,6 @@ class InitialSetup():
         if dialog.yesno(heading=lang(29999), line1=lang(39016)):
             log.debug("User opted to disable Plex music library.")
             settings('enableMusic', value="false")
-        else:
-            from utils import advancedsettings_tweaks
-            advancedsettings_tweaks()
 
         # Download additional art from FanArtTV
         if dialog.yesno(heading=lang(29999), line1=lang(39061)):
@@ -496,12 +495,6 @@ class InitialSetup():
             # Open Settings page now? You will need to restart!
             goToSettings = dialog.yesno(heading=lang(29999), line1=lang(39017))
         if goToSettings:
-            window('plex_serverStatus', value="Stop")
+            state.PMS_STATUS = 'Stop'
             xbmc.executebuiltin(
                 'Addon.OpenSettings(plugin.video.plexkodiconnect)')
-        else:
-            # "Kodi will now restart to apply the changes"
-            dialog.ok(heading=lang(29999), line1=lang(33033))
-            xbmc.executebuiltin('RestartApp')
-        # We should always restart to ensure e.g. Kodi settings for Music
-        # are in use!

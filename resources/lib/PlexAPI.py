@@ -53,6 +53,7 @@ from utils import window, settings, language as lang, tryDecode, tryEncode, \
 from PlexFunctions import PMSHttpsEnabled
 import plexdb_functions as plexdb
 import variables as v
+import state
 
 ###############################################################################
 
@@ -628,7 +629,7 @@ class PlexAPI():
                            authenticate=False,
                            headerOptions={'X-Plex-Token': PMS['token']},
                            verifySSL=False,
-                           timeout=3)
+                           timeout=10)
         try:
             xml.attrib['machineIdentifier']
         except (AttributeError, KeyError):
@@ -879,6 +880,8 @@ class PlexAPI():
         settings('plex_restricteduser',
                  'true' if answer.attrib.get('restricted', '0') == '1'
                  else 'false')
+        state.RESTRICTED_USER = True if \
+            answer.attrib.get('restricted', '0') == '1' else False
 
         # Get final token to the PMS we've chosen
         url = 'https://plex.tv/api/resources?includeHttps=1'
@@ -2550,20 +2553,20 @@ class API():
             if "\\" in path:
                 if not path.endswith('\\'):
                     # Add the missing backslash
-                    check = exists_dir(tryEncode(path + "\\"))
+                    check = exists_dir(path + "\\")
                 else:
-                    check = exists_dir(tryEncode(path))
+                    check = exists_dir(path)
             else:
                 if not path.endswith('/'):
-                    check = exists_dir(tryEncode(path + "/"))
+                    check = exists_dir(path + "/")
                 else:
-                    check = exists_dir(tryEncode(path))
+                    check = exists_dir(path)
 
         if not check:
             if forceCheck is False:
                 # Validate the path is correct with user intervention
                 if self.askToValidate(path):
-                    window('plex_shouldStop', value="true")
+                    state.STOP_SYNC = True
                     path = None
                 window('plex_pathverified', value='true')
             else:

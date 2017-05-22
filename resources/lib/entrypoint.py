@@ -12,7 +12,7 @@ from xbmc import sleep, executebuiltin, translatePath
 from xbmcgui import ListItem
 
 from utils import window, settings, language as lang, dialog, tryEncode, \
-    CatchExceptions, JSONRPC, exists_dir
+    CatchExceptions, JSONRPC, exists_dir, plex_command, tryDecode
 import downloadutils
 
 from PlexFunctions import GetPlexMetadata, GetPlexSectionResults, \
@@ -42,8 +42,8 @@ def chooseServer():
     server = setup.PickPMS(showDialog=True)
     if server is None:
         log.error('We did not connect to a new PMS, aborting')
-        window('suspend_Userclient', clear=True)
-        window('suspend_LibraryThread', clear=True)
+        plex_command('SUSPEND_USER_CLIENT', 'False')
+        plex_command('SUSPEND_LIBRARY_THREAD', 'False')
         return
 
     log.info("User chose server %s" % server['name'])
@@ -81,7 +81,8 @@ def togglePlexTV():
         settings('plex_status', value="Not logged in to plex.tv")
 
         window('plex_token', clear=True)
-        window('plex_username', clear=True)
+        plex_command('PLEX_TOKEN', '')
+        plex_command('PLEX_USERNAME', '')
     else:
         log.info('Login to plex.tv')
         import initialsetup
@@ -100,7 +101,7 @@ def resetAuth():
     resp = dialog('yesno', heading="{plex}", line1=lang(39206))
     if resp == 1:
         log.info("Reset login attempts.")
-        window('plex_serverStatus', value="Auth")
+        plex_command('PMS_STATUS', 'Auth')
     else:
         executebuiltin('Addon.OpenSettings(plugin.video.plexkodiconnect)')
 
@@ -146,7 +147,7 @@ def doMainListing(content_type=None):
     addDirectoryItem(lang(30173),
                      "plugin://%s?mode=channels" % v.ADDON_ID)
     # Plex user switch
-    addDirectoryItem(lang(39200) + window('plex_username'),
+    addDirectoryItem(lang(39200),
                      "plugin://%s?mode=switchuser" % v.ADDON_ID)
 
     # some extra entries for settings and stuff
@@ -488,7 +489,6 @@ def getVideoFiles(plexId, params):
     except:
         log.error('Could not get file path for item %s' % plexId)
         return xbmcplugin.endOfDirectory(HANDLE)
-    path = tryEncode(path)
     # Assign network protocol
     if path.startswith('\\\\'):
         path = path.replace('\\\\', 'smb://')
@@ -501,14 +501,14 @@ def getVideoFiles(plexId, params):
     if exists_dir(path):
         for root, dirs, files in walk(path):
             for directory in dirs:
-                item_path = join(root, directory)
+                item_path = tryEncode(join(root, directory))
                 li = ListItem(item_path, path=item_path)
                 xbmcplugin.addDirectoryItem(handle=HANDLE,
                                             url=item_path,
                                             listitem=li,
                                             isFolder=True)
             for file in files:
-                item_path = join(root, file)
+                item_path = tryEncode(join(root, file))
                 li = ListItem(item_path, path=item_path)
                 xbmcplugin.addDirectoryItem(handle=HANDLE,
                                             url=file,
@@ -536,7 +536,8 @@ def getExtraFanArt(plexid, plexPath):
 
     # We need to store the images locally for this to work
     # because of the caching system in xbmc
-    fanartDir = translatePath("special://thumbnails/plex/%s/" % plexid)
+    fanartDir = tryDecode(translatePath(
+        "special://thumbnails/plex/%s/" % plexid))
     if not exists_dir(fanartDir):
         # Download the images to the cache directory
         makedirs(fanartDir)
@@ -549,19 +550,19 @@ def getExtraFanArt(plexid, plexPath):
         backdrops = api.getAllArtwork()['Backdrop']
         for count, backdrop in enumerate(backdrops):
             # Same ordering as in artwork
-            fanartFile = join(fanartDir, "fanart%.3d.jpg" % count)
+            fanartFile = tryEncode(join(fanartDir, "fanart%.3d.jpg" % count))
             li = ListItem("%.3d" % count, path=fanartFile)
             xbmcplugin.addDirectoryItem(
                 handle=HANDLE,
                 url=fanartFile,
                 listitem=li)
-            copyfile(backdrop, fanartFile)
+            copyfile(backdrop, tryDecode(fanartFile))
     else:
         log.info("Found cached backdrop.")
         # Use existing cached images
         for root, dirs, files in walk(fanartDir):
             for file in files:
-                fanartFile = join(root, file)
+                fanartFile = tryEncode(join(root, file))
                 li = ListItem(file, path=fanartFile)
                 xbmcplugin.addDirectoryItem(handle=HANDLE,
                                             url=fanartFile,
@@ -964,22 +965,19 @@ def enterPMS():
 
 def __LogIn():
     """
-    Resets (clears) window properties to enable (re-)login:
-        suspend_Userclient
-        plex_runLibScan: set to 'full' to trigger lib sync
+    Resets (clears) window properties to enable (re-)login
 
-    suspend_LibraryThread is cleared in service.py if user was signed out!
+    SUSPEND_LIBRARY_THREAD is set to False in service.py if user was signed
+    out!
     """
     window('plex_runLibScan', value='full')
     # Restart user client
-    window('suspend_Userclient', clear=True)
+    plex_command('SUSPEND_USER_CLIENT', 'False')
 
 
 def __LogOut():
     """
-    Finishes lib scans, logs out user. The following window attributes are set:
-        suspend_LibraryThread: 'true'
-        suspend_Userclient: 'true'
+    Finishes lib scans, logs out user.
 
     Returns True if successfully signed out, False otherwise
     """
@@ -991,7 +989,7 @@ def __LogOut():
            time=3000,
            sound=False)
     # Pause library sync thread
-    window('suspend_LibraryThread', value='true')
+    plex_command('SUSPEND_LIBRARY_THREAD', 'True')
     # Wait max for 10 seconds for all lib scans to shutdown
     counter = 0
     while window('plex_dbScan') == 'true':
@@ -999,17 +997,18 @@ def __LogOut():
             # Failed to reset PMS and plex.tv connects. Try to restart Kodi.
             dialog('ok', lang(29999), lang(39208))
             # Resuming threads, just in case
-            window('suspend_LibraryThread', clear=True)
+            plex_command('SUSPEND_LIBRARY_THREAD', 'False')
             log.error("Could not stop library sync, aborting")
             return False
         counter += 1
         sleep(50)
     log.debug("Successfully stopped library sync")
 
-    # Log out currently signed in user:
-    window('plex_serverStatus', value="401")
-    # Above method needs to have run its course! Hence wait
     counter = 0
+    # Log out currently signed in user:
+    window('plex_serverStatus', value='401')
+    plex_command('PMS_STATUS', '401')
+    # Above method needs to have run its course! Hence wait
     while window('plex_serverStatus') == "401":
         if counter > 100:
             # 'Failed to reset PKC. Try to restart Kodi.'
@@ -1019,5 +1018,5 @@ def __LogOut():
         counter += 1
         sleep(50)
     # Suspend the user client during procedure
-    window('suspend_Userclient', value='true')
+    plex_command('SUSPEND_USER_CLIENT', 'True')
     return True

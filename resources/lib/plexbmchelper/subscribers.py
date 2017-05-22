@@ -3,8 +3,10 @@ import re
 import threading
 
 import downloadutils
+from clientinfo import getXArgsDeviceInfo
 from utils import window
 import PlexFunctions as pf
+import state
 from functions import *
 
 ###############################################################################
@@ -68,19 +70,16 @@ class SubscriptionManager:
             info = self.getPlayerProperties(playerid)
             # save this info off so the server update can use it too
             self.playerprops[playerid] = info;
-            state = info['state']
+            status = info['state']
             time = info['time']
         else:
-            state = "stopped"
+            status = "stopped"
             time = 0
-        ret = "\n"+'  <Timeline state="%s" time="%s" type="%s"' % (state, time, ptype)
+        ret = "\n"+'  <Timeline state="%s" time="%s" type="%s"' % (status, time, ptype)
         if playerid is None:
-            ret += ' seekRange="0-0"'
             ret += ' />'
             return ret
 
-        # pbmc_server = str(WINDOW.getProperty('plexbmc.nowplaying.server'))
-        # userId = str(WINDOW.getProperty('currUserId'))
         pbmc_server = window('pms_server')
         if pbmc_server:
             (self.protocol, self.server, self.port) = \
@@ -112,7 +111,6 @@ class SubscriptionManager:
             ret += ' containerKey="%s"' % self.containerKey
 
         ret += ' duration="%s"' % info['duration']
-        ret += ' seekRange="0-%s"' % info['duration']
         ret += ' controllable="%s"' % self.controllable()
         ret += ' machineIdentifier="%s"' % serv.get('uuid', "")
         ret += ' protocol="%s"' % serv.get('protocol', "http")
@@ -123,6 +121,8 @@ class SubscriptionManager:
         ret += ' mute="%s"' % self.mute
         ret += ' repeat="%s"' % info['repeat']
         ret += ' itemType="%s"' % info['itemType']
+        if state.PLEX_TRANSIENT_TOKEN:
+            ret += ' token="%s"' % state.PLEX_TRANSIENT_TOKEN
         # Might need an update in the future
         if ptype == 'video':
             ret += ' subtitleStreamID="-1"'
@@ -167,9 +167,10 @@ class SubscriptionManager:
         # Process the players we have left (to signal a stop)
         for typus, p in self.lastplayers.iteritems():
             self.lastinfo[typus]['state'] = 'stopped'
-            self._sendNotification(self.lastinfo[typus])
+            # self._sendNotification(self.lastinfo[typus])
 
     def _sendNotification(self, info):
+        xargs = getXArgsDeviceInfo()
         params = {
             'containerKey': self.containerKey or "/library/metadata/900000",
             'key': self.lastkey or "/library/metadata/900000",
@@ -178,6 +179,8 @@ class SubscriptionManager:
             'time': info['time'],
             'duration': info['duration']
         }
+        if state.PLEX_TRANSIENT_TOKEN:
+            xargs['X-Plex-Token'] = state.PLEX_TRANSIENT_TOKEN
         if info.get('playQueueID'):
             params['containerKey'] = '/playQueues/%s' % info['playQueueID']
             params['playQueueVersion'] = info['playQueueVersion']
@@ -186,7 +189,7 @@ class SubscriptionManager:
         url = '%s://%s:%s/:/timeline' % (serv.get('protocol', 'http'),
                                          serv.get('server', 'localhost'),
                                          serv.get('port', '32400'))
-        self.doUtils(url, parameters=params)
+        self.doUtils(url, parameters=params, headerOptions=xargs)
         log.debug("Sent server notification with parameters: %s to %s"
                   % (params, url))
 

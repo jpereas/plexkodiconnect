@@ -11,9 +11,9 @@ from ssl import CERT_NONE
 
 from xbmc import sleep
 
-from utils import window, settings, ThreadMethodsAdditionalSuspend, \
-    ThreadMethods
+from utils import window, settings, thread_methods
 from companion import process_command
+import state
 
 ###############################################################################
 
@@ -22,8 +22,6 @@ log = logging.getLogger("PLEX."+__name__)
 ###############################################################################
 
 
-@ThreadMethodsAdditionalSuspend('suspend_LibraryThread')
-@ThreadMethods
 class WebSocket(Thread):
     opcode_data = (websocket.ABNF.OPCODE_TEXT, websocket.ABNF.OPCODE_BINARY)
 
@@ -62,11 +60,11 @@ class WebSocket(Thread):
 
         counter = 0
         handshake_counter = 0
-        threadStopped = self.threadStopped
-        threadSuspended = self.threadSuspended
-        while not threadStopped():
+        thread_stopped = self.thread_stopped
+        thread_suspended = self.thread_suspended
+        while not thread_stopped():
             # In the event the server goes offline
-            while threadSuspended():
+            while thread_suspended():
                 # Set in service.py
                 if self.ws is not None:
                     try:
@@ -74,7 +72,7 @@ class WebSocket(Thread):
                     except:
                         pass
                     self.ws = None
-                if threadStopped():
+                if thread_stopped():
                     # Abort was requested while waiting. We should exit
                     log.info("##===---- %s Stopped ----===##"
                              % self.__class__.__name__)
@@ -141,16 +139,17 @@ class WebSocket(Thread):
 
     def stopThread(self):
         """
-        Overwrite this method from ThreadMethods to close websockets
+        Overwrite this method from thread_methods to close websockets
         """
         log.info("Stopping %s thread." % self.__class__.__name__)
-        self._threadStopped = True
+        self.__threadStopped = True
         try:
             self.ws.shutdown()
         except:
             pass
 
 
+@thread_methods(add_suspends=['SUSPEND_LIBRARY_THREAD'])
 class PMS_Websocket(WebSocket):
     """
     Websocket connection with the PMS for Plex Companion
@@ -160,16 +159,15 @@ class PMS_Websocket(WebSocket):
 
     def getUri(self):
         server = window('pms_server')
-        # Need to use plex.tv token, if any. NOT user token
-        token = window('plex_token')
         # Get the appropriate prefix for the websocket
         if server.startswith('https'):
             server = "wss%s" % server[5:]
         else:
             server = "ws%s" % server[4:]
         uri = "%s/:/websockets/notifications" % server
-        if token:
-            uri += '?X-Plex-Token=%s' % token
+        # Need to use plex.tv token, if any. NOT user token
+        if state.PLEX_TOKEN:
+            uri += '?X-Plex-Token=%s' % state.PLEX_TOKEN
         sslopt = {}
         if settings('sslverify') == "false":
             sslopt["cert_reqs"] = CERT_NONE
@@ -213,14 +211,18 @@ class PMS_Websocket(WebSocket):
 
 class Alexa_Websocket(WebSocket):
     """
-    Websocket connection to talk to Amazon Alexa
+    Websocket connection to talk to Amazon Alexa.
+
+    Can't use thread_methods!
     """
+    __thread_stopped = False
+    __thread_suspended = False
+
     def getUri(self):
         self.plex_client_Id = window('plex_client_Id')
         uri = ('wss://pubsub.plex.tv/sub/websockets/%s/%s?X-Plex-Token=%s'
-               % (window('currUserId'),
-                  self.plex_client_Id,
-                  window('plex_token')))
+               % (state.PLEX_USER_ID,
+                  self.plex_client_Id, state.PLEX_TOKEN))
         sslopt = {}
         log.debug("Uri: %s, sslopt: %s" % (uri, sslopt))
         return uri, sslopt
@@ -252,11 +254,32 @@ class Alexa_Websocket(WebSocket):
     def IOError_response(self):
         pass
 
-    def threadSuspended(self):
+    # Path in thread_methods
+    def stop_thread(self):
+        self.__thread_stopped = True
+
+    def suspend_thread(self):
+        self.__thread_suspended = True
+
+    def resume_thread(self):
+        self.__thread_suspended = False
+
+    def thread_stopped(self):
+        if self.__thread_stopped is True:
+            return True
+        if state.STOP_PKC:
+            return True
+        return False
+
+    # The culprit
+    def thread_suspended(self):
         """
-        Overwrite to ignore library sync stuff and allow to check for
-        plex_restricteduser
+        Overwrite method since we need to check for plex token
         """
-        return (self._threadSuspended or
-                window('plex_restricteduser') == 'true' or
-                not window('plex_token'))
+        if self.__thread_suspended is True:
+            return True
+        if not state.PLEX_TOKEN:
+            return True
+        if state.RESTRICTED_USER:
+            return True
+        return False

@@ -13,7 +13,7 @@ from xbmc import executeJSONRPC, sleep, translatePath
 from xbmcvfs import exists
 
 from utils import window, settings, language as lang, kodiSQL, tryEncode, \
-    ThreadMethods, ThreadMethodsAdditionalStop, dialog, exists_dir
+    thread_methods, dialog, exists_dir, tryDecode
 
 # Disable annoying requests warnings
 import requests.packages.urllib3
@@ -126,8 +126,8 @@ def double_urldecode(text):
     return unquote(unquote(text))
 
 
-@ThreadMethodsAdditionalStop('plex_shouldStop')
-@ThreadMethods
+@thread_methods(add_stops=['STOP_SYNC'],
+                add_suspends=['SUSPEND_LIBRARY_THREAD', 'DB_SCAN'])
 class Image_Cache_Thread(Thread):
     xbmc_host = 'localhost'
     xbmc_port, xbmc_username, xbmc_password = setKodiWebServerDetails()
@@ -140,22 +140,16 @@ class Image_Cache_Thread(Thread):
         self.queue = ARTWORK_QUEUE
         Thread.__init__(self)
 
-    def threadSuspended(self):
-        # Overwrite method to add TWO additional suspends
-        return (self._threadSuspended or
-                window('suspend_LibraryThread') or
-                window('plex_dbScan'))
-
     def run(self):
-        threadStopped = self.threadStopped
-        threadSuspended = self.threadSuspended
+        thread_stopped = self.thread_stopped
+        thread_suspended = self.thread_suspended
         queue = self.queue
         sleep_between = self.sleep_between
-        while not threadStopped():
+        while not thread_stopped():
             # In the event the server goes offline
-            while threadSuspended():
+            while thread_suspended():
                 # Set in service.py
-                if threadStopped():
+                if thread_stopped():
                     # Abort was requested while waiting. We should exit
                     log.info("---===### Stopped Image_Cache_Thread ###===---")
                     return
@@ -178,7 +172,7 @@ class Image_Cache_Thread(Thread):
                     # download. All is well
                     break
                 except requests.ConnectionError:
-                    if threadStopped():
+                    if thread_stopped():
                         # Kodi terminated
                         break
                     # Server thinks its a DOS attack, ('error 10053')
@@ -228,7 +222,7 @@ class Artwork():
         if dialog('yesno', "Image Texture Cache", lang(39251)):
             log.info("Resetting all cache data first")
             # Remove all existing textures first
-            path = translatePath("special://thumbnails/")
+            path = tryDecode(translatePath("special://thumbnails/"))
             if exists_dir(path):
                 rmtree(path, ignore_errors=True)
 
@@ -241,8 +235,7 @@ class Artwork():
             for row in rows:
                 tableName = row[0]
                 if tableName != "version":
-                    query = "DELETE FROM ?"
-                    cursor.execute(query, (tableName,))
+                    cursor.execute("DELETE FROM %s" % tableName)
             connection.commit()
             connection.close()
 
@@ -430,7 +423,7 @@ class Artwork():
             path = translatePath("special://thumbnails/%s" % cachedurl)
             log.debug("Deleting cached thumbnail: %s" % path)
             if exists(path):
-                rmtree(path, ignore_errors=True)
+                rmtree(tryDecode(path), ignore_errors=True)
             cursor.execute("DELETE FROM texture WHERE url = ?", (url,))
             connection.commit()
         finally:
