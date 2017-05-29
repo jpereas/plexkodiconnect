@@ -310,7 +310,7 @@ class Player(xbmc.Player):
                      'plex_forcetranscode'):
             window(item, clear=True)
         # We might have saved a transient token from a user flinging media via
-        # Companion
+        # Companion (if we could not use the playqueue to store the token)
         state.PLEX_TRANSIENT_TOKEN = None
         log.debug("Cleared playlist properties.")
 
@@ -326,68 +326,45 @@ class Player(xbmc.Player):
         # Process each items
         for item in self.played_info:
             data = self.played_info.get(item)
-            if data:
-                log.debug("Item path: %s" % item)
-                log.debug("Item data: %s" % data)
+            if not data:
+                continue
+            log.debug("Item path: %s" % item)
+            log.debug("Item data: %s" % data)
 
-                runtime = data['runtime']
-                currentPosition = data['currentPosition']
-                itemid = data['item_id']
-                refresh_id = data['refresh_id']
-                currentFile = data['currentfile']
-                media_type = data['Type']
-                playMethod = data['playmethod']
+            runtime = data['runtime']
+            currentPosition = data['currentPosition']
+            itemid = data['item_id']
+            refresh_id = data['refresh_id']
+            currentFile = data['currentfile']
+            media_type = data['Type']
+            playMethod = data['playmethod']
 
-                # Prevent manually mark as watched in Kodi monitor
-                window('plex_skipWatched%s' % itemid, value="true")
+            # Prevent manually mark as watched in Kodi monitor
+            window('plex_skipWatched%s' % itemid, value="true")
 
-                if currentPosition and runtime:
-                    try:
-                        percentComplete = float(currentPosition) / float(runtime)
-                    except ZeroDivisionError:
-                        # Runtime is 0.
-                        percentComplete = 0
+            if not currentPosition or not runtime:
+                continue
+            try:
+                percentComplete = float(currentPosition) / float(runtime)
+            except ZeroDivisionError:
+                # Runtime is 0.
+                percentComplete = 0
 
-                    markPlayed = 0.90
-                    log.info("Percent complete: %s Mark played at: %s"
-                             % (percentComplete, markPlayed))
-                    if percentComplete >= markPlayed:
-                        # Tell Kodi that we've finished watching (Plex knows)
-                        if (data['fileid'] is not None and
-                                data['itemType'] in (v.KODI_TYPE_MOVIE, v.KODI_TYPE_EPISODE)):
-                            with kodidb.GetKodiDB('video') as kodi_db:
-                                kodi_db.addPlaystate(
-                                    data['fileid'],
-                                    None,
-                                    None,
-                                    data['playcount'] + 1,
-                                    DateToKodi(getUnixTimestamp()))
-                    # Send the delete action to the server.
-                    offerDelete = False
-
-                    if media_type == "Episode" and settings('deleteTV') == "true":
-                        offerDelete = True
-                    elif media_type == "Movie" and settings('deleteMovies') == "true":
-                        offerDelete = True
-
-                    if settings('offerDelete') != "true":
-                        # Delete could be disabled, even if the subsetting is enabled.
-                        offerDelete = False
-
-                    # Plex: never delete
-                    offerDelete = False
-                    if percentComplete >= markPlayed and offerDelete:
-                        resp = xbmcgui.Dialog().yesno(
-                            lang(30091),
-                            lang(33015),
-                            autoclose=120000)
-                        if not resp:
-                            log.info("User skipped deletion.")
-                            continue
-
-                        url = "{server}/emby/Items/%s?format=json" % itemid
-                        log.info("Deleting request: %s" % itemid)
-                        self.doUtils(url, action_type="DELETE")
+            markPlayed = 0.90
+            log.info("Percent complete: %s Mark played at: %s"
+                     % (percentComplete, markPlayed))
+            if percentComplete >= markPlayed:
+                # Tell Kodi that we've finished watching (Plex knows)
+                if (data['fileid'] is not None and
+                        data['itemType'] in (v.KODI_TYPE_MOVIE,
+                                             v.KODI_TYPE_EPISODE)):
+                    with kodidb.GetKodiDB('video') as kodi_db:
+                        kodi_db.addPlaystate(
+                            data['fileid'],
+                            None,
+                            None,
+                            data['playcount'] + 1,
+                            DateToKodi(getUnixTimestamp()))
 
         # Clean the WINDOW properties
         for filename in self.played_info:
