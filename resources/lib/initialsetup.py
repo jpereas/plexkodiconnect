@@ -14,6 +14,7 @@ from userclient import UserClient
 from PlexAPI import PlexAPI
 from PlexFunctions import GetMachineIdentifier, get_PMS_settings
 import state
+from migration import check_migration
 
 ###############################################################################
 
@@ -411,6 +412,9 @@ class InitialSetup():
         log.info('Current Kodi video memory cache in bytes: %s' % cache)
         settings('kodi_video_cache', value=cache)
 
+        # Do we need to migrate stuff?
+        check_migration()
+
         # Optionally sign into plex.tv. Will not be called on very first run
         # as plexToken will be ''
         settings('plex_status', value=lang(39226))
@@ -488,6 +492,8 @@ class InitialSetup():
         # If you use several Plex libraries of one kind, e.g. "Kids Movies" and
         # "Parents Movies", be sure to check https://goo.gl/JFtQV9
         dialog.ok(heading=lang(29999), line1=lang(39076))
+        # Need to tell about our image source for collections: themoviedb.org
+        dialog.ok(heading=lang(29999), line1=lang(39717))
         # Make sure that we only ask these questions upon first installation
         settings('InstallQuestionsAnswered', value='true')
 
