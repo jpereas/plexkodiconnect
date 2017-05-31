@@ -1288,10 +1288,17 @@ class API():
         except (KeyError, ValueError):
             lastPlayedDate = None
 
-        try:
-            userrating = int(float(item['userRating']))
-        except (KeyError, ValueError):
+        if state.INDICATE_MEDIA_VERSIONS is True:
             userrating = 0
+            for entry in self.item.findall('./Media'):
+                userrating += 1
+            # Don't show a value of '1'
+            userrating = 0 if userrating == 1 else userrating
+        else:
+            try:
+                userrating = int(float(item['userRating']))
+            except (KeyError, ValueError):
+                userrating = 0
 
         try:
             rating = float(item['audienceRating'])
@@ -1881,7 +1888,8 @@ class API():
 
         If not found in item's Plex metadata, check themovidedb.org
 
-        collection=True will try to return the collection's ID
+        collection=True will try to return the three-tuple:
+            collection ID, poster-path, background-path
 
         None is returned if unsuccessful
         """
@@ -1900,7 +1908,8 @@ class API():
             log.info('Plex did not provide ID for IMDB or TVDB. Start '
                      'lookup process')
         else:
-            log.info('Start movie set/collection lookup on themoviedb')
+            log.info('Start movie set/collection lookup on themoviedb using %s'
+                     % item.get('title', ''))
 
         apiKey = settings('themoviedbAPIKey')
         if media_type == v.PLEX_TYPE_SHOW:
@@ -1909,7 +1918,7 @@ class API():
         # if the title has the year in remove it as tmdb cannot deal with it...
         # replace e.g. 'The Americans (2015)' with 'The Americans'
         title = sub(r'\s*\(\d{4}\)$', '', title, count=1)
-        url = 'http://api.themoviedb.org/3/search/%s' % media_type
+        url = 'https://api.themoviedb.org/3/search/%s' % media_type
         parameters = {
             'api_key': apiKey,
             'language': v.KODILANGUAGE,
@@ -2001,10 +2010,10 @@ class API():
         for language in [v.KODILANGUAGE, "en"]:
             parameters['language'] = language
             if media_type == "movie":
-                url = 'http://api.themoviedb.org/3/movie/%s' % tmdbId
+                url = 'https://api.themoviedb.org/3/movie/%s' % tmdbId
                 parameters['append_to_response'] = 'videos'
             elif media_type == "tv":
-                url = 'http://api.themoviedb.org/3/tv/%s' % tmdbId
+                url = 'https://api.themoviedb.org/3/tv/%s' % tmdbId
                 parameters['append_to_response'] = 'external_ids,videos'
             data = DownloadUtils().downloadUrl(
                 url,
@@ -2025,9 +2034,28 @@ class API():
                     mediaId = str(data["external_ids"].get("tvdb_id"))
                     break
             else:
-                if data.get("belongs_to_collection") is not None:
-                    mediaId = str(data.get("belongs_to_collection").get("id"))
-                    log.debug('Retrieved collections tmdb id %s' % mediaId)
+                if data.get("belongs_to_collection") is None:
+                    continue
+                mediaId = str(data.get("belongs_to_collection").get("id"))
+                log.debug('Retrieved collections tmdb id %s for %s'
+                          % (mediaId, title))
+                url = 'https://api.themoviedb.org/3/collection/%s' % mediaId
+                data = DownloadUtils().downloadUrl(
+                    url,
+                    authenticate=False,
+                    parameters=parameters,
+                    timeout=7)
+                try:
+                    data.get('poster_path')
+                except AttributeError:
+                    log.info('Could not find TheMovieDB poster paths for %s in'
+                             'the language %s' % (title, language))
+                    continue
+                else:
+                    poster = 'https://image.tmdb.org/t/p/original%s' % data.get('poster_path')
+                    background = 'https://image.tmdb.org/t/p/original%s' % data.get('backdrop_path')
+                    mediaId = mediaId, poster, background
+                    break
         return mediaId
 
     def getFanartTVArt(self, mediaId, allartworks, setInfo=False):
@@ -2158,7 +2186,18 @@ class API():
         # fanart tv only for movie or tv show
         externalId = self.getExternalItemId(collection=True)
         if externalId is not None:
+            try:
+                externalId, poster, background = externalId
+            except TypeError:
+                poster, background = None, None
+            if poster is not None:
+                allartworks['Primary'] = poster
+            if background is not None:
+                allartworks['Backdrop'].append(background)
             allartworks = self.getFanartTVArt(externalId, allartworks, True)
+        else:
+            log.info('Did not find a set/collection ID on TheMovieDB using %s.'
+                     ' Artwork will be missing.' % self.getTitle()[0])
         return allartworks
 
     def shouldStream(self):

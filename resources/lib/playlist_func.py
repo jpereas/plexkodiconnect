@@ -1,16 +1,19 @@
 import logging
 from urllib import quote
 from urlparse import parse_qsl, urlsplit
+from re import compile as re_compile
 
 import plexdb_functions as plexdb
 from downloadutils import DownloadUtils as DU
 from utils import JSONRPC, tryEncode, escape_html
 from PlexAPI import API
+from PlexFunctions import GetPlexMetadata
 
 ###############################################################################
 
 log = logging.getLogger("PLEX."+__name__)
 
+REGEX = re_compile(r'''metadata%2F(\d+)''')
 ###############################################################################
 
 # kodi_item dict:
@@ -62,9 +65,6 @@ class Playlist_Object_Baseclase(object):
         self.repeat = 0
         self.plex_transient_token = None
         log.debug('Playlist cleared: %s' % self)
-
-    def log_Kodi_playlist(self):
-        log.debug('Current Kodi playlist: %s' % get_kodi_playlist_items(self))
 
 
 class Playlist_Object(Playlist_Object_Baseclase):
@@ -566,3 +566,39 @@ def remove_from_Kodi_playlist(playlist, pos):
             del playlist.items[pos]
         except IndexError:
             log.error('Cannot delete position %s for %s' % (pos, playlist))
+
+
+def get_pms_playqueue(playqueue_id):
+    """
+    Returns the Plex playqueue as an etree XML or None if unsuccessful
+    """
+    xml = DU().downloadUrl(
+        "{server}/playQueues/%s" % playqueue_id,
+        headerOptions={'Accept': 'application/xml'})
+    try:
+        xml.attrib
+    except AttributeError:
+        log.error('Could not download Plex playqueue %s' % playqueue_id)
+        xml = None
+    return xml
+
+
+def get_plextype_from_xml(xml):
+    """
+    Needed if PMS returns an empty playqueue. Will get the Plex type from the
+    empty playlist playQueueSourceURI. Feed with (empty) etree xml
+
+    returns None if unsuccessful
+    """
+    try:
+        plex_id = REGEX.findall(xml.attrib['playQueueSourceURI'])[0]
+    except IndexError:
+        log.error('Could not get plex_id from xml: %s' % xml.attrib)
+        return
+    new_xml = GetPlexMetadata(plex_id)
+    try:
+        new_xml[0].attrib
+    except (TypeError, IndexError, AttributeError):
+        log.error('Could not get plex metadata for plex id %s' % plex_id)
+        return
+    return new_xml[0].attrib.get('type')
