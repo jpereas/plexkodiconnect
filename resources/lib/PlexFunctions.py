@@ -3,11 +3,12 @@ from logging import getLogger
 from urllib import urlencode
 from ast import literal_eval
 from urlparse import urlparse, parse_qsl
+from urllib import quote_plus
 import re
 from copy import deepcopy
 
 import downloadutils
-from utils import settings
+from utils import settings, tryEncode
 from variables import PLEX_TO_KODI_TIMEFACTOR
 
 ###############################################################################
@@ -434,7 +435,7 @@ def delete_item_from_pms(plexid):
         return False
 
 
-def get_PMS_settings(url, token):
+def get_pms_settings(url, token):
     """
     Retrieve the PMS' settings via <url>/:/
 
@@ -445,3 +446,42 @@ def get_PMS_settings(url, token):
         authenticate=False,
         verifySSL=False,
         headerOptions={'X-Plex-Token': token} if token else None)
+
+
+def get_transcode_image_path(self, key, AuthToken, path, width, height):
+    """
+    Transcode Image support
+
+    parameters:
+        key
+        AuthToken
+        path - source path of current XML: path[srcXML]
+        width
+        height
+    result:
+        final path to image file
+    """
+    # external address - can we get a transcoding request for external images?
+    if key.startswith('http://') or key.startswith('https://'):
+        path = key
+    elif key.startswith('/'):  # internal full path.
+        path = 'http://127.0.0.1:32400' + key
+    else:  # internal path, add-on
+        path = 'http://127.0.0.1:32400' + path + '/' + key
+    path = tryEncode(path)
+
+    # This is bogus (note the extra path component) but ATV is stupid when it
+    # comes to caching images, it doesn't use querystrings. Fortunately PMS is
+    # lenient...
+    transcodePath = '/photo/:/transcode/' + \
+        str(width) + 'x' + str(height) + '/' + quote_plus(path)
+
+    args = dict()
+    args['width'] = width
+    args['height'] = height
+    args['url'] = path
+
+    if not AuthToken == '':
+        args['X-Plex-Token'] = AuthToken
+
+    return transcodePath + '?' + urlencode(args)

@@ -30,8 +30,7 @@ sys_path.append(_base_resource)
 
 ###############################################################################
 
-from utils import settings, window, language as lang, dialog, tryEncode, \
-    tryDecode
+from utils import settings, window, language as lang, dialog, tryDecode
 from userclient import UserClient
 import initialsetup
 from kodimonitor import KodiMonitor
@@ -40,8 +39,8 @@ import videonodes
 from websocket_client import PMS_Websocket, Alexa_Websocket
 import downloadutils
 from playqueue import Playqueue
+from connectmanager import ConnectManager, check_connection
 
-import PlexAPI
 from PlexCompanion import PlexCompanion
 from command_pipeline import Monitor_Window
 from playback_starter import Playback_Starter
@@ -165,8 +164,6 @@ class Service():
         if settings('enableTextureCache') == "true":
             self.image_cache_thread = Image_Cache_Thread()
 
-        plx = PlexAPI.PlexAPI()
-
         welcome_msg = True
         counter = 0
         while not __stop_PKC():
@@ -260,7 +257,7 @@ class Service():
                     if server is False:
                         # No server info set in add-on settings
                         pass
-                    elif plx.CheckConnection(server, verifySSL=True) is False:
+                    elif check_connection(server, verifySSL=True) is False:
                         # Server is offline or cannot be reached
                         # Alert the user and suppress future warning
                         if self.server_online:
@@ -279,10 +276,10 @@ class Service():
                         # Periodically check if the IP changed, e.g. per minute
                         if counter > 20:
                             counter = 0
-                            setup = initialsetup.InitialSetup()
-                            tmp = setup.PickPMS()
+                            connectmanager = ConnectManager()
+                            tmp = connectmanager.pick_pms()
                             if tmp is not None:
-                                setup.WritePMStoSettings(tmp)
+                                connectmanager.write_pms_to_settings(tmp)
                     else:
                         # Server is online
                         counter = 0

@@ -1,20 +1,18 @@
 # -*- coding: utf-8 -*-
 
-##################################################################################################
+###############################################################################
 
-import logging
+from logging import getLogger
 
 import xbmc
 import xbmcgui
 
-import connect.connectionmanager as connectionmanager
 from utils import language as lang
 
-##################################################################################################
+###############################################################################
 
-log = logging.getLogger("EMBY."+__name__)
+log = getLogger("PLEX."+__name__)
 
-CONN_STATE = connectionmanager.ConnectionState
 ACTION_PARENT_DIR = 9
 ACTION_PREVIOUS_MENU = 10
 ACTION_BACK = 92
@@ -30,7 +28,7 @@ BUSY = 204
 EMBY_CONNECT = 205
 MANUAL_SERVER = 206
 
-##################################################################################################
+###############################################################################
 
 
 class ServerConnect(xbmcgui.WindowXMLDialog):
@@ -42,11 +40,6 @@ class ServerConnect(xbmcgui.WindowXMLDialog):
     _selected_server = None
     _connect_login = False
     _manual_server = False
-
-
-    def __init__(self, *args, **kwargs):
-
-        xbmcgui.WindowXMLDialog.__init__(self, *args, **kwargs)
 
     def set_args(self, **kwargs):
         # connect_manager, username, user_image, servers, emby_connect
@@ -65,7 +58,6 @@ class ServerConnect(xbmcgui.WindowXMLDialog):
     def is_manual_server(self):
         return self._manual_server
 
-
     def onInit(self):
 
         self.message = self.getControl(MESSAGE)
@@ -77,13 +69,13 @@ class ServerConnect(xbmcgui.WindowXMLDialog):
             server_type = "wifi" if server.get('ExchangeToken') else "network"
             self.list_.addItem(self._add_listitem(server['Name'], server['Id'], server_type))
 
-        self.getControl(USER_NAME).setLabel("%s %s" % (lang(33000), self.username.decode('utf-8')))
+        self.getControl(USER_NAME).setLabel("%s %s" % ('Switch plex.tv user', self.username.decode('utf-8')))
 
         if self.user_image is not None:
             self.getControl(USER_IMAGE).setImage(self.user_image)
 
         if not self.emby_connect: # Change connect user
-            self.getControl(EMBY_CONNECT).setLabel("[UPPERCASE][B]"+lang(30618)+"[/B][/UPPERCASE]")
+            self.getControl(EMBY_CONNECT).setLabel("[UPPERCASE][B]"+'plex.tv user change'+"[/B][/UPPERCASE]")
 
         if self.servers:
             self.setFocus(self.list_)

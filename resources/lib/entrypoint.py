@@ -37,9 +37,9 @@ def chooseServer():
     """
     log.info("Choosing PMS server requested, starting")
 
-    import initialsetup
-    setup = initialsetup.InitialSetup()
-    server = setup.PickPMS(showDialog=True)
+    from connectmanager import ConnectManager
+    connectmanager = ConnectManager()
+    server = connectmanager.pick_pms(show_dialog=True)
     if server is None:
         log.error('We did not connect to a new PMS, aborting')
         plex_command('SUSPEND_USER_CLIENT', 'False')
@@ -47,7 +47,7 @@ def chooseServer():
         return
 
     log.info("User chose server %s" % server['name'])
-    setup.WritePMStoSettings(server)
+    connectmanager.write_pms_to_settings(server)
 
     if not __LogOut():
         return
@@ -85,8 +85,8 @@ def togglePlexTV():
         plex_command('PLEX_USERNAME', '')
     else:
         log.info('Login to plex.tv')
-        import initialsetup
-        initialsetup.InitialSetup().PlexTVSignIn()
+        from connectmanager import ConnectManager
+        ConnectManager().plex_tv_signin()
     dialog('notification',
            lang(29999),
            lang(39221),

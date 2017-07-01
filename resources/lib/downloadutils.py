@@ -142,12 +142,15 @@ class DownloadUtils():
 
     def downloadUrl(self, url, action_type="GET", postBody=None,
                     parameters=None, authenticate=True, headerOptions=None,
-                    verifySSL=True, timeout=None, return_response=False):
+                    verifySSL=True, timeout=None, return_response=False,
+                    auth=None):
         """
         Override SSL check with verifySSL=False
 
         If authenticate=True, existing request session will be used/started
         Otherwise, 'empty' request will be made
+
+        auth=None or auth=('user', 'password')
 
         Returns:
             None              If an error occured
@@ -190,6 +193,8 @@ class DownloadUtils():
             kwargs['params'] = parameters
         if timeout is not None:
             kwargs['timeout'] = timeout
+        if auth is not None:
+            kwargs['auth'] = auth
 
         # ACTUAL DOWNLOAD HAPPENING HERE
         try:

@@ -34,6 +34,26 @@ log = logging.getLogger("PLEX."+__name__)
 WINDOW = xbmcgui.Window(10000)
 ADDON = xbmcaddon.Addon(id='plugin.video.plexkodiconnect')
 
+# For use with xbmcgui.dialog
+ICONS = {
+    '{plex}': 'special://home/addons/plugin.video.plexkodiconnect/icon.png',
+    '{info}': xbmcgui.NOTIFICATION_INFO,
+    '{warning}': xbmcgui.NOTIFICATION_WARNING,
+    '{error}': xbmcgui.NOTIFICATION_ERROR
+}
+TYPES = {
+    '{alphanum}': xbmcgui.INPUT_ALPHANUM,
+    '{numeric}': xbmcgui.INPUT_NUMERIC,
+    '{date}': xbmcgui.INPUT_DATE,
+    '{time}': xbmcgui.INPUT_TIME,
+    '{ipaddress}': xbmcgui.INPUT_IPADDRESS,
+    '{password}': xbmcgui.INPUT_PASSWORD
+}
+OPTIONS = {
+    '{hide_input}': xbmcgui.ALPHANUM_HIDE_INPUT,
+    '{password_verify}': xbmcgui.PASSWORD_VERIFY
+}
+
 ###############################################################################
 # Main methods
 
@@ -154,27 +174,19 @@ def dialog(typus, *args, **kwargs):
         type='{ipaddress}'  xbmcgui.INPUT_IPADDRESS (format: #.#.#.#)
         type='{password}'   xbmcgui.INPUT_PASSWORD
                             (return md5 hash of input, input is masked)
+
+    Input Options:
+        option='{hide_input}':      xbmcgui.ALPHANUM_HIDE_INPUT
+        option='{password_verify}': xbmcgui.PASSWORD_VERIFY
     """
     d = xbmcgui.Dialog()
     if "icon" in kwargs:
-        types = {
-            '{plex}': 'special://home/addons/plugin.video.plexkodiconnect/icon.png',
-            '{info}': xbmcgui.NOTIFICATION_INFO,
-            '{warning}': xbmcgui.NOTIFICATION_WARNING,
-            '{error}': xbmcgui.NOTIFICATION_ERROR
-        }
-        for key, value in types.iteritems():
+        for key, value in ICONS.iteritems():
             kwargs['icon'] = kwargs['icon'].replace(key, value)
     if 'type' in kwargs:
-        types = {
-            '{alphanum}': xbmcgui.INPUT_ALPHANUM,
-            '{numeric}': xbmcgui.INPUT_NUMERIC,
-            '{date}': xbmcgui.INPUT_DATE,
-            '{time}': xbmcgui.INPUT_TIME,
-            '{ipaddress}': xbmcgui.INPUT_IPADDRESS,
-            '{password}': xbmcgui.INPUT_PASSWORD
-        }
-        kwargs['type'] = types[kwargs['type']]
+        kwargs['type'] = TYPES[kwargs['type']]
+    if 'option' in kwargs:
+        kwargs['option'] = OPTIONS[kwargs['option']]
     if "heading" in kwargs:
         kwargs['heading'] = kwargs['heading'].replace("{plex}",
                                                       language(29999))

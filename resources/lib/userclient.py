@@ -14,6 +14,9 @@ from utils import window, settings, language as lang, thread_methods
 import downloadutils
 
 import PlexAPI
+from connectmanager import check_connection
+from connect.plex_tv import get_user_artwork_url
+
 from PlexFunctions import GetMachineIdentifier
 import state
 
@@ -106,7 +109,7 @@ class UserClient(threading.Thread):
         log.debug('Setting user preferences')
         # Only try to get user avatar if there is a token
         if self.currToken:
-            url = PlexAPI.PlexAPI().GetUserArtworkURL(self.currUser)
+            url = get_user_artwork_url(self.currUser)
             if url:
                 window('PlexUserImage', value=url)
         # Set resume point max
@@ -130,9 +133,9 @@ class UserClient(threading.Thread):
             if self.currServer is None:
                 return False
             log.debug('Testing validity of current token')
-            res = PlexAPI.PlexAPI().CheckConnection(self.currServer,
-                                                    token=self.currToken,
-                                                    verifySSL=self.ssl)
+            res = check_connection(self.currServer,
+                                   token=self.currToken,
+                                   verifySSL=self.ssl)
             if res is False:
                 # PMS probably offline
                 return False
