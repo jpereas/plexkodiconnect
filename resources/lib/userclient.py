@@ -14,10 +14,9 @@ from utils import window, settings, language as lang, thread_methods
 import downloadutils
 
 import PlexAPI
-from connectmanager import check_connection
 from connect.plex_tv import get_user_artwork_url
 
-from PlexFunctions import GetMachineIdentifier
+from PlexFunctions import GetMachineIdentifier, check_connection
 import state
 
 ###############################################################################

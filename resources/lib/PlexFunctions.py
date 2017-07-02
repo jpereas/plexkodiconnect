@@ -7,7 +7,7 @@ from urllib import quote_plus
 import re
 from copy import deepcopy
 
-import downloadutils
+from downloadutils import DownloadUtils
 from utils import settings, tryEncode
 from variables import PLEX_TO_KODI_TIMEFACTOR
 
@@ -100,8 +100,58 @@ def SelectStreams(url, args):
     Does a PUT request to tell the PMS what audio and subtitle streams we have
     chosen.
     """
-    downloadutils.DownloadUtils().downloadUrl(
+    DownloadUtils().downloadUrl(
         url + '?' + urlencode(args), action_type='PUT')
+
+
+def check_connection(url, token=None, verifySSL=None):
+    """
+    Checks connection to a Plex server, available at url. Can also be used
+    to check for connection with plex.tv.
+
+    Override SSL to skip the check by setting verifySSL=False
+    if 'None', SSL will be checked (standard requests setting)
+    if 'True', SSL settings from file settings are used (False/True)
+
+    Input:
+        url         URL to Plex server (e.g. https://192.168.1.1:32400)
+        token       appropriate token to access server. If None is passed,
+                    the current token is used
+    Output:
+        False       if server could not be reached or timeout occured
+        200         if connection was successfull
+        int         or other HTML status codes as received from the server
+    """
+    headerOptions = {'X-Plex-Token': token} if token is not None else None
+    if verifySSL is True:
+        verifySSL = None if settings('sslverify') == 'true' \
+            else False
+    if 'plex.tv' in url:
+        url = 'https://plex.tv/api/home/users'
+    else:
+        url = url + '/library/onDeck'
+    log.debug("Checking connection to server %s with verifySSL=%s"
+              % (url, verifySSL))
+    answer = DownloadUtils().downloadUrl(url,
+                                         authenticate=False,
+                                         headerOptions=headerOptions,
+                                         verifySSL=verifySSL)
+    if answer is None:
+        log.debug("Could not connect to %s" % url)
+        return False
+    try:
+        # xml received?
+        answer.attrib
+    except:
+        if answer is True:
+            # Maybe no xml but connection was successful nevertheless
+            answer = 200
+    else:
+        # Success - we downloaded an xml!
+        answer = 200
+    # We could connect but maybe were not authenticated. No worries
+    log.debug("Checking connection successfull. Answer: %s" % answer)
+    return answer
 
 
 def GetPlexMetadata(key):
@@ -130,7 +180,7 @@ def GetPlexMetadata(key):
         # 'includeConcerts': 1
     }
     url = url + '?' + urlencode(arguments)
-    xml = downloadutils.DownloadUtils().downloadUrl(url)
+    xml = DownloadUtils().downloadUrl(url)
     if xml == 401:
         # Either unauthorized (taken care of by doUtils) or PMS under strain
         return 401
@@ -187,8 +237,7 @@ def DownloadChunks(url):
             'X-Plex-Container-Size': CONTAINERSIZE,
             'X-Plex-Container-Start': pos
         }
-        xmlpart = downloadutils.DownloadUtils().downloadUrl(
-            url + urlencode(args))
+        xmlpart = DownloadUtils().downloadUrl(url + urlencode(args))
         # If something went wrong - skip in the hope that it works next time
         try:
             xmlpart.attrib
@@ -263,8 +312,7 @@ def get_plex_sections():
     """
     Returns all Plex sections (libraries) of the PMS as an etree xml
     """
-    return downloadutils.DownloadUtils().downloadUrl(
-        '{server}/library/sections')
+    return DownloadUtils().downloadUrl('{server}/library/sections')
 
 
 def init_plex_playqueue(itemid, librarySectionUUID, mediatype='movie',
@@ -283,7 +331,7 @@ def init_plex_playqueue(itemid, librarySectionUUID, mediatype='movie',
     }
     if trailers is True:
         args['extrasPrefixCount'] = settings('trailerNumber')
-    xml = downloadutils.DownloadUtils().downloadUrl(
+    xml = DownloadUtils().downloadUrl(
         url + '?' + urlencode(args), action_type="POST")
     try:
         xml[0].tag
@@ -314,7 +362,7 @@ def PMSHttpsEnabled(url):
 
     Prefers HTTPS over HTTP
     """
-    doUtils = downloadutils.DownloadUtils().downloadUrl
+    doUtils = DownloadUtils().downloadUrl
     res = doUtils('https://%s/identity' % url,
                   authenticate=False,
                   verifySSL=False)
@@ -344,10 +392,10 @@ def GetMachineIdentifier(url):
 
     Returns None if something went wrong
     """
-    xml = downloadutils.DownloadUtils().downloadUrl('%s/identity' % url,
-                                                    authenticate=False,
-                                                    verifySSL=False,
-                                                    timeout=10)
+    xml = DownloadUtils().downloadUrl('%s/identity' % url,
+                                      authenticate=False,
+                                      verifySSL=False,
+                                      timeout=10)
     try:
         machineIdentifier = xml.attrib['machineIdentifier']
     except (AttributeError, KeyError):
@@ -374,7 +422,7 @@ def GetPMSStatus(token):
     or an empty dict.
     """
     answer = {}
-    xml = downloadutils.DownloadUtils().downloadUrl(
+    xml = DownloadUtils().downloadUrl(
         '{server}/status/sessions',
         headerOptions={'X-Plex-Token': token})
     try:
@@ -414,7 +462,7 @@ def scrobble(ratingKey, state):
         url = "{server}/:/unscrobble?" + urlencode(args)
     else:
         return
-    downloadutils.DownloadUtils().downloadUrl(url)
+    DownloadUtils().downloadUrl(url)
     log.info("Toggled watched state for Plex item %s" % ratingKey)
 
 
@@ -425,7 +473,7 @@ def delete_item_from_pms(plexid):
 
     Returns True if successful, False otherwise
     """
-    if downloadutils.DownloadUtils().downloadUrl(
+    if DownloadUtils().downloadUrl(
             '{server}/library/metadata/%s' % plexid,
             action_type="DELETE") is True:
         log.info('Successfully deleted Plex id %s from the PMS' % plexid)
@@ -441,7 +489,7 @@ def get_pms_settings(url, token):
 
     Call with url: scheme://ip:port
     """
-    return downloadutils.DownloadUtils().downloadUrl(
+    return DownloadUtils().downloadUrl(
         '%s/:/prefs' % url,
         authenticate=False,
         verifySSL=False,

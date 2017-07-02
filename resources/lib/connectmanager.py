@@ -8,7 +8,8 @@ from dialogs.serverconnect import ServerConnect
 from connect.plex_tv import plex_tv_sign_in_with_pin
 from userclient import UserClient
 from utils import window, settings, tryEncode, language as lang, dialog
-from PlexFunctions import GetMachineIdentifier, get_pms_settings
+from PlexFunctions import GetMachineIdentifier, get_pms_settings, \
+    check_connection
 import variables as v
 
 ###############################################################################
@@ -18,58 +19,6 @@ log = getLogger("PLEX."+__name__)
 # STATE = connectionmanager.ConnectionState
 
 ###############################################################################
-
-
-def check_connection(url, token=None, verifySSL=None):
-    """
-    Checks connection to a Plex server, available at url. Can also be used
-    to check for connection with plex.tv.
-
-    Override SSL to skip the check by setting verifySSL=False
-    if 'None', SSL will be checked (standard requests setting)
-    if 'True', SSL settings from file settings are used (False/True)
-
-    Input:
-        url         URL to Plex server (e.g. https://192.168.1.1:32400)
-        token       appropriate token to access server. If None is passed,
-                    the current token is used
-    Output:
-        False       if server could not be reached or timeout occured
-        200         if connection was successfull
-        int         or other HTML status codes as received from the server
-    """
-    headerOptions = None
-    if token is not None:
-        headerOptions = {'X-Plex-Token': token}
-    if verifySSL is True:
-        verifySSL = None if settings('sslverify') == 'true' \
-            else False
-    if 'plex.tv' in url:
-        url = 'https://plex.tv/api/home/users'
-    else:
-        url = url + '/library/onDeck'
-    log.debug("Checking connection to server %s with verifySSL=%s"
-              % (url, verifySSL))
-    answer = DownloadUtils().downloadUrl(url,
-                                         authenticate=False,
-                                         headerOptions=headerOptions,
-                                         verifySSL=verifySSL)
-    if answer is None:
-        log.debug("Could not connect to %s" % url)
-        return False
-    try:
-        # xml received?
-        answer.attrib
-    except:
-        if answer is True:
-            # Maybe no xml but connection was successful nevertheless
-            answer = 200
-    else:
-        # Success - we downloaded an xml!
-        answer = 200
-    # We could connect but maybe were not authenticated. No worries
-    log.debug("Checking connection successfull. Answer: %s" % answer)
-    return answer
 
 
 def get_plex_login_from_settings():

@@ -15,7 +15,7 @@ log = getLogger("PLEX."+__name__)
 ###############################################################################
 
 
-def setup(self):
+def setup():
     """
     Initial setup. Run once upon startup.
 
@@ -47,11 +47,13 @@ def setup(self):
     # If a Plex server IP has already been set
     # return only if the right machine identifier is found
     if connectmanager.server:
-        log.info("PMS is already set: %s. Checking now..." % self.server)
+        log.info("PMS is already set: %s. Checking now..."
+                 % connectmanager.server)
         if connectmanager.check_pms():
             log.info("Using PMS %s with machineIdentifier %s"
-                     % (self.server, self.serverid))
-            connectmanager.write_pms_settings(self.server, self.pms_token)
+                     % (connectmanager.server, connectmanager.serverid))
+            connectmanager.write_pms_settings(connectmanager.server,
+                                              connectmanager.pms_token)
             return
 
     # If not already retrieved myplex info, optionally let user sign in

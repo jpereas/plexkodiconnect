@@ -236,9 +236,9 @@ def list_plex_home_users(token):
     If any value is missing, None is returned instead (or "" from plex.tv)
     If an error is encountered, False is returned
     """
-    xml = DownloadUtils.downloadUrl('https://plex.tv/api/home/users/',
-                                    authenticate=False,
-                                    headerOptions={'X-Plex-Token': token})
+    xml = DownloadUtils().downloadUrl('https://plex.tv/api/home/users/',
+                                      authenticate=False,
+                                      headerOptions={'X-Plex-Token': token})
     try:
         xml.attrib
     except:

@@ -151,7 +151,7 @@ class Service():
         self.command_pipeline.start()
 
         # Server auto-detect
-        initialsetup.InitialSetup().setup()
+        initialsetup.setup()
 
         # Initialize important threads, handing over self for callback purposes
         self.user = UserClient(self)
