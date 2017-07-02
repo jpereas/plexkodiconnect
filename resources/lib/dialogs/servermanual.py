@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
-
-##################################################################################################
-
-import logging
+###############################################################################
+from logging import getLogger
 import os
 
 import xbmcgui
@@ -11,12 +9,12 @@ import xbmcaddon
 import connect.connectionmanager as connectionmanager
 from utils import language as lang
 
-##################################################################################################
+###############################################################################
 
-log = logging.getLogger("EMBY."+__name__)
-addon = xbmcaddon.Addon('plugin.video.emby')
+log = getLogger("PLEX."+__name__)
+addon = xbmcaddon.Addon('plugin.video.plexkodiconnect')
 
-CONN_STATE = connectionmanager.ConnectionState
+CONN_STATE = connectionmanager.CONNECTIONSTATE
 ACTION_PARENT_DIR = 9
 ACTION_PREVIOUS_MENU = 10
 ACTION_BACK = 92
@@ -29,14 +27,13 @@ ERROR = {
     'Empty': 2
 }
 
-##################################################################################################
+###############################################################################
 
 
 class ServerManual(xbmcgui.WindowXMLDialog):
 
     _server = None
     error = None
-
 
     def __init__(self, *args, **kwargs):
 

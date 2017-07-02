@@ -5,6 +5,7 @@ from logging import getLogger
 # from connect.connectionmanager import ConnectionManager
 from downloadutils import DownloadUtils
 from dialogs.serverconnect import ServerConnect
+from dialogs.servermanual import ServerManual
 from connect.plex_tv import plex_tv_sign_in_with_pin
 from userclient import UserClient
 from utils import window, settings, tryEncode, language as lang, dialog
@@ -131,7 +132,7 @@ class ConnectManager(object):
 
     def manual_server(self):
         # Return server or raise error
-        dia = ServerManual("script-emby-connect-server-manual.xml", *XML_PATH)
+        dia = ServerManual("script-plex-connect-server-manual.xml", *XML_PATH)
         dia._set_connect_manager(self.__connect)
         dia.doModal()
 
