@@ -31,7 +31,7 @@ except IndexError:
 ###############################################################################
 
 
-def chooseServer():
+def choose_server():
     """
     Lets user choose from list of PMS
     """

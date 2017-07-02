@@ -137,7 +137,7 @@ class Main():
             window('plex_runLibScan', value='del_textures')
 
         elif mode == 'chooseServer':
-            entrypoint.chooseServer()
+            self.__exec('function=choose_server')
 
         elif mode == 'refreshplaylist':
             log.info('Requesting playlist/nodes refresh')
@@ -172,8 +172,7 @@ class Main():
         # Put the request into the 'queue'
         while window('plex_command'):
             sleep(50)
-        window('plex_command',
-               value='play_%s' % argv[2])
+        window('plex_command', value='play_%s' % argv[2])
         # Wait for the result
         while not pickl_window('plex_result'):
             sleep(50)
@@ -189,6 +188,17 @@ class Main():
         elif result.listitem:
             listitem = convert_PKC_to_listitem(result.listitem)
             setResolvedUrl(HANDLE, True, listitem)
+
+    @staticmethod
+    def __exec(command):
+        """
+        Used to funnel commands to the main PKC python instance (like play())
+        """
+        # Put the request into the 'queue'
+        while window('plex_command'):
+            sleep(50)
+        window('plex_command', value='exec_%s' % command)
+        # No need to wait for the result
 
     def deviceid(self):
         deviceId_old = window('plex_client_Id')

@@ -3,11 +3,13 @@
 import logging
 from threading import Thread
 from Queue import Queue
+from urlparse import parse_qsl
 
 from xbmc import sleep
 
 from utils import window, thread_methods
 import state
+import entrypoint
 
 ###############################################################################
 log = logging.getLogger("PLEX."+__name__)
@@ -32,6 +34,29 @@ class Monitor_Window(Thread):
         self.playback_queue = Queue()
         Thread.__init__(self)
 
+    @staticmethod
+    def __execute(value):
+        """
+        Kick off with new threads. Pass in a string with the information url-
+        encoded:
+            function=<function-name in entrypoint.py>
+            params=<function parameters> (optional)
+        """
+        values = dict(parse_qsl(value))
+        function = values.get('function')
+        params = values.get('params')
+        log.debug('Execution called for function %s with parameters %s'
+                  % (function, params))
+        function = getattr(entrypoint, function)
+        try:
+            if params is not None:
+                function(params)
+            else:
+                function()
+        except:
+            log.error('Failed to execute function %s with params %s'
+                      % (function, params))
+
     def run(self):
         thread_stopped = self.thread_stopped
         queue = self.playback_queue
@@ -42,7 +67,9 @@ class Monitor_Window(Thread):
                 window('plex_command', clear=True)
                 if value.startswith('play_'):
                     queue.put(value)
-
+                elif value.startswith('exec_'):
+                    t = Thread(target=self.__execute, args=(value[5:], ))
+                    t.start()
                 elif value == 'SUSPEND_LIBRARY_THREAD-True':
                     state.SUSPEND_LIBRARY_THREAD = True
                 elif value == 'SUSPEND_LIBRARY_THREAD-False':
