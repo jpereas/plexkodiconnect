@@ -12,6 +12,7 @@ from utils import window, settings, tryEncode, language as lang, dialog
 from PlexFunctions import GetMachineIdentifier, get_pms_settings, \
     check_connection
 import variables as v
+import state
 
 ###############################################################################
 
@@ -100,8 +101,8 @@ class ConnectManager(object):
         dia = ServerConnect("script-plex-connect-server.xml", *XML_PATH)
         kwargs = {
             'connect_manager': None,  # self._connect
-            'username': settings('username'),
-            'user_image': window('PlexUserImage'),
+            'username': state.PLEX_USERNAME,
+            'user_image': state.PLEX_USER_IMAGE,
             # 'servers': state.get('Servers') or [],
             # 'emby_connect': False if user else True
         }

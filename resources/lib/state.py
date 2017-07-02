@@ -29,6 +29,8 @@ INDICATE_MEDIA_VERSIONS = False
 AUTHENTICATED = False
 # plex.tv username
 PLEX_USERNAME = None
+# plex.tv image for this user
+PLEX_USER_IMAGE = None
 # Token for that user for plex.tv
 PLEX_TOKEN = None
 # Plex ID of that user (e.g. for plex.tv) as a STRING

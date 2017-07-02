@@ -111,6 +111,7 @@ class UserClient(threading.Thread):
             url = get_user_artwork_url(self.currUser)
             if url:
                 window('PlexUserImage', value=url)
+                state.PLEX_USER_IMAGE = url
         # Set resume point max
         # url = "{server}/emby/System/Configuration?format=json"
         # result = doUtils.downloadUrl(url)
@@ -282,6 +283,7 @@ class UserClient(threading.Thread):
         window('plex_servername', clear=True)
         state.PLEX_USER_ID = None
         state.PLEX_USERNAME = None
+        state.PLEX_USER_IMAGE = None
         window('plex_restricteduser', clear=True)
         state.RESTRICTED_USER = False
 
