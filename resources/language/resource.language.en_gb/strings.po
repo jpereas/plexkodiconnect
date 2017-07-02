@@ -1155,6 +1155,28 @@ msgctxt "#30545"
 msgid "Force transcode pictures"
 msgstr ""
 
+
+# Server selection dialog: button text to sign in or sign out of plex.tv
+msgctxt "#30600"
+msgid "Toggle plex.tv sign-in"
+msgstr ""
+
+# Server selection dialog: button text to add server manually
+msgctxt "#30601"
+msgid "Manually add server"
+msgstr ""
+
+# Button text, e.g. to cancel a dialog
+msgctxt "#30602"
+msgid "Cancel"
+msgstr ""
+
+# Server selection dialog: button text to select the main PMS
+msgctxt "#30607"
+msgid "Select main PMS"
+msgstr ""
+
+
 # service add-on
 
 msgctxt "#33000"

@@ -69,7 +69,7 @@ class ServerConnect(xbmcgui.WindowXMLDialog):
             server_type = "wifi" if server.get('ExchangeToken') else "network"
             self.list_.addItem(self._add_listitem(server['Name'], server['Id'], server_type))
 
-        self.getControl(USER_NAME).setLabel("%s %s" % ('Switch plex.tv user', self.username.decode('utf-8')))
+        self.getControl(USER_NAME).setLabel("%s %s" % (lang(33000), self.username.decode('utf-8')))
 
         if self.user_image is not None:
             self.getControl(USER_IMAGE).setImage(self.user_image)

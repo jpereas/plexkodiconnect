@@ -96,7 +96,15 @@ class ConnectManager(object):
         """
         Will return selected server or raise RuntimeError
         """
-        dia = ServerConnect("script-emby-connect-server.xml", *XML_PATH)
+        dia = ServerConnect("script-plex-connect-server.xml", *XML_PATH)
+        kwargs = {
+            'connect_manager': None,  # self._connect
+            'username': settings('username'),
+            'user_image': window('PlexUserImage'),
+            # 'servers': state.get('Servers') or [],
+            # 'emby_connect': False if user else True
+        }
+        dia.set_args(**kwargs)
         dia.doModal()
 
         if dia.is_server_selected():
@@ -106,7 +114,6 @@ class ConnectManager(object):
         elif dia._is_connect_login():
             log.debug("Login to plex.tv")
             try:
-                # Login to emby connect
                 self._login_connect()
             except RuntimeError:
                 pass
@@ -270,7 +277,10 @@ class ConnectManager(object):
         if not self.server or not self.serverid:
             show_dialog = True
         if show_dialog is True:
-            server = self.select_servers()
+            try:
+                server = self.select_servers()
+            except RuntimeError:
+                pass
             log.info("Server: %s", server)
             server = self.__user_pick_pms()
         else:

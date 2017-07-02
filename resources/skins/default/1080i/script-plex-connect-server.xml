@@ -27,7 +27,7 @@
 				<texture>logo-white.png</texture>
 				<aspectratio>keep</aspectratio>
 				<width>120</width>
-				<height>49</height>
+				<height>120</height>
 				<top>30</top>
 				<left>25</left>
 			</control>
@@ -82,7 +82,7 @@
 				<control type="label">
 					<description>Select server</description>
 					<textcolor>ffa6a6a6</textcolor>
-					<label>$ADDON[plugin.video.emby 30607]</label>
+					<label>$ADDON[plugin.video.plexkodiconnect 30607]</label>
 					<font>font10</font>
 					<align>center</align>
 					<aligny>top</aligny>
@@ -202,10 +202,10 @@
 						<height>150</height>
 						<control type="button" id="205">
 							<visible>True</visible>
-							<description>Sign in Connect</description>
-							<texturenofocus border="5" colordiffuse="ff0b8628">box.png</texturenofocus>
-							<texturefocus border="5" colordiffuse="ff13a134">box.png</texturefocus>
-							<label>[UPPERCASE][B]$ADDON[plugin.video.emby 30600][/B][/UPPERCASE]</label>
+							<description>Toggle plex.tv sign-in</description>
+							<texturenofocus border="5" colordiffuse="ff464646">box.png</texturenofocus>
+							<texturefocus border="5" colordiffuse="ff525252">box.png</texturefocus>
+							<label>$ADDON[plugin.video.plexkodiconnect 30600]</label>
 							<font>font10</font>
 							<textcolor>ffa6a6a6</textcolor>
 							<focusedcolor>white</focusedcolor>
@@ -221,7 +221,7 @@
 							<description>Manually add server</description>
 							<texturenofocus border="5" colordiffuse="ff464646">box.png</texturenofocus>
 							<texturefocus border="5" colordiffuse="ff525252">box.png</texturefocus>
-							<label>[UPPERCASE][B]$ADDON[plugin.video.emby 30611][/B][/UPPERCASE]</label>
+							<label>$ADDON[plugin.video.plexkodiconnect 30601]</label>
 							<font>font10</font>
 							<textcolor>ffa6a6a6</textcolor>
 							<focusedcolor>white</focusedcolor>
@@ -239,7 +239,7 @@
 							<description>Cancel</description>
 							<texturenofocus border="5" colordiffuse="ff464646">box.png</texturenofocus>
 							<texturefocus border="5" colordiffuse="ff525252">box.png</texturefocus>
-							<label>[UPPERCASE][B]$ADDON[plugin.video.emby 30606][/B][/UPPERCASE]</label>
+							<label>$ADDON[plugin.video.plexkodiconnect 30602]</label>
 							<font>font10</font>
 							<textcolor>ffa6a6a6</textcolor>
 							<focusedcolor>white</focusedcolor>
