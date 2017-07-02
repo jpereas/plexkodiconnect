@@ -273,7 +273,7 @@ class ConnectManager(object):
         if not self.server or not self.serverid:
             show_dialog = True
         if show_dialog is True:
-            server = self.connectmanager.select_servers()
+            server = self.select_servers()
             log.info("Server: %s", server)
             server = self.__user_pick_pms()
         else:
