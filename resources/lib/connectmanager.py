@@ -16,7 +16,7 @@ import variables as v
 
 log = getLogger("PLEX."+__name__)
 
-# STATE = connectionmanager.ConnectionState
+XML_PATH = (tryEncode(v.ADDON_PATH), "default", "1080i")
 
 ###############################################################################
 
@@ -96,10 +96,7 @@ class ConnectManager(object):
         """
         Will return selected server or raise RuntimeError
         """
-        dia = ServerConnect("script-emby-connect-server.xml",
-                            tryEncode(v.ADDON_PATH),
-                            "default",
-                            "1080i")
+        dia = ServerConnect("script-emby-connect-server.xml", *XML_PATH)
         dia.doModal()
 
         if dia.is_server_selected():
