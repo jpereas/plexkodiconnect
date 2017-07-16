@@ -160,7 +160,7 @@ class ConnectManager(object):
         dia.set_connect_manager(self.__connect)
         dia.doModal()
 
-        if dia._is_connected():
+        if dia.is_connected():
             return dia.get_server()
         else:
             raise RuntimeError("Server is not connected")

@@ -83,8 +83,33 @@ msgctxt "#30017"
 msgid "Unauthorized for PMS"
 msgstr ""
 
+# Title of dialog for manual PMS connection
+msgctxt "#30018"
+msgid "Manually connect to PMS"
+msgstr ""
+
+# Button text for connect dialog
+msgctxt "#30019"
+msgid "PMS IP address or host name"
+msgstr ""
+
+# Button text for connect dialog
+msgctxt "#30020"
+msgid "Connect"
+msgstr ""
+
+# Button text for connect dialog
+msgctxt "#30021"
+msgid "Please fill in both server and port"
+msgstr ""
+
 msgctxt "#30022"
 msgid "Advanced"
+msgstr ""
+
+# Used to show that PKC is currently trying to connect to a PMS
+msgctxt "#30023"
+msgid "Connecting to"
 msgstr ""
 
 msgctxt "#30024"
@@ -96,7 +121,7 @@ msgid "Display message if PMS goes offline"
 msgstr ""
 
 msgctxt "#30030"
-msgid "Port Number"
+msgid "Port number"
 msgstr ""
 
 msgctxt "#30031"

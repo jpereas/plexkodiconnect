@@ -43,34 +43,37 @@
 			</control>
 			
 			<control type="image">
-				<description>Emby logo</description>
+				<description>Plex logo</description>
 				<texture>logo-white.png</texture>
 				<aspectratio>keep</aspectratio>
 				<width>120</width>
 				<height>49</height>
-				<top>30</top>
-				<left>25</left>
+				<top>20</top>
+				<left>0</left>
+				<aligny>left</aligny>
+				<align>left</align>
 			</control>
 			
 			<control type="group">
 				<width>500</width>
 				<left>50</left>
 				<control type="label">
-					<description>Connect to server</description>
-					<label>$ADDON[plugin.video.emby 30614]</label>
+					<description>Connect to PMS</description>
+					<label>$ADDON[plugin.video.plexkodiconnect 30018]</label>
 					<textcolor>white</textcolor>
 					<font>font12</font>
 					<aligny>top</aligny>
-					<align>center</align>
+					<align>left</align>
 					<width>100%</width>
-					<top>100</top>
+					<top>30</top>
+					<left>60</left>
 				</control>
 				
 				<control type="group">
-					<top>150</top>
+					<top>75</top>
 					<control type="label">
-						<description>Host</description>
-						<label>$ADDON[plugin.video.emby 30615]</label>
+						<description>PMS IP address or host name</description>
+						<label>$ADDON[plugin.video.plexkodiconnect 30019]</label>
 						<textcolor>ffa6a6a6</textcolor>
 						<font>font10</font>
 						<aligny>top</aligny>
@@ -87,7 +90,7 @@
 
 					<control type="label">
 						<description>Host example</description>
-						<label>192.168.1.100 or https://myserver.com</label>
+						<label>https://192.168.1.2, https://myserver.com</label>
 						<textcolor>ff464646</textcolor>
 						<font>font10</font>
 						<aligny>top</aligny>
@@ -97,10 +100,10 @@
 				
 				<control type="group">
 					<description>Port</description>
-					<top>275</top>
+					<top>200</top>
 					<control type="label">
-						<description>Port label</description>
-						<label>$ADDON[plugin.video.emby 30030]</label>
+						<description>Port Number</description>
+						<label>$ADDON[plugin.video.plexkodiconnect 30030]</label>
 						<textcolor>ffa6a6a6</textcolor>
 						<font>font10</font>
 						<aligny>top</aligny>
@@ -121,9 +124,9 @@
 					<top>380</top>
 					<control type="button" id="200">
 						<description>Connect</description>
-						<texturenofocus border="5" colordiffuse="ff0b8628">box.png</texturenofocus>
-						<texturefocus border="5" colordiffuse="ff13a134">box.png</texturefocus>
-						<label>[UPPERCASE][B]$ADDON[plugin.video.emby 30616][/B][/UPPERCASE]</label>
+						<texturenofocus border="5" colordiffuse="ff464646">box.png</texturenofocus>
+						<texturefocus border="5" colordiffuse="ff525252">box.png</texturefocus>
+						<label>$ADDON[plugin.video.plexkodiconnect 30020]</label>
 						<font>font10</font>
 						<textcolor>ffa6a6a6</textcolor>
 						<focusedcolor>white</focusedcolor>
@@ -137,7 +140,7 @@
 						<description>Cancel</description>
 						<texturenofocus border="5" colordiffuse="ff464646">box.png</texturenofocus>
 						<texturefocus border="5" colordiffuse="ff525252">box.png</texturefocus>
-						<label>[UPPERCASE][B]$ADDON[plugin.video.emby 30606][/B][/UPPERCASE]</label>
+						<label>$ADDON[plugin.video.plexkodiconnect 30602]</label>
 						<font>font10</font>
 						<textcolor>ffa6a6a6</textcolor>
 						<focusedcolor>white</focusedcolor>

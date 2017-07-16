@@ -1,18 +1,17 @@
 # -*- coding: utf-8 -*-
 ###############################################################################
 from logging import getLogger
-import os
+from os.path import join
 
 import xbmcgui
-import xbmcaddon
 
 import connect.connectionmanager as connectionmanager
-from utils import language as lang
+from utils import language as lang, tryEncode
+import variables as v
 
 ###############################################################################
 
 log = getLogger("PLEX."+__name__)
-addon = xbmcaddon.Addon('plugin.video.plexkodiconnect')
 
 CONN_STATE = connectionmanager.CONNECTIONSTATE
 ACTION_PARENT_DIR = 9
@@ -54,10 +53,10 @@ class ServerManual(xbmcgui.WindowXMLDialog):
         self.cancel_button = self.getControl(CANCEL)
         self.error_toggle = self.getControl(ERROR_TOGGLE)
         self.error_msg = self.getControl(ERROR_MSG)
-        self.host_field = self._add_editcontrol(725, 400, 40, 500)
-        self.port_field = self._add_editcontrol(725, 525, 40, 500)
+        self.host_field = self._add_editcontrol(725, 325, 40, 500)
+        self.port_field = self._add_editcontrol(725, 450, 40, 500)
 
-        self.port_field.setText('8096')
+        self.port_field.setText('32400')
         self.setFocus(self.host_field)
 
         self.host_field.controlUp(self.cancel_button)
@@ -78,7 +77,7 @@ class ServerManual(xbmcgui.WindowXMLDialog):
 
             if not server or not port:
                 # Display error
-                self._error(ERROR['Empty'], lang(30617))
+                self._error(ERROR['Empty'], lang(30021))
                 log.error("Server or port cannot be null")
 
             elif self._connect_to_server(server, port):
@@ -97,14 +96,14 @@ class ServerManual(xbmcgui.WindowXMLDialog):
             self.close()
 
     def _add_editcontrol(self, x, y, height, width):
-
-        media = os.path.join(addon.getAddonInfo('path'), 'resources', 'skins', 'default', 'media')
+        media = tryEncode(join(
+            v.ADDON_PATH, 'resources', 'skins', 'default', 'media'))
         control = xbmcgui.ControlEdit(0, 0, 0, 0,
                                       label="User",
                                       font="font10",
                                       textColor="ffc2c2c2",
-                                      focusTexture=os.path.join(media, "button-focus.png"),
-                                      noFocusTexture=os.path.join(media, "button-focus.png"))
+                                      focusTexture=join(media, "button-focus.png"),
+                                      noFocusTexture=join(media, "button-focus.png"))
         control.setPosition(x, y)
         control.setHeight(height)
         control.setWidth(width)
@@ -115,11 +114,11 @@ class ServerManual(xbmcgui.WindowXMLDialog):
     def _connect_to_server(self, server, port):
 
         server_address = "%s:%s" % (server, port)
-        self._message("%s %s..." % (lang(30610), server_address))
+        self._message("%s %s..." % (lang(30023), server_address))
         result = self.connect_manager.connectToAddress(server_address)
 
         if result['State'] == CONN_STATE['Unavailable']:
-            self._message(lang(30609))
+            self._message(lang(30204))
             return False
         else:
             self._server = result['Servers'][0]
