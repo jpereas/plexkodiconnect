@@ -2,13 +2,21 @@
 ###############################################################################
 from logging import getLogger
 from hashlib import md5
-import json
 import requests
+from struct import pack
 import socket
 import time
 from datetime import datetime
+import xml.etree.ElementTree as etree
+from Queue import Queue
+from threading import Thread
+
+from xbmc import sleep
 
 import credentials as cred
+from utils import tryDecode
+from PlexFunctions import PMSHttpsEnabled
+
 
 ###############################################################################
 
@@ -35,6 +43,11 @@ CONNECTIONMODE = {
     'Manual': 2
 }
 
+# multicast to PMS
+IP_PLEXGDM = '239.0.0.250'
+PORT_PLEXGDM = 32414
+MSG_PLEXGDM = 'M-SEARCH * HTTP/1.0'
+
 ###############################################################################
 
 
@@ -52,15 +65,16 @@ def getServerAddress(server, mode):
 
 
 class ConnectionManager(object):
-
-    default_timeout = 20
+    default_timeout = 30
     apiClients = []
-    minServerVersion = "3.0.5930"
+    minServerVersion = "1.7.0.0"
     connectUser = None
+    # Token for plex.tv
+    plexToken = None
 
     def __init__(self, appName, appVersion, deviceName, deviceId,
                  capabilities=None, devicePixelRatio=None):
-        log.info("Begin ConnectionManager constructor")
+        log.debug("Instantiating")
 
         self.credentialProvider = cred.Credentials()
         self.appName = appName
@@ -144,8 +158,7 @@ class ConnectionManager(object):
         if server is None or systemInfo is None:
             return
 
-        server['Name'] = systemInfo['ServerName']
-        server['Id'] = systemInfo['Id']
+        server['Id'] = systemInfo.attrib['machineIdentifier']
 
         if systemInfo.get('LocalAddress'):
             server['LocalAddress'] = systemInfo['LocalAddress']
@@ -155,16 +168,11 @@ class ConnectionManager(object):
             server['WakeOnLanInfos'] = [{'MacAddress': systemInfo['MacAddress']}]
 
     def _getHeaders(self, request):
-        
         headers = request.setdefault('headers', {})
-
-        if request.get('dataType') == "json":
-            headers['Accept'] = "application/json"
-            request.pop('dataType')
-
-        headers['X-Application'] = self._addAppInfoToConnectRequest()
-        headers['Content-type'] = request.get('contentType',
-            'application/x-www-form-urlencoded; charset=UTF-8')
+        headers['Accept'] = '*/*'
+        headers['Content-type'] = request.get(
+            'contentType',
+            "application/x-www-form-urlencoded")
 
     def requestUrl(self, request):
 
@@ -192,9 +200,10 @@ class ConnectionManager(object):
 
         else:
             try:
-                return r.json()
-            except ValueError:
-                r.content # Read response to release connection
+                return etree.fromstring(r.content)
+            except etree.ParseError:
+                # Read response to release connection
+                r.content
                 return
 
     def _requests(self, action, **kwargs):
@@ -212,79 +221,68 @@ class ConnectionManager(object):
     def getConnectUrl(self, handler):
         return "https://connect.emby.media/service/%s" % handler
 
-    def _findServers(self, foundServers):
-
+    @staticmethod
+    def _findServers(foundServers):
         servers = []
-
-        for foundServer in foundServers:
-
-            server = self._convertEndpointAddressToManualAddress(foundServer)
-
-            info = {
-                'Id': foundServer['Id'],
-                'LocalAddress': server or foundServer['Address'],
-                'Name': foundServer['Name']
-            }
-            info['LastCONNECTIONMODE'] = CONNECTIONMODE['Manual'] if info.get('ManualAddress') else CONNECTIONMODE['Local']
-            
-            servers.append(info)
-        else:
-            return servers
-
-    def _convertEndpointAddressToManualAddress(self, info):
-        
-        if info.get('Address') and info.get('EndpointAddress'):
-            address = info['EndpointAddress'].split(':')[0]
-
-            # Determine the port, if any
-            parts = info['Address'].split(':')
-            if len(parts) > 1:
-                portString = parts[len(parts)-1]
-
-                try:
-                    address += ":%s" % int(portString)
-                    return self._normalizeAddress(address)
-                except ValueError:
+        for server in foundServers:
+            if '200 OK' not in server['data']:
+                continue
+            ip = server['from'][0]
+            info = {'LastCONNECTIONMODE': CONNECTIONMODE['Local']}
+            for line in server['data'].split('\n'):
+                if line.startswith('Name:'):
+                    info['Name'] = tryDecode(line.split(':')[1].strip())
+                elif line.startswith('Port:'):
+                    info['Port'] = line.split(':')[1].strip()
+                elif line.startswith('Resource-Identifier:'):
+                    info['Id'] = line.split(':')[1].strip()
+                elif line.startswith('Updated-At:'):
                     pass
-
-        return None
+                elif line.startswith('Version:'):
+                    pass
+            # Need to check whether we need HTTPS or only HTTP
+            https = PMSHttpsEnabled('%s:%s' % (ip, info['Port']))
+            if https is None:
+                # Error contacting url. Skip for now
+                continue
+            elif https is True:
+                info['LocalAddress'] = 'https://%s:%s' % (ip, info['Port'])
+            else:
+                info['LocalAddress'] = 'http://%s:%s' % (ip, info['Port'])
+            servers.append(info)
+        return servers
 
     def _serverDiscovery(self):
-        
-        MULTI_GROUP = ("<broadcast>", 7359)
-        MESSAGE = "who is EmbyServer?"
-        
-        sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        sock.settimeout(1.0) # This controls the socket.timeout exception
+        """
+        PlexGDM
+        """
+        # setup socket for discovery -> multicast message
+        GDM = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        GDM.settimeout(2.0)
 
-        sock.setsockopt(socket.IPPROTO_IP, socket.IP_MULTICAST_TTL, 20)
-        sock.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
-        sock.setsockopt(socket.SOL_IP, socket.IP_MULTICAST_LOOP, 1)
-        sock.setsockopt(socket.IPPROTO_IP, socket.SO_REUSEADDR, 1)
-        
-        log.debug("MultiGroup      : %s" % str(MULTI_GROUP))
-        log.debug("Sending UDP Data: %s" % MESSAGE)
+        # Set the time-to-live for messages to 2 for local network
+        ttl = pack('b', 2)
+        GDM.setsockopt(socket.IPPROTO_IP, socket.IP_MULTICAST_TTL, ttl)
 
         servers = []
-
         try:
-            sock.sendto(MESSAGE, MULTI_GROUP)
-        except Exception as error:
-            log.error(error)
-            return servers
-
-        while True:
-            try:
-                data, addr = sock.recvfrom(1024) # buffer size
-                servers.append(json.loads(data))
-            
-            except socket.timeout:
-                log.info("Found Servers: %s" % servers)
-                return servers
-            
-            except Exception as e:
-                log.error("Error trying to find servers: %s" % e)
-                return servers
+            # Send data to the multicast group
+            GDM.sendto(MSG_PLEXGDM, (IP_PLEXGDM, PORT_PLEXGDM))
+            # Look for responses from all recipients
+            while True:
+                try:
+                    data, server = GDM.recvfrom(1024)
+                    servers.append({'from': server, 'data': data})
+                except socket.timeout:
+                    break
+        except:
+            # Probably error: (101, 'Network is unreachable')
+            log.error('Could not find Plex servers using GDM')
+            import traceback
+            log.error("Traceback:\n%s" % traceback.format_exc())
+        finally:
+            GDM.close()
+        return servers
 
     def _normalizeAddress(self, address):
         # Attempt to correct bad input
@@ -345,21 +343,72 @@ class ConnectionManager(object):
         self.credentialProvider.getCredentials(credentials)
 
     def _tryConnect(self, url, timeout=None, options={}):
-
-        url = self.getEmbyServerUrl(url, "system/info/public")
-        log.info("tryConnect url: %s" % url)
-
+        url = '%s/identity' % url
+        log.debug("tryConnect url: %s" % url)
         return self.requestUrl({
-            
             'type': "GET",
             'url': url,
-            'dataType': "json",
             'timeout': timeout,
             'ssl': options.get('ssl')
         })
 
     def _addAppInfoToConnectRequest(self):
         return "%s/%s" % (self.appName, self.appVersion)
+
+    def __get_PMS_servers_from_plex_tv(self):
+        """
+        Retrieves Plex Media Servers from plex.tv/pms/resources
+        """
+        servers = []
+        xml = self.requestUrl({
+            'url': 'https://plex.tv/api/resources?includeHttps=1',
+            'type': 'GET',
+            'headers': {'X-Plex-Token': self.plexToken},
+            'timeout': 5.0,
+            'ssl': True})
+        try:
+            xml.attrib
+        except AttributeError:
+            log.error('Could not get list of PMS from plex.tv')
+            return servers
+
+        maxAgeSeconds = 2*60*60*24
+        for device in xml.findall('Device'):
+            if 'server' not in device.attrib.get('provides'):
+                # No PMS - skip
+                continue
+            cons = device.find('Connection')
+            if cons is None:
+                # no valid connection - skip
+                continue
+            # check MyPlex data age - skip if >2 days
+            server = {'Name': device.attrib.get('name')}
+            infoAge = time.time() - int(device.attrib.get('lastSeenAt'))
+            if infoAge > maxAgeSeconds:
+                log.info("Server %s not seen for 2 days - skipping."
+                         % server['Name'])
+                continue
+            server['Id'] = device.attrib['clientIdentifier']
+            server['ConnectServerId'] = device.attrib['clientIdentifier']
+            # server['AccessToken'] = device.attrib['accessToken']
+            server['ExchangeToken'] = device.attrib['accessToken']
+            # One's own Plex home?
+            server['UserLinkType'] = 'Guest' if device.attrib['owned'] == '0' \
+                else 'LinkedUser'
+            # Foreign PMS' user name
+            server['UserId'] = device.attrib.get('sourceTitle')
+            for con in cons:
+                if con.attrib['local'] == '1':
+                    # Local LAN address; there might be several!!
+                    server['LocalAddress'] = con.attrib['uri']
+                else:
+                    server['RemoteAddress'] = con.attrib['uri']
+
+            # Additional stuff, not yet implemented
+            server['local'] = device.attrib.get('publicAddressMatches')
+
+            servers.append(server)
+        return servers
 
     def _getConnectServers(self, credentials):
 
@@ -375,7 +424,6 @@ class ConnectionManager(object):
 
             'type': "GET",
             'url': url,
-            'dataType': "json",
             'headers': {
                 'X-Connect-UserToken': credentials['ConnectAccessToken']
             }
@@ -396,18 +444,16 @@ class ConnectionManager(object):
         return servers
 
     def getAvailableServers(self):
-        
         log.info("Begin getAvailableServers")
 
-        # Clone the array
         credentials = self.credentialProvider.getCredentials()
-
-        connectServers = self._getConnectServers(credentials)
-        foundServers = self._findServers(self._serverDiscovery())
-
         servers = list(credentials['Servers'])
+
+        if self.plexToken:
+            connectServers = self.__get_PMS_servers_from_plex_tv()
+            self._mergeServers(servers, connectServers)
+        foundServers = self._findServers(self._serverDiscovery())
         self._mergeServers(servers, foundServers)
-        self._mergeServers(servers, connectServers)
 
         servers = self._filterServers(servers, connectServers)
 
@@ -550,8 +596,9 @@ class ConnectionManager(object):
                 return self._testNextCONNECTIONMODE(tests, index+1, server, options)
         else:
 
-            if self._compareVersions(self._getMinServerVersion(), result['Version']) == 1:
-                log.warn("minServerVersion requirement not met. Server version: %s" % result['Version'])
+            if self._compareVersions(self._getMinServerVersion(),
+                                     result.attrib['version']) == 1:
+                log.warn("minServerVersion requirement not met. Server version: %s" % result.attrib['version'])
                 return {
                     'State': CONNECTIONSTATE['ServerUpdateNeeded'],
                     'Servers': [server]
@@ -616,7 +663,6 @@ class ConnectionManager(object):
             'type': "GET",
             'url': self.getEmbyServerUrl(url, "System/Info"),
             'ssl': options.get('ssl'),
-            'dataType': "json",
             'headers': {
                 'X-MediaBrowser-Token': server['AccessToken']
             }
@@ -631,7 +677,6 @@ class ConnectionManager(object):
                     'type': "GET",
                     'url': self.getEmbyServerUrl(url, "users/%s" % server['UserId']),
                     'ssl': options.get('ssl'),
-                    'dataType': "json",
                     'headers': {
                         'X-MediaBrowser-Token': server['AccessToken']
                     }
@@ -658,7 +703,6 @@ class ConnectionManager(object):
                 'nameOrEmail': username,
                 'password': md5
             },
-            'dataType': "json"
         }
         try:
             result = self.requestUrl(request)
@@ -695,7 +739,6 @@ class ConnectionManager(object):
             
             'type': "GET",
             'url': url,
-            'dataType': "json",
             'headers': {
                 'X-Connect-UserToken': accessToken
             }
@@ -718,7 +761,6 @@ class ConnectionManager(object):
 
                 'url': url,
                 'type': "GET",
-                'dataType': "json",
                 'ssl': options.get('ssl'),
                 'params': {
                     'ConnectUserId': credentials['ConnectUserId']

@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import xbmc
 from xbmcaddon import Addon
+from os.path import join
 
 # Paths are in unicode, otherwise Windows will throw fits
 # For any file operations with KODI function, use encoded strings!
@@ -32,6 +33,7 @@ KODILANGUAGE = xbmc.getLanguage(xbmc.ISO_639_1)
 KODIVERSION = int(xbmc.getInfoLabel("System.BuildVersion")[:2])
 KODILONGVERSION = xbmc.getInfoLabel('System.BuildVersion')
 KODI_PROFILE = tryDecode(xbmc.translatePath("special://profile"))
+ADDON_PATH_DATA = join(KODI_PROFILE, 'addon_data', ADDON_ID, '')
 
 if xbmc.getCondVisibility('system.platform.osx'):
     PLATFORM = "MacOSX"

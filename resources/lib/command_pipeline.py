@@ -56,6 +56,7 @@ class Monitor_Window(Thread):
         except:
             log.error('Failed to execute function %s with params %s'
                       % (function, params))
+            raise
 
     def run(self):
         thread_stopped = self.thread_stopped

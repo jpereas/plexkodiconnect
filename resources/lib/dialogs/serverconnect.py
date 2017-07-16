@@ -7,12 +7,14 @@ from logging import getLogger
 import xbmc
 import xbmcgui
 
+import connect.connectionmanager as connectionmanager
 from utils import language as lang
 
 ###############################################################################
 
 log = getLogger("PLEX."+__name__)
 
+CONN_STATE = connectionmanager.CONNECTIONSTATE
 ACTION_PARENT_DIR = 9
 ACTION_PREVIOUS_MENU = 10
 ACTION_BACK = 92
@@ -25,7 +27,7 @@ CANCEL = 201
 MESSAGE_BOX = 202
 MESSAGE = 203
 BUSY = 204
-EMBY_CONNECT = 205
+PLEX_CONNECT = 205
 MANUAL_SERVER = 206
 
 ###############################################################################
@@ -42,7 +44,7 @@ class ServerConnect(xbmcgui.WindowXMLDialog):
     _manual_server = False
 
     def set_args(self, **kwargs):
-        # connect_manager, username, user_image, servers, emby_connect
+        # connect_manager, username, user_image, servers, plex_connect
         for key, value in kwargs.iteritems():
             setattr(self, key, value)
 
@@ -74,8 +76,8 @@ class ServerConnect(xbmcgui.WindowXMLDialog):
         if self.user_image is not None:
             self.getControl(USER_IMAGE).setImage(self.user_image)
 
-        if not self.emby_connect: # Change connect user
-            self.getControl(EMBY_CONNECT).setLabel("[UPPERCASE][B]"+'plex.tv user change'+"[/B][/UPPERCASE]")
+        if not self.plex_connect: # Change connect user
+            self.getControl(PLEX_CONNECT).setLabel("[UPPERCASE][B]"+'plex.tv user change'+"[/B][/UPPERCASE]")
 
         if self.servers:
             self.setFocus(self.list_)
@@ -107,7 +109,7 @@ class ServerConnect(xbmcgui.WindowXMLDialog):
 
     def onClick(self, control):
 
-        if control == EMBY_CONNECT:
+        if control == PLEX_CONNECT:
             self.connect_manager.clearData()
             self._connect_login = True
             self.close()

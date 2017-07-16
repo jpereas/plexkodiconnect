@@ -38,3 +38,6 @@ PLEX_USER_ID = None
 # Token passed along, e.g. if playback initiated by Plex Companion. Might be
 # another user playing something! Token identifies user
 PLEX_TRANSIENT_TOKEN = None
+
+# Used by connectmanager.py
+CONNECT_STATE = {}

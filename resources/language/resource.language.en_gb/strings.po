@@ -1158,12 +1158,12 @@ msgstr ""
 
 # Server selection dialog: button text to sign in or sign out of plex.tv
 msgctxt "#30600"
-msgid "Toggle plex.tv sign-in"
+msgid "Sign-in to plex.tv"
 msgstr ""
 
 # Server selection dialog: button text to add server manually
 msgctxt "#30601"
-msgid "Manually add server"
+msgid "Manually add PMS"
 msgstr ""
 
 # Button text, e.g. to cancel a dialog

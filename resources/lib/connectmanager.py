@@ -1,14 +1,20 @@
 # -*- coding: utf-8 -*-
 ###############################################################################
 from logging import getLogger
+from copy import deepcopy
+from os import makedirs
+
+from xbmc import getIPAddress
 
 # from connect.connectionmanager import ConnectionManager
 from downloadutils import DownloadUtils
 from dialogs.serverconnect import ServerConnect
 from dialogs.servermanual import ServerManual
 from connect.plex_tv import plex_tv_sign_in_with_pin
+import connect.connectionmanager as connectionmanager
 from userclient import UserClient
-from utils import window, settings, tryEncode, language as lang, dialog
+from utils import window, settings, tryEncode, language as lang, dialog, \
+    exists_dir
 from PlexFunctions import GetMachineIdentifier, get_pms_settings, \
     check_connection
 import variables as v
@@ -18,6 +24,7 @@ import state
 
 log = getLogger("PLEX."+__name__)
 
+STATE = connectionmanager.CONNECTIONSTATE
 XML_PATH = (tryEncode(v.ADDON_PATH), "default", "1080i")
 
 ###############################################################################
@@ -55,6 +62,7 @@ def get_plex_login_from_settings():
 class ConnectManager(object):
     # Borg
     __shared_state = {}
+    state = {}
 
     def __init__(self):
         # Borg
@@ -68,19 +76,36 @@ class ConnectManager(object):
         plexdict = get_plex_login_from_settings()
         self.myplexlogin = plexdict['myplexlogin'] == 'true'
         self.plexLogin = plexdict['plexLogin']
-        self.plexToken = plexdict['plexToken']
         self.plexid = plexdict['plexid']
         # Token for the PMS, not plex.tv
+        self.__connect = connectionmanager.ConnectionManager(
+            appName="Kodi",
+            appVersion=v.ADDON_VERSION,
+            deviceName=v.DEVICENAME,
+            deviceId=window('plex_client_Id'))
+
         self.pms_token = settings('accessToken')
+        self.plexToken = plexdict['plexToken']
+        self.__connect.plexToken = self.plexToken
         if self.plexToken:
             log.debug('Found a plex.tv token in the settings')
+        if not exists_dir(v.ADDON_PATH_DATA):
+            makedirs(v.ADDON_PATH_DATA)
+        self.__connect.setFilePath(v.ADDON_PATH_DATA)
+
+        if state.CONNECT_STATE:
+            self.state = state.CONNECT_STATE
+        else:
+            self.state = self.__connect.connect()
+            log.debug("Started with: %s", self.state)
+            state.CONNECT_STATE = deepcopy(self.state)
 
     def update_state(self):
         self.state = self.__connect.connect({'updateDateLastAccessed': False})
         return self.get_state()
 
-    def get_sate(self):
-        window('emby_state.json', value=self.state)
+    def get_state(self):
+        state.CONNECT_STATE = deepcopy(self.state)
         return self.state
 
     def get_server(self, server, options={}):
@@ -98,13 +123,14 @@ class ConnectManager(object):
         """
         Will return selected server or raise RuntimeError
         """
+        status = self.__connect.connect({'enableAutoLogin': False})
         dia = ServerConnect("script-plex-connect-server.xml", *XML_PATH)
         kwargs = {
-            'connect_manager': None,  # self._connect
+            'connect_manager': self.__connect,
             'username': state.PLEX_USERNAME,
             'user_image': state.PLEX_USER_IMAGE,
-            # 'servers': state.get('Servers') or [],
-            # 'emby_connect': False if user else True
+            'servers': status.get('Servers') or [],
+            'plex_connect': False if status.get('ConnectUser') else True
         }
         dia.set_args(**kwargs)
         dia.doModal()
@@ -113,12 +139,9 @@ class ConnectManager(object):
             log.debug("Server selected")
             return dia.get_server()
 
-        elif dia._is_connect_login():
+        elif dia.is_connect_login():
             log.debug("Login to plex.tv")
-            try:
-                self._login_connect()
-            except RuntimeError:
-                pass
+            self.plex_tv_signin()
             return self.select_servers()
 
         elif dia.is_manual_server():
@@ -134,26 +157,13 @@ class ConnectManager(object):
     def manual_server(self):
         # Return server or raise error
         dia = ServerManual("script-plex-connect-server-manual.xml", *XML_PATH)
-        dia._set_connect_manager(self.__connect)
+        dia.set_connect_manager(self.__connect)
         dia.doModal()
 
         if dia._is_connected():
             return dia.get_server()
         else:
             raise RuntimeError("Server is not connected")
-
-    def _login_connect(self):
-        # Return connect user or raise error
-        dia = LoginConnect("script-emby-connect-login.xml", *XML_PATH)
-        dia._set_connect_manager(self.__connect)
-        dia.doModal()
-
-        self.update_state()
-
-        if dia.is_logged_in():
-            return dia.get_user()
-        else:
-            raise RuntimeError("Connect user is not logged in")
 
     def login(self, server=None):
         # Return user or raise error
@@ -233,7 +243,7 @@ class ConnectManager(object):
         # Update the token in data.txt
         self.__connect.credentialProvider.getCredentials(credentials)
 
-    def _get_connect_servers(self):
+    def get_connect_servers(self):
 
         connect_servers = []
         servers = self.__connect.getAvailableServers()
@@ -580,8 +590,7 @@ class ConnectManager(object):
         """
         Returns a list of servers from GDM and possibly plex.tv
         """
-        self.discoverPMS(xbmc.getIPAddress(),
-                         plexToken=self.plexToken)
+        self.discoverPMS(getIPAddress(), plexToken=self.plexToken)
         serverlist = self.plx.returnServerList(self.plx.g_PMS)
         log.debug('PMS serverlist: %s' % serverlist)
         return serverlist
