@@ -8,12 +8,12 @@ msgstr ""
 "POT-Creation-Date: 2017-04-15 13:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Croneter None <croneter@gmail.com>, 2017\n"
-"Language-Team: Chinese (Taiwan) (https://www.transifex.com/croneter/teams/73837/zh_TW/)\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/croneter/teams/73837/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_TW\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 # Add-on settings
 msgctxt "#29999"
@@ -22,1402 +22,1436 @@ msgstr "PlexKodiConnect"
 
 msgctxt "#30000"
 msgid "Server Address (IP)"
-msgstr "伺服器位址(IP)"
+msgstr "Endereço do servidor (IP)"
 
 msgctxt "#30002"
 msgid "Preferred playback method"
-msgstr "喜好的播放方式"
+msgstr "Método de reprodução preferencial"
 
 msgctxt "#30004"
 msgid "Log level"
-msgstr "日誌層級"
+msgstr "Nível do registo"
 
 msgctxt "#30005"
 msgid "Username: "
-msgstr "使用者: "
+msgstr "Utilizador: "
 
 msgctxt "#30006"
 msgid "Password: "
-msgstr "密碼 "
+msgstr "Palavra passe: "
 
 msgctxt "#30007"
 msgid "Network Username: "
-msgstr "網路使用者: "
+msgstr "Nome do utilizador de rede: "
 
 msgctxt "#30008"
 msgid "Network Password: "
-msgstr "網路密碼: "
+msgstr "Palavra passe da rede: "
 
 msgctxt "#30009"
 msgid "Transcode: "
-msgstr "轉碼: "
+msgstr "Transcodificar: "
 
 msgctxt "#30010"
 msgid "Enable Performance Profiling"
-msgstr "使用性能分析"
+msgstr "Ativar perfis de desempenho"
 
 msgctxt "#30011"
 msgid "Local caching system"
-msgstr "本地快取系統"
+msgstr "Sistema de cache local"
 
 msgctxt "#30012"
 msgid "OK"
-msgstr "確定"
+msgstr "OK"
 
 msgctxt "#30013"
 msgid "Never show"
-msgstr "不要顯示"
+msgstr "Nunca mostrar"
 
 msgctxt "#30014"
 msgid "Connection"
-msgstr "連結"
+msgstr "Ligação"
 
 msgctxt "#30015"
 msgid "Network"
-msgstr "網路"
+msgstr "Rede"
 
 msgctxt "#30016"
 msgid "Device Name"
-msgstr "裝置名稱"
+msgstr "Nome do Dispositivo"
 
 msgctxt "#30017"
 msgid "Unauthorized for PMS"
-msgstr "Plex伺服器未被授權"
+msgstr "Não autorizado para o PMS"
 
 msgctxt "#30022"
 msgid "Advanced"
-msgstr "進階"
+msgstr "Avançado"
 
 msgctxt "#30024"
 msgid "Username"
-msgstr "使用者"
+msgstr "Nome de Utilizador"
 
 msgctxt "#30025"
 msgid "Display message if PMS goes offline"
-msgstr "顯示\"伺服器未連線\""
+msgstr "Exibir mensagem se o PMS ficar offline"
 
 msgctxt "#30030"
 msgid "Port Number"
-msgstr "埠號"
+msgstr "Número da Porta"
 
 msgctxt "#30031"
 msgid "I own this Plex Media Server"
-msgstr "我擁有這個伺服器"
+msgstr "Eu possuo este Servidor Plex Media"
 
 msgctxt "#30035"
 msgid "Number of recent Music Albums to show:"
-msgstr "顯示幾張新加的專輯:"
+msgstr "Número de álbuns de música recente para mostrar:"
 
 msgctxt "#30036"
 msgid "Number of recent Movies to show:"
-msgstr "顯示幾部新加的電影:"
+msgstr "Número de filmes recentes para mostrar:"
 
 msgctxt "#30037"
 msgid "Number of recent TV episodes to show:"
-msgstr "顯示幾部新加的電視節目:"
+msgstr "Número de episódios de TV recentes para mostrar:"
 
 msgctxt "#30038"
 msgid "Mark watched at start of playback:"
-msgstr "開始放就設為「已播放」:"
+msgstr "Marcar como visto no início da reprodução:"
 
 msgctxt "#30039"
 msgid "Set Season poster for episodes"
-msgstr "為電視節目設定每季海報"
+msgstr "Definido o cartaz da temporada para os episódios"
 
 msgctxt "#30040"
 msgid "Genre Filter ..."
-msgstr "依「類型」篩選..."
+msgstr "Filtro de género..."
 
 msgctxt "#30041"
 msgid "Play All from Here"
-msgstr "從此全部播放"
+msgstr "Reproduzir tudo a partir daqui"
 
 msgctxt "#30042"
 msgid "Refresh"
-msgstr "更新"
+msgstr "Atualizar"
 
 msgctxt "#30043"
 msgid "Delete"
-msgstr "刪除"
+msgstr "Eliminar"
 
 msgctxt "#30044"
 msgid "Incorrect Username/Password"
-msgstr "使用者名稱或密碼錯誤"
+msgstr "Nome de utilizador ou palavra-passe incorretos"
 
 msgctxt "#30045"
 msgid "Username not found"
-msgstr "沒有這個使用者"
+msgstr "Utilizador desconhecido"
 
 msgctxt "#30046"
 msgid "Add Movie to CouchPotato"
-msgstr "將電影加到CouchPotato"
+msgstr "Adicionar Filme ao CouchPotato"
 
 msgctxt "#30052"
 msgid "Deleting"
-msgstr "刪除中"
+msgstr "A apagar"
 
 msgctxt "#30053"
 msgid "Waiting for server to delete"
-msgstr "等待伺服器刪除中"
+msgstr "A aguardar pelo servidor para excluir"
 
 msgctxt "#30059"
 msgid "Server Default"
-msgstr "伺服器預設"
+msgstr "Servidor padrão"
 
 msgctxt "#30060"
 msgid "Title"
-msgstr "標題"
+msgstr "Título"
 
 msgctxt "#30061"
 msgid "Year"
-msgstr "年"
+msgstr "Ano"
 
 msgctxt "#30062"
 msgid "Premiere Date"
-msgstr "首映日期"
+msgstr "Data de Estreia"
 
 msgctxt "#30063"
 msgid "Date Created"
-msgstr "創建日期"
+msgstr "Data de Criação"
 
 msgctxt "#30064"
 msgid "Critic Rating"
-msgstr "評論家評分"
+msgstr "Avaliação da Crítica"
 
 msgctxt "#30065"
 msgid "Community Rating"
-msgstr "適群評等"
+msgstr "Avaliação da Comunidade"
 
 msgctxt "#30066"
 msgid "Play Count"
-msgstr "播放次數"
+msgstr "Contagem de Visualizações"
 
 msgctxt "#30067"
 msgid "Budget"
-msgstr "預算"
+msgstr "Orçamento"
 
 # Runtime added as 30226 below
 msgctxt "#30068"
 msgid "Sort By"
-msgstr "排序"
+msgstr "Ordenar Por"
 
 msgctxt "#30069"
 msgid "None"
-msgstr "無"
+msgstr "Nada"
 
 msgctxt "#30070"
 msgid "Action"
-msgstr "動作"
+msgstr "Ação"
 
 msgctxt "#30071"
 msgid "Adventure"
-msgstr "冒險"
+msgstr "Aventura"
 
 msgctxt "#30072"
 msgid "Animation"
-msgstr "動畫"
+msgstr "Animação"
 
 msgctxt "#30073"
 msgid "Crime"
-msgstr "犯罪"
+msgstr "Crime"
 
 msgctxt "#30074"
 msgid "Comedy"
-msgstr "喜劇"
+msgstr "Comédia"
 
 msgctxt "#30075"
 msgid "Documentary"
-msgstr "傳記"
+msgstr "Documentário"
 
 msgctxt "#30076"
 msgid "Drama"
-msgstr "戲劇"
+msgstr "Drama"
 
 msgctxt "#30077"
 msgid "Fantasy"
-msgstr "幻想"
+msgstr "Fantasia"
 
 msgctxt "#30078"
 msgid "Foreign"
-msgstr "外國的"
+msgstr "Estrangeiros"
 
 msgctxt "#30079"
 msgid "History"
-msgstr "歷史"
+msgstr "Histórico"
 
 msgctxt "#30080"
 msgid "Horror"
-msgstr "恐怖"
+msgstr "Terror"
 
 msgctxt "#30081"
 msgid "Music"
-msgstr "音樂"
+msgstr "Música"
 
 msgctxt "#30082"
 msgid "Musical"
-msgstr "音樂的"
+msgstr "Musical"
 
 msgctxt "#30083"
 msgid "Mystery"
-msgstr "神秘"
+msgstr "Mistério"
 
 msgctxt "#30084"
 msgid "Romance"
-msgstr "浪漫"
+msgstr "Romance"
 
 msgctxt "#30085"
 msgid "Science Fiction"
-msgstr "科幻"
+msgstr "Ficção Cientifica"
 
 msgctxt "#30086"
 msgid "Short"
-msgstr "短劇"
+msgstr "Curta"
 
 msgctxt "#30087"
 msgid "Suspense"
-msgstr "懸疑"
+msgstr "Suspense"
 
 msgctxt "#30088"
 msgid "Thriller"
-msgstr "驚悚"
+msgstr "Thriller"
 
 msgctxt "#30089"
 msgid "Western"
-msgstr "歐美"
+msgstr "Faroeste"
 
 msgctxt "#30090"
 msgid "Genre Filter"
-msgstr "依類別篩選"
+msgstr "Filtro de Géneros"
 
 msgctxt "#30091"
 msgid "Confirm file deletion"
-msgstr "確認刪除檔案"
+msgstr "Confirmar eliminação do ficheiro"
 
 msgctxt "#30092"
 msgid ""
 "Delete this item? This action will delete media and associated data files."
-msgstr "確認要刪除？這會刪除該媒體及所有相關資料檔。"
+msgstr ""
+"Excluir este item? Esta ação irá apagar o média e arquivos de dados "
+"associados."
 
 msgctxt "#30093"
 msgid "Mark Watched"
-msgstr "設為「已觀看」"
+msgstr "Marcar como Visto"
 
 msgctxt "#30094"
 msgid "Mark Unwatched"
-msgstr "設為「未觀看」"
+msgstr "Marcar como Não Visto"
 
 msgctxt "#30095"
 msgid "Add to Favorites"
-msgstr "加到最愛"
+msgstr "Adicionar aos Favoritos"
 
 msgctxt "#30096"
 msgid "Remove from Favorites"
-msgstr "移除最愛"
+msgstr "Remover dos Favoritos"
 
 msgctxt "#30097"
 msgid "Sort By ..."
-msgstr "依... 排序"
+msgstr "Ordenar Por ..."
 
 msgctxt "#30098"
 msgid "Sort Order Descending"
-msgstr "降序"
+msgstr "Ordenação Descendente"
 
 msgctxt "#30099"
 msgid "Sort Order Ascending"
-msgstr "升序"
+msgstr "Ordenação Ascendente"
 
 msgctxt "#30100"
 msgid "Show People"
-msgstr "顯示人員"
+msgstr "Mostrar Pessoas"
 
 # resume dialog
 msgctxt "#30105"
 msgid "Resume"
-msgstr "繼續"
+msgstr "Resumir"
 
 msgctxt "#30106"
 msgid "Resume from"
-msgstr "指定播放位置"
+msgstr "Resumir a partir de"
 
 msgctxt "#30107"
 msgid "Start from beginning"
-msgstr "從頭播放"
+msgstr "Começar do início"
 
 msgctxt "#30110"
 msgid "Interface"
-msgstr "介面"
+msgstr "Interface"
 
 msgctxt "#30111"
 msgid "Include Stream Info"
-msgstr "顯示串流資訊"
+msgstr "Incluir Informação de Transmissão"
 
 msgctxt "#30112"
 msgid "Include People"
-msgstr "顯示人員"
+msgstr "Incluir Pessoas"
 
 msgctxt "#30113"
 msgid "Include Overview"
-msgstr "顯示簡介"
+msgstr "Inclui Visão Geral"
 
 msgctxt "#30114"
 msgid "Offer delete after playback"
-msgstr "播放後刪除"
+msgstr "Mostrar Excluir após a reprodução"
 
 msgctxt "#30115"
 msgid "For Episodes"
-msgstr "針對電視節目"
+msgstr "Para Episódios"
 
 msgctxt "#30116"
 msgid "For Movies"
-msgstr "針對電影"
+msgstr "Para Filmes"
 
 msgctxt "#30117"
 msgid "Background Art Refresh Rate (seconds)"
-msgstr "背景更新頻率(秒)"
+msgstr "Taxa de atualização da arte de fundo (segundos)"
 
 msgctxt "#30118"
 msgid "Add Resume Percent"
-msgstr "顯示已播放比率"
+msgstr "Adicionar Percentagem do Resumo"
 
 msgctxt "#30119"
 msgid "Add Episode Number"
-msgstr "顯示電視節目集數"
+msgstr "Adicionar Número de Episódio"
 
 msgctxt "#30120"
 msgid "Show Load Progress"
-msgstr "顯示加載進度"
+msgstr "Mostrar Progresso do Carregamento"
 
 msgctxt "#30121"
 msgid "Loading Content"
-msgstr "加載內容中"
+msgstr "A Carregar Conteúdo"
 
 msgctxt "#30122"
 msgid "Retrieving Data"
-msgstr "數據檢索中"
+msgstr "A obter dados"
 
 msgctxt "#30125"
 msgid "Done"
-msgstr "完成"
+msgstr "Concluído"
 
 msgctxt "#30126"
 msgid "Processing Item : "
-msgstr "處理內容: "
+msgstr "A Processar Item :"
 
 msgctxt "#30128"
 msgid "Play Error"
-msgstr "播放錯誤"
+msgstr "Erro de Reprodução"
 
 msgctxt "#30129"
 msgid "This item is not playable"
-msgstr "內容無法播放"
+msgstr "Este item não pode ser reproduzido"
 
 msgctxt "#30130"
 msgid "Local path detected"
-msgstr "偵測到本地路徑"
+msgstr "Caminho local detectado"
 
 msgctxt "#30131"
 msgid ""
 "Your MB3 Server contains local paths.  Please change server paths to UNC or "
 "change XBMB3C setting 'Play from Stream' to true.  Path: "
-msgstr "你的MB3伺服器包含區網位置。請變更伺服器位置到UNC或是將XBMC3C「從串流播放」設定為「True」。路徑: "
+msgstr ""
+"Seu servidor MB3 contém caminhos locais.  Altere os caminhos do servidor "
+"para UNC ou altere a configuração XBMB3C 'Play from Stream' para true.  "
+"Caminho:"
 
 msgctxt "#30132"
 msgid "Warning"
-msgstr "警告"
+msgstr "Aviso"
 
 msgctxt "#30133"
 msgid "Debug logging enabled."
-msgstr "除錯日誌已啟動"
+msgstr "Registo de depuração ativado."
 
 msgctxt "#30134"
 msgid "This will affect performance."
-msgstr "這會影響效能。"
+msgstr "Isto irá afetar o desempenho."
 
 msgctxt "#30135"
 msgid "Error"
-msgstr "錯誤"
+msgstr "Erro"
 
 msgctxt "#30136"
 msgid "Monitoring service is not running"
-msgstr "監控服務未啟動"
+msgstr "O serviço de monitorização não está em execução"
 
 msgctxt "#30137"
 msgid "If you have just installed please restart Kodi"
-msgstr "如果是新安裝的，請重啟Kodi"
+msgstr "Se acabou de instalar por favor reinicie o Kodi"
 
 msgctxt "#30138"
 msgid "Search"
-msgstr "搜尋"
+msgstr "Procurar"
 
 msgctxt "#30139"
 msgid "Enable Theme Music (Requires Restart)"
-msgstr "啟用劇院音樂(須重啟)"
+msgstr "Ativar Música Temática (Requer Reinício) "
 
 msgctxt "#30140"
 msgid " - Loop Theme Music"
-msgstr " 循環播放劇院音樂"
+msgstr "Reprodução em Loop de Música Temática"
 
 msgctxt "#30141"
 msgid "Enable Background Image (Requires Restart)"
-msgstr "顯示背景圖片(須重啟)"
+msgstr "Ativar a Imagem de Fundo (requer reinicialização)"
 
 msgctxt "#30142"
 msgid "Services"
-msgstr "服務項目"
+msgstr "Serviços"
 
 msgctxt "#30143"
 msgid "Always transcode if video bitrate is above"
-msgstr "執行轉碼，如果傳輸率高於"
+msgstr "Transcodificar sempre se a taxa bits do vídeo estiver acima de"
 
 msgctxt "#30150"
 msgid "Skin does not support setting views"
-msgstr "Skin不支援設置視圖"
+msgstr "O tema não suporta a definição de visualizações"
 
 msgctxt "#30151"
 msgid "Select item action (Requires Restart)"
-msgstr "選擇執行動作(須重啟)"
+msgstr "Selecionar ação do item (Requer Reinicio)"
 
 msgctxt "#30156"
 msgid "Sort NextUp by Show Title"
-msgstr "依標題排序「即將上映」"
+msgstr "Classificar NextUp por Mostrar título"
 
 msgctxt "#30157"
 msgid "Enable Enhanced Images (eg CoverArt)"
-msgstr "使用進階圖片(例: CoverArt)"
+msgstr "Ativar imagens melhoradas (ex: Capa)"
 
 msgctxt "#30158"
 msgid "Metadata"
-msgstr "元數據"
+msgstr "Metadados"
 
 msgctxt "#30159"
 msgid "Artwork"
-msgstr "背景海報"
+msgstr "Ilustrações"
 
 msgctxt "#30160"
 msgid "Video Quality if Transcoding necessary"
-msgstr "轉碼影像品質"
+msgstr "Qualidade de vídeo se a transcodificação for necessária"
 
 msgctxt "#30161"
 msgid "Enable Suggested Loader (Requires Restart)"
-msgstr "啟用建議的裝載器(須重啟)"
+msgstr "Ativar Carregador Sugerido (Requer Reinício)"
 
 msgctxt "#30162"
 msgid "Add Season Number"
-msgstr "顯示季數"
+msgstr "Adicionar número da temporada"
 
 msgctxt "#30163"
 msgid "Flatten Seasons"
-msgstr "不依季分階"
+msgstr "Nivelar Temporadas"
 
 msgctxt "#30164"
 msgid "Direct Play - HTTP"
-msgstr "直播－HTTP"
+msgstr "Reprodução Direta - HTTP"
 
 msgctxt "#30165"
 msgid "Direct Play"
-msgstr "直播"
+msgstr "Reprodução Direta"
 
 msgctxt "#30166"
 msgid "Transcoding"
-msgstr "轉碼中"
+msgstr "A Transcodificar"
 
 msgctxt "#30167"
 msgid "Server Detection Succeeded"
-msgstr "伺服器檢測成功"
+msgstr "A Deteção do Servidor Foi Bem-Sucedida"
 
 msgctxt "#30168"
 msgid "Found server"
-msgstr "找到伺服器"
+msgstr "Servidor encontrado"
 
 msgctxt "#30169"
 msgid "Address : "
-msgstr "位址: "
+msgstr "Endereço: "
 
 # Video nodes
 msgctxt "#30170"
 msgid "Recently Added TV Shows"
-msgstr "最近添加的電視節目"
+msgstr "Programas de TV recentemente adicionados"
 
 msgctxt "#30171"
 msgid "In Progress TV Shows"
-msgstr "未看完的電視節目"
+msgstr "Programas de TV em progresso"
 
 msgctxt "#30172"
 msgid "All Music"
-msgstr "所有的音樂"
+msgstr "Todas as músicas"
 
 msgctxt "#30173"
 msgid "Channels"
-msgstr "頻道"
+msgstr "Canais"
 
 msgctxt "#30174"
 msgid "Recently Added"
-msgstr "最近加入"
+msgstr "Adicionado Recentemente"
 
 msgctxt "#30175"
 msgid "Recently Added Episodes"
-msgstr "最近新增的劇集"
+msgstr "Episódios Recentemente Adicionados"
 
 msgctxt "#30176"
 msgid "Recently Added Albums"
-msgstr "最近新增的專輯"
+msgstr "Álbuns Recentemente Adicionados"
 
 msgctxt "#30177"
 msgid "In Progress Movies"
-msgstr "未看完的電影"
+msgstr "Filmes em progresso"
 
 msgctxt "#30178"
 msgid "In Progress Episodes"
-msgstr "未看完的劇集"
+msgstr "Episódios em progresso"
 
 msgctxt "#30179"
 msgid "Next Episodes"
-msgstr "下一集"
+msgstr "Próximos Episódios"
 
 msgctxt "#30180"
 msgid "Favorite Movies"
-msgstr "最愛的電影"
+msgstr "Filmes Favoritos"
 
 msgctxt "#30181"
 msgid "Favorite Shows"
-msgstr "最愛的電視節目"
+msgstr "Séries de TV Favoritas"
 
 msgctxt "#30182"
 msgid "Favorite Episodes"
-msgstr "最愛的劇集"
+msgstr "Episódios Favoritos"
 
 msgctxt "#30183"
 msgid "Frequent Played Albums"
-msgstr "最常播放的專輯"
+msgstr "Álbuns Reproduzidos Frequentemente"
 
 msgctxt "#30184"
 msgid "Upcoming TV"
-msgstr "即將上映的影集"
+msgstr "Próximos Programas de TV"
 
 msgctxt "#30185"
 msgid "BoxSets"
-msgstr "合集"
+msgstr "Colectâneas"
 
 msgctxt "#30186"
 msgid "Trailers"
-msgstr "預告片"
+msgstr "Trailers"
 
 msgctxt "#30187"
 msgid "Music Videos"
-msgstr "音樂視頻"
+msgstr "Vídeos de música"
 
 msgctxt "#30188"
 msgid "Photos"
-msgstr "相片"
+msgstr "Fotografias"
 
 msgctxt "#30189"
 msgid "Unwatched Movies"
-msgstr "未觀看的電影"
+msgstr "Filmes Por Ver"
 
 msgctxt "#30190"
 msgid "Movie Genres"
-msgstr "電影分類"
+msgstr "Géneros de Filme"
 
 msgctxt "#30191"
 msgid "Movie Studios"
-msgstr "製片廠"
+msgstr "Estúdios de cinema"
 
 msgctxt "#30192"
 msgid "Movie Actors"
-msgstr "電影演員"
+msgstr "Atores do Filme"
 
 msgctxt "#30193"
 msgid "Unwatched Episodes"
-msgstr "未觀看的劇集"
+msgstr "Episódios não vistos"
 
 msgctxt "#30194"
 msgid "TV Genres"
-msgstr "電視節目分類"
+msgstr "Géneros de TV"
 
 msgctxt "#30195"
 msgid "TV Networks"
-msgstr "電視網路"
+msgstr "Redes de TV"
 
 msgctxt "#30196"
 msgid "TV Actors"
-msgstr "電視演員"
+msgstr "Atores de TV"
 
 msgctxt "#30197"
 msgid "Playlists"
-msgstr "播放列表"
+msgstr "Listas de Reprodução"
 
 msgctxt "#30198"
 msgid "Search"
-msgstr "搜尋"
+msgstr "Procurar"
 
 msgctxt "#30199"
 msgid "Set Views"
-msgstr "設置的視圖"
+msgstr "Definir Visualizações"
 
 msgctxt "#30200"
 msgid "Select User"
-msgstr "選擇使用者"
+msgstr "Selecionar Utilizador"
 
 msgctxt "#30201"
 msgid "Profiling enabled."
-msgstr "啟用分析。"
+msgstr "Perfis ativados."
 
 msgctxt "#30202"
 msgid "Please remember to turn off when finished testing."
-msgstr "請記得完成測試後關閉。"
+msgstr "Lembre-se de desligar quando terminar o teste."
 
 msgctxt "#30203"
 msgid "Error in ArtworkRotationThread"
-msgstr "旋轉背景海報線程發生錯誤"
+msgstr "Erro no ArtworkRotationThread"
 
 msgctxt "#30204"
 msgid "Unable to connect to server"
-msgstr "無法連線到伺服器"
+msgstr "Não foi possível conectar ao servidor"
 
 msgctxt "#30205"
 msgid "Error in LoadMenuOptionsThread"
-msgstr "載入選單選項的線程發生錯誤"
+msgstr "Erro no LoadMenuOptionsThread"
 
 msgctxt "#30206"
 msgid "Enable Playlists Loader (Requires Restart)"
-msgstr "啟用播放清單載入程式 (須重啟)"
+msgstr "Ativar Carregador de Listas de Reprodução (Requer Reinício)"
 
 msgctxt "#30207"
 msgid "Songs"
-msgstr "歌曲"
+msgstr "Músicas"
 
 msgctxt "#30208"
 msgid "Albums"
-msgstr "專輯"
+msgstr "Álbuns"
 
 msgctxt "#30209"
 msgid "Album Artists"
-msgstr "專輯演唱者"
+msgstr "Artistas do Álbum"
 
 msgctxt "#30210"
 msgid "Artists"
-msgstr "演出者"
+msgstr "Artistas"
 
 msgctxt "#30211"
 msgid "Music Genres"
-msgstr "音樂流派"
+msgstr "Géneros de Musica"
 
 msgctxt "#30212"
 msgid "Enable Theme Videos (Requires Restart)"
-msgstr "啟用主題視頻 (須重啟)"
+msgstr "Ativar Vídeos Temáticos (Requer Reinício)"
 
 msgctxt "#30213"
 msgid " - Loop Theme Videos"
-msgstr " -循環播放主題視頻"
+msgstr "Reprodução em Loop de Vídeos Temáticos"
 
 msgctxt "#30216"
 msgid "AutoPlay remaining episodes in a season"
-msgstr "同一季自動播放下一集"
+msgstr "Reproduzir automaticamente os episódios restantes em uma temporada"
 
 msgctxt "#30218"
 msgid "Compress Artwork"
-msgstr "壓縮背景海報"
+msgstr "Comprimir as Ilustrações"
 
 msgctxt "#30220"
 msgid "Latest "
-msgstr "最新的 "
+msgstr "Mais recentes "
 
 msgctxt "#30221"
 msgid "In Progress "
-msgstr "進行中 "
+msgstr "Em Progresso "
 
 msgctxt "#30222"
 msgid "NextUp "
-msgstr "即將上映 "
+msgstr "A seguir "
 
 msgctxt "#30223"
 msgid "User Views"
-msgstr "使用者視圖"
+msgstr "Visualizações do utilizador"
 
 msgctxt "#30224"
 msgid "Report Metrics"
-msgstr "報告度量"
+msgstr "Reportar estatísticas"
 
 msgctxt "#30225"
 msgid "Use Kodi Sorting"
-msgstr "使用Kodi排序"
+msgstr "Usar classificação Kodi"
 
 msgctxt "#30226"
 msgid "Runtime"
-msgstr "運行時間"
+msgstr "Duração"
 
 msgctxt "#30227"
 msgid "Random"
-msgstr "隨機"
+msgstr "Aleatório"
 
 msgctxt "#30228"
 msgid "Recently releases"
-msgstr "最近發佈的"
+msgstr "Recentemente lançados"
 
 msgctxt "#30229"
 msgid "Random Items"
-msgstr "隨機播放項目"
+msgstr "Itens Aleatórios"
 
 msgctxt "#30230"
 msgid "Recommended"
-msgstr "推薦"
+msgstr "Recomendado"
 
 msgctxt "#30235"
 msgid "Extras"
-msgstr "附加功能"
+msgstr "Extras"
 
 msgctxt "#30236"
 msgid "Sync Theme Music"
-msgstr "同步主題音樂"
+msgstr "Sincronizar Música Temática"
 
 msgctxt "#30237"
 msgid "Sync Extra Fanart"
-msgstr "同步額外的背景海報"
+msgstr "Sincronizar Extras do Fanart"
 
 msgctxt "#30238"
 msgid "Sync Movie BoxSets"
-msgstr "同步電影合集"
+msgstr "Sincronizar Coletâneas de Filmes"
 
 msgctxt "#30239"
 msgid "[COLOR yellow]Reset local Kodi database[/COLOR]"
-msgstr "[COLOR yellow]重置 Kodi 資料庫[/COLOR]"
+msgstr "[COLOR yellow]Repor a base de dados local do Kodi[/COLOR]"
 
 msgctxt "#30240"
 msgid "Enable watched/resume status sync"
-msgstr "啟用「已看過」及「觀看進度」同步"
+msgstr "Ativar a sincronização do Estado Assistido/Retomar"
 
 msgctxt "#30241"
 msgid "DB Sync Indication:"
-msgstr "資料庫同步進度:"
+msgstr "Indicação de Sincronização da base de dados:"
 
 msgctxt "#30242"
 msgid "Play Count Sync Indication:"
-msgstr "播放次數同步進度:"
+msgstr "Indicação de sincronização do numero de reproduções"
 
 msgctxt "#30243"
 msgid "Enable HTTPS"
-msgstr "啟用 HTTPS"
+msgstr "Ativar HTTPS"
 
 msgctxt "#30245"
 msgid "Force Transcoding Codecs"
-msgstr "強迫使用特定的轉碼"
+msgstr "Forçar Transcodificar Codecs"
 
 msgctxt "#30246"
 msgid "Enable Netflix style next up notification"
-msgstr "使用 Netflix 的「即將上映」通知樣式"
+msgstr "Ativar estilo Netflix na notificação a seguir"
 
 msgctxt "#30247"
 msgid "  - The number of seconds before the end to show the notification"
-msgstr "  設定通知即將播放完畢前的秒數"
+msgstr "  - O número de segundos antes do fim para mostrar a notificação"
 
 msgctxt "#30248"
 msgid "Show Emby Info dialog on play/select action"
-msgstr "在 播放/選擇 時顯示 Plex 資訊對話方塊"
+msgstr "Mostrar caixa de diálogo Emby Info na ação reproduzir/selecionar"
 
 msgctxt "#30249"
 msgid "Enable server connection message on startup"
-msgstr "啟動時顯示連接伺服器的訊息"
+msgstr "Ativar mensagem de conexão do servidor ao iniciar"
 
 msgctxt "#30251"
 msgid "Recently added Home Videos"
-msgstr "最近添加的家庭視頻"
+msgstr "Vídeos caseiros recentemente adicionados "
 
 msgctxt "#30252"
 msgid "Recently added Photos"
-msgstr "最近添加的照片"
+msgstr "Fotos recentemente adicionadas"
 
 msgctxt "#30253"
 msgid "Favorite Home Videos"
-msgstr "最愛的家庭視頻"
+msgstr "Vídeos Caseiros Favoritos"
 
 msgctxt "#30254"
 msgid "Favorite Photos"
-msgstr "最愛的照片"
+msgstr "Fotografias Favoritas"
 
 msgctxt "#30255"
 msgid "Favorite Albums"
-msgstr "最喜歡的專輯"
+msgstr "Álbuns Favoritos"
 
 msgctxt "#30256"
 msgid "Recently added Music videos"
-msgstr "最近添加的音樂視頻"
+msgstr "Vídeos de Música recentemente adicionados"
 
 msgctxt "#30257"
 msgid "In progress Music videos"
-msgstr "進行中的音樂視頻"
+msgstr "Vídeos de Música em progresso"
 
 msgctxt "#30258"
 msgid "Unwatched Music videos"
-msgstr "未觀看的音樂視頻"
+msgstr "Vídeos de Música não vistos"
 
 # Default views
 msgctxt "#30300"
 msgid "Active"
-msgstr "啟動中"
+msgstr "Ativo"
 
 msgctxt "#30301"
 msgid "Clear Settings"
-msgstr "清除設置"
+msgstr "Limpar as definições"
 
 msgctxt "#30302"
 msgid "Movies"
-msgstr "電影"
+msgstr "Filmes"
 
 msgctxt "#30303"
 msgid "BoxSets"
-msgstr "合集"
+msgstr "Colectâneas"
 
 msgctxt "#30304"
 msgid "Trailers"
-msgstr "預告片"
+msgstr "Trailers"
 
 msgctxt "#30305"
 msgid "Series"
-msgstr "系列"
+msgstr "Séries"
 
 msgctxt "#30306"
 msgid "Seasons"
-msgstr "季"
+msgstr "Temporadas"
 
 msgctxt "#30307"
 msgid "Episodes"
-msgstr "劇集"
+msgstr "Episódios"
 
 msgctxt "#30308"
 msgid "Music Artists"
-msgstr "音樂演出者"
+msgstr "Artistas da Música"
 
 msgctxt "#30309"
 msgid "Music Albums"
-msgstr "音樂專輯"
+msgstr "Álbuns de Música"
 
 msgctxt "#30310"
 msgid "Music Videos"
-msgstr "音樂視頻"
+msgstr "Vídeos de Música"
 
 msgctxt "#30311"
 msgid "Music Tracks"
-msgstr "音樂曲目"
+msgstr "Músicas"
 
 msgctxt "#30312"
 msgid "Channels"
-msgstr "頻道"
+msgstr "Canais"
 
 # contextmenu
 msgctxt "#30401"
 msgid "Plex options"
-msgstr "Plex 選項"
+msgstr "Opções do Plex"
 
 msgctxt "#30402"
 msgid "Clear like for this item"
-msgstr "清除類似的項目"
+msgstr "Limpar gosto neste item"
 
 msgctxt "#30403"
 msgid "Like this item"
-msgstr "喜歡的項目"
+msgstr "Gosto deste item"
 
 msgctxt "#30404"
 msgid "Dislike this item"
-msgstr "不喜歡的項目"
+msgstr "Desgosto deste item"
 
 msgctxt "#30405"
 msgid "Add to Plex favorites"
-msgstr "加到 Plex 的最愛"
+msgstr "Adicionar aos favoritos do Plex"
 
 msgctxt "#30406"
 msgid "Remove from Plex favorites"
-msgstr "從 Plex 的最愛移除"
+msgstr "Remover dos favoritos do Plex"
 
 msgctxt "#30407"
 msgid "Set custom song rating"
-msgstr "設置自訂歌曲評級"
+msgstr "Definir classificação personalizada da música"
 
 msgctxt "#30408"
 msgid "Plex addon settings"
-msgstr "Plex 外掛程式設置"
+msgstr "Configurações de addon Plex"
 
 msgctxt "#30409"
 msgid "Delete item from server"
-msgstr "從伺服器中刪除項目"
+msgstr "Apagar este item do servidor"
 
 msgctxt "#30410"
 msgid "Refresh this item"
-msgstr "刷新這項"
+msgstr "Atualizar este item"
 
 msgctxt "#30411"
 msgid "Set custom song rating (0-5)"
-msgstr "設置自訂歌曲評級 (0-5)"
+msgstr "Definir classificação personalizada da música (0-5)"
 
 msgctxt "#30412"
 msgid "Force transcode"
-msgstr "強迫轉碼"
+msgstr "Forçar transcodificação"
 
 msgctxt "#30413"
 msgid "Enable Plex context menu in Kodi"
-msgstr "啟用在Kodi顯示Plex內容功能表"
+msgstr "Ativar o menu de contexto do Plex no Kodi"
 
 msgctxt "#30414"
 msgid ""
 "Could not delete the Plex item. Is item deletion enabled on the Plex Media "
 "Server?"
-msgstr "無法刪除Plex的項目, 請確認Plex伺服器是否已啟動刪除功能?"
+msgstr ""
+"Não foi possível apagar o item do Plex. O Servidor Plex Media tem eliminação"
+" de items ativado?"
 
 msgctxt "#30415"
 msgid "Start playback via PMS"
-msgstr "從 Plex 伺服器播放"
+msgstr "Iniciar a reprodução via PMS"
 
 msgctxt "#30416"
 msgid "Settings for the Plex Server"
-msgstr "Plex 伺服器的設置"
+msgstr "Configurações do Servidor Plex"
 
 # add-on settings
 msgctxt "#30500"
 msgid "Verify Host SSL Certificate (more secure)"
-msgstr "驗證主機 SSL 憑證 (更安全)"
+msgstr "Verificar Certificado SSL do Hospedeiro (mais seguro)"
 
 msgctxt "#30501"
 msgid "Client SSL certificate"
-msgstr "用戶端 SSL 憑證"
+msgstr "Certificado SSL do cliente"
 
 msgctxt "#30502"
 msgid "Use alternate address"
-msgstr "使用備用位址"
+msgstr "Usar endereço alternativo"
 
 msgctxt "#30503"
 msgid "Alternate Server Address"
-msgstr "待命伺服器位址"
+msgstr "Endereço do Servidor Alternativo"
 
 msgctxt "#30504"
 msgid "Use alternate device Name"
-msgstr "使用備用設備名稱"
+msgstr "Usar Nome de dispositivo alternativo"
 
 msgctxt "#30505"
 msgid "[COLOR yellow]Reset login attempts[/COLOR]"
-msgstr "[COLOR yellow]重置嘗試登入次數[/COLOR]"
+msgstr "[COLOR yellow]Repor tentativas de inicio de sessão[/COLOR]"
 
 msgctxt "#30506"
 msgid "Sync Options"
-msgstr "同步處理選項"
+msgstr "Opções de sincronização"
 
 msgctxt "#30507"
 msgid "Show syncing progress"
-msgstr "顯示同步進度"
+msgstr "Mostrar o progresso de sincronização"
 
 msgctxt "#30508"
 msgid "Sync empty TV Shows"
-msgstr "同步空的電視影集"
+msgstr "Sincronizar programas de TV vazios"
 
 msgctxt "#30509"
 msgid "Enable Music Library"
-msgstr "啟動音樂資料庫"
+msgstr "Ativar Biblioteca de Música"
 
 msgctxt "#30510"
 msgid "Direct stream music library"
-msgstr "直接串流音樂資料庫"
+msgstr "Transmitir biblioteca de música diretamente"
 
 msgctxt "#30511"
 msgid "Playback Mode"
-msgstr "播放模式"
+msgstr "Modo de Reprodução"
 
 msgctxt "#30512"
 msgid "Force artwork caching"
-msgstr "強制暫存背景海報"
+msgstr "Forçar o armazenamento em cache das ilustrações"
 
 msgctxt "#30513"
 msgid "Limit artwork cache threads (recommended for rpi)"
-msgstr "限制快取背景海報(對Raspberry Pi是必須的)"
+msgstr "Limitar operações de cache das ilustrações (recomendado para rpi)"
 
 msgctxt "#30514"
 msgid "Enable fast startup (requires server plugin)"
-msgstr "啟用快速啟動 (需要伺服器外掛程式)"
+msgstr "Ativar iniciar rápido (requer plugin de servidor)"
 
 msgctxt "#30515"
 msgid "Maximum items to request from the server at once"
-msgstr "同時對伺服器請求最多的項目數"
+msgstr "Máximo de itens a pedir do servidor de uma vez"
 
 msgctxt "#30516"
 msgid "Playback"
-msgstr "播放"
+msgstr "Reproduzir"
 
 msgctxt "#30517"
 msgid "[COLOR yellow]Enter network credentials[/COLOR]"
-msgstr "[COLOR yellow]輸入網路通行訊息[/COLOR]"
+msgstr "[COLOR yellow]Digite as credenciais da rede[/COLOR]"
 
 msgctxt "#30518"
 msgid "Enable Plex Trailers (Plexpass is needed)"
-msgstr "啟用Plex 預告片(需Plexpass資格)"
+msgstr "Ativar Trailers do Plex (Necessário Plexpass)"
 
 msgctxt "#30519"
 msgid "Ask to play trailers"
-msgstr "播放預告片"
+msgstr "Perguntar antes de reproduzir trailers"
 
 msgctxt "#30520"
 msgid ""
 "Skip Plex delete confirmation for the context menu (use at your own risk)"
-msgstr "跳過Plex確認刪除內容的警訊(自己承擔誤刪的風險)"
+msgstr ""
+"Saltar confirmação de eliminação do menu de contexto (use com risco por "
+"conta própria )"
 
 msgctxt "#30521"
 msgid "Jump back on resume (in seconds)"
-msgstr "恢復播放時跳回秒數"
+msgstr "Salte atrás na reprodução (em segundos)"
 
 msgctxt "#30522"
 msgid "Force transcode h265/HEVC"
-msgstr "播放 h265/HEVC 時，強迫轉碼"
+msgstr "Forçar a transcodificação dos codecs h265/HEVC"
 
 msgctxt "#30523"
 msgid "Music metadata options (not compatible with direct stream)"
-msgstr "音樂中繼資料選項 (與直接串流不相容)"
+msgstr ""
+"Opções dos meta-dados de música (Não e compatível com transmissões diretas)"
 
 msgctxt "#30524"
 msgid "Import music song rating directly from files"
-msgstr "直接從檔中導入音樂歌曲評級"
+msgstr "Importar classificação de música diretamente dos ficheiros"
 
 msgctxt "#30525"
 msgid "Convert music song rating to Emby rating"
-msgstr "將音樂歌曲評級轉換為 Plex 評級"
+msgstr "Converter classificação de música para classificação Emby"
 
 msgctxt "#30526"
 msgid "Allow rating in song files to be updated"
-msgstr "允許更新歌曲檔評級"
+msgstr "Permitir que a classificação dos ficheiros de música seja atualizada"
 
 msgctxt "#30527"
 msgid "Ignore specials in next episodes"
-msgstr "播放下一集時忽略特輯"
+msgstr "Ignorar cenas especiais nos próximos episódios "
 
 msgctxt "#30528"
 msgid "Permanent users to add to the session"
-msgstr "多使用者永久加入會話(session)"
+msgstr "Utilizadores permanentes a adicionar à sessão "
 
 msgctxt "#30529"
 msgid "Startup delay (in seconds)"
-msgstr "啟動延遲 (以秒為單位)"
+msgstr "Atraso no início (em segundos)"
 
 msgctxt "#30530"
 msgid "Enable server restart message"
-msgstr "啟用「伺服器重新開機」訊息"
+msgstr "Ativar mensagem de reinício do servidor"
 
 msgctxt "#30531"
 msgid "Enable new content notification"
-msgstr "啟用「新的內容」通知"
+msgstr "Ativar notificações de conteúdo novo"
 
 msgctxt "#30532"
 msgid "Duration of the video library pop up (in seconds)"
-msgstr "彈出視訊資料庫持續時間 (以秒為單位)"
+msgstr "Duração do aparecimento da biblioteca de video (em segundos)"
 
 msgctxt "#30533"
 msgid "Duration of the music library pop up (in seconds)"
-msgstr "彈出的音樂資料庫持續時間 (以秒為單位)"
+msgstr "Duração do aparecimento da biblioteca de música (em segundos)"
 
 msgctxt "#30534"
 msgid "Server messages"
-msgstr "伺服器訊息："
+msgstr "Mensagens do servidor"
 
 msgctxt "#30535"
 msgid ""
 "[COLOR yellow]Generate a new unique device Id (e.g. when cloning "
 "Kodi)[/COLOR]"
-msgstr "[COLOR yellow]產生新的唯一的設備辨識碼(例如：當複製Kodi時)[/COLOR]"
+msgstr ""
+"[COLOR yellow]Criar uma nova identidade única do dispositivo (e.x. ao clonar"
+" Kodi)[/COLOR]"
 
 msgctxt "#30536"
 msgid "Users must log in every time Kodi restarts"
-msgstr "重開Kodi時使用者必須重新登入"
+msgstr "Utilizadores têm de iniciar sessão sempre que o Kodi reinicia "
 
 msgctxt "#30537"
 msgid "RESTART KODI IF YOU MAKE ANY CHANGES"
-msgstr "如果您進行任何更改，請重開Kodi"
+msgstr "REINICIE O KODI SE FIZER MUDANÇAS"
 
 msgctxt "#30538"
 msgid "Complete Re-Sync necessary"
-msgstr "必需完全重新同步"
+msgstr "Ressincronização Completa necessária"
 
 msgctxt "#30539"
 msgid "Download additional art from FanArtTV"
-msgstr "從 FanArtTV 下載額外的背景海報"
+msgstr "Descarregar arte adicional da FanArtTV"
 
 msgctxt "#30540"
 msgid "Download movie set/collection art from FanArtTV"
-msgstr "從 FanArtTV 下載電影合輯海報"
+msgstr "Descarregar arte para o conjunto/coleção de filmes da FanArtTV "
 
 msgctxt "#30541"
 msgid "Don't ask to pick a certain stream/quality"
-msgstr "不要要求挑選特定的 串流/品質"
+msgstr "Não perguntar para escolher uma certa qualidade/transmissão"
 
 msgctxt "#30542"
 msgid "Always pick best quality for trailers"
-msgstr "總是挑選最好品質的預告片"
+msgstr "Escolher sempre a melhor qualidade para trailers"
 
 msgctxt "#30543"
 msgid "Kodi runs on a low-power device (e.g. Raspberry Pi)"
-msgstr "Kodi在低效能的設備上運行 (例如Raspberry Pi)"
+msgstr "Kodi funciona num dispositivo de baixa potência (ex. Raspberry Pi)"
 
 msgctxt "#30544"
 msgid "Artwork"
-msgstr "背景海報"
+msgstr "Ilustrações"
 
 msgctxt "#30545"
 msgid "Force transcode pictures"
-msgstr "強制圖片轉碼"
+msgstr "Forçar transcodificação de imagens"
 
 # service add-on
 msgctxt "#33000"
 msgid "Welcome"
-msgstr "歡迎"
+msgstr "Bem-vindo"
 
 msgctxt "#33001"
 msgid "Error connecting"
-msgstr "連線錯誤"
+msgstr "Erro de ligação"
 
 msgctxt "#33002"
 msgid "Server is unreachable"
-msgstr "無法連到伺服器"
+msgstr "Servidor inacessível"
 
 msgctxt "#33003"
 msgid "Server is online"
-msgstr "伺服器已上線"
+msgstr "Servidor está on-line"
 
 msgctxt "#33004"
 msgid "items added to playlist"
-msgstr "加入播放清單"
+msgstr "Itens adicionados à lista de reprodução"
 
 msgctxt "#33005"
 msgid "items queued to playlist"
-msgstr "排入播放清單"
+msgstr "Itens em fila para a lista de reprodução"
 
 msgctxt "#33006"
 msgid "Server is restarting"
-msgstr "伺服器正在重新開機"
+msgstr "A reiniciar o servidor"
 
 msgctxt "#33007"
 msgid "Access is enabled"
-msgstr "可以使用"
+msgstr "Acesso está ativo "
 
 msgctxt "#33008"
 msgid "Enter password for user:"
-msgstr "輸入使用者的密碼︰"
+msgstr "Introduza a palavra-passe do utilizador "
 
 msgctxt "#33009"
 msgid "Invalid username or password"
-msgstr "無效的使用者名稱或密碼"
+msgstr "Utilizador ou palavra-passe inválidos"
 
 msgctxt "#33010"
 msgid "Failed to authenticate too many times. Reset in the settings."
-msgstr "未能通過身份驗證的次數太多。請重置設定。"
+msgstr "Falha na autenticação demasiadas vezes. Repor nas definições"
 
 msgctxt "#33011"
 msgid "Unable to direct play"
-msgstr "不能直接播放"
+msgstr "Incapaz de reproduzir diretamente"
 
 msgctxt "#33012"
 msgid "Direct play failed 3 times. Enabled play from HTTP."
-msgstr "直接播放失敗了 3 次。使用 HTTP 的播放。"
+msgstr "Reprodução direta falhou 3 vezes. Ativada reprodução de HTTP"
 
 msgctxt "#33013"
 msgid "Choose the audio stream"
-msgstr "選擇音軌"
+msgstr "Escolha a transmissão de audio "
 
 msgctxt "#33014"
 msgid "Choose the subtitles stream"
-msgstr "選擇字幕"
+msgstr "Escolha a transmissão de legendas"
 
 msgctxt "#33015"
 msgid "Delete file from your Emby server?"
-msgstr "從你的 Plex 伺服器上刪除檔？"
+msgstr "Apagar ficheiro do seu servidor Emby?"
 
 msgctxt "#33016"
 msgid "Play trailers?"
-msgstr "播放預告嗎？"
+msgstr "Reproduzir trailers?"
 
 msgctxt "#33017"
 msgid "Gathering movies from:"
-msgstr "取得電影︰"
+msgstr "A agrupar filmes do:"
 
 msgctxt "#33018"
 msgid "Gathering boxsets"
-msgstr "取得合輯"
+msgstr "A agrupar coletâneas"
 
 msgctxt "#33019"
 msgid "Gathering music videos from:"
-msgstr "取得音樂視頻︰"
+msgstr "A agrupar vídeos de música do: "
 
 msgctxt "#33020"
 msgid "Gathering tv shows from:"
-msgstr "取得電視節目︰"
+msgstr "A agrupar programas de tv do:"
 
 msgctxt "#33021"
 msgid "Gathering:"
-msgstr "取得中："
+msgstr "A agrupar"
 
 msgctxt "#33022"
 msgid ""
 "Detected the database needs to be recreated for this version of Emby for "
 "Kodi. Proceed?"
-msgstr "偵測到使用本版PKC需要為Kodi重新創建資料庫 。是否繼續？"
+msgstr ""
+"Base de dados detetada necessita de ser recriada para esta versão de Emby "
+"para o Kodi. Continuar?"
 
 msgctxt "#33023"
 msgid "Emby for Kodi may not work correctly until the database is reset."
-msgstr "直到完成重置資料庫，PKC可能無法正常工作。"
+msgstr ""
+"Emby para o Kodi poderá nao funcionar corretamente até a base de dados ser "
+"reposta."
 
 msgctxt "#33024"
 msgid ""
 "Cancelling the database syncing process. The current Kodi version is "
 "unsupported."
-msgstr "取消資料庫同步過程。當前的Kodi版本不受支援 (請勿使用mySQL)。"
+msgstr ""
+"A cancelar o processo de sincronização da base de dados. A versão corrente "
+"do Kodi não e suportada."
 
 msgctxt "#33025"
 msgid "completed in:"
-msgstr "已完成："
+msgstr "concluído em:"
 
 msgctxt "#33026"
 msgid "Comparing movies from:"
-msgstr "比對電影："
+msgstr "A comparar filmes do:"
 
 msgctxt "#33027"
 msgid "Comparing boxsets"
-msgstr "比對電影合集："
+msgstr "A comparar as coletâneas"
 
 msgctxt "#33028"
 msgid "Comparing music videos from:"
-msgstr "比對音樂視頻︰"
+msgstr "A comparar vídeos de música do:"
 
 msgctxt "#33029"
 msgid "Comparing tv shows from:"
-msgstr "比對電視節目︰"
+msgstr "A comparar programas de TV do:"
 
 msgctxt "#33030"
 msgid "Comparing episodes from:"
-msgstr "比對電視節目集︰"
+msgstr "A comparar episódios de:"
 
 msgctxt "#33031"
 msgid "Comparing:"
-msgstr "比對︰"
+msgstr "A comparar:"
 
 msgctxt "#33032"
 msgid ""
 "Failed to generate a new device Id. See your logs for more information."
-msgstr "無法產生新的設備辨識碼。查看日誌以瞭解更多資訊。"
+msgstr ""
+"Falha na criação de uma nova identificação do dispositivo. Consulte os seus "
+"registos para mais informações."
 
 msgctxt "#33033"
 msgid "Kodi will now restart to apply the changes."
-msgstr "Kodi將立即重啟，以套用更改的設定。"
+msgstr "Kodi vai reiniciar para aplicar as novas configurações."
 
 msgctxt "#33041"
 msgid ""
 "Delete file(s) from Plex Server? This will also delete the file(s) from "
 "disk!"
-msgstr "從Plex上刪除檔案？這也將會從磁碟中刪除檔案 ！"
+msgstr ""
+"Eliminar ficheiro(s) do Servidor Plex? Irá também eliminar os ficheiro(s) do"
+" disco!"
 
 # New to Plex
 msgctxt "#39000"
 msgid "- Number of trailers to play before a movie"
-msgstr "- 預先播放預告片的數量"
+msgstr "- Numero de trailers a reproduzir antes de um filme"
 
 msgctxt "#39001"
 msgid "Boost audio when transcoding"
-msgstr "轉碼時提高音訊"
+msgstr "Potenciar audio quando transcodificar"
 
 msgctxt "#39002"
 msgid "Burnt-in subtitle size"
-msgstr "設定字幕大小"
+msgstr "Tamanho de legendas permanentes"
 
 msgctxt "#39003"
 msgid "Limit download sync threads (rec. for rpi: 1)"
-msgstr "限制下載同步執行緒 (rpi 的建議︰ 1)"
+msgstr ""
+"Limitar as operaçoes de descarregamento sincronizado (rec. para rpi: 1)"
 
 msgctxt "#39004"
 msgid "Enable Plex Companion (restart Kodi!)"
-msgstr "啟用Plex Companion (重啟Kodi！)"
+msgstr "Ativar Acompanhante Plex (reinicie Kodi!)"
 
 msgctxt "#39005"
 msgid "Plex Companion Port (change only if needed)"
-msgstr "Plex Companion 埠 (僅在需要時更改)"
+msgstr "Porta do Acompanhante Plex  (mude apenas se necessário)"
 
 msgctxt "#39006"
 msgid "Activate Plex Companion debug log"
-msgstr "啟用Plex Companion 除錯日誌"
+msgstr "Ativar registo de depuração do Acompanhante Plex"
 
 msgctxt "#39007"
 msgid "Activate Plex Companion GDM debug log"
-msgstr "啟用Plex Companion GDM 除錯日誌"
+msgstr "Activar registo de depuração Acompanhante Plex GDM"
 
 msgctxt "#39008"
 msgid "Plex Companion: Allows flinging media to Kodi through Plex"
-msgstr "Plex Companion︰允許透過Plex傳送媒體到Kodi"
+msgstr "Acompanhante Plex: Permite mover media para o Kodi através do Plex"
 
 msgctxt "#39009"
 msgid "Could not login to plex.tv. Please try signing in again."
-msgstr "無法登錄到 plex.tv。請重試。"
+msgstr ""
+"Não foi possível iniciar sessão na plex.tv. Por favor tente entrar outra "
+"vez. "
 
 msgctxt "#39010"
 msgid "Problems connecting to plex.tv. Network or internet issue?"
-msgstr "連接到 plex.tv 有問題。網路或互聯網的問題？"
+msgstr "Problemas na conexão à plex.tv. Problema de rede ou internet?"
 
 msgctxt "#39011"
 msgid "Could not find any Plex server in the network. Aborting..."
-msgstr "在網路中找不到任何Plex伺服器。中止..."
+msgstr ""
+"Não foi possível encontrar qualquer Servidor Plex na rede. A abortar..."
 
 msgctxt "#39012"
 msgid "Choose your Plex server"
-msgstr "選擇您的Plex伺服器"
+msgstr "Escolha o seu servidor Plex"
 
 msgctxt "#39013"
 msgid "Not yet authorized for Plex server "
-msgstr "尚未為Plex伺服器授權 "
+msgstr "Não está ainda autorizado para o servidor Plex"
 
 msgctxt "#39014"
 msgid "Please sign in to plex.tv."
-msgstr "請登錄到 plex.tv。"
+msgstr "Por favor entre na plex.tv."
 
 msgctxt "#39015"
 msgid "Problems connecting to server. Pick another server?"
-msgstr "連接到伺服器時出現問題。選擇另一台伺服器？"
+msgstr "Problemas na conexão ao servidor. Escolher outro servidor?"
 
 msgctxt "#39016"
 msgid ""
 "Disable Plex music library? (It is HIGHLY recommended to use Plex music only"
 " with direct paths for large music libraries. Kodi might crash otherwise)"
-msgstr "禁用Plex音樂資料庫嗎？(強烈建議使用Plex音樂時，大型音樂資料庫只用直接路徑。否則Kodi可能會崩潰)"
+msgstr ""
+"Desactivar a biblioteca de música Plex? (É BASTANTE recomendado o uso de "
+"Plex music apenas com caminhos diretos para grandes bibliotecas de musica. "
+"Caso contrário Kodi poderá falhar)"
 
 msgctxt "#39017"
 msgid ""
 "Would you now like to go to the plugin's settings to fine-tune PKC? You will"
 " need to RESTART Kodi!"
-msgstr "你現在想轉到外掛程式的設置進行微調 PKC 嗎？您將需要重新開啟Kodi ！"
+msgstr ""
+"Gostaria de ir para as definições de plugin para refinar a afinação do PKC? "
+"Precisará de REINICIAR o Kodi!"
 
 msgctxt "#39018"
 msgid "[COLOR yellow]Repair local database (force update all content)[/COLOR]"
-msgstr "[COLOR yellow]修復本機資料庫 (強制更新所有內容)[/COLOR]"
+msgstr ""
+"[COLOR yellow]Reparar base de dados local (forçar actualização de todo o "
+"conteúdo)[/COLOR]"
 
 msgctxt "#39019"
 msgid "[COLOR red]Partial or full reset of Database and PKC[/COLOR]"
-msgstr "[COLOR red]部分或全部重置資料庫和PKC[/COLOR]"
+msgstr "[COLOR red]Reposiçao partial ou total da base de dados e PKC[/COLOR]"
 
 msgctxt "#39020"
 msgid "[COLOR yellow]Cache all images to Kodi texture cache now[/COLOR]"
-msgstr "[COLOR yellow]立即暫存所有圖像到Kodi的圖像暫存區[/COLOR]"
+msgstr ""
+"[COLOR yellow]Cache todas as imagens para o cache de textura do Kodi[/COLOR]"
 
 msgctxt "#39021"
 msgid "[COLOR yellow]Sync Emby Theme Media to Kodi[/COLOR]"
-msgstr "[COLOR yellow]同步 Plex 主題媒體到 Kodi[/COLOR]"
+msgstr "[COLOR yellow]Sincronizar Tema Emby Media para o Kodi[/COLOR]"
 
 msgctxt "#39022"
 msgid "local"
-msgstr "本地"
+msgstr "local"
 
 msgctxt "#39023"
 msgid "Failed to authenticate. Did you login to plex.tv?"
-msgstr "未能通過身份驗證。您沒有登錄到 plex.tv 嗎？"
+msgstr "Falha na autenticação. Fez inicio de sessão na plex.tv?"
 
 msgctxt "#39025"
 msgid "Automatically log into plex.tv on startup"
-msgstr "在啟動時自動登入到 plex.tv"
+msgstr "Inicio de sessão automático para a plex.tv ao iniciar"
 
 msgctxt "#39026"
 msgid "Enable constant background sync"
-msgstr "啟用持續的背景同步"
+msgstr "Ativar sincronização de segundo plano constante "
 
 msgctxt "#39027"
 msgid "Playback Mode"
-msgstr "播放模式"
+msgstr "Modo de reprodução"
 
 msgctxt "#39028"
 msgid ""
@@ -1426,510 +1460,574 @@ msgid ""
 "shares need to use direct paths (e.g. smb://myNAS/mymovie.mkv or "
 "\\\\myNAS/mymovie.mkv)!"
 msgstr ""
+"CUIDADO! Se escolher modo \"Nativo\", poderá perder acesso a certas características do Plex tais como:\n"
+"Plex trailers e opções de transcodificação. TODAS as partilhas Plex necessitam de usar caminhos diretos (e.x. smb://myNAS/mymovie.mkv or \\\\myNAS/mymovie.mkv)!"
 
 msgctxt "#39029"
 msgid "Network credentials"
-msgstr "網路憑據"
+msgstr "Credenciais de rede"
 
 msgctxt "#39030"
 msgid ""
 "Add network credentials to allow Kodi access to your content? Note: Skipping"
 " this step may generate a message during the initial scan of your content if"
 " Kodi can't locate your content."
-msgstr "添加網路憑據，以允許科迪訪問您的內容嗎？注︰ 跳過這一步在初始掃描期間可能產生一個訊息，如果Kodi找不到您的內容。"
+msgstr ""
+"Adicionar credenciais de rede para permitir ao Kodi o acesso ao seu "
+"conteúdo? Nota: Saltar este passo poderá criar uma mensagem durante o "
+"escaneamento initial do seu conteúdo caso o Kodi não consiga localizar o seu"
+" conteúdo. "
 
 msgctxt "#39031"
 msgid "Kodi can't locate file: "
-msgstr "科迪找不到檔案︰ "
+msgstr "O Kodi não consegue localizar o ficheiro:"
 
 msgctxt "#39032"
 msgid ""
 "Please verify the path. You may need to verify your network credentials in "
 "the add-on settings or use different Plex paths. Stop syncing?"
-msgstr "請驗證路徑。您可能需要驗證您的載入項設置中的網路憑據或使用不同的Plex路徑。停止同步嗎？"
+msgstr ""
+"Por favor verifique o caminho. Poderá necessitar de verificar os seus "
+"credenciais de rede nas definições da lista de add-ons ou usar um caminho do"
+" Plex diferente. Parar sincronização?"
 
 msgctxt "#39033"
 msgid ""
 "Transform Plex UNC library paths \\\\myNas\\mymovie.mkv automatically to smb"
 " paths, smb://myNas/mymovie.mkv? (recommended)"
 msgstr ""
+"Transformar caminhos da biblioteca Plex UNC \\\\myNas\\mymovie.mkv "
+"automaticamente para caminhos smb, smb://myNas/mymovie.mkv? (recomendado)"
 
 msgctxt "#39034"
 msgid "Replace Plex UNC paths \\\\myNas with smb://myNas"
-msgstr ""
+msgstr "Substituir caminhos Plex UNC \\\\myNas com smb://myNas"
 
 msgctxt "#39035"
 msgid ""
 "Replace Plex paths /volume1/media or \\\\myserver\\media with custom SMB "
 "paths smb://NAS/mystuff"
 msgstr ""
+"Substituir caminhos Plex /volume1/media or \\\\myserver\\media with custom "
+"SMB paths smb://NAS/mystuff"
 
 msgctxt "#39037"
 msgid "Original Plex MOVIE path to replace:"
-msgstr "要替換的Plex原始電影路徑︰"
+msgstr "Caminho original Plex FILME a substituir:"
 
 msgctxt "#39038"
 msgid "Replace Plex MOVIE with:"
-msgstr "取代Plex電影路徑，用︰"
+msgstr "Substituir Plex FILME com:"
 
 msgctxt "#39039"
 msgid "Original Plex TV SHOWS path to replace:"
-msgstr "要被替換的 Plex 原始電視路徑︰"
+msgstr "Caminho original Plex PROGRAMAS DE TV a substituir:"
 
 msgctxt "#39040"
 msgid "Replace Plex TV SHOWS with:"
-msgstr "替換Plex電視路徑為︰"
+msgstr "Substituir Plex PROGRAMAS DE TV com:"
 
 msgctxt "#39041"
 msgid "Original Plex MUSIC path to replace:"
-msgstr "要替換的Plex原始音樂路徑︰"
+msgstr "Caminho original Plex MÚSICA a substituir:"
 
 msgctxt "#39042"
 msgid "Replace Plex MUSIC with:"
-msgstr "取代Plex音樂路徑，用︰"
+msgstr "Substituir Plex MÚSICA com:"
 
 msgctxt "#39043"
 msgid ""
 "Go a step further and completely replace all original Plex library paths "
 "(/volume1/media) with custom SMB paths (smb://NAS/MyStuff)?"
-msgstr "進一步完全用自訂SMB路徑(smb://NAS/MyStuff) 替換所有Plex資料庫路徑(/volume1/媒體) 嗎？"
+msgstr ""
+"Proceder mais longe e substituir completamente todos os caminhos originais "
+"da biblioteca Plex (/volume1/media) com caminhos SMB personalizados "
+"(smb://NAS/MyStuff)?"
 
 msgctxt "#39044"
 msgid ""
 "Please enter your custom smb paths in the settings under \"Sync Options\" "
 "and then restart Kodi"
-msgstr "請輸入您自訂的smb路徑在\"設置\"下的\"同步選項\"，然後重新開啟kodi"
+msgstr ""
+"Por favor insira os seus caminhos smb personalizados nas definições sob "
+"\"Opções de sincronização\" e depois reinicie o Kodi"
 
 msgctxt "#39045"
 msgid "Original Plex PHOTO path to replace:"
-msgstr "要替換的Plex原始照片路徑︰"
+msgstr "Caminho original Plex FOTOGRAFIA a substituir:"
 
 msgctxt "#39046"
 msgid "Replace Plex PHOTO with:"
-msgstr "取代Plex照片路徑，用︰"
+msgstr "Substituir Plex FOTOGRAFIA com:"
 
 msgctxt "#39047"
 msgid "On Deck: Append show title to episode"
-msgstr "上架︰增加顯示電視節目集標題"
+msgstr "Na plataforma: Anexar o titulo do programa ao episódio "
 
 msgctxt "#39048"
 msgid "On Deck: Append season- and episode-number SxxExx"
-msgstr "上架︰增加季和集編號 SxxExx"
+msgstr "Na plataforma: Anexar temporada- e episódio-numero SxxExx"
 
 msgctxt "#39049"
 msgid "Nothing works? Try a full reset!"
-msgstr "完全掛點？試著完全重置 ！"
+msgstr "Nada funciona? Tente uma reposição completa!"
 
 msgctxt "#39050"
 msgid "[COLOR yellow]Choose Plex Server from a list[/COLOR]"
-msgstr "[COLOR yellow]選取Plex伺服器[/COLOR]"
+msgstr "[COLOR yellow]Escolha o Servidor Plex de uma lista[/COLOR]"
 
 msgctxt "#39051"
 msgid "Wait before sync new/changed PMS item [s]"
-msgstr "在同步前等待\"新增或修改\" Plex媒體伺服器項目完成"
+msgstr "Espere antes de sincronizar um novo/mudado item PMS [s]"
 
 msgctxt "#39052"
 msgid "Background Sync"
-msgstr "背景同步"
+msgstr "Sincronização de segundo plano"
 
 msgctxt "#39053"
 msgid "Do a full library sync every x minutes"
-msgstr "每隔 x 分鐘做完整資料庫同步"
+msgstr "Realizar uma sincronização de biblioteca completa todos x minutos"
 
 msgctxt "#39054"
 msgid "remote"
-msgstr "遠端"
+msgstr "remoto"
 
 msgctxt "#39055"
 msgid "Searching for Plex Server"
-msgstr "正在搜索Plex伺服器"
+msgstr "A procurar o(s) servidor(es) Plex"
 
 msgctxt "#39056"
 msgid "Used by Sync and when attempting to Direct Play"
-msgstr "通過同步和嘗試使用直接播放"
+msgstr "Usado pela sincronização e quando tentando Reprodução Direta"
 
 msgctxt "#39057"
 msgid "Customize Paths"
-msgstr "自訂路徑"
+msgstr "Personalizar Caminhos"
 
 msgctxt "#39058"
 msgid "Extend Plex TV Series \"On Deck\" view to all shows"
-msgstr "延伸plex電視節目系列\"上架\"視圖，到所有節目"
+msgstr ""
+"Extender Plex Séries de TV na vista \"Na Plataforma\" a todos os programas"
 
 msgctxt "#39059"
 msgid "Recently Added: Append show title to episode"
-msgstr "最近添加︰ 追加顯示集標題"
+msgstr "Adicionado Recentemente: Anexar o titulo do episódio ao programa"
 
 msgctxt "#39060"
 msgid "Recently Added: Append season- and episode-number SxxExx"
-msgstr "最近添加︰ 追加和本集編號 SxxExx"
+msgstr "Adicionado Recentemente: Anexar temporada- e episódio-numero SxxExx"
 
 msgctxt "#39061"
 msgid ""
 "Would you like to download additional artwork from FanArtTV in the "
 "background?"
-msgstr "你想在背景從 FanArtTV 下載更多圖片？"
+msgstr ""
+"Gostaria de descarregar em segundo plano Ilustrações adicionais da FanArtTV?"
 
 msgctxt "#39062"
 msgid "Sync when screensaver is deactivated"
-msgstr "停用螢幕保護程式時同步"
+msgstr "Sincronizar quando o protetor de tela é desativado"
 
 msgctxt "#39063"
 msgid "Force Transcode Hi10P"
-msgstr "播放Hi10P 時強迫轉碼"
+msgstr "Forçar transcodificação Hi10P"
 
 msgctxt "#39064"
 msgid "Recently Added: Also show already watched episodes"
-msgstr "最近添加︰ 一併顯示已觀看"
+msgstr "Adicionado Recentemente: Mostrar também episódios visualizados "
 
 msgctxt "#39066"
 msgid ""
 "Recently Added: Also show already watched movies (Refresh Plex "
 "playlist/nodes!)"
-msgstr "最近添加︰ 也顯示已觀看的電影 (刷新Plex播放清單/節點！)"
+msgstr ""
+"Adicionado Recentemente: Mostrar também filmes visualizados (Actualize "
+"listas de reprodução/nós do Plex!)"
 
 msgctxt "#39067"
 msgid "Your current Plex Media Server:"
-msgstr "您當前的Plex媒體伺服器︰"
+msgstr "O seu Servidor Plex Media atual:"
 
 msgctxt "#39068"
 msgid "[COLOR yellow]Manually enter Plex Media Server address[/COLOR]"
-msgstr "[COLOR yellow]手動輸入Plex媒體伺服器位址[/COLOR]"
+msgstr ""
+"[COLOR yellow]Inserir manualmente o endereço do Servidor Plex Media "
+"Server[/COLOR]"
 
 msgctxt "#39069"
 msgid "Current address:"
-msgstr "當前位址︰"
+msgstr "Endereço atual:"
 
 msgctxt "#39070"
 msgid "Current port:"
-msgstr "當前埠︰"
+msgstr "Porta actual:"
 
 msgctxt "#39071"
 msgid "Current plex.tv status:"
-msgstr "plex.tv 狀態︰"
+msgstr "Estado atual da plex.tv:"
 
 msgctxt "#39072"
 msgid ""
 "Is your Kodi installed on a low-powered device like a Raspberry Pi? If yes, "
 "then we will reduce the strain on Kodi to prevent it from crashing."
-msgstr "Kodi裝在像Raspbery Pi的低效能設備上嗎？如果是的話，我們會減少Kodi的壓力，防止它崩潰。"
+msgstr ""
+"O seu Kodi está instalado num dispositivo de baixa potência como o Raspberry"
+" Pi? Se sim, iremos reduzir a sobrecarga para prevenir a falha do Kodi."
 
 msgctxt "#39073"
 msgid "Appearance Tweaks"
-msgstr "外觀微調"
+msgstr "Ajustes de Aparência "
 
 msgctxt "#39074"
 msgid "TV Shows"
-msgstr "電視節目"
+msgstr "Programas de TV"
 
 msgctxt "#39075"
 msgid "Always use default Plex subtitle if possible"
-msgstr "如果可能的話，使用預設 Plex 字幕"
+msgstr "Utilize sempre as legendas Plex se possível"
 
 msgctxt "#39076"
 msgid ""
 "If you use several Plex libraries of one kind, e.g. \"Kids Movies\" and "
 "\"Parents Movies\", be sure to check the Wiki: https://goo.gl/JFtQV9"
-msgstr "如果您使用多個同類的Plex資料庫，例如\"兒童電影\"和\"父母電影\"，務必參閱 Wiki: HTTPs://goo.gl/JFtQV9"
+msgstr ""
+"Se usar várias bibliotecas Plex de um tipo, e.x. \"Filmes de Crianças\" e "
+"\"Filmes de Pais\", tenha a certeza de verificar Wiki: https://goo.gl/JFtQV9"
 
 msgctxt "#39077"
 msgid "Number of PMS items to show in widgets (e.g. \"On Deck\")"
-msgstr "PMS 中顯示在小工具集 (例如\"上架\") 品項的數目"
+msgstr ""
+"Numero de items do PMS a aparecer nas aplicacções (e.x. \"Na plataforma\")"
 
 msgctxt "#39078"
 msgid "Plex Companion Update Port (change only if needed)"
-msgstr "Plex Companion更新埠(僅在需要時更改)"
+msgstr "Atualizar a Porta do Acompanhante Plex (mude apenas se necessário)"
 
 msgctxt "#39079"
 msgid ""
 "Plex Companion could not open the GDM port. Please change it in the PKC "
 "settings."
-msgstr "Plex Companion不能打開 GDM 埠。請在 PKC 設置中更改它。"
+msgstr ""
+"O Acompanhante Plex não conseguiu abrir a porta GDM. Por favor mude-a nas "
+"definiçoes PKC."
 
 # Plex Entrypoint.py
 msgctxt "#39200"
 msgid "Log-out Plex Home User "
-msgstr "登出Plex Home用戶 "
+msgstr "Sair da sessão do Utilizador Caseiro Plex"
 
 msgctxt "#39201"
 msgid "Settings"
-msgstr "設置"
+msgstr "Configurações"
 
 msgctxt "#39202"
 msgid "Network credentials"
-msgstr "網路憑據"
+msgstr "Credenciais de rede"
 
 msgctxt "#39203"
 msgid "Refresh Plex playlists/nodes"
-msgstr "刷新Plex的播放清單/節點"
+msgstr "Atualizar listas de reprodução/nós do Plex"
 
 msgctxt "#39204"
 msgid "Perform manual library sync"
-msgstr "手動執行資料庫同步"
+msgstr "Executar sincronização manual da biblioteca"
 
 msgctxt "#39205"
 msgid "Unable to run the sync, the add-on is not connected to a Plex server."
-msgstr "外掛未連接到Plex伺服器，同步無法執行．"
+msgstr ""
+"Incapaz de proceder à sincronização, o add-on não está conectado a um "
+"Servidor Plex."
 
 msgctxt "#39206"
 msgid ""
 "Plex might lock your account if you fail to log in too many times. Proceed "
 "anyway?"
-msgstr "如果你多次登錄失敗，Plex可能會鎖定您的帳戶。是否繼續？"
+msgstr ""
+"O Plex poderá bloquear a sua conta caso falhe o inicio de sessão demasiadas "
+"vezes. Quer continuar?"
 
 msgctxt "#39207"
 msgid "Resetting PMS connections, please wait"
-msgstr "重置 PMS 連線，請稍候"
+msgstr "A repor as conexões PMS, por favor aguarde."
 
 msgctxt "#39208"
 msgid "Failed to reset PKC. Try to restart Kodi."
-msgstr "重置 PKC 失敗。嘗試重開Kodi。"
+msgstr "Falha na reposição do PKC. Tente reiniciar o Kodi."
 
 msgctxt "#39209"
 msgid "[COLOR yellow]Toggle plex.tv login (sign in or sign out)[/COLOR]"
-msgstr "[COLOR yellow]切換 plex.tv 帳號 (登錄或登出) [/COLOR]"
+msgstr ""
+"[COLOR yellow] Alternar inicio de sessão plex.tv (inicio ou saida)[/COLOR]"
 
 msgctxt "#39210"
 msgid "Not yet connected to Plex Server"
-msgstr "尚未連接到Plex伺服器"
+msgstr "Ainda não está conectado ao Servidor Plex"
 
 msgctxt "#39211"
 msgid "Watch later"
-msgstr "稍後再看"
+msgstr "Ver mais tarde"
 
 msgctxt "#39213"
 msgid "is offline"
-msgstr "處於離線狀態"
+msgstr "está offline"
 
 msgctxt "#39214"
 msgid "Even though we signed in to plex.tv, we could not authorize for PMS"
-msgstr "雖然我們登錄到 plex.tv，我們無法為PMS取得授權"
+msgstr ""
+"Apesar de termos iniciado sessão na plex.tv, não conseguimos autorização "
+"para o PMS "
 
 msgctxt "#39215"
 msgid "Enter your Plex Media Server's IP or URL, Examples are:"
-msgstr "輸入您的Plex媒體伺服器的 IP 或 URL，例子︰"
+msgstr "Insira o seu IP ou URL do Servidor Plex Media, Exemplos são:"
 
 msgctxt "#39217"
 msgid ""
 "Does your Plex Media Server support SSL connections? (https instead of "
 "http)?"
-msgstr "你的Plex媒體伺服器是否支援 SSL 連線？(HTTPS 而不是 HTTP) ？"
+msgstr ""
+"O seu Servidor Plex Media suporta conexões SSL? (https em vez de http)"
 
 msgctxt "#39218"
 msgid "Error contacting PMS"
-msgstr "PMS連線錯誤"
+msgstr "Erro no contato do PMS"
 
 msgctxt "#39219"
 msgid "Abort (Yes) or save address anyway (No)?"
-msgstr "中止 (Yes) 或保存位址 (No)？"
+msgstr "Abortar (Sim) ou guardar endereço de qualquer forma (No)?"
 
 msgctxt "#39220"
 msgid "connected"
-msgstr "已連結"
+msgstr "conectado"
 
 msgctxt "#39221"
 msgid "plex.tv toggle successful"
-msgstr "plex.tv 切換成功"
+msgstr "alternação da plex.tv bem sucedida "
 
 msgctxt "#39222"
 msgid "[COLOR yellow]Look for missing fanart on FanartTV now[/COLOR]"
-msgstr "[COLOR yellow]由FanartTV搜尋漏失的背景海報中[/COLOR]"
+msgstr "[COLOR yellow]Procurar ilustrações em falha na FanartTV now[/COLOR]"
 
 msgctxt "#39223"
 msgid ""
 "Only look for missing fanart or refresh all fanart? The scan will take quite"
 " a while and happen in the background."
-msgstr "只搜尋缺失的背景海報或刷新所有的背景海報嗎？掃描在背景執行，將需要相當一段時間。"
+msgstr ""
+"Procurar somente ilustrações em falta ou atualizar todas as ilustraçoes? O "
+"escaneamento irá demorar bastante e irá continuar em segundo plano."
 
 msgctxt "#39224"
 msgid "Refresh all"
-msgstr "刷新所有"
+msgstr "Actualizar tudo"
 
 msgctxt "#39225"
 msgid "Missing only"
-msgstr "僅缺失部分"
+msgstr "Só os ausentes"
 
 # Message in the PKC settings if user has not logged in to plex.tv
 msgctxt "#39226"
 msgid "Not logged in to plex.tv"
-msgstr ""
+msgstr "Não está iniciado na sessão da plex.tv"
 
 # Message in the PKC settings if user is logged in to plex.tv
 msgctxt "#39227"
 msgid "Logged in to plex.tv"
-msgstr ""
+msgstr "Iniciado na sessão da plex.tv"
 
 # Message in the PKC settings to display the plex.tv username. Leave the colon
 # :
 msgctxt "#39228"
 msgid "Plex user:"
-msgstr ""
+msgstr "Utilizador do Plex:"
 
 # Plex Artwork.py
 msgctxt "#39250"
 msgid ""
 "Running the image cache process can take some time. It will happen in the "
 "background. Are you sure you want continue?"
-msgstr "在背景執行圖像暫存，可能需要花費一些時間。確實要繼續嗎？"
+msgstr ""
+"Realizar o processo de cache de imagem poderá demorar algum tempo. Irá "
+"acontecer em segundo plano. Tem a certeza que quer continuar?"
 
 msgctxt "#39251"
 msgid "Reset all existing cache data first?"
-msgstr "優先重置暫存中的現有資料？"
+msgstr "Repor toda a data cache existente primeiro?"
 
 # Plex PlexAPI.py
 msgctxt "#39300"
 msgid ": Enter plex.tv username. Or nothing to cancel."
-msgstr "︰輸入 plex.tv 的使用者。或留空取消。"
+msgstr ": Insira o nome de utilizador da plex.tv. Ou nada para cancelar."
 
 msgctxt "#39301"
 msgid "Enter password for plex.tv user "
-msgstr "輸入 plex.tv 使用者密碼 "
+msgstr "Insira a password para o utilizador da plex.tv "
 
 msgctxt "#39302"
 msgid "Could not sign in user "
-msgstr "無法登入使用者 "
+msgstr "Não foi possível registar utilizador"
 
 msgctxt "#39303"
 msgid "Problems trying to contact plex.tv. Try again later"
-msgstr "連接 plex.tv 有問題。請稍後再試"
+msgstr "Problemas na conexão à plex.tv. Tente mais tarde "
 
 msgctxt "#39304"
 msgid "Go to https://plex.tv/pin and enter the code: "
-msgstr "請到 https://plex.tv/pin，然後輸入代碼︰ "
+msgstr "Vá a https://plex.tv/pin e insira o código:"
 
 msgctxt "#39305"
 msgid "Could not sign in to plex.tv. Try again later"
-msgstr "無法登錄到 plex.tv。請稍後再試"
+msgstr "Não foi possível iniciar sessão na plex.tv. Tente mais tarde"
 
 msgctxt "#39306"
 msgid ": Select User"
-msgstr "︰ 選擇使用者"
+msgstr ": Selecionar Utilizador"
 
 msgctxt "#39307"
 msgid "Enter PIN for user "
-msgstr "為使用者輸入 PIN "
+msgstr "Introduza o PIN para o utilizador "
 
 msgctxt "#39308"
 msgid "Could not log in user "
-msgstr "使用者無法登錄 "
+msgstr "Não foi possível iniciar sessão do utilizador"
 
 msgctxt "#39309"
 msgid "Please try again."
-msgstr "請重試。"
+msgstr "Por favor tente outra vez."
 
 msgctxt "#39310"
 msgid "unknown"
-msgstr "未知"
+msgstr "desconhecido"
 
 msgctxt "#39311"
 msgid "or press No to not sign in."
-msgstr "或按No，不登入。"
+msgstr "ou pressione Não para não dar inicio à sessão."
 
 # Plex Librarysync.py
 msgctxt "#39400"
 msgid ""
 "Library sync thread has crashed. You should restart Kodi now. Please report "
 "this on the forum"
-msgstr "資料庫同步執行緒已經掛點。立刻重啟Kodi。請將此狀況回報論壇"
+msgstr ""
+"A operação de sincronização da biblioteca falhou. Deve reiniciar o Kodi. Por"
+" favor reporte o incidente no fórum "
 
 msgctxt "#39401"
 msgid ""
 "Detected Kodi database needs to be recreated for this version. This might "
 "take a while. Proceed?"
-msgstr "檢測到此版本需要重新創建Kodi資料庫。這可能需要一段時間。是否繼續？"
+msgstr ""
+"Detetada uma base de dados do Kodi que necessita ser recreada para esta "
+"versão. Isto poderá demorar. Continuar?"
 
 msgctxt "#39402"
 msgid " may not work correctly until the database is reset."
-msgstr " 可能無法正常運行，直到重置資料庫。"
+msgstr "poderá não funcionar corretamente até a base de dados ser reposta."
 
 msgctxt "#39403"
 msgid ""
 "Cancelling the database syncing process. Current Kodi version is "
 "unsupported. Please verify your logs for more info."
-msgstr "取消資料庫同步程序。不支援當前kodi版本。請檢查您的日誌了解更多的資訊。"
+msgstr ""
+"A cancelar o processo de sincronização da base de dados. A versão corrente "
+"do Kodi não é suportada. Por favor verifique os seus registos para mais "
+"informações."
 
 msgctxt "#39404"
 msgid ""
 "Startup syncing process failed repeatedly. Try restarting Kodi. Stopping "
 "Sync for now."
-msgstr "啟動同步程序一再失敗。請嘗試重開Kodi。停止同步。"
+msgstr ""
+"Inicio do processo de sincronização falhou repetidamente. Tente reiniciar o "
+"Kodi. Parar a sincronização por agora."
 
 msgctxt "#39405"
 msgid "Plex playlists/nodes refreshed"
-msgstr "已刷新Plex 播放清單/節點"
+msgstr "Listas de reprodução/nós do Plex foram atualizados"
 
 msgctxt "#39406"
 msgid "Plex playlists/nodes refresh failed"
-msgstr "Plex 播放清單/節點刷新失敗"
+msgstr "Atualização das listas de reprodução/nós do Plex falharam"
 
 msgctxt "#39407"
 msgid "Full library sync finished"
-msgstr "所有資料庫同步完成"
+msgstr "Sincronização completa da biblioteca terminada"
 
 msgctxt "#39408"
 msgid ""
 "Sync had to skip some items because they could not be processed. Kodi may be"
 " instable now!! Please post your Kodi logs to the Plex forum."
-msgstr "同步不得不跳過某些項目，因為他們無法處理。Kodi現在可能不穩定!! 請張貼kodi日誌到Plex論壇。"
+msgstr ""
+"A Sincronização teve que saltar alguns items porque não poderiam ser "
+"processados. O Kodi poderá estar instável!! Por favor poste os seus registos"
+" do Kodi no fórum da Plex."
 
 msgctxt "#39409"
 msgid ""
 "The Plex Server did not like you asking for so much data at once and "
 "returned ERRORS. Try lowering the number of sync download threads in the "
 "settings. Skipped some items for now."
-msgstr "Plex伺服器不喜歡你一次要求這麼多資料，並返回錯誤。嘗試降低同步下載中的執行緒數設置。跳過一些項目。"
+msgstr ""
+"O Servidor Plex não gostou do seu pedido de muitos dados ao mesmo tempo e "
+"devolveu ERROS. Tente baixar o número de operações de descarregamento "
+"sincronizado nas definições. Alguns items foram saltados por agora."
 
 msgctxt "#39410"
 msgid "ERROR in library sync"
-msgstr "資料庫同步錯誤"
+msgstr "ERRO na sincronização da biblioteca"
 
 # Plex videonodes.py
 msgctxt "#39500"
 msgid "On Deck"
-msgstr "上架"
+msgstr "Na Plataforma"
 
 msgctxt "#39501"
 msgid "Collections"
-msgstr "收藏"
+msgstr "Coleções"
 
 # Plex utils.py
 msgctxt "#39600"
 msgid ""
 "Are you sure you want to reset your local Kodi database? A re-sync of the "
 "Plex data will take time afterwards."
-msgstr "你確定你想要重置您的本地Kodi資料庫？再重新同步 Plex 資料需要時間。"
+msgstr ""
+"Tem a certeza de que quer repor a sua base de dados local do Kodi? Uma "
+"posterior ressincronização dos dados do Plex irá demorar tempo."
 
 msgctxt "#39601"
 msgid "Could not stop the database from running. Please try again later."
-msgstr "不能停止運行中的資料庫。請稍後再試。"
+msgstr ""
+"Não foi possível parar a operação da base de dados. Por favor tente mais "
+"tarde."
 
 msgctxt "#39602"
 msgid "Remove all cached artwork? (recommended!)"
-msgstr "刪除所有暫存的背景海報嗎？(推薦！)"
+msgstr "Remover toda a cache das Ilustrações? (recomendado!)"
 
 msgctxt "#39603"
 msgid ""
 "Reset all PlexKodiConnect Addon settings? (this is usually NOT recommended "
 "and unnecessary!)"
-msgstr "重置所有的 PlexKodiConnect 外掛程式設置嗎？(不推薦且沒有必要！)"
+msgstr ""
+"Repor todas as definições de Addon do PlexKodiConnect? (Isto NÃO e "
+"recomendado e desnecessário!)"
 
 msgctxt "#39700"
 msgid "Amazon Alexa (Voice Recognition)"
-msgstr "亞馬遜 Alexa (語音辨識)"
+msgstr "Amazon Alexa (Reconhecimento de Voz)"
 
 msgctxt "#39701"
 msgid "Activate Alexa"
-msgstr "啟動 Alexa"
+msgstr "Ativar Alexa"
 
 msgctxt "#39702"
 msgid "Browse by folder"
-msgstr "依資料夾流覽"
+msgstr "Navegar por pastas"
 
 # For use with addon.xml (PKC metadata for Kodi, e.g. description)
 # Addon Summary
 msgctxt "#39703"
 msgid "Native Integration of Plex into Kodi"
-msgstr ""
+msgstr "Integração nativa do Plex no Kodi"
 
 # For use with addon.xml (PKC metadata for Kodi, e.g. description)
 # Addon Description
@@ -1940,43 +2038,47 @@ msgid ""
 "stored in the Kodi video and music databases (as this plugin directly "
 "changes them). Use at your own risk!"
 msgstr ""
+"Conectar o Kodi ao Servidor Plex Media. Este plugin assume que gerirá todos "
+"os vídeos com o Plex (e nenhum com Kodi). Poderá perder dados guardados nas "
+"bases de dados de vídeo e musica do Kodi (pois este plugin interfere "
+"diretamente com as mesmas). Use por risco de conta própria"
 
 # For use with addon.xml (PKC metadata for Kodi, e.g. description)
 # Addon Disclaimer
 msgctxt "#39705"
 msgid "Use at your own risk"
-msgstr ""
+msgstr "Use por risco de conta própria"
 
 # If user gets prompted to choose between several subtitles. Leave the number
 # one at the beginning of the string!
 msgctxt "#39706"
 msgid "1 No subtitles"
-msgstr ""
+msgstr "1 Sem legendas"
 
 # If user gets prompted to choose between several audio/subtitle tracks and
 # language is unknown
 msgctxt "#39707"
 msgid "unknown"
-msgstr ""
+msgstr "desconhecido"
 
 # If user gets prompted to choose between several subtitles and Plex adds the
 # "default" flag
 msgctxt "#39708"
 msgid "Default"
-msgstr ""
+msgstr "Predefinido"
 
 # If user gets prompted to choose between several subtitles and Plex adds the
 # "forced" flag
 msgctxt "#39709"
 msgid "Forced"
-msgstr ""
+msgstr "Forçado"
 
 # If user gets prompted to choose between several subtitles the subtitle
 # cannot be downloaded (has no 'key' attribute from the PMS), the subtitle
 # needs to be burned in
 msgctxt "#39710"
 msgid "burn-in"
-msgstr ""
+msgstr "Gravado"
 
 # Dialog text if PKC detected a new Music library and Kodi needs to be
 # restarted
@@ -1985,26 +2087,28 @@ msgid ""
 "New Plex music library detected. Sorry, but we need to restart Kodi now due "
 "to the changes made."
 msgstr ""
+"Nova biblioteca de música Plex detetada. Pedimos desculpa, mas e necessário "
+"reiniciar o Kodi devido às mudanças feitas."
 
 # Shown during sync process
 msgctxt "#39712"
 msgid "downloaded"
-msgstr ""
+msgstr "Descarregado"
 
 # Shown during sync process
 msgctxt "#39713"
 msgid "processed"
-msgstr ""
+msgstr "Processado"
 
 # Shown during sync process
 msgctxt "#39714"
 msgid "Sync"
-msgstr ""
+msgstr "Sincronizar "
 
 # Shown during sync process
 msgctxt "#39715"
 msgid "items"
-msgstr ""
+msgstr "items"
 
 # Error message if an xml, e.g. advancedsettings.xml cannot be parsed (xml is
 # screwed up; formated the wrong way). Do NOT replace {0} and {1}!
@@ -2013,12 +2117,16 @@ msgid ""
 "Kodi cannot parse {0}. PKC will not function correctly. Please visit {1} and"
 " correct your file!"
 msgstr ""
+"O Kodi não pode analisar {0}. PKC não irá funcionar corretamente. Por favor "
+"visite {1} e corrija o ficheiro! "
 
 # Shown once on first installation to comply with the terms of use of
 # themoviedb.org
 msgctxt "#39717"
 msgid "PKC uses free additional artwork from www.themoviedb.org. Many thanks!"
 msgstr ""
+"PKC utiliza ilustrações gratuitas adicionais de www.themoviedb.org. Muito "
+"Obrigado!"
 
 # Shown during very first PKC setup only
 msgctxt "#39718"
@@ -2026,8 +2134,11 @@ msgid ""
 "Do you want to replace your custom user ratings with an indicator of how "
 "many versions of a media item you posses?"
 msgstr ""
+"Quer substituir as suas classificações personalizadas do utilizador com um "
+"indicador de quantas versões de items de média possui?"
 
 # In PKC Settings under Sync
 msgctxt "#39719"
 msgid "Replace user ratings with number of media versions"
 msgstr ""
+"Substituir classificações do utilizador com numero de versões de média"
