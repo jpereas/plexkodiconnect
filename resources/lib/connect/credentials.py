@@ -6,9 +6,10 @@ import os
 import time
 from datetime import datetime
 ###############################################################################
-
 log = getLogger("PLEX."+__name__)
 
+# This is a throwaway variable to deal with a python bug
+_ = datetime.strptime('20110101', '%Y%m%d')
 ###############################################################################
 
 
