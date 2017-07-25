@@ -54,6 +54,7 @@ def setup():
                      % (connectmanager.server, connectmanager.serverid))
             connectmanager.write_pms_settings(connectmanager.server,
                                               connectmanager.pms_token)
+            connectmanager.pick_pms(show_dialog=True)
             return
 
     # If not already retrieved myplex info, optionally let user sign in

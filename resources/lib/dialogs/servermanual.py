@@ -21,10 +21,13 @@ CONNECT = 200
 CANCEL = 201
 ERROR_TOGGLE = 202
 ERROR_MSG = 203
+VERIFY_SSL = 204
 ERROR = {
     'Invalid': 1,
     'Empty': 2
 }
+
+MEDIA = tryEncode(join(v.ADDON_PATH, 'resources', 'skins', 'default', 'media'))
 
 ###############################################################################
 
@@ -55,15 +58,20 @@ class ServerManual(xbmcgui.WindowXMLDialog):
         self.error_msg = self.getControl(ERROR_MSG)
         self.host_field = self._add_editcontrol(725, 325, 40, 500)
         self.port_field = self._add_editcontrol(725, 450, 40, 500)
+        # self.ssl_field = self._add_radiobutton(725, 550, 50, 50)
+        self.ssl_field = self.getControl(VERIFY_SSL)
 
         self.port_field.setText('32400')
         self.setFocus(self.host_field)
+        self.ssl_field.setSelected(True)
 
         self.host_field.controlUp(self.cancel_button)
         self.host_field.controlDown(self.port_field)
         self.port_field.controlUp(self.host_field)
-        self.port_field.controlDown(self.connect_button)
-        self.connect_button.controlUp(self.port_field)
+        self.port_field.controlDown(self.ssl_field)
+        self.ssl_field.controlUp(self.port_field)
+        self.ssl_field.controlDown(self.connect_button)
+        self.connect_button.controlUp(self.ssl_field)
         self.cancel_button.controlDown(self.host_field)
 
     def onClick(self, control):
@@ -82,7 +90,6 @@ class ServerManual(xbmcgui.WindowXMLDialog):
 
             elif self._connect_to_server(server, port):
                 self.close()
-
         elif control == CANCEL:
             # Remind me later
             self.close()
@@ -96,14 +103,30 @@ class ServerManual(xbmcgui.WindowXMLDialog):
             self.close()
 
     def _add_editcontrol(self, x, y, height, width):
-        media = tryEncode(join(
-            v.ADDON_PATH, 'resources', 'skins', 'default', 'media'))
-        control = xbmcgui.ControlEdit(0, 0, 0, 0,
-                                      label="User",
-                                      font="font10",
-                                      textColor="ffc2c2c2",
-                                      focusTexture=join(media, "button-focus.png"),
-                                      noFocusTexture=join(media, "button-focus.png"))
+        control = xbmcgui.ControlEdit(
+            0, 0, 0, 0,
+            label="User",
+            font="font10",
+            textColor="ffc2c2c2",
+            focusTexture=join(MEDIA, "button-focus.png"),
+            noFocusTexture=join(MEDIA, "button-focus.png"))
+        control.setPosition(x, y)
+        control.setHeight(height)
+        control.setWidth(width)
+
+        self.addControl(control)
+        return control
+
+    def _add_radiobutton(self, x, y, height, width):
+        control = xbmcgui.ControlRadioButton(
+            0, 0, 0, 0,
+            label="",
+            font="font10",
+            textColor="ffc2c2c2",
+            focusOnTexture=join(MEDIA, "radio-on.png"),
+            noFocusOnTexture=join(MEDIA, "radio-on.png"),
+            focusOffTexture=join(MEDIA, "radio-off.png"),
+            noFocusOffTexture=join(MEDIA, "radio-off.png"))
         control.setPosition(x, y)
         control.setHeight(height)
         control.setWidth(width)
