@@ -784,7 +784,7 @@ class ConnectionManager(object):
             except Exception:
                 return False
 
-    def connect(self, options={}):
+    def connect(self, options=None):
 
         log.info("Begin connect")
 
