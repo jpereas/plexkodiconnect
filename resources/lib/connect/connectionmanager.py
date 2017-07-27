@@ -518,7 +518,7 @@ class ConnectionManager(object):
 
         return 0
 
-    def connectToServer(self, server, options={}):
+    def connectToServer(self, server, options=None):
         log.info("begin connectToServer")
 
         tests = []
