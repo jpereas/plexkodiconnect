@@ -68,7 +68,7 @@ class ServerConnect(xbmcgui.WindowXMLDialog):
         self.list_ = self.getControl(LIST)
 
         for server in self.servers:
-            server_type = "wifi" if server.get('ExchangeToken') else "network"
+            server_type = "wifi" if server.get('local') == '0' else "network"
             self.list_.addItem(self._add_listitem(server['Name'], server['Id'], server_type))
 
         self.getControl(USER_NAME).setLabel("%s %s" % (lang(33000), self.username.decode('utf-8')))
