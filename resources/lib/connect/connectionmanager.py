@@ -196,7 +196,7 @@ class ConnectionManager(object):
             r = self._requests(action, **request)
             log.info("ConnectionManager response status: %s" % r.status_code)
             r.raise_for_status()
-        except Exception as e:
+        except requests.RequestException as e:
             # Elaborate on exceptions?
             log.error(e)
             raise
@@ -205,8 +205,8 @@ class ConnectionManager(object):
                 return etree.fromstring(r.content)
             except etree.ParseError:
                 # Read response to release connection
-                r.content
-                raise
+                log.error('Could not parse PMS response: %s' % r.content)
+                raise requests.RequestException
 
     def _requests(self, action, **kwargs):
 
@@ -258,15 +258,18 @@ class ConnectionManager(object):
         """
         PlexGDM
         """
-        # setup socket for discovery -> multicast message
-        GDM = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        GDM.settimeout(2.0)
-
-        # Set the time-to-live for messages to 2 for local network
-        ttl = pack('b', 2)
-        GDM.setsockopt(socket.IPPROTO_IP, socket.IP_MULTICAST_TTL, ttl)
-
         servers = []
+        # setup socket for discovery -> multicast message
+        try:
+            GDM = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+            GDM.settimeout(2.0)
+
+            # Set the time-to-live for messages to 2 for local network
+            ttl = pack('b', 2)
+            GDM.setsockopt(socket.IPPROTO_IP, socket.IP_MULTICAST_TTL, ttl)
+        except (socket.error, socket.herror, socket.gaierror):
+            log.error('Socket error, abort PlexGDM')
+            return servers
         try:
             # Send data to the multicast group
             GDM.sendto(MSG_PLEXGDM, (IP_PLEXGDM, PORT_PLEXGDM))
@@ -279,7 +282,7 @@ class ConnectionManager(object):
                     break
         except:
             # Probably error: (101, 'Network is unreachable')
-            log.error('Could not find Plex servers using GDM')
+            log.error('Could not find Plex servers using PlexGDM')
             import traceback
             log.error("Traceback:\n%s" % traceback.format_exc())
         finally:
@@ -349,15 +352,14 @@ class ConnectionManager(object):
         Retrieves Plex Media Servers from plex.tv/pms/resources
         """
         servers = []
-        xml = self.requestUrl({
-            'url': 'https://plex.tv/api/resources?includeHttps=1',
-            'type': 'GET',
-            'headers': {'X-Plex-Token': self.plexToken},
-            'timeout': 5.0,
-            'verify': True})
         try:
-            xml.attrib
-        except AttributeError:
+            xml = self.requestUrl({
+                'url': 'https://plex.tv/api/resources?includeHttps=1',
+                'type': 'GET',
+                'headers': {'X-Plex-Token': self.plexToken},
+                'timeout': 5.0,
+                'verify': True})
+        except requests.RequestException:
             log.error('Could not get list of PMS from plex.tv')
             return servers
 
