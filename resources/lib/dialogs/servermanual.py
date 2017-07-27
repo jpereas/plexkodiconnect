@@ -1,13 +1,11 @@
 # -*- coding: utf-8 -*-
 ###############################################################################
 from logging import getLogger
-from os.path import join
 
 import xbmcgui
 
 import connect.connectionmanager as connectionmanager
-from utils import language as lang, tryEncode, tryDecode
-import variables as v
+from utils import language as lang, tryDecode
 
 ###############################################################################
 log = getLogger("PLEX."+__name__)
@@ -28,8 +26,6 @@ ERROR = {
     'Invalid': 1,
     'Empty': 2
 }
-
-MEDIA = tryEncode(join(v.ADDON_PATH, 'resources', 'skins', 'default', 'media'))
 ###############################################################################
 
 
