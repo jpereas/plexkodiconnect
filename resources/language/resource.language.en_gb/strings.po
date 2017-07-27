@@ -997,7 +997,7 @@ msgstr ""
 # add-on settings
 
 msgctxt "#30500"
-msgid "Verify Host SSL Certificate (more secure)"
+msgid "Verify SSL Certificate"
 msgstr ""
 
 msgctxt "#30501"

@@ -80,10 +80,10 @@
 				</control>
 
 				<control type="label">
-					<description>Select server</description>
+					<description>Select Main PMS</description>
 					<textcolor>ffa6a6a6</textcolor>
 					<label>$ADDON[plugin.video.plexkodiconnect 30607]</label>
-					<font>font10</font>
+					<font>font12</font>
 					<align>center</align>
 					<aligny>top</aligny>
 					<top>170</top>
@@ -205,7 +205,7 @@
 							<description>Toggle plex.tv sign-in</description>
 							<texturenofocus border="5" colordiffuse="ff464646">box.png</texturenofocus>
 							<texturefocus border="5" colordiffuse="ff525252">box.png</texturefocus>
-							<label>$ADDON[plugin.video.plexkodiconnect 30600]</label>
+							<label>[UPPERCASE][B]$ADDON[plugin.video.plexkodiconnect 30600][/UPPERCASE][/B]</label>
 							<font>font10</font>
 							<textcolor>ffa6a6a6</textcolor>
 							<focusedcolor>white</focusedcolor>
@@ -221,7 +221,7 @@
 							<description>Manually add server</description>
 							<texturenofocus border="5" colordiffuse="ff464646">box.png</texturenofocus>
 							<texturefocus border="5" colordiffuse="ff525252">box.png</texturefocus>
-							<label>$ADDON[plugin.video.plexkodiconnect 30601]</label>
+							<label>[UPPERCASE][B]$ADDON[plugin.video.plexkodiconnect 30601][/UPPERCASE][/B]</label>
 							<font>font10</font>
 							<textcolor>ffa6a6a6</textcolor>
 							<focusedcolor>white</focusedcolor>
@@ -239,7 +239,7 @@
 							<description>Cancel</description>
 							<texturenofocus border="5" colordiffuse="ff464646">box.png</texturenofocus>
 							<texturefocus border="5" colordiffuse="ff525252">box.png</texturefocus>
-							<label>$ADDON[plugin.video.plexkodiconnect 30602]</label>
+							<label>[UPPERCASE][B]$ADDON[plugin.video.plexkodiconnect 30602][/UPPERCASE][/B]</label>
 							<font>font10</font>
 							<textcolor>ffa6a6a6</textcolor>
 							<focusedcolor>white</focusedcolor>

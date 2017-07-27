@@ -12,7 +12,7 @@
 			<centerleft>50%</centerleft>
 			<centertop>50%</centertop>
 			<width>560</width>
-			<height>560</height>
+			<height>656</height>
 			<textcolor>white</textcolor>
 			<control type="image">
 				<top>-20</top>
@@ -20,7 +20,7 @@
 				<description>Background box</description>
 				<texture colordiffuse="ff111111">white.png</texture>
 				<width>600</width>
-				<height>600</height>
+				<height>636</height>
 			</control>
 			<control type="image">
 				<description>Plex logo</description>
@@ -43,47 +43,104 @@
 				<description>Container for spacing</description>
 				<top>80</top>
 				<left>0</left>
-				<height>480</height>
+				<height>400</height>
 				<width>560</width>
 				<aligny>top</aligny>
-				<font>font6</font>
 				<control type="label">
 					<height>50</height>
 					<width>560</width>
 					<description>PMS IP address or host name</description>
-					<label>$ADDON[plugin.video.plexkodiconnect 30019]</label>
+					<label>$ADDON[plugin.video.plexkodiconnect 30019]:</label>
+					<font>font10</font>
 				</control>
-				<control type="edit" id="1">
+				<control type="edit" id="208">
 					<height>50</height>
 					<width>560</width>
-					<font>font4</font>
 					<hinttext>https://192.168.1.2, https://myserver.com</hinttext>
+					<font>font10</font>
 				</control>
 				<control type="label">
 					<height>50</height>
 					<width>560</width>
 					<description>Port Number</description>
-					<label>$ADDON[plugin.video.plexkodiconnect 30030]</label>
+					<label>$ADDON[plugin.video.plexkodiconnect 30030]:</label>
+					<font>font10</font>
 				</control>
-				<control type="edit" id="2">
+				<control type="edit" id="209">
 					<height>50</height>
 					<width>560</width>
-					<font>font4</font>
+					<font>font10</font>
+				</control>
+				<control type="label">
+					<description>Advanced</description>
+					<height>50</height>
+					<width>560</width>
+					<label>$ADDON[plugin.video.plexkodiconnect 30022]:</label>
+					<font>font10</font>
 				</control>
 				<control type="radiobutton" id="204">
+				    <description>Verify SSL Certificate</description>
 					<width>560</width>
-				    <description>Verify Host SSL Certificate</description>
 				    <label>$ADDON[plugin.video.plexkodiconnect 30500]</label>
+				    <font>font10</font>
 				</control>
+				<control type="radiobutton" id="205">
+				    <description>Client SSL certificate</description>
+					<width>560</width>
+				    <label>$ADDON[plugin.video.plexkodiconnect 30501]</label>
+				    <font>font10</font>
+				</control>
+			</control>
+			<control type="group">
+				<description>Buttons group</description>
+				<top>480</top>
+				<left>50</left>
+				<width>460</width>
+				<height>100</height>
 				<control type="button" id="200">
 					<description>Connect</description>
-					<label>$ADDON[plugin.video.plexkodiconnect 30020]</label>
-					<ondown>201</ondown>
+					<label>[UPPERCASE][B]$ADDON[plugin.video.plexkodiconnect 30020][/UPPERCASE][/B]</label>
+					<height>50</height>
+					<width>460</width>
+					<font>font10</font>
+					<texturenofocus border="5" colordiffuse="ff464646">box.png</texturenofocus>
+					<texturefocus border="5" colordiffuse="ff525252">box.png</texturefocus>
+					<textcolor>ffa6a6a6</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<align>center</align>
 				</control>
 				<control type="button" id="201">
 					<description>Cancel</description>
-					<label>$ADDON[plugin.video.plexkodiconnect 30602]</label>
-					<onup>200</onup>
+					<label>[UPPERCASE][B]$ADDON[plugin.video.plexkodiconnect 30602][/UPPERCASE][/B]</label>
+					<top>55</top>
+					<height>50</height>
+					<width>460</width>
+					<font>font10</font>
+					<texturenofocus border="5" colordiffuse="ff464646">box.png</texturenofocus>
+					<texturefocus border="5" colordiffuse="ff525252">box.png</texturefocus>
+					<textcolor>ffa6a6a6</textcolor>
+					<focusedcolor>white</focusedcolor>
+					<align>center</align>
+				</control>
+			</control>
+			<control type="group" id="202">
+				<top>626</top>
+				<left>-20</left>
+				<width>600</width>
+				<visible>False</visible>
+				<control type="image">
+					<description>Error box</description>
+					<texture colordiffuse="ff222222">white.png</texture>
+					<width>100%</width>
+					<height>50</height>
+				</control>
+				<control type="label" id="203">
+					<description>Error message</description>
+					<textcolor>white</textcolor>
+					<font>font10</font>
+					<aligny>center</aligny>
+					<align>center</align>
+					<height>50</height>
 				</control>
 			</control>
 		</control>

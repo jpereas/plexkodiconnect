@@ -175,36 +175,38 @@ class ConnectionManager(object):
             "application/x-www-form-urlencoded")
 
     def requestUrl(self, request):
+        """
+        request: dict with the following (optional) keys:
+            type:       GET, POST, ... (mandatory)
+            url:        (mandatory)
+            timeout
+            verify:     set to False to disable SSL certificate check
 
-        if not request:
-            raise AttributeError("Request cannot be null")
-
+        ...and all the other requests settings
+        """
         self._getHeaders(request)
         request['timeout'] = request.get('timeout') or self.default_timeout
-        request['verify'] = request.get('ssl') or False
 
         action = request['type']
         request.pop('type', None)
-        request.pop('ssl', None)
 
-        log.debug("ConnectionManager requesting %s" % request)
+        log.debug("Requesting %s" % request)
 
         try:
             r = self._requests(action, **request)
             log.info("ConnectionManager response status: %s" % r.status_code)
             r.raise_for_status()
-        
-        except Exception as e: # Elaborate on exceptions?
+        except Exception as e:
+            # Elaborate on exceptions?
             log.error(e)
             raise
-
         else:
             try:
                 return etree.fromstring(r.content)
             except etree.ParseError:
                 # Read response to release connection
                 r.content
-                return
+                raise
 
     def _requests(self, action, **kwargs):
 
@@ -284,25 +286,12 @@ class ConnectionManager(object):
             GDM.close()
         return servers
 
-    def _normalizeAddress(self, address):
-        # Attempt to correct bad input
-        address = address.strip()
-        address = address.lower()
-
-        if 'http' not in address:
-            address = "http://%s" % address
-
-        return address
-
-    def connectToAddress(self, address, options={}):
-
-        if not address:
-            return False
-
-        address = self._normalizeAddress(address)
+    def connectToAddress(self, address, options=None):
+        log.debug('connectToAddress %s with options %s' % (address, options))
 
         def _onFail():
-            log.error("connectToAddress %s failed" % address)
+            log.error("connectToAddress %s failed with options %s" %
+                      (address, options))
             return self._resolveFailure()
 
         try:
@@ -310,10 +299,10 @@ class ConnectionManager(object):
         except Exception:
             return _onFail()
         else:
-            log.info("connectToAddress %s succeeded" % address)
             server = {
                 'ManualAddress': address,
-                'LastCONNECTIONMODE': CONNECTIONMODE['Manual']
+                'LastCONNECTIONMODE': CONNECTIONMODE['Manual'],
+                'options': options
             }
             self._updateServerInfo(server, publicInfo)
             server = self.connectToServer(server, options)
@@ -342,15 +331,15 @@ class ConnectionManager(object):
         self._saveUserInfoIntoCredentials(server, result['User'])
         self.credentialProvider.getCredentials(credentials)
 
-    def _tryConnect(self, url, timeout=None, options={}):
-        url = '%s/identity' % url
-        log.debug("tryConnect url: %s" % url)
-        return self.requestUrl({
-            'type': "GET",
-            'url': url,
-            'timeout': timeout,
-            'ssl': options.get('ssl')
-        })
+    def _tryConnect(self, url, timeout=None, options=None):
+        request = {
+            'type': 'GET',
+            'url': '%s/identity' % url,
+            'timeout': timeout
+        }
+        if options:
+            request.update(options)
+        return self.requestUrl(request)
 
     def _addAppInfoToConnectRequest(self):
         return "%s/%s" % (self.appName, self.appVersion)
@@ -365,7 +354,7 @@ class ConnectionManager(object):
             'type': 'GET',
             'headers': {'X-Plex-Token': self.plexToken},
             'timeout': 5.0,
-            'ssl': True})
+            'verify': True})
         try:
             xml.attrib
         except AttributeError:
@@ -528,7 +517,6 @@ class ConnectionManager(object):
         return 0
 
     def connectToServer(self, server, options={}):
-
         log.info("begin connectToServer")
 
         tests = []
