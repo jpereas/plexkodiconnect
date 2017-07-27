@@ -519,23 +519,11 @@ class ConnectionManager(object):
         return 0
 
     def connectToServer(self, server, options=None):
-        log.info("begin connectToServer")
-
-        tests = []
-
-        if server.get('LastCONNECTIONMODE') is not None:
-            #tests.append(server['LastCONNECTIONMODE'])
-            pass
-        if CONNECTIONMODE['Manual'] not in tests:
-            tests.append(CONNECTIONMODE['Manual'])
-        if CONNECTIONMODE['Local'] not in tests:
-            tests.append(CONNECTIONMODE['Local'])
-        if CONNECTIONMODE['Remote'] not in tests:
-            tests.append(CONNECTIONMODE['Remote'])
-
-        # TODO: begin to wake server
-
-        log.info("beginning connection tests")
+        tests = [
+            CONNECTIONMODE['Manual'],
+            CONNECTIONMODE['Local'],
+            CONNECTIONMODE['Remote']
+        ]
         return self._testNextCONNECTIONMODE(tests, 0, server, options)
 
     def _stringEqualsIgnoreCase(self, str1, str2):
@@ -543,12 +531,12 @@ class ConnectionManager(object):
         return (str1 or "").lower() == (str2 or "").lower()
 
     def _testNextCONNECTIONMODE(self, tests, index, server, options):
-
         if index >= len(tests):
             log.info("Tested all connection modes. Failing server connection.")
             return self._resolveFailure()
 
         mode = tests[index]
+        log.debug('Testing connection %s with options %s' % (mode, options))
         address = getServerAddress(server, mode)
         enableRetry = False
         skipTest = False
