@@ -299,7 +299,7 @@ class ConnectionManager(object):
 
         try:
             publicInfo = self._tryConnect(address, options=options)
-        except Exception:
+        except requests.RequestException:
             return _onFail()
         else:
             server = {
@@ -308,7 +308,7 @@ class ConnectionManager(object):
                 'options': options
             }
             self._updateServerInfo(server, publicInfo)
-            server = self.connectToServer(server, options)
+            server = self.connectToServer(server)
             if server is False:
                 return _onFail()
             else:
@@ -518,73 +518,68 @@ class ConnectionManager(object):
 
         return 0
 
-    def connectToServer(self, server, options=None):
+    def connectToServer(self, server, settings=None):
+        # First test manual connections, then local, then remote
         tests = [
             CONNECTIONMODE['Manual'],
             CONNECTIONMODE['Local'],
             CONNECTIONMODE['Remote']
         ]
-        return self._testNextCONNECTIONMODE(tests, 0, server, options)
+        return self._testNextCONNECTIONMODE(tests, 0, server, settings)
 
     def _stringEqualsIgnoreCase(self, str1, str2):
 
         return (str1 or "").lower() == (str2 or "").lower()
 
-    def _testNextCONNECTIONMODE(self, tests, index, server, options):
+    def _testNextCONNECTIONMODE(self, tests, index, server, settings):
         if index >= len(tests):
             log.info("Tested all connection modes. Failing server connection.")
             return self._resolveFailure()
 
         mode = tests[index]
-        log.debug('Testing connection %s with options %s' % (mode, options))
         address = getServerAddress(server, mode)
-        enableRetry = False
         skipTest = False
-        timeout = self.default_timeout
-
         if mode == CONNECTIONMODE['Local']:
-            enableRetry = True
-            timeout = 8
-
-            if self._stringEqualsIgnoreCase(address, server.get('ManualAddress')):
-                log.info("skipping LocalAddress test because it is the same as ManualAddress")
+            if self._stringEqualsIgnoreCase(address,
+                                            server.get('ManualAddress')):
+                # skipping LocalAddress test because it is the same as
+                # ManualAddress
                 skipTest = True
-
-        elif mode == CONNECTIONMODE['Manual']:
-
-            if self._stringEqualsIgnoreCase(address, server.get('LocalAddress')):
-                enableRetry = True
-                timeout = 8
-
         if skipTest or not address:
-            log.info("skipping test at index: %s" % index)
-            return self._testNextCONNECTIONMODE(tests, index+1, server, options)
+            log.debug("skipping test for %s" % mode)
+            return self._testNextCONNECTIONMODE(tests,
+                                                index+1,
+                                                server,
+                                                settings)
 
-        log.info("testing connection mode %s with server %s" % (mode, server.get('Name')))
+        log.debug("testing connection %s with settings %s for server %s"
+                  % (address, settings, server.get('Name')))
         try:
-            result = self._tryConnect(address, timeout, options)
-        
-        except Exception:
-            log.error("test failed for connection mode %s with server %s" % (mode, server.get('Name')))
-
-            if enableRetry:
-                # TODO: wake on lan and retry
-                return self._testNextCONNECTIONMODE(tests, index+1, server, options)
-            else:
-                return self._testNextCONNECTIONMODE(tests, index+1, server, options)
+            result = self._tryConnect(address, options=server.get('options'))
+        except requests.RequestException:
+            log.info("Connection test failed for %s with server %s"
+                     % (address, server.get('Name')))
+            return self._testNextCONNECTIONMODE(tests,
+                                                index+1,
+                                                server,
+                                                settings)
         else:
-
             if self._compareVersions(self._getMinServerVersion(),
                                      result.attrib['version']) == 1:
-                log.warn("minServerVersion requirement not met. Server version: %s" % result.attrib['version'])
+                log.warn("Minimal PMS version requirement not met. PMS version"
+                         " is: %s" % result.attrib['version'])
                 return {
                     'State': CONNECTIONSTATE['ServerUpdateNeeded'],
                     'Servers': [server]
                 }
             else:
-                log.info("calling onSuccessfulConnection with connection mode %s with server %s"
-                        % (mode, server.get('Name')))
-                return self._onSuccessfulConnection(server, result, mode, options)
+                log.debug("calling onSuccessfulConnection with mode %s, "
+                          "address %s, settings %s with server %s"
+                          % (mode, address, settings, server.get('Name')))
+                return self._onSuccessfulConnection(server,
+                                                    result,
+                                                    mode,
+                                                    settings)
 
     def _onSuccessfulConnection(self, server, systemInfo, CONNECTIONMODE, options):
 
@@ -772,19 +767,19 @@ class ConnectionManager(object):
             except Exception:
                 return False
 
-    def connect(self, options=None):
+    def connect(self, settings=None):
 
         log.info("Begin connect")
 
         servers = self.getAvailableServers()
-        return self._connectToServers(servers, options)
+        return self._connectToServers(servers, settings)
 
-    def _connectToServers(self, servers, options):
+    def _connectToServers(self, servers, settings):
 
         log.info("Begin connectToServers, with %s servers" % len(servers))
 
         if len(servers) == 1:
-            result = self.connectToServer(servers[0], options)
+            result = self.connectToServer(servers[0], settings)
             if result and result.get('State') == CONNECTIONSTATE['Unavailable']:
                 result['State'] = CONNECTIONSTATE['ConnectSignIn'] if result['ConnectUser'] == None else CONNECTIONSTATE['ServerSelection']
 
@@ -795,7 +790,7 @@ class ConnectionManager(object):
         # See if we have any saved credentials and can auto sign in
         if firstServer:
             
-            result = self.connectToServer(firstServer, options)
+            result = self.connectToServer(firstServer, settings)
             if result and result.get('State') == CONNECTIONSTATE['SignedIn']:
                 return result
 
