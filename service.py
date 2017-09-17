@@ -30,8 +30,7 @@ sys_path.append(_base_resource)
 
 ###############################################################################
 
-from utils import settings, window, language as lang, dialog, tryEncode, \
-    tryDecode
+from utils import settings, window, language as lang, dialog, tryDecode
 from userclient import UserClient
 import initialsetup
 from kodimonitor import KodiMonitor
@@ -82,10 +81,8 @@ class Service():
 
     def __init__(self):
 
-        logLevel = self.getLogLevel()
         self.monitor = Monitor()
 
-        window('plex_logLevel', value=str(logLevel))
         window('plex_kodiProfile',
                value=tryDecode(translatePath("special://profile")))
         window('plex_context',
@@ -94,27 +91,26 @@ class Service():
                value=settings('fetch_pms_item_number'))
 
         # Initial logging
-        log.warn("======== START %s ========" % v.ADDON_NAME)
-        log.warn("Platform: %s" % v.PLATFORM)
-        log.warn("KODI Version: %s" % v.KODILONGVERSION)
-        log.warn("%s Version: %s" % (v.ADDON_NAME, v.ADDON_VERSION))
-        log.warn("Using plugin paths: %s"
+        log.info("======== START %s ========" % v.ADDON_NAME)
+        log.info("Platform: %s" % v.PLATFORM)
+        log.info("KODI Version: %s" % v.KODILONGVERSION)
+        log.info("%s Version: %s" % (v.ADDON_NAME, v.ADDON_VERSION))
+        log.info("Using plugin paths: %s"
                  % (settings('useDirectPaths') != "true"))
-        log.warn("Number of sync threads: %s"
+        log.info("Number of sync threads: %s"
                  % settings('syncThreadNumber'))
-        log.warn("Log Level: %s" % logLevel)
-        log.warn("Full sys.argv received: %s" % argv)
+        log.info("Full sys.argv received: %s" % argv)
 
         # Reset window props for profile switch
         properties = [
             "plex_online", "plex_serverStatus", "plex_onWake",
-            "plex_dbCheck", "plex_kodiScan",
+            "plex_kodiScan",
             "plex_shouldStop", "plex_dbScan",
             "plex_initialScan", "plex_customplayqueue", "plex_playbackProps",
-            "plex_runLibScan", "pms_token", "plex_token",
+            "pms_token", "plex_token",
             "pms_server", "plex_machineIdentifier", "plex_servername",
             "plex_authenticated", "PlexUserImage", "useDirectPaths",
-            "kodiplextimeoffset", "countError", "countUnauthorized",
+            "countError", "countUnauthorized",
             "plex_restricteduser", "plex_allows_mediaDeletion",
             "plex_command", "plex_result", "plex_force_transcode_pix"
         ]
@@ -126,13 +122,6 @@ class Service():
 
         # Set the minimum database version
         window('plex_minDBVersion', value="1.5.10")
-
-    def getLogLevel(self):
-        try:
-            logLevel = int(settings('logLevel'))
-        except ValueError:
-            logLevel = 0
-        return logLevel
 
     def __stop_PKC(self):
         """
@@ -173,7 +162,7 @@ class Service():
 
             if window('plex_kodiProfile') != kodiProfile:
                 # Profile change happened, terminate this thread and others
-                log.warn("Kodi profile was: %s and changed to: %s. "
+                log.info("Kodi profile was: %s and changed to: %s. "
                          "Terminating old PlexKodiConnect thread."
                          % (kodiProfile,
                             window('plex_kodiProfile')))
@@ -332,7 +321,7 @@ class Service():
         except:
             pass
         window('plex_service_started', clear=True)
-        log.warn("======== STOP %s ========" % v.ADDON_NAME)
+        log.info("======== STOP %s ========" % v.ADDON_NAME)
 
 
 # Safety net - Kody starts PKC twice upon first installation!
@@ -345,11 +334,11 @@ else:
 # Delay option
 delay = int(settings('startupDelay'))
 
-log.warn("Delaying Plex startup by: %s sec..." % delay)
+log.info("Delaying Plex startup by: %s sec..." % delay)
 if exit:
     log.error('PKC service.py already started - exiting this instance')
 elif delay and Monitor().waitForAbort(delay):
     # Start the service
-    log.warn("Abort requested while waiting. PKC not started.")
+    log.info("Abort requested while waiting. PKC not started.")
 else:
     Service().ServiceEntryPoint()

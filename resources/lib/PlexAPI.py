@@ -49,7 +49,7 @@ from xbmcvfs import exists
 import clientinfo as client
 from downloadutils import DownloadUtils
 from utils import window, settings, language as lang, tryDecode, tryEncode, \
-    DateToKodi, exists_dir
+    DateToKodi, exists_dir, slugify
 from PlexFunctions import PMSHttpsEnabled
 import plexdb_functions as plexdb
 import variables as v
@@ -1346,14 +1346,18 @@ class API():
         cast = []
         producer = []
         for child in self.item:
-            if child.tag == 'Director':
-                director.append(child.attrib['tag'])
-            elif child.tag == 'Writer':
-                writer.append(child.attrib['tag'])
-            elif child.tag == 'Role':
-                cast.append(child.attrib['tag'])
-            elif child.tag == 'Producer':
-                producer.append(child.attrib['tag'])
+            try:
+                if child.tag == 'Director':
+                    director.append(child.attrib['tag'])
+                elif child.tag == 'Writer':
+                    writer.append(child.attrib['tag'])
+                elif child.tag == 'Role':
+                    cast.append(child.attrib['tag'])
+                elif child.tag == 'Producer':
+                    producer.append(child.attrib['tag'])
+            except KeyError:
+                log.warn('Malformed PMS answer for getPeople: %s: %s'
+                         % (child.tag, child.attrib))
         return {
             'Director': director,
             'Writer': writer,
@@ -1750,8 +1754,16 @@ class API():
         videotracks = []
         audiotracks = []
         subtitlelanguages = []
-        # Sometimes, aspectratio is on the "toplevel"
-        aspectratio = self.item[0].attrib.get('aspectRatio', None)
+        try:
+            # Sometimes, aspectratio is on the "toplevel"
+            aspectratio = self.item[0].attrib.get('aspectRatio', None)
+        except IndexError:
+            # There is no stream info at all, returning empty
+            return {
+                        'video': videotracks,
+                        'audio': audiotracks,
+                        'subtitle': subtitlelanguages
+                    }
         # TODO: what if several Media tags exist?!?
         # Loop over parts
         for child in self.item[0]:
@@ -2357,11 +2369,11 @@ class API():
             # ext = stream.attrib.get('format')
             if key:
                 # We do know the language - temporarily download
-                if stream.attrib.get('languageCode') is not None:
+                if stream.attrib.get('language') is not None:
                     path = self.download_external_subtitles(
                         "{server}%s" % key,
                         "subtitle%02d.%s.%s" % (fileindex,
-                                                stream.attrib['languageCode'],
+                                                stream.attrib['language'],
                                                 stream.attrib['codec']))
                     fileindex += 1
                 # We don't know the language - no need to download
@@ -2395,9 +2407,14 @@ class API():
             log.error('Could not temporarily download subtitle %s' % url)
             return
         else:
-            r.encoding = 'utf-8'
-            with open(path, 'wb') as f:
-                f.write(r.content)
+            log.debug('Writing temp subtitle to %s' % path)
+            try:
+                with open(path, 'wb') as f:
+                    f.write(r.content)
+            except UnicodeEncodeError:
+                log.debug('Need to slugify the filename %s' % path)
+                with open(slugify(path), 'wb') as f:
+                    f.write(r.content)
             return path
 
     def GetKodiPremierDate(self):
@@ -2575,16 +2592,16 @@ class API():
         if path is None:
             return None
         typus = v.REMAP_TYPE_FROM_PLEXTYPE[typus]
-        if window('remapSMB') == 'true':
-            path = path.replace(window('remapSMB%sOrg' % typus),
-                                window('remapSMB%sNew' % typus),
+        if state.REMAP_PATH is True:
+            path = path.replace(getattr(state, 'remapSMB%sOrg' % typus),
+                                getattr(state, 'remapSMB%sNew' % typus),
                                 1)
             # There might be backslashes left over:
             path = path.replace('\\', '/')
-        elif window('replaceSMB') == 'true':
+        elif state.REPLACE_SMB_PATH is True:
             if path.startswith('\\\\'):
                 path = 'smb:' + path.replace('\\', '/')
-        if ((window('plex_pathverified') == 'true' and forceCheck is False) or
+        if ((state.PATH_VERIFIED and forceCheck is False) or
                 omitCheck is True):
             return path
 
@@ -2612,12 +2629,12 @@ class API():
                 if self.askToValidate(path):
                     state.STOP_SYNC = True
                     path = None
-                window('plex_pathverified', value='true')
+                state.PATH_VERIFIED = True
             else:
                 path = None
         elif forceCheck is False:
-            if window('plex_pathverified') != 'true':
-                window('plex_pathverified', value='true')
+            # Only set the flag if we were not force-checking the path
+            state.PATH_VERIFIED = True
         return path
 
     def askToValidate(self, url):

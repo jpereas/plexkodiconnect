@@ -59,24 +59,6 @@ def window(property, value=None, clear=False, windowid=10000):
         return tryDecode(win.getProperty(property))
 
 
-def pickl_window(property, value=None, clear=False, windowid=10000):
-    """
-    Get or set window property - thread safe! For use with Pickle
-    Property and value must be string
-    """
-    if windowid != 10000:
-        win = xbmcgui.Window(windowid)
-    else:
-        win = WINDOW
-
-    if clear:
-        win.clearProperty(property)
-    elif value is not None:
-        win.setProperty(property, value)
-    else:
-        return win.getProperty(property)
-
-
 def plex_command(key, value):
     """
     Used to funnel states between different Python instances. NOT really thread
@@ -86,7 +68,7 @@ def plex_command(key, value):
         value: either 'True' or 'False'
     """
     while window('plex_command'):
-        xbmc.sleep(5)
+        xbmc.sleep(20)
     window('plex_command', value='%s-%s' % (key, value))
 
 
@@ -139,6 +121,15 @@ def dialog(typus, *args, **kwargs):
     """
     Displays xbmcgui Dialog. Pass a string as typus:
         'yesno', 'ok', 'notification', 'input', 'select', 'numeric'
+
+    kwargs:
+        heading='{plex}'        title bar (here PlexKodiConnect)
+        message=lang(30128),    Actual dialog content. Don't use with OK
+        line1=str(),            For 'OK' and 'yesno' dialogs use line1...line3!
+        time=5000,
+        sound=True,
+        nolabel=str(),          For 'yesno' dialogs
+        yeslabel=str(),         For 'yesno' dialogs
 
     Icons:
         icon='{plex}'       Display Plex standard icon
@@ -221,6 +212,16 @@ def tryDecode(string, encoding='utf-8'):
     return string
 
 
+def slugify(text):
+    """
+    Normalizes text (in unicode or string) to e.g. enable safe filenames.
+    Returns unicode
+    """
+    if not isinstance(text, unicode):
+        text = unicode(text)
+    return unicode(normalize('NFKD', text).encode('ascii', 'ignore'))
+
+
 def escape_html(string):
     """
     Escapes the following:
@@ -248,7 +249,7 @@ def DateToKodi(stamp):
     None if an error was encountered
     """
     try:
-        stamp = float(stamp) + float(window('kodiplextimeoffset'))
+        stamp = float(stamp) + state.KODI_PLEX_TIME_OFFSET
         date_time = localtime(stamp)
         localdate = strftime('%Y-%m-%d %H:%M:%S', date_time)
     except:

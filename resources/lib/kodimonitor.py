@@ -2,24 +2,48 @@
 
 ###############################################################################
 
-import logging
+from logging import getLogger
 from json import loads
 
 from xbmc import Monitor, Player, sleep
 
-import downloadutils
+from downloadutils import DownloadUtils
 import plexdb_functions as plexdb
-from utils import window, settings, CatchExceptions, tryDecode, tryEncode
+from utils import window, settings, CatchExceptions, tryDecode, tryEncode, \
+    plex_command
 from PlexFunctions import scrobble
 from kodidb_functions import get_kodiid_from_filename
 from PlexAPI import API
-from variables import REMAP_TYPE_FROM_PLEXTYPE
 import state
 
 ###############################################################################
 
-log = logging.getLogger("PLEX."+__name__)
+log = getLogger("PLEX."+__name__)
 
+# settings: window-variable
+WINDOW_SETTINGS = {
+    'enableContext': 'plex_context',
+    'plex_restricteduser': 'plex_restricteduser',
+    'force_transcode_pix': 'plex_force_transcode_pix',
+    'fetch_pms_item_number': 'fetch_pms_item_number'
+}
+
+# settings: state-variable (state.py)
+# Need to use getattr and setattr!
+STATE_SETTINGS = {
+    'dbSyncIndicator': 'SYNC_DIALOG',
+    'remapSMB': 'REMAP_PATH',
+    'remapSMBmovieOrg': 'remapSMBmovieOrg',
+    'remapSMBmovieNew': 'remapSMBmovieNew',
+    'remapSMBtvOrg': 'remapSMBtvOrg',
+    'remapSMBtvNew': 'remapSMBtvNew',
+    'remapSMBmusicOrg': 'remapSMBmusicOrg',
+    'remapSMBmusicNew': 'remapSMBmusicNew',
+    'remapSMBphotoOrg': 'remapSMBphotoOrg',
+    'remapSMBphotoNew': 'remapSMBphotoNew',
+    'enableMusic': 'ENABLE_MUSIC',
+    'enableBackgroundSync': 'BACKGROUND_SYNC'
+}
 ###############################################################################
 
 
@@ -27,7 +51,7 @@ class KodiMonitor(Monitor):
 
     def __init__(self, callback):
         self.mgr = callback
-        self.doUtils = downloadutils.DownloadUtils().downloadUrl
+        self.doUtils = DownloadUtils().downloadUrl
         self.xbmcplayer = Player()
         self.playqueue = self.mgr.playqueue
         Monitor.__init__(self)
@@ -47,31 +71,42 @@ class KodiMonitor(Monitor):
         """
         Monitor the PKC settings for changes made by the user
         """
-        # settings: window-variable
-        items = {
-            'logLevel': 'plex_logLevel',
-            'enableContext': 'plex_context',
-            'plex_restricteduser': 'plex_restricteduser',
-            'dbSyncIndicator': 'dbSyncIndicator',
-            'remapSMB': 'remapSMB',
-            'replaceSMB': 'replaceSMB',
-            'force_transcode_pix': 'plex_force_transcode_pix',
-            'fetch_pms_item_number': 'fetch_pms_item_number'
-        }
-        # Path replacement
-        for typus in REMAP_TYPE_FROM_PLEXTYPE.values():
-            for arg in ('Org', 'New'):
-                key = 'remapSMB%s%s' % (typus, arg)
-                items[key] = key
+        log.debug('PKC settings change detected')
+        changed = False
         # Reset the window variables from the settings variables
-        for settings_value, window_value in items.iteritems():
+        for settings_value, window_value in WINDOW_SETTINGS.iteritems():
             if window(window_value) != settings(settings_value):
-                log.debug('PKC settings changed: %s is now %s'
+                changed = True
+                log.debug('PKC window settings changed: %s is now %s'
                           % (settings_value, settings(settings_value)))
                 window(window_value, value=settings(settings_value))
                 if settings_value == 'fetch_pms_item_number':
                     log.info('Requesting playlist/nodes refresh')
-                    window('plex_runLibScan', value="views")
+                    plex_command('RUN_LIB_SCAN', 'views')
+        # Reset the state variables in state.py
+        for settings_value, state_name in STATE_SETTINGS.iteritems():
+            new = settings(settings_value)
+            if new == 'true':
+                new = True
+            elif new == 'false':
+                new = False
+            if getattr(state, state_name) != new:
+                changed = True
+                log.debug('PKC state settings %s changed from %s to %s'
+                          % (settings_value, getattr(state, state_name), new))
+                setattr(state, state_name, new)
+        # Special cases, overwrite all internal settings
+        state.FULL_SYNC_INTERVALL = int(settings('fullSyncInterval'))*60
+        state.BACKGROUNDSYNC_SAFTYMARGIN = int(
+            settings('backgroundsync_saftyMargin'))
+        state.SYNC_THREAD_NUMBER = int(settings('syncThreadNumber'))
+        # Never set through the user
+        # state.KODI_PLEX_TIME_OFFSET = float(settings('kodiplextimeoffset'))
+        if changed is True:
+            # Assume that the user changed the settings so that we can now find
+            # the path to all media files
+            state.STOP_SYNC = False
+            state.PATH_VERIFIED = False
 
     @CatchExceptions(warnuser=False)
     def onNotification(self, sender, method, data):
@@ -137,7 +172,7 @@ class KodiMonitor(Monitor):
         elif method == "GUI.OnScreensaverDeactivated":
             if settings('dbSyncScreensaver') == "true":
                 sleep(5000)
-                window('plex_runLibScan', value="full")
+                plex_command('RUN_LIB_SCAN', 'full')
 
         elif method == "System.OnQuit":
             log.info('Kodi OnQuit detected - shutting down')

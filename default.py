@@ -32,9 +32,9 @@ sys_path.append(_base_resource)
 ###############################################################################
 
 import entrypoint
-from utils import window, pickl_window, reset, passwordsXML, language as lang,\
-    dialog
-from pickler import unpickle_me
+from utils import window, reset, passwordsXML, language as lang, dialog, \
+    plex_command
+from pickler import unpickle_me, pickl_window
 from PKC_listitem import convert_PKC_to_listitem
 import variables as v
 
@@ -127,28 +127,29 @@ class Main():
                 log.error('Not connected to a PMS.')
             else:
                 if mode == 'repair':
-                    window('plex_runLibScan', value='repair')
                     log.info('Requesting repair lib sync')
+                    plex_command('RUN_LIB_SCAN', 'repair')
                 elif mode == 'manualsync':
                     log.info('Requesting full library scan')
-                    window('plex_runLibScan', value='full')
+                    plex_command('RUN_LIB_SCAN', 'full')
 
         elif mode == 'texturecache':
-            window('plex_runLibScan', value='del_textures')
+            log.info('Requesting texture caching of all textures')
+            plex_command('RUN_LIB_SCAN', 'textures')
 
         elif mode == 'chooseServer':
             entrypoint.chooseServer()
 
         elif mode == 'refreshplaylist':
             log.info('Requesting playlist/nodes refresh')
-            window('plex_runLibScan', value='views')
+            plex_command('RUN_LIB_SCAN', 'views')
 
         elif mode == 'deviceid':
             self.deviceid()
 
         elif mode == 'fanart':
             log.info('User requested fanarttv refresh')
-            window('plex_runLibScan', value='fanart')
+            plex_command('RUN_LIB_SCAN', 'fanart')
 
         elif '/extrafanart' in argv[0]:
             plexpath = argv[2][1:]
@@ -165,15 +166,13 @@ class Main():
         else:
             entrypoint.doMainListing(content_type=params.get('content_type'))
 
-    def play(self):
+    @staticmethod
+    def play():
         """
         Start up playback_starter in main Python thread
         """
         # Put the request into the 'queue'
-        while window('plex_command'):
-            sleep(50)
-        window('plex_command',
-               value='play_%s' % argv[2])
+        plex_command('PLAY', argv[2])
         # Wait for the result
         while not pickl_window('plex_result'):
             sleep(50)
@@ -190,7 +189,8 @@ class Main():
             listitem = convert_PKC_to_listitem(result.listitem)
             setResolvedUrl(HANDLE, True, listitem)
 
-    def deviceid(self):
+    @staticmethod
+    def deviceid():
         deviceId_old = window('plex_client_Id')
         from clientinfo import getDeviceId
         try:
@@ -204,6 +204,7 @@ class Main():
             # 'Kodi will now restart to apply the changes'
             dialog('ok', lang(29999), lang(33033))
             executebuiltin('RestartApp')
+
 
 if __name__ == '__main__':
     log.info('%s started' % v.ADDON_ID)

@@ -575,14 +575,6 @@ def getExtraFanArt(plexid, plexPath):
     xbmcplugin.endOfDirectory(HANDLE)
 
 
-def RunLibScan(mode):
-    if window('plex_online') != "true":
-        # Server is not online, do not run the sync
-        dialog('ok', lang(29999), lang(39205))
-    else:
-        window('plex_runLibScan', value='full')
-
-
 def getOnDeck(viewid, mediatype, tagname, limit):
     """
     Retrieves Plex On Deck items, currently only for TV shows
@@ -975,7 +967,7 @@ def __LogIn():
     SUSPEND_LIBRARY_THREAD is set to False in service.py if user was signed
     out!
     """
-    window('plex_runLibScan', value='full')
+    plex_command('RUN_LIB_SCAN', 'full')
     # Restart user client
     plex_command('SUSPEND_USER_CLIENT', 'False')
 
