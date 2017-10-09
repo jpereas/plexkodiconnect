@@ -1,9 +1,9 @@
 #  XBMC Media Center language file
 # Translators:
 # Croneter None <croneter@gmail.com>, 2017
+# Vladimir Supranenok <stark_v@mail.ru>, 2017
 # Алексей Коробцов <korobcoff@gmail.com>, 2017
 # Павел Хоменко <xom2000@gmail.com>, 2017
-# Vladimir Supranenok <stark_v@mail.ru>, 2017
 # Alex Freit <alex.nx@mail.ru>, 2017
 msgid ""
 msgstr ""
@@ -30,7 +30,7 @@ msgstr "Адрес сервера (IP)"
 
 msgctxt "#30002"
 msgid "Preferred playback method"
-msgstr "Предпочтительный способ воспроизведения"
+msgstr "Предпочтительное воспроизведение"
 
 msgctxt "#30004"
 msgid "Log level"
@@ -86,7 +86,7 @@ msgstr "Имя устройства"
 
 msgctxt "#30017"
 msgid "Unauthorized for PMS"
-msgstr "Не подтвержден в PMS"
+msgstr "Не авторизован на сервере Plex"
 
 msgctxt "#30022"
 msgid "Advanced"
@@ -98,7 +98,7 @@ msgstr "Имя пользователя"
 
 msgctxt "#30025"
 msgid "Display message if PMS goes offline"
-msgstr "Сообщать об отключении от PMS"
+msgstr "Сообщать об отключении от сервера Plex "
 
 msgctxt "#30030"
 msgid "Port Number"
@@ -106,7 +106,7 @@ msgstr "Порт"
 
 msgctxt "#30031"
 msgid "I own this Plex Media Server"
-msgstr "Я владелец этого Plex медиа сервера"
+msgstr "Я владелец этого сервера Plex"
 
 # Kodi context menu entry for movie and episode information screen
 msgctxt "#30032"
@@ -478,7 +478,7 @@ msgstr "Службы"
 
 msgctxt "#30143"
 msgid "Always transcode if video bitrate is above"
-msgstr "Всегда использовать транскодирование, если битрейт видео больше"
+msgstr "Транскодировать, если битрейт видео больше"
 
 msgctxt "#30150"
 msgid "Skin does not support setting views"
@@ -506,7 +506,7 @@ msgstr "Иллюстрация"
 
 msgctxt "#30160"
 msgid "Video Quality if Transcoding necessary"
-msgstr "Качество видео, если производится транскодинг"
+msgstr "Качество при транскодинге"
 
 msgctxt "#30161"
 msgid "Enable Suggested Loader (Requires Restart)"
@@ -547,7 +547,7 @@ msgstr "Адрес : "
 # Video nodes
 msgctxt "#30170"
 msgid "Recently Added TV Shows"
-msgstr "Последние Сериалы"
+msgstr "Недавно добавленные Сериалы"
 
 msgctxt "#30171"
 msgid "In Progress TV Shows"
@@ -563,15 +563,15 @@ msgstr "Каналы"
 
 msgctxt "#30174"
 msgid "Recently Added"
-msgstr "Последние"
+msgstr "Недавно добавленные"
 
 msgctxt "#30175"
 msgid "Recently Added Episodes"
-msgstr "Последние Эпизоды"
+msgstr "Недавно добавленные Серии"
 
 msgctxt "#30176"
 msgid "Recently Added Albums"
-msgstr "Последние Альбомы"
+msgstr "Недавно добавленные Альбомы"
 
 msgctxt "#30177"
 msgid "In Progress Movies"
@@ -975,7 +975,7 @@ msgstr "Не возможно удалить элемент. На сервере
 
 msgctxt "#30415"
 msgid "Start playback via PMS"
-msgstr "Начать воспроизведение через PMS"
+msgstr "Начать воспроизведение через Plex"
 
 msgctxt "#30416"
 msgid "Settings for the Plex Server"
@@ -984,11 +984,11 @@ msgstr "Настройки для сервера Plex"
 # add-on settings
 msgctxt "#30500"
 msgid "Verify Host SSL Certificate (more secure)"
-msgstr "Проверить SSL-сертификат хоста (более безопасный)"
+msgstr "Проверять SSL сертификат хоста (более безопасно)"
 
 msgctxt "#30501"
 msgid "Client SSL certificate"
-msgstr "Клиентский сертификат SSL"
+msgstr "SSL сертификат клиента"
 
 msgctxt "#30502"
 msgid "Use alternate address"
@@ -1008,11 +1008,11 @@ msgstr "[COLOR yellow]Сбросить попытки входа[/COLOR]"
 
 msgctxt "#30506"
 msgid "Sync Options"
-msgstr "Параметры синхронизации"
+msgstr "Синхронизация"
 
 msgctxt "#30507"
 msgid "Show syncing progress"
-msgstr "Показывать синхронизацию"
+msgstr "Отображать прогресс синхронизации"
 
 msgctxt "#30508"
 msgid "Sync empty TV Shows"
@@ -1037,7 +1037,7 @@ msgstr "Принудительное кеширование иллюстраци
 msgctxt "#30513"
 msgid "Limit artwork cache threads (recommended for rpi)"
 msgstr ""
-"Ограничить потоки кеширование иллюстраций (рекомендуется для Raspberry)"
+"Ограничить потоки кешированиa иллюстраций (рекомендуется для Raspberry)"
 
 msgctxt "#30514"
 msgid "Enable fast startup (requires server plugin)"
@@ -1076,7 +1076,7 @@ msgstr "Вернуться назад при возобновлении (в се
 
 msgctxt "#30522"
 msgid "Force transcode h265/HEVC"
-msgstr "Принудительно транскодировать h265/HEVC"
+msgstr "Транскодировать h265/HEVC"
 
 msgctxt "#30523"
 msgid "Music metadata options (not compatible with direct stream)"
@@ -1168,7 +1168,7 @@ msgstr "Kodi запущен на слабом устройстве (наприм
 
 msgctxt "#30544"
 msgid "Artwork"
-msgstr "Иллюстрация"
+msgstr "Иллюстрации"
 
 msgctxt "#30545"
 msgid "Force transcode pictures"
@@ -1342,7 +1342,7 @@ msgstr "Размер субтитров внедряемых в видео"
 
 msgctxt "#39003"
 msgid "Limit download sync threads (rec. for rpi: 1)"
-msgstr "Количество потоков синхронизации (для Rasberry: 1)"
+msgstr "Количество потоков синхронизации(для RPi:1)"
 
 msgctxt "#39004"
 msgid "Enable Plex Companion (restart Kodi!)"
@@ -1557,11 +1557,11 @@ msgstr "Заменить путь ФОТОГРАФИЙ Plex на:"
 
 msgctxt "#39047"
 msgid "On Deck: Append show title to episode"
-msgstr "Текущее: Показывать название эпизода"
+msgstr "Текущие: Показывать название эпизода"
 
 msgctxt "#39048"
 msgid "On Deck: Append season- and episode-number SxxExx"
-msgstr "Текущее: Показывать номер сезона и эпизода как SxxExx"
+msgstr "Текущие: Показывать номер сезона и эпизода как SxxExx"
 
 msgctxt "#39049"
 msgid "Nothing works? Try a full reset!"
@@ -1573,7 +1573,7 @@ msgstr "[COLOR yellow]Выберите сервер Plex из списка[/COLO
 
 msgctxt "#39051"
 msgid "Wait before sync new/changed PMS item [s]"
-msgstr "Подождите пока синхронизируется новый/измененный элемент"
+msgstr "Ожидание новый/измененный элемент [с]"
 
 msgctxt "#39052"
 msgid "Background Sync"
@@ -1667,7 +1667,7 @@ msgstr ""
 
 msgctxt "#39073"
 msgid "Appearance Tweaks"
-msgstr "Дополнительные настройки внешнего вида"
+msgstr "Дополнительно"
 
 msgctxt "#39074"
 msgid "TV Shows"
@@ -1688,7 +1688,7 @@ msgstr ""
 
 msgctxt "#39077"
 msgid "Number of PMS items to show in widgets (e.g. \"On Deck\")"
-msgstr "Количество элементов, отображаемых в виджетах (например \"Текущее\")"
+msgstr "Количество элементов, отображаемых в виджетах (например \"Текущие\")"
 
 msgctxt "#39078"
 msgid "Plex Companion Update Port (change only if needed)"
@@ -1774,7 +1774,7 @@ msgctxt "#39217"
 msgid ""
 "Does your Plex Media Server support SSL connections? (https instead of "
 "http)?"
-msgstr "Ваш Plex-сервер поддерживает SSL-соединение (https вместо http)?"
+msgstr "Ваш Plex-сервер поддерживает SSL соединение (https вместо http)?"
 
 msgctxt "#39218"
 msgid "Error contacting PMS"
@@ -1810,7 +1810,7 @@ msgstr "Обновить все"
 
 msgctxt "#39225"
 msgid "Missing only"
-msgstr "Только недостающие"
+msgstr "Недостающие"
 
 # Message in the PKC settings if user has not logged in to plex.tv
 msgctxt "#39226"
@@ -1965,7 +1965,7 @@ msgstr "Ошибка синхронизации библиотеки"
 # Plex videonodes.py
 msgctxt "#39500"
 msgid "On Deck"
-msgstr "Текущее"
+msgstr "Текущие"
 
 msgctxt "#39501"
 msgid "Collections"

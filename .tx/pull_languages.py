@@ -20,7 +20,7 @@ languages = [
     'pl_PL',
     # 'sv_SE',
     # 'hu_HU',
-    # 'ru_RU',
+    'ru_RU',
 ]
 
 os.system("cd ..")
